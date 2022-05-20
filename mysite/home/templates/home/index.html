@@ -12,11 +12,35 @@
 <body>
     <header class="header container-fluid">
         <div class="row align-content-center">
-            <div class="col-lg-1 col-md-1">
+            <div class="col-lg-1 col-md-1 col-sm-2 col-2">
                 <a href="">
                     <img src="../../static/img/logo.svg" alt="logo" srcset="" width="50px" height="100px">
                 </a>
             </div>
+            <!-- extra small devices -->
+            <div class="d-block d-sm-none col-8 align-self-center">
+                <p class="text-info text-uppercase">
+                    Воронежское отделение благотворительного фонда “Российский детский фонд”
+                </p>
+            </div>
+            <!-- small devices -->
+            <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
+                <p class="text-info text-uppercase">
+                    Воронежское отделение благотворительного фонда “Российский детский фонд”
+                </p>
+            </div>
+            <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
+                <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../../static/img/menu.svg" alt="menu" srcset="">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+            </div>
+            <!-- medium devices -->
             <div class="d-none d-md-block d-lg-none col-md-10 align-self-center">
                 <p class="text-info text-uppercase">
                     Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
@@ -34,6 +58,7 @@
                     <li><a class="dropdown-item" href="#">Separated link</a></li>
                   </ul>
             </div>
+            <!-- large divices -->
             <div class="align-self-end col-lg-3 mt-lg-2">
                 <p class="text-uppercase text-info d-none d-lg-block">
                     Воронежское областное отделение <br>
