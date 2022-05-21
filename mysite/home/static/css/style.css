@@ -1,3 +1,5 @@
+/* font-family: 'Source Serif Pro', serif; */
+
 a {
     text-decoration: none;
 }
@@ -7,7 +9,7 @@ span {
 }
 
 .header {
-    background-color: #EFFBFE;
+    background-color: #a3e9f839;
 }
 
 .search__icon {
@@ -24,3 +26,38 @@ span {
     background-repeat: no-repeat;
 }
 
+.phone__link {
+    position: relative;
+}
+
+.phone__link::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/phone_img.svg);
+    background-repeat: no-repeat;
+    right: 120px;
+
+}
+
+/* .subheader {
+    background-image: url(../img/image\ 4header_img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 250px;
+} */
+
+.subheader__text {
+    font-family: 'Source Serif Pro';
+}
+
+.subheader__subtext {
+    font-family: 'Source Serif Pro';
+}
+
+.btn__help {
+    color: #847FD2;
+    border: 1px solid #847FD2;
+    border-radius: 10px;
+}
