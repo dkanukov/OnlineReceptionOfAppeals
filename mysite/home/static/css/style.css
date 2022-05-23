@@ -1,5 +1,25 @@
 /* font-family: 'Source Serif Pro', serif; */
 
+p {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Source Serif Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+}
+
 a {
     text-decoration: none;
 }
@@ -9,7 +29,11 @@ span {
 }
 
 .header {
-    background-color: #a3e9f839;
+    background-color: #a3e9f838;
+}
+
+.news__content {
+    background-color: white;
 }
 
 .search__icon {
@@ -41,23 +65,37 @@ span {
 
 }
 
-/* .subheader {
-    background-image: url(../img/image\ 4header_img.png);
+.subheader {
+    min-height: 60vh;
+    max-height: 80vh;
+    background-color: #a3e9f839;
+    background-image: url(../img/boat.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-bottom: 250px;
-} */
-
-.subheader__text {
-    font-family: 'Source Serif Pro';
+    background-size: cover;
+    background-position: center;
 }
+
 
 .subheader__subtext {
     font-family: 'Source Serif Pro';
 }
 
 .btn__help {
+    max-width: 200px;
     color: #847FD2;
     border: 1px solid #847FD2;
     border-radius: 10px;
+}
+
+.news__content {
+    max-height: max-content;
+}
+
+.card-body {
+    max-height: fit-content;
+}
+
+.about__part__img {
+    max-height: 50vh;
+    max-width: 80vh;
 }
