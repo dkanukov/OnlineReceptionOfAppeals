@@ -61,8 +61,8 @@ span {
     height: 40px;
     background-image: url(../img/phone_img.svg);
     background-repeat: no-repeat;
-    right: 120px;
-
+    right: 100px;
+    top: -5px;
 }
 
 .subheader {
@@ -98,4 +98,10 @@ span {
 .about__part__img {
     max-height: 50vh;
     max-width: 80vh;
+}
+
+.btn__browse__more {
+    min-width: 250px;
+    color: #847FD2;
+    border: 1px solid #847FD2;
 }
