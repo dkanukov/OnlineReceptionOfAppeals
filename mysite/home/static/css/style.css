@@ -105,3 +105,45 @@ span {
     color: #847FD2;
     border: 1px solid #847FD2;
 }
+
+.carousel {
+    background-color: #f8f9fb69;
+    height: max-content;
+}
+
+.carousel-inner {
+    max-height: 30vh;
+}
+
+.carousel-item {
+    max-height: 30vh;
+}
+
+.carousel-caption {
+    max-height: 30vh;
+}
+
+.carousel__text {
+    /* padding-bottom: 140px; */
+    padding-top: 0;
+    top: 0;
+    border: 1px solid black;
+}
+
+.comment__header {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+    text-align: start;
+}
+
+.comment__text {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+    text-align: start;
+}
