@@ -107,7 +107,6 @@ span {
 }
 
 .carousel {
-    background-color: #f8f9fb69;
     height: max-content;
 }
 
@@ -124,13 +123,12 @@ span {
 }
 
 .carousel__text {
-    /* padding-bottom: 140px; */
     padding-top: 0;
     top: 0;
-    border: 1px solid black;
 }
 
 .comment__header {
+    padding-top: 10px;
     overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -147,3 +145,55 @@ span {
 	-webkit-box-orient: vertical;
     text-align: start;
 }
+
+.text__comment__comas {
+    position: relative;
+}
+
+.text__comment__comas::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/commas.svg);
+    background-repeat: no-repeat;
+    left: -20px;
+}
+
+
+.footer__links ul,
+.footer__contacts ul{
+    list-style: none;
+}
+
+.footer__links ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* .arrow__prev {
+    position: relative;
+}
+
+.arrow__next {
+    position: relative;
+}
+
+.arrow__prev::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/arrow-back.svg);
+    background-repeat: no-repeat;
+    bottom: 100px;
+}
+
+.arrow__next::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/arrow-forward.svg);
+    background-repeat: no-repeat;
+    bottom: 100px;
+} */
