@@ -33,7 +33,14 @@ span {
 }
 
 .news__content {
+    max-height: 60%;
     background-color: white;
+}
+
+.news__content__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .search__icon {
@@ -43,7 +50,7 @@ span {
 .search__icon::before {
     position: absolute;
     content: "";
-    bottom: 0px;
+    bottom: 0;
     width: 40px;
     height: 40px;
     background-image: url(../img/loupe.svg);
@@ -87,10 +94,6 @@ span {
     border-radius: 10px;
 }
 
-.news__content {
-    max-height: max-content;
-}
-
 .card-body {
     max-height: fit-content;
 }
@@ -106,60 +109,51 @@ span {
     border: 1px solid #847FD2;
 }
 
+.card {
+    border: none;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
 .carousel {
-    height: max-content;
+    height: 12rem;
 }
 
-.carousel-inner {
-    max-height: 30vh;
-}
-
-.carousel-item {
-    max-height: 30vh;
-}
-
-.carousel-caption {
-    max-height: 30vh;
-}
-
-.carousel__text {
-    padding-top: 0;
-    top: 0;
-}
-
-.comment__header {
-    padding-top: 10px;
+.carousel-item p {
     overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-    text-align: start;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
 }
 
-.comment__text {
-    overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 4;
-	-webkit-box-orient: vertical;
-    text-align: start;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    background-image: none;
 }
 
-.text__comment__comas {
-    position: relative;
+.carousel-control-next-icon:after
+{
+    margin-left: 110px;
+    content: '>';
+    font-size: 30px;
 }
 
-.text__comment__comas::before {
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/commas.svg);
-    background-repeat: no-repeat;
-    left: -20px;
+.carousel-control-prev-icon:after {
+    margin-left: -130px;
+    content: '<';
+    font-size: 30px;
 }
-
 
 .footer__links ul,
 .footer__contacts ul{
@@ -169,31 +163,3 @@ span {
 .footer__links ul li:not(:last-child) {
     margin-bottom: 10px;
 }
-
-/* .arrow__prev {
-    position: relative;
-}
-
-.arrow__next {
-    position: relative;
-}
-
-.arrow__prev::before {
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/arrow-back.svg);
-    background-repeat: no-repeat;
-    bottom: 100px;
-}
-
-.arrow__next::before {
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/arrow-forward.svg);
-    background-repeat: no-repeat;
-    bottom: 100px;
-} */
