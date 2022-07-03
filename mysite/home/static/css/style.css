@@ -43,6 +43,13 @@ span {
     text-overflow: ellipsis;
 }
 
+.programs__card__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .search__icon {
     position: relative;
 }
@@ -162,4 +169,40 @@ span {
 
 .footer__links ul li:not(:last-child) {
     margin-bottom: 10px;
+}
+
+/*news page*/
+
+.social__link svg,
+.social__link svg path {
+    transition: fill .3s ease-in-out;
+}
+
+.social__link:hover .vk__icon{
+    fill: #3375F6;
+}
+
+.social__link:hover .vk__icon path,
+.social__link:hover .odno__icon path,
+.social__link:hover .telegram__icon path,
+.social__link:hover .whats__icon path,
+.social__link:hover .viber__icon path{
+    fill-opacity: 1;
+    fill: #FFFFFF;
+}
+
+.social__link:hover .odno__icon{
+    fill: #EE9622;
+}
+
+.social__link:hover .telegram__icon{
+    fill: #5BA6DD;
+}
+
+.social__link:hover .whats__icon{
+    fill: #65D072;
+}
+
+.social__link:hover .viber__icon{
+    fill: #7A5DE8;
 }
