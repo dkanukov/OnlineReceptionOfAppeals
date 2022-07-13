@@ -29,7 +29,7 @@ span {
 }
 
 .header {
-    background-color: #a3e9f838;
+    background-color: #F3FCFF;
 }
 
 .news__content {
@@ -208,13 +208,19 @@ span {
 }
 
 .form__btn {
+    background-color: #0b5ed7;
+    color: white;
     margin: 0 auto;
     padding: 5px;
     max-width: max-content;
-    border: 1px solid gray;
     border-radius: 10px;
 }
 
 .form__btn:hover {
     opacity: 0.5;
+}
+
+.test {
+    text-align: justify;
+    text-justify: inter-word;
 }

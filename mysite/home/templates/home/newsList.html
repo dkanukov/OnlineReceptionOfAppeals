@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
+          rel="stylesheet">
+    <script defer type="application/javascript" src="../../static/js/donateForm.js"></script>
+    <title>NewsList</title>
+</head>
+<body>
+<header class="header container-fluid pb-1">
+    <div class="row align-content-center">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+            <a href="">
+                <img src="../../static/img/logo.svg" alt="logo" srcset="" width="50px" height="100px">
+            </a>
+        </div>
+        <!-- extra small devices -->
+        <div class="d-block d-sm-none col-7 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
+                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+            </p>
+        </div>
+        <div class="d-block d-sm-none col-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="../../static/img/menu.svg" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
+                <li><a class="dropdown-item" href="#">Главная</a></li>
+                <li><a class="dropdown-item" href="#">О фонде</a></li>
+                <li><a class="dropdown-item" href="#">Программы</a></li>
+                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- small devices -->
+        <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
+                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+            </p>
+        </div>
+        <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="../../static/img/menu.svg" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
+                <li><a class="dropdown-item" href="#">Главная</a></li>
+                <li><a class="dropdown-item" href="#">О фонде</a></li>
+                <li><a class="dropdown-item" href="#">Программы</a></li>
+                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- medium devices -->
+        <div class="d-none d-md-block d-lg-none col-md-10 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
+                детский фонд”<br>
+                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+            </p>
+        </div>
+        <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="../../static/img/menu.svg" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">Главная</a></li>
+                <li><a class="dropdown-item" href="#">О фонде</a></li>
+                <li><a class="dropdown-item" href="#">Программы</a></li>
+                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- large divices -->
+        <div class="align-self-end col-lg-4 mt-lg-2">
+            <p class="text-uppercase text-info d-none d-lg-block">
+                Воронежское областное отделение <br>
+                общероссийского общественного <br>
+                благотворительного фонда <br>
+                “Российский детский фонд” <br>
+                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+            </p>
+        </div>
+        <nav class="navbar navbar-expand-lg col-lg-7">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav flex-lg-wrap">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">О фонде</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Программы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Хочу помочь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Право голоса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="container pt-1">
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item active"><a href="#">Пресс центр</a></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <h2>Новости</h2>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+            <div class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 g-sm-3 g-3">
+                <div class="col">
+                    <a href="./news.html">
+                        <div class="card" style="outline: 1px solid gray">
+                            <img src="../../static/img/news_1.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
+                                <p class="card-text text-dark">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами и над теми, кто находится в приюте Покров.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="card-text"><small class="text-muted">Новости</small></p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text"><small class="text-muted">Дата: 01.01.2020</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#">
+                        <div class="card" style="outline: 1px solid gray">
+                            <img src="../../static/img/news_1.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title text-dark">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
+                                <p class="card-text text-dark">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами и над теми, кто находится в приюте Покров.</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="card-text"><small class="text-muted">Новости</small></p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text"><small class="text-muted">Дата: 01.01.2020</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-3">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-lg justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 d-none d-md-block">
+            <div class="card" style="border: 1px solid gray; border-radius: 15px">
+                <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Хотите стать нашим партнером?</h5>
+                    <p class="card-text text-center">Заполните анкету, наши специалисты свяжутся с Вами</p>
+                    <hr>
+                    <h6 class="form__btn" data-bs-toggle="modal" data-bs-target="#formModal">Заполнить анкету</h6>
+                    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Стать партнером</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <div class="mb-3">
+                                            <label for="nameFormInput" class="form-label">Имя <strong style="color: red">*</strong></label>
+                                            <input type="text" class="form-control" id="nameFormInput" placeholder="Иван">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phoneFormInput" class="form-label">Имя <strong style="color: red">*</strong></label>
+                                            <input type="text" class="form-control" id="phoneFormInput" placeholder="Иван">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<footer class="container-fluid">
+    <div
+            class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
+        <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
+            <ul>
+                <li><a class="link-dark" href="">ГЛАВНАЯ</a></li>
+                <li><a class="link-dark" href="">О ФОНДЕ</a></li>
+                <li><a class="link-dark" href="">ПРОГРАММЫ</a></li>
+                <li><a class="link-dark" href="">ХОЧУ ПОМОЧЬ</a></li>
+                <li><a class="link-dark" href="">ПРАВО ГОЛОСА</a></li>
+                <li><a class="link-dark" href="">НОВОСТИ</a></li>
+                <li><a class="link-dark" href="">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
+            <ul>
+                <li>
+                    <a class="link-dark" href="tel:+7(473)2104705">
+                        <i class="bi bi-telephone-fill"></i>
+                        +7 (473) 210-47-05
+                    </a>
+                </li>
+                <li class="mt-2">
+                    <a class="" href="mailto:fond@dfvrn.ru ">
+                        <i class="bi bi-envelope"></i>
+                        fond@dfvrn.ru
+                    </a>
+                </li>
+                <li class="mt-2">
+                    <a href="">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        394036, Россия, г. Воронеж,
+                        ул. Комиссаржевской, д. 15а,
+                        3 этаж, офис 3
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-2 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center text-black-50">
+            <i class="bi bi-printer"></i>
+            <p class="">Версия для печати</p>
+        </div>
+        <hr>
+        <div class="row row-cols-2 justify-content-between">
+            <div class="col-4">
+                <p class="text-black-50">
+                    © Воронежское областное отделение общероссийского общественного благотворительного фонда
+                    «Российский детский фонд» 1988-2022
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="text-black-50">
+                    Политика конфиденциальности
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- extra small devices -->
+    <div class="d-block d-sm-none row row-cols-1">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="row">
+                    <a class="link-dark" href="tel:+7(473)2104705">
+                        <i class="bi bi-telephone-fill"></i>
+                        +7 (473) 210-47-05
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <a class="" href="mailto:fond@dfvrn.ru ">
+                        <i class="bi bi-envelope"></i>
+                        fond@dfvrn.ru
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <a href="">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        394036, Россия, г. Воронеж, <br> ул. Комиссаржевской, д. 15а,<br> 3 этаж, офис 3
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p class="text-black-50">
+                    © Воронежское областное отделение общероссийского общественного <br> благотворительного фонда
+                    «Российский детский фонд» 1988-2022
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="text-black-50">
+                    Политика конфиденциальности
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
