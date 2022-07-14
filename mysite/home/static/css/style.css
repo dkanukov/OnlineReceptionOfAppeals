@@ -224,9 +224,9 @@ span {
     opacity: 0.5;
 }
 
-.test {
+.centered__text {
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: none;
 }
 
 .modal-backdrop {
