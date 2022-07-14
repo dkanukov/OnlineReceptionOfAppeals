@@ -203,12 +203,52 @@
                 <hr>
                 <div>
                     <div class="card" style="border: 1px solid gray; border-radius: 15px">
-                        <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem">
+                        <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem" alt="">
                         <div class="card-body">
                             <h5 class="card-title text-center">Хотите стать нашим партнером?</h5>
                             <p class="card-text text-center">Заполните анкету, наши специалисты свяжутся с Вами</p>
                             <hr>
-                            <h6 class="form__btn">Заполнить анкету</h6>
+                            <h6 class="form__btn" data-bs-toggle="modal" data-bs-target="#formModal">Заполнить анкету</h6>
+                            <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Стать партнером</h5>
+                                            <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="mb-3">
+                                                    <label for="nameFormInput" class="form-label">Имя <strong style="color: red">*</strong></label>
+                                                    <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="phoneFormInput" class="form-label">Номер телефона <strong style="color: red">*</strong></label>
+                                                    <input required type="tel" class="form-control" id="phoneFormInput" placeholder="(999)999-99-99">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="mailFormInput" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="mailFormInput" placeholder="example@gmail.com">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="messageFormInput" class="form-label">Сообщение</label>
+                                                    <input type="text" class="form-control" id="messageFormInput" placeholder="Мы будем рады узнать что-то о вас!">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
+                                                    <label class="form-check-label" for="checkboxForm">
+                                                        Я согласен на <a href="#">На обработку персональных данных</a>
+                                                    </label>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">Отправить</button>
+                                                    <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -233,12 +273,52 @@
                 <div class="d-block d-md-none">
                     <hr>
                     <div class="card" style="border: 1px solid gray; border-radius: 15px">
-                        <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem">
+                        <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem" alt="">
                         <div class="card-body">
                             <h5 class="card-title text-center">Хотите стать нашим партнером?</h5>
                             <p class="card-text text-center">Заполните анкету, наши специалисты свяжутся с Вами</p>
                             <hr>
-                            <h6 class="form__btn">Заполнить анкету</h6>
+                            <h6 class="form__btn" data-bs-toggle="modal" data-bs-target="#formModal">Заполнить анкету</h6>
+                            <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Стать партнером</h5>
+                                            <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="mb-3">
+                                                    <label for="nameFormInput" class="form-label">Имя <strong style="color: red">*</strong></label>
+                                                    <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="phoneFormInput" class="form-label">Номер телефона <strong style="color: red">*</strong></label>
+                                                    <input required type="tel" class="form-control" id="phoneFormInput" placeholder="(999)999-99-99">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="mailFormInput" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="mailFormInput" placeholder="example@gmail.com">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="messageFormInput" class="form-label">Сообщение</label>
+                                                    <input type="text" class="form-control" id="messageFormInput" placeholder="Мы будем рады узнать что-то о вас!">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
+                                                    <label class="form-check-label" for="checkboxForm">
+                                                        Я согласен на <a href="#">На обработку персональных данных</a>
+                                                    </label>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">Отправить</button>
+                                                    <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -403,6 +483,7 @@
             </div>
         </div>
     </footer>
-    <script src="../../static/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask"></script>
 </body>
 </html>
