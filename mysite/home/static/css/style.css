@@ -50,6 +50,13 @@ span {
     overflow: hidden;
 }
 
+.manage__text__overflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .search__icon {
     position: relative;
 }
@@ -231,4 +238,18 @@ span {
 
 .modal-backdrop {
     position:unset !important;
+}
+
+.footer__bg {
+    background-color: #F3FCFF;
+}
+
+.program__card svg {
+    transition: background-color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+
+.program__card:hover svg {
+    background-color: #2D60E0;
+    color: #FFFFFF;
 }
