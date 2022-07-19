@@ -236,10 +236,6 @@ span {
     text-justify: none;
 }
 
-.modal-backdrop {
-    position:unset !important;
-}
-
 .footer__bg {
     background-color: #F3FCFF;
 }
@@ -252,4 +248,11 @@ span {
 .program__card:hover svg {
     background-color: #2D60E0;
     color: #FFFFFF;
+}
+
+.manage__header__text__overflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
