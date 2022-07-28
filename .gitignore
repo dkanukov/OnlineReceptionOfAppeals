@@ -1,4 +1,6 @@
 .DS_Store
+.idea
+.jshintrc
 node_modules
 /dist
 
