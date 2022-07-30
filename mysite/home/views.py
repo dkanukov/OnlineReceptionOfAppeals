@@ -18,7 +18,7 @@ def get_news_page(request):
 
 
 class APINews(APIView):
-    def get(self, request):
+    def post(self, request):
         obj = News.objects.get(id=int(request.data['id']))
         additional_photos = []
         for block_photo in obj.additional_images:
