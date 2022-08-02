@@ -29,11 +29,11 @@ class APINews(APIView):
         for block_photo in obj.additional_images:
             additional_photos.append(block_photo._as_tuple()[1].file.url)
         return Response({'caption': obj.caption,
-                         'date': obj.create_date,
-                         'text_before_photo': obj.text_before_photo,
-                         'image_url': obj.image.file.url,
-                         'text_after_photo': obj.text_after_photo,
-                         'additional_photos': additional_photos})
+                         'date': format_date(obj.create_date),
+                         'textBeforePhoto': obj.text_before_photo,
+                         'imageUrl': obj.image.file.url,
+                         'textAfterPhoto': obj.text_after_photo,
+                         'additionalPhotos': additional_photos})
 
 
 def get_programs_page(request):
@@ -56,7 +56,16 @@ class APIPrograms(APIView):
         return Response({'title': obj.title,
                          'caption': obj.caption,
                          'description': obj.description,
-                         'date': obj.create_date,
-                         'image_url': obj.image.file.url
+                         'date': format_date(obj.create_date),
+                         'imageUrl': obj.image.file.url
                          })
+
+
+def format_date(date):
+    month_dct = {1: 'января', 2: 'февраля', 3: 'марта', 4: 'апреля',
+                 5: 'мая', 6: 'июня', 7: 'июля', 8: 'августа',
+                 9: 'сентября', 10: 'октября', 11: 'ноября', 12: 'декабря'}
+
+    year, month, day = date.year, date.month, date.day
+    return ' '.join(list(map(str, [day, month_dct[month], year])))
 
