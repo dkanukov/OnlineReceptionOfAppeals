@@ -20,6 +20,22 @@ h2 {
     line-height: 50px;
 }
 
+h3 {
+    font-family: 'Source Serif Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h4 {
+    font-family: 'Source Serif Pro', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
 a {
     text-decoration: none;
 }
@@ -249,3 +265,56 @@ span {
     background-color: #2D60E0;
     color: #FFFFFF;
 }
+
+.manage__header__text__overflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.program__btn {
+    background-color: white;
+    color: #0054A7;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: max-content;
+    border-radius: 10px;
+    transition: background-color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+
+.program__btn:hover {
+    cursor: pointer;
+    background-color: #2D60E0;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.26);
+}
+
+/*.program__photo {*/
+/*    background-size: cover;*/
+/*    min-height: 60vh;*/
+/*    position: relative;*/
+/*}*/
+
+/*.program__photo__overlay {*/
+/*    position: absolute;*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .program__photo {*/
+/*        min-height: 40vh;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 576px) {*/
+/*    .program__photo {*/
+/*        min-height: 40vh;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 430px) {*/
+/*    .program__photo {*/
+/*        min-height: 20vh;*/
+/*    }*/
+/*}*/

@@ -43,6 +43,14 @@ class News(models.Model):
 
 
 class Programs(models.Model):
+    title = models.CharField(max_length=100, null=True, verbose_name='Название программы')
+
+    caption = models.CharField(max_length=250, null=True, verbose_name="Подпись")
+
+    description = models.TextField(null=True, verbose_name="Описание программы")
+
+    create_date = models.DateField(auto_now_add=True, blank=True, null=True)
+
     image = models.ForeignKey('wagtailimages.Image',
                               on_delete=models.CASCADE,
                               related_name='+',
@@ -54,7 +62,10 @@ class Programs(models.Model):
         related_name='programs'
     )
     panels = [
-        ImageChooserPanel('image')
+        ImageChooserPanel('image'),
+        FieldPanel('title'),
+        FieldPanel('caption'),
+        FieldPanel('description')
     ]
 
 

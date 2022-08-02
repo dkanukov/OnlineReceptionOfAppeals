@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../static/css/style.css">
+    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <script defer type="application/javascript" src="../../static/js/donateForm.js"></script>
+    <script defer type="application/javascript" src="{% static 'home/js/donateForm.js' %}"></script>
     <title>News</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div class="row align-content-center">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
             <a href="">
-                <img src="../../static/img/logo.svg" alt="logo" srcset="" width="50px" height="100px">
+                <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="50px" height="100px">
             </a>
         </div>
         <!-- extra small devices -->
@@ -30,7 +31,7 @@
         <div class="d-block d-sm-none col-1 align-self-center">
             <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
                aria-expanded="false">
-                <img src="../../static/img/menu.svg" alt="menu" srcset="">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
                 <li><a class="dropdown-item" href="#">Главная</a></li>
@@ -53,7 +54,7 @@
         <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
             <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
                aria-expanded="false">
-                <img src="../../static/img/menu.svg" alt="menu" srcset="">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
                 <li><a class="dropdown-item" href="#">Главная</a></li>
@@ -77,7 +78,7 @@
         <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
             <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
                aria-expanded="false">
-                <img src="../../static/img/menu.svg" alt="menu" srcset="">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                 <li><a class="dropdown-item" href="#">Главная</a></li>
@@ -203,7 +204,7 @@
                 <hr>
                 <div>
                     <div class="card" style="border: 1px solid gray; border-radius: 15px">
-                        <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem">
+                        <img src="{% static 'home/images/logo_1.svg' %}" class="card-img-top mt-1" style="height: 9rem">
                         <div class="card-body">
                             <h5 class="card-title text-center">Хотите стать нашим партнером?</h5>
                             <p class="card-text text-center">Заполните анкету, наши специалисты свяжутся с Вами</p>
@@ -220,7 +221,7 @@
                 <p>
                     Делегация посетила три ПВР: приют «Покров», детский оздоровительный лагерь «Ракета» и Бобровскую школу-интернат для детей-сирот с ограниченными возможностями здоровья.
                 </p>
-                <img src="../../static/img/news_1.png" width="100%">
+                <img src="{% static 'home/images/news_1.png' %}" width="100%">
                 <p class="test">
                     В «Покрове» омбудсмен пообщалась с Ариной и ее мамой Ниной, которые были разлучены произошедшей эвакуацией из Донецка, но благодаря слаженной работе Детского фонда и уполномоченных по правам ребёнка Воронежской и Ульяновской областей, им удалось встретиться.  Об этой истории вы можете прочитать на нашем сайте и в социальных сетях фонда. Сейчас мама с девочкой чувствуют себя хорошо и спокойно. Арина рассказала, что хочет стать дизайнером одежды и готовится к поступлению в специализированный колледж.
 
@@ -233,7 +234,7 @@
                 <div class="d-block d-md-none">
                     <hr>
                     <div class="card" style="border: 1px solid gray; border-radius: 15px">
-                        <img src="../../static/img/logo_1.svg" class="card-img-top mt-1" style="height: 9rem">
+                        <img src="{% static 'home/images/logo_1.svg' %}" class="card-img-top mt-1" style="height: 9rem">
                         <div class="card-body">
                             <h5 class="card-title text-center">Хотите стать нашим партнером?</h5>
                             <p class="card-text text-center">Заполните анкету, наши специалисты свяжутся с Вами</p>
@@ -252,7 +253,7 @@
             <div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-3 row-cols-sm-1 row-cols-1 g-sm-3 g-3">
                 <div class="col">
                     <div class="card" style="outline: 1px solid gray">
-                        <img src="../../static/img/news_1.png" class="card-img-top" alt="">
+                        <img src="{% static 'home/images/news_1.png' %}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
                             <p class="card-text">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами и над теми, кто находится в приюте Покров.</p>
@@ -269,7 +270,7 @@
                 </div>
                 <div class="col">
                     <div class="card" style="outline: 1px solid gray">
-                        <img src="../../static/img/news_2.png" class="card-img-top" alt="">
+                        <img src="{% static 'home/images/news_2.png' %}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
                             <p class="card-text">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами и над теми, кто находится в приюте Покров.</p>
@@ -286,7 +287,7 @@
                 </div>
                 <div class="col">
                     <div class="card" style="outline: 1px solid gray">
-                        <img src="../../static/img/news_3.png" class="card-img-top" alt="">
+                        <img src="{% static 'home/images/news_3.png' %}" class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
                             <p class="card-text">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами и над теми, кто находится в приюте Покров.</p>
@@ -403,6 +404,6 @@
             </div>
         </div>
     </footer>
-    <script src="../../static/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'home/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

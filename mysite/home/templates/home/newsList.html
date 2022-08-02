@@ -149,7 +149,7 @@
             <div id="newsArea" class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 g-sm-3 g-3">
                 {% for news in page_obj %}
                 <div class="col">
-                    <a id="pageLink" href=news_list?id={{news.id}}>
+                    <a id="pageLink" href="news?id={{news.id}}">
                         <div class="card" style="outline: 1px solid gray">
                             {% image news.image original as img %}
                             <img src="{{img.url}}" class="card-img-top" alt="">
