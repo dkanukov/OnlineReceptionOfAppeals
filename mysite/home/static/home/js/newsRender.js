@@ -1,28 +1,18 @@
-const exampleData = {
-    textHeader: "Для маленьких детей-сирот в Воронежской области начнут искать семьи по пилотной программе",
-    date: "11 марта, 2022",
-    textBeforePhoto: "10 марта в ходе рабочей поездки в Воронежскую область уполномоченная по правам ребёнка при президенте РФ Мария Львова-Белова посетила три пункта временного размещения наших подопечных, прибывших из ДНР и ЛНР.\n" +
-        "Делегация посетила три ПВР: приют «Покров», детский оздоровительный лагерь «Ракета» и Бобровскую школу-интернат для детей-сирот с ограниченными возможностями здоровья.",
-    imgUrl: "../../static/img/news_1.png",
-    textAfterPhoto: "В «Покрове» омбудсмен пообщалась с Ариной и ее мамой Ниной, которые были разлучены произошедшей эвакуацией из Донецка, но благодаря слаженной работе Детского фонда и уполномоченных по правам ребёнка Воронежской и Ульяновской областей, им удалось встретиться.  Об этой истории вы можете прочитать на нашем сайте и в социальных сетях фонда. Сейчас мама с девочкой чувствуют себя хорошо и спокойно. Арина рассказала, что хочет стать дизайнером одежды и готовится к поступлению в специализированный колледж.\n" +
-        "Также целью визита Марии Беловой-Львовой стало обсуждение с губернатором области Александром Гусевым вопроса упрощения процедуры опекунства и усыновления детей Донбасса. Данная тема была озвучена во время официальной встречи с президентом России Владимиром Путиным. Он поддержал инициативу уполномоченной по правам ребенка.\n" +
-        "Воронежская область войдет в число участников пилотного проекта. И Детский фонд станет одним из его партнеров. Это очень важное начинание – мы приняли уже 4 обращения от российских семей, готовых усыновить детей из числа беженцев.\n" +
-        "Кстати, еще 22 февраля председатель регионального отделения Фонда Марина Севергина и уполномоченный по правам ребенка в Воронежской области Ирина Попова приняли участие в селекторном совещании с Марией Львовой-Беловой, в ходе которого обсудили актуальные проблемы, с которыми их коллеги из регионов сталкиваются при оказании помощи жителям Донецкой и Луганской народных республик. Участники совещания обменялись опытом, договорились наладить оперативный обмен информацией и выработать единые алгоритмы действий."
-}
 const header = document.getElementById('mainHeader');
 const date = document.getElementById('date');
 const textBeforePhoto = document.getElementById('textBeforePhoto');
 const img = document.getElementById('img');
 const textAfterPhoto = document.getElementById('textAfterPhoto');
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded');
-    //TODO: Making request to server
+document.addEventListener('DOMContentLoaded', async function () {
     const params = new URLSearchParams(window.location.search).get('id');
-    console.log(params);
-    //request here
-    header.innerText = exampleData.textHeader;
-    date.innerText = exampleData.date
-    textBeforePhoto.innerText = exampleData.textBeforePhoto;
-    img.src = exampleData.imgUrl;
-    textAfterPhoto.innerText = exampleData.textAfterPhoto;
+    const res = await fetch("http://127.0.0.1:8000/api/news?id=" + params, {method: 'GET'})
+        .then((res) => res.json())
+        .then(function(data) {
+            console.log(data);
+            header.innerText = data.caption;
+            date.innerText = data.date;
+            img.src = data.image_url;
+            textBeforePhoto.innerText = data.text_before_photo;
+            textAfterPhoto.innerText = data.text_after_photo;
+        })
 });

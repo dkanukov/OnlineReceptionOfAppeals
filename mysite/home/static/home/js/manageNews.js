@@ -9,11 +9,6 @@
 // })
 
 (function () {
-    const link = document.querySelectorAll("#pageLink");
-    link.forEach(el => {
-      el.addEventListener("click", () => {
-          window.location.href = el.getAttribute("href");
-      });
-    });
+    console.log("manageNews.js");
 })();
 
