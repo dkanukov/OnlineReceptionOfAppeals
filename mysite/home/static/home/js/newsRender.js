@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             console.log(data);
             header.innerText = data.caption;
             date.innerText = data.date;
-            img.src = data.image_url;
-            textBeforePhoto.innerText = data.text_before_photo;
-            textAfterPhoto.innerText = data.text_after_photo;
+            img.src = data.imageUrl;
+            textBeforePhoto.innerText = data.textBeforePhoto;
+            textAfterPhoto.innerText = data.textAfterPhoto;
         })
 });
