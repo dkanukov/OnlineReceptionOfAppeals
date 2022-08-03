@@ -45,7 +45,7 @@ class News(models.Model):
 class Programs(models.Model):
     title = models.CharField(max_length=100, null=True, verbose_name='Название программы')
 
-    caption = models.CharField(max_length=250, null=True, verbose_name="Подпись")
+    caption = models.TextField(null=True, verbose_name="Подпись")
 
     description = models.TextField(null=True, verbose_name="Описание программы")
 
