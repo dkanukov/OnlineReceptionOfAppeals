@@ -4,7 +4,6 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.models import Page
 from modelcluster.fields import ParentalKey
-from wagtail import blocks
 from wagtail.fields import StreamField
 
 
@@ -85,6 +84,37 @@ class Feedback(models.Model):
     ]
 
 
+class AboutInfo(models.Model):
+
+    information = models.TextField(verbose_name='информация о фонде')
+    phone_number = models.CharField(max_length=20,
+                                    unique=True,
+                                    blank=False,
+                                    verbose_name='номер телефона')
+
+    second_phone_number = models.CharField(max_length=20,
+                                           unique=True,
+                                           blank=True,
+                                           null=True,
+                                           verbose_name='дополнительный номер теелфона')
+
+    email = models.EmailField(max_length=255, verbose_name='адрес электронной почты')
+    address = models.TextField(verbose_name='полный адрес')
+    page = ParentalKey(
+        'home.HomePage',
+        on_delete=models.CASCADE,
+        related_name='about'
+    )
+
+    panels = [
+        FieldPanel('information'),
+        FieldPanel('phone_number'),
+        FieldPanel('second_phone_number'),
+        FieldPanel('email'),
+        FieldPanel('address')
+    ]
+
+
 class HomePage(Page):
 
     content_panels = Page.content_panels + [
@@ -94,4 +124,5 @@ class HomePage(Page):
                         heading='Программы'),
         MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
                         heading='Отзывы'),
+        MultiFieldPanel([InlinePanel('about', label='информацию')], heading='Информация')
     ]

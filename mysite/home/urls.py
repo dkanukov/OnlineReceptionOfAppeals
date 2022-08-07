@@ -7,5 +7,6 @@ urlpatterns = [
         path('news', views.get_specific_news, name='get_spec_news'),
         path('programs_list', views.get_programs_page, name='programs'),
         path('api/programs', views.APIPrograms.as_view()),
-        path('program', views.get_specific_program, name='get_spec_prog')
+        path('program', views.get_specific_program, name='get_spec_prog'),
+        path('about', views.get_about_page, name='about')
     ]

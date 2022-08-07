@@ -4,8 +4,7 @@ from django.template import loader
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .serializers import NewsSerializer
-from . models import News, Programs
+from . models import News, Programs, AboutInfo
 
 
 def get_news_page(request):
@@ -69,3 +68,13 @@ def format_date(date):
     year, month, day = date.year, date.month, date.day
     return ' '.join(list(map(str, [day, month_dct[month], year])))
 
+
+def get_about_page(request):
+    info = AboutInfo.objects.all()[0]
+
+    temp = loader.get_template('home/about.html')
+    return HttpResponse(temp.render({'information': info.information,
+                                     'phone_number': info.phone_number,
+                                     'second_phone_number': info.second_phone_number,
+                                     'email': info.email,
+                                     'address': info.address}))
