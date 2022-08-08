@@ -115,6 +115,19 @@ class AboutInfo(models.Model):
     ]
 
 
+class Report(models.Model):
+    file = models.FileField(verbose_name='отчёт')
+    create_date = models.DateField(auto_now_add=True, blank=True, null=True)
+    page = ParentalKey(
+        'home.HomePage',
+        on_delete=models.CASCADE,
+        related_name='reports'
+    )
+    panels = [
+        FieldPanel('file')
+    ]
+
+
 class HomePage(Page):
 
     content_panels = Page.content_panels + [
@@ -124,5 +137,6 @@ class HomePage(Page):
                         heading='Программы'),
         MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
                         heading='Отзывы'),
-        MultiFieldPanel([InlinePanel('about', label='информацию')], heading='Информация')
+        MultiFieldPanel([InlinePanel('about', label='информацию')], heading='Информация'),
+        MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты')
     ]

@@ -11,3 +11,7 @@ class NewsSerializer(serializers.Serializer):
         child=serializers.ImageField(use_url=True)
     )
 
+
+class PartnerSerializer(serializers.Serializer):
+    pass
+    ''' прописать все поля и метод create, в апиview прописать метод пост, is_valid(), save() '''
