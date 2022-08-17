@@ -137,6 +137,6 @@ class HomePage(Page):
                         heading='Программы'),
         MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
                         heading='Отзывы'),
-        MultiFieldPanel([InlinePanel('about', label='информацию')], heading='Информация'),
+        MultiFieldPanel([InlinePanel('about', label='информацию', max_num=1)], heading='Информация'),
         MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты')
     ]
