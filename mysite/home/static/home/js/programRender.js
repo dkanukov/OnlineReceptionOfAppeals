@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     await fetch("http://127.0.0.1:8000/api/programs?id=" + params, {method: 'GET'})
         .then((res) => res.json())
         .then((data) => {
-            console.log("Ура! файл обновился");
-            document.getElementById('caption').innerText = data.title;
+            console.log(data);
+            document.getElementById('title').innerText = data.title;
+            document.getElementById('caption').innerText = data.caption;
+            document.getElementById('description').innerText = data.description;
+            document.getElementById('bgcImg').style.backgroundImage = data.imageUrl;
         })
-    // const res = await fetch("http://127.0.0.1:8000/api/programs?id=" + params, {method: 'GET'});
-    // const data = await res.json();
-    // console.log(data);
 });
