@@ -148,17 +148,77 @@
   </div>
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-4 col-5 mb-3">
-      <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active p-lg-4 p-md-3" aria-current="true">О фонде</a>
-        <a href="#" class="list-group-item list-group-item-action p-lg-4 p-md-3">Хочу помочь фонду</a>
-        <a href="#" class="list-group-item list-group-item-action p-lg-4 p-md-3">Программы фонда</a>
-        <a href="#" class="list-group-item list-group-item-action p-lg-4 p-md-3">Документы</a>
-        <a href="#" class="list-group-item list-group-item-action p-lg-4 p-md-3">Реквизиты</a>
-        <a href="#" class="list-group-item list-group-item-action p-lg-4 p-md-3">Отзывы</a>
+      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="about-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">О фонде</button>
+        <button class="nav-link" id="help-tab" data-bs-toggle="pill" data-bs-target="#help" type="button" role="tab" aria-controls="help" aria-selected="false">Хочу помочь фонду</button>
+        <button class="nav-link" id="programs-tab" data-bs-toggle="pill" data-bs-target="#programs" type="button" role="tab" aria-controls="programs" aria-selected="false">Программы фонда</button>
+        <button class="nav-link" id="docs-tab" data-bs-toggle="pill" data-bs-target="#docs" type="button" role="tab" aria-controls="docs" aria-selected="false">Документы</button>
+        <button class="nav-link " id="requisites-tab" data-bs-toggle="pill" data-bs-target="#requisites" type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты</button>
+        <button class="nav-link" id="feedbacks-tab" data-bs-toggle="pill" data-bs-target="#feedbacks" type="button" role="tab" aria-controls="feedbacks" aria-selected="false">Отзывы</button>
       </div>
     </div>
-    <div class="col-lg-8 col-md-8 col-sm-8 col-12">
-    {{information|linebreaks}}
+    <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">{{information|linebreaks}}</div>
+      <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">1</div>
+      <div class="tab-pane fade" id="programs" role="tabpanel" aria-labelledby="programs-tab">2</div>
+      <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">3</div>
+      <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
+        <table class="table">
+          <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+            <tr>
+              <td>Полное наименование:</td>
+              <td>Воронежское областное отделение общероссийского общественного благотворительного фонда «Российский детский фонд»</td>
+            </tr>
+          <tr>
+            <td>Сокращенное наименование:</td>
+            <td>ВООООБФ «Российский детский фонд»</td>
+          </tr>
+          <tr>
+            <td>ИНН/КПП:</td>
+            <td>3664011005/366401001</td>
+          </tr>
+          <tr>
+            <td>ОГРН:</td>
+            <td>1033692003443</td>
+          </tr>
+          <tr>
+            <td>Юридический адрес:</td>
+            <td>394018, г. Воронеж, пл. Ленина, 5 комната 7</td>
+          </tr>
+          <tr>
+            <td>Фактический адрес:</td>
+            <td>394018, г. Воронеж, пл. Ленина, 5 комната 7</td>
+          </tr>
+          <tr>
+            <td>Телефон:</td>
+            <td><a href="tel:+74732104705">+7 (473) 210-47-05</a></td>
+          </tr>
+          <tr>
+            <td>Электронная почта:</td>
+            <td><a href="mailto:fond@dfvrn.ru">fond@dfvrn.ru</a></td>
+          </tr>
+          <tr>
+            <td>Сайт:</td>
+            <td>Ссылка на сайт</td>
+          </tr>
+          <tr>
+            <td>Банковские реквизиты:</td>
+            <td>БИК 042007681
+              Р/с №40703810813000019237 в Центрально-Черноземном банке ПАО Сбербанк г. Воронеж
+              Кор/счет 30101810600000000681</td>
+          </tr>
+          <tr>
+            <td>Председатель правления:</td>
+            <td>Севергина Марина Алексеевна, действующая на основании Протокола №1 от 07.02.2017</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="feedbacks" role="tabpanel" aria-labelledby="feedbacks-tab">5</div>
     </div>
   </div>
 </div>
