@@ -2,322 +2,359 @@
 {% load static %}
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
-        rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-  <title>About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>About</title>
 </head>
 <body>
 <header class="header container-fluid pb-1">
-  <div class="row align-content-center">
-    <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-      <a href="">
-        <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="50px" height="100px">
-      </a>
-    </div>
-    <!-- extra small devices -->
-    <div class="d-block d-sm-none col-7 align-self-center">
-      <p class="text-info text-uppercase">
-        Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-        <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-      </p>
-    </div>
-    <div class="d-block d-sm-none col-1 align-self-center">
-      <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
-         aria-expanded="false">
-        <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
-        <li><a class="dropdown-item" href="#">Главная</a></li>
-        <li><a class="dropdown-item text-info" href="#">О фонде</a></li>
-        <li><a class="dropdown-item" href="#">Программы</a></li>
-        <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
-        <li><a class="dropdown-item" href="#">Право голоса</a></li>
-        <li><a class="dropdown-item" href="#">Новости</a></li>
-        <li><a class="dropdown-item" href="#">Контакты</a></li>
-      </ul>
-    </div>
+    <div class="row align-content-center">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+            <a href="">
+                <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="50px" height="100px">
+            </a>
+        </div>
+        <!-- extra small devices -->
+        <div class="d-block d-sm-none col-7 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
+            </p>
+        </div>
+        <div class="d-block d-sm-none col-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
+                <li><a class="dropdown-item" href="#">Главная</a></li>
+                <li><a class="dropdown-item text-info" href="#">О фонде</a></li>
+                <li><a class="dropdown-item" href="#">Программы</a></li>
+                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
 
-    <!-- small devices -->
-    <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
-      <p class="text-info text-uppercase">
-        Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-        <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-      </p>
-    </div>
-    <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
-      <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
-         aria-expanded="false">
-        <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
-        <li><a class="dropdown-item" href="#">Главная</a></li>
-        <li><a class="dropdown-item text-info" href="#">О фонде</a></li>
-        <li><a class="dropdown-item" href="#">Программы</a></li>
-        <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
-        <li><a class="dropdown-item" href="#">Право голоса</a></li>
-        <li><a class="dropdown-item" href="#">Новости</a></li>
-        <li><a class="dropdown-item" href="#">Контакты</a></li>
-      </ul>
-    </div>
+        <!-- small devices -->
+        <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
+            </p>
+        </div>
+        <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
+                <li><a class="dropdown-item" href="#">Главная</a></li>
+                <li><a class="dropdown-item text-info" href="#">О фонде</a></li>
+                <li><a class="dropdown-item" href="#">Программы</a></li>
+                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
 
-    <!-- medium devices -->
-    <div class="d-none d-md-block d-lg-none col-md-10 align-self-center">
-      <p class="text-info text-uppercase">
-        Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
-        детский фонд”<br>
-        <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-      </p>
-    </div>
-    <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
-      <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-         aria-expanded="false">
-        <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
-      </a>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li><a class="dropdown-item" href="#">Главная</a></li>
-        <li><a class="dropdown-item text-info" href="#">О фонде</a></li>
-        <li><a class="dropdown-item" href="#">Программы</a></li>
-        <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
-        <li><a class="dropdown-item" href="#">Право голоса</a></li>
-        <li><a class="dropdown-item" href="#">Новости</a></li>
-        <li><a class="dropdown-item" href="#">Контакты</a></li>
-      </ul>
-    </div>
+        <!-- medium devices -->
+        <div class="d-none d-md-block d-lg-none col-md-10 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
+                детский фонд”<br>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
+            </p>
+        </div>
+        <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">Главная</a></li>
+                <li><a class="dropdown-item text-info" href="#">О фонде</a></li>
+                <li><a class="dropdown-item" href="#">Программы</a></li>
+                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+            </ul>
+        </div>
 
-    <!-- large divices -->
-    <div class="align-self-end col-lg-4 mt-lg-2">
-      <p class="text-uppercase text-info d-none d-lg-block">
-        Воронежское областное отделение <br>
-        общероссийского общественного <br>
-        благотворительного фонда <br>
-        “Российский детский фонд” <br>
-        <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-      </p>
+        <!-- large divices -->
+        <div class="align-self-end col-lg-4 mt-lg-2">
+            <p class="text-uppercase text-info d-none d-lg-block">
+                Воронежское областное отделение <br>
+                общероссийского общественного <br>
+                благотворительного фонда <br>
+                “Российский детский фонд” <br>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
+            </p>
+        </div>
+        <nav class="navbar navbar-expand-lg col-lg-7">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav flex-lg-wrap">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info" href="">О фонде</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Программы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Хочу помочь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Право голоса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <nav class="navbar navbar-expand-lg col-lg-7">
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav flex-lg-wrap">
-          <li class="nav-item">
-            <a class="nav-link" href="">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-info" href="">О фонде</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Программы</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Хочу помочь</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Право голоса</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Новости</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Контакты</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">Контакты</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
 </header>
 <div class="container-lg container-md container-fluid-sm pt-1">
-  <div class="row">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Главная</a></li>
-        <li class="breadcrumb-item active" aria-current="page">О фонде</li>
-      </ol>
-    </nav>
-  </div>
-  <div class="row mb-3">
-    <h2 class="text-center d-none d-sm-block">Воронежское областное отделение общероссийского общественного благотворительного фонда «Российский детский фонд»</h2>
-    <h4 class="text-center d-block d-sm-none">Воронежское областное отделение общероссийского общественного благотворительного фонда «Российский детский фонд»</h4>
-  </div>
-  <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-4 col-5 mb-3">
-      <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <button class="nav-link active" id="about-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="true">О фонде</button>
-        <button class="nav-link" id="help-tab" data-bs-toggle="pill" data-bs-target="#help" type="button" role="tab" aria-controls="help" aria-selected="false">Хочу помочь фонду</button>
-        <button class="nav-link" id="programs-tab" data-bs-toggle="pill" data-bs-target="#programs" type="button" role="tab" aria-controls="programs" aria-selected="false">Программы фонда</button>
-        <button class="nav-link" id="docs-tab" data-bs-toggle="pill" data-bs-target="#docs" type="button" role="tab" aria-controls="docs" aria-selected="false">Документы</button>
-        <button class="nav-link " id="requisites-tab" data-bs-toggle="pill" data-bs-target="#requisites" type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты</button>
-        <button class="nav-link" id="feedbacks-tab" data-bs-toggle="pill" data-bs-target="#feedbacks" type="button" role="tab" aria-controls="feedbacks" aria-selected="false">Отзывы</button>
-      </div>
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">О фонде</li>
+            </ol>
+        </nav>
     </div>
-    <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">{{information|linebreaks}}</div>
-      <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">1</div>
-      <div class="tab-pane fade" id="programs" role="tabpanel" aria-labelledby="programs-tab">2</div>
-      <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">3</div>
-      <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
-        <table class="table">
-          <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-            <tr>
-              <td>Полное наименование:</td>
-              <td>Воронежское областное отделение общероссийского общественного благотворительного фонда «Российский детский фонд»</td>
-            </tr>
-          <tr>
-            <td>Сокращенное наименование:</td>
-            <td>ВООООБФ «Российский детский фонд»</td>
-          </tr>
-          <tr>
-            <td>ИНН/КПП:</td>
-            <td>3664011005/366401001</td>
-          </tr>
-          <tr>
-            <td>ОГРН:</td>
-            <td>1033692003443</td>
-          </tr>
-          <tr>
-            <td>Юридический адрес:</td>
-            <td>394018, г. Воронеж, пл. Ленина, 5 комната 7</td>
-          </tr>
-          <tr>
-            <td>Фактический адрес:</td>
-            <td>394018, г. Воронеж, пл. Ленина, 5 комната 7</td>
-          </tr>
-          <tr>
-            <td>Телефон:</td>
-            <td><a href="tel:+74732104705">+7 (473) 210-47-05</a></td>
-          </tr>
-          <tr>
-            <td>Электронная почта:</td>
-            <td><a href="mailto:fond@dfvrn.ru">fond@dfvrn.ru</a></td>
-          </tr>
-          <tr>
-            <td>Сайт:</td>
-            <td>Ссылка на сайт</td>
-          </tr>
-          <tr>
-            <td>Банковские реквизиты:</td>
-            <td>БИК 042007681
-              Р/с №40703810813000019237 в Центрально-Черноземном банке ПАО Сбербанк г. Воронеж
-              Кор/счет 30101810600000000681</td>
-          </tr>
-          <tr>
-            <td>Председатель правления:</td>
-            <td>Севергина Марина Алексеевна, действующая на основании Протокола №1 от 07.02.2017</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="tab-pane fade" id="feedbacks" role="tabpanel" aria-labelledby="feedbacks-tab">5</div>
+    <div class="row mb-3">
+        <h2 class="text-center d-none d-sm-block">Воронежское областное отделение общероссийского общественного
+            благотворительного фонда «Российский детский фонд»</h2>
+        <h4 class="text-center d-block d-sm-none">Воронежское областное отделение общероссийского общественного
+            благотворительного фонда «Российский детский фонд»</h4>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-5 mb-3">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="m-2 nav-link nav__btn" id="about-tab" data-bs-toggle="pill" data-bs-target="#about"
+                        type="button" role="tab" aria-controls="about" aria-selected="true">О фонде
+                </button>
+                <button class="m-2 nav-link nav__btn" id="help-tab" data-bs-toggle="pill" data-bs-target="#help" type="button"
+                        role="tab" aria-controls="help" aria-selected="false">Хочу помочь фонду
+                </button>
+                <button class="m-2 nav-link nav__btn" id="programs-tab" data-bs-toggle="pill" data-bs-target="#programs"
+                        type="button" role="tab" aria-controls="programs" aria-selected="false">Программы фонда
+                </button>
+                <button class="m-2 nav-link nav__btn" id="docs-tab" data-bs-toggle="pill" data-bs-target="#docs" type="button"
+                        role="tab" aria-controls="docs" aria-selected="false">Документы
+                </button>
+                <button class="m-2 nav-link nav__btn" id="requisites-tab" data-bs-toggle="pill" data-bs-target="#requisites"
+                        type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты
+                </button>
+                <button class="m-2 nav-link nav__btn active" id="feedbacks-tab" data-bs-toggle="pill" data-bs-target="#feedbacks"
+                        type="button" role="tab" aria-controls="feedbacks" aria-selected="false">Отзывы
+                </button>
+            </div>
+        </div>
+        <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12" id="v-pills-tabContent">
+            <div class="tab-pane fade " id="about" role="tabpanel" aria-labelledby="about-tab">
+                {{information|linebreaks}}
+            </div>
+            <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">1</div>
+            <div class="tab-pane fade" id="programs" role="tabpanel" aria-labelledby="programs-tab">2</div>
+            <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">3</div>
+            <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Полное наименование:</td>
+                        <td>Воронежское областное отделение общероссийского общественного благотворительного фонда
+                            «Российский детский фонд»
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Сокращенное наименование:</td>
+                        <td>ВООООБФ «Российский детский фонд»</td>
+                    </tr>
+                    <tr>
+                        <td>ИНН/КПП:</td>
+                        <td>3664011005/366401001</td>
+                    </tr>
+                    <tr>
+                        <td>ОГРН:</td>
+                        <td>1033692003443</td>
+                    </tr>
+                    <tr>
+                        <td>Юридический адрес:</td>
+                        <td>394018, г. Воронеж, пл. Ленина, 5 комната 7</td>
+                    </tr>
+                    <tr>
+                        <td>Фактический адрес:</td>
+                        <td>394018, г. Воронеж, пл. Ленина, 5 комната 7</td>
+                    </tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td><a href="tel:+74732104705">+7 (473) 210-47-05</a></td>
+                    </tr>
+                    <tr>
+                        <td>Электронная почта:</td>
+                        <td><a href="mailto:fond@dfvrn.ru">fond@dfvrn.ru</a></td>
+                    </tr>
+                    <tr>
+                        <td>Сайт:</td>
+                        <td>Ссылка на сайт</td>
+                    </tr>
+                    <tr>
+                        <td>Банковские реквизиты:</td>
+                        <td>БИК 042007681
+                            Р/с №40703810813000019237 в Центрально-Черноземном банке ПАО Сбербанк г. Воронеж
+                            Кор/счет 30101810600000000681
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Председатель правления:</td>
+                        <td>Севергина Марина Алексеевна, действующая на основании Протокола №1 от 07.02.2017</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade show active" id="feedbacks" role="tabpanel" aria-labelledby="feedbacks-tab">
+                <p class="text-center">Всегда рады Вашим отзывам, они мотивируют нас на новые достижения!</p>
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-primary btn-lg">Оставить отзыв</button>
+                </div>
+                <div class="row row-cols-1">
+                    <div class="col mt-4">
+                        <div class="card feedback__card">
+                            <div class="card-body">
+                                <h5 class="card-title">Отзыв</h5>
+                                <p class="card-text">Отзыв</p>
+                                <p class="card-text"><small class="text-muted">Дата</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <footer class="container-fluid footer__bg">
-  <hr>
-  <div
-          class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
-    <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
-      <ul>
-        <li><a class="link-dark" href="">ГЛАВНАЯ</a></li>
-        <li><a class="link-dark" href="">О ФОНДЕ</a></li>
-        <li><a class="link-dark" href="">ПРОГРАММЫ</a></li>
-        <li><a class="link-dark" href="">ХОЧУ ПОМОЧЬ</a></li>
-        <li><a class="link-dark" href="">ПРАВО ГОЛОСА</a></li>
-        <li><a class="link-dark" href="">НОВОСТИ</a></li>
-        <li><a class="link-dark" href="">КОНТАКТЫ</a></li>
-      </ul>
-    </div>
-    <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
-      <ul>
-        <li>
-          <a class="link-dark" href="tel:+7(473)2104705">
-            <i class="bi bi-telephone-fill"></i>
-            {{phone_number}}
-          </a>
-        </li>
-        <li class="mt-2">
-          <a class="" href="mailto:fond@dfvrn.ru ">
-            <i class="bi bi-envelope"></i>
-            {{email}}
-          </a>
-        </li>
-        <li class="mt-2">
-          <a href="">
-            <i class="bi bi-geo-alt-fill"></i>
-            {{address}}
-          </a>
-        </li>
-      </ul>
+    <hr>
+    <div class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
+        <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
+            <ul>
+                <li><a class="link-dark" href="">ГЛАВНАЯ</a></li>
+                <li><a class="link-dark" href="">О ФОНДЕ</a></li>
+                <li><a class="link-dark" href="">ПРОГРАММЫ</a></li>
+                <li><a class="link-dark" href="">ХОЧУ ПОМОЧЬ</a></li>
+                <li><a class="link-dark" href="">ПРАВО ГОЛОСА</a></li>
+                <li><a class="link-dark" href="">НОВОСТИ</a></li>
+                <li><a class="link-dark" href="">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
+            <ul>
+                <li>
+                    <a class="link-dark" href="tel:+7(473)2104705">
+                        <i class="bi bi-telephone-fill"></i>
+                        {{phone_number}}
+                    </a>
+                </li>
+                <li class="mt-2">
+                    <a class="" href="mailto:fond@dfvrn.ru ">
+                        <i class="bi bi-envelope"></i>
+                        {{email}}
+                    </a>
+                </li>
+                <li class="mt-2">
+                    <a href="">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        {{address}}
+                    </a>
+                </li>
+            </ul>
 
-    </div>
-    <div class="col-2 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center text-black-50">
-      <i class="bi bi-printer"></i>
-      <p class="">Версия для печати</p>
-    </div>
-    <hr>
-    <div class="row row-cols-2 justify-content-between">
-      <div class="col-4">
-        <p class="text-black-50">
-          © Воронежское областное отделение общероссийского общественного благотворительного фонда
-          «Российский детский фонд» 1988-2022
-        </p>
-      </div>
-      <div class="col-auto">
-        <p class="text-black-50">
-          Политика конфиденциальности
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- extra small devices -->
-  <div class="d-block d-sm-none row row-cols-1">
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <div class="row">
-          <a class="link-dark" href="tel:+7(473)2104705">
-            <i class="bi bi-telephone-fill"></i>
-            {{phone_number}}
-          </a>
         </div>
-        <div class="row mt-2">
-          <a class="" href="mailto:fond@dfvrn.ru ">
-            <i class="bi bi-envelope"></i>
-            {{email}}
-          </a>
+        <div class="col-2 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center text-black-50">
+            <i class="bi bi-printer"></i>
+            <p class="">Версия для печати</p>
         </div>
-        <div class="row mt-2">
-          <a href="">
-            <i class="bi bi-geo-alt-fill"></i>
-            {{address}}</a>
+        <hr>
+        <div class="row row-cols-2 justify-content-between">
+            <div class="col-4">
+                <p class="text-black-50">
+                    © Воронежское областное отделение общероссийского общественного благотворительного фонда
+                    «Российский детский фонд» 1988-2022
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="text-black-50">
+                    Политика конфиденциальности
+                </p>
+            </div>
         </div>
-      </div>
     </div>
-    <hr>
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <p class="text-black-50">
-          © Воронежское областное отделение общероссийского общественного <br> благотворительного фонда
-          «Российский детский фонд» 1988-2022
-        </p>
-      </div>
-      <div class="col-auto">
-        <p class="text-black-50">
-          Политика конфиденциальности
-        </p>
-      </div>
+    <!-- extra small devices -->
+    <div class="d-block d-sm-none row row-cols-1">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="row">
+                    <a class="link-dark" href="tel:+7(473)2104705">
+                        <i class="bi bi-telephone-fill"></i>
+                        {{phone_number}}
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <a class="" href="mailto:fond@dfvrn.ru ">
+                        <i class="bi bi-envelope"></i>
+                        {{email}}
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <a href="">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        {{address}}</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p class="text-black-50">
+                    © Воронежское областное отделение общероссийского общественного <br> благотворительного фонда
+                    «Российский детский фонд» 1988-2022
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="text-black-50">
+                    Политика конфиденциальности
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
