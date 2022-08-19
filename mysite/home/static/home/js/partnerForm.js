@@ -44,7 +44,7 @@ function isValidXs() {
         isValid();
     });
     btnSubmit.addEventListener('click', function () {
-        //    here will be form sending dont forget about trim() for inputs
+        //    TODO: here will be form sending dont forget about trim() for inputs
         nameInput.value = '';
         phoneInput.value = '';
         emailInput.value = '';
