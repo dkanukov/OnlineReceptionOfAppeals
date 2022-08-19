@@ -298,3 +298,7 @@ span {
 .feedback__card {
     border: 1px solid #E4E4EF;
 }
+
+.feedback__card:not(:first-child) {
+    margin-top: 20px;
+}
