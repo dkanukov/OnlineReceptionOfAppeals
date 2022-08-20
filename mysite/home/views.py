@@ -78,3 +78,8 @@ def get_about_page(request):
                                      'second_phone_number': info.second_phone_number,
                                      'email': info.email,
                                      'address': info.address}))
+
+
+def get_personal_data_consent(request):
+    temp = loader.get_template(('home/personalDataValidation.html'))
+    return HttpResponse(temp.render())

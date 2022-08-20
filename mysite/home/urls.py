@@ -8,5 +8,6 @@ urlpatterns = [
         path('programs_list', views.get_programs_page, name='programs'),
         path('api/programs', views.APIPrograms.as_view()),
         path('program', views.get_specific_program, name='get_spec_prog'),
-        path('about', views.get_about_page, name='about')
+        path('about', views.get_about_page, name='about'),
+        path('personal_data', views.get_personal_data_consent, name='pers_data')
     ]

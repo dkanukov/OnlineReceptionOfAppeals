@@ -133,18 +133,20 @@
         </nav>
     </div>
 </header>
-<div class="container-fluid program__photo d-none d-sm-block"
-     style="background-image: url('../../static/home/images/picture.png');
+<div id="bgcImg" class="container-fluid program__photo"
+     style="
             background-repeat: no-repeat;
-            background-size: cover">
+            background-position: center;
+            background-size: cover;
+            min-height: 80vh">
     <div class="container program__photo__overlay">
         <div class="row к row-cols-1">
             <div class="col-12 mt-5">
-                <h2 id="caption" class="text-white fw-bold"></h2>
+                <h2 id="title" class="text-dark fw-bold"></h2>
             </div>
             <div class="col-12">
-                <h3 class="text-white ">
-                    Конкурс педагогического мастерства им. М. И. Картавцевой - особенный проект для Российского детского фонда. Ежегодно он объединяет учителей, которые работают с детьми, требующими особого педагогического подхода. Это единственное мероприятие в области, которое охватывает своим вниманием эту категорию педагогов.
+                <h3 class="text-dark" id="caption">
+
                 </h3>
             </div>
             <div class="col-12 pb-5">
@@ -153,24 +155,8 @@
         </div>
     </div>
 </div>
-<div class="container-fluid d-block d-sm-none"
-     style="background-image: url('../../static/home/images/picture.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            min-height: 40vh">
-    <div class="d-flex justify-content-center flex-column">
-        <h2 class="text-white">Конкурс «Тепло моей души»</h2>
-        <p class="text-white">
-            Конкурс педагогического мастерства им. М. И. Картавцевой - особенный проект для Российского детского фонда. Ежегодно он объединяет учителей, которые работают с детьми, требующими особого педагогического подхода. Это единственное мероприятие в области, которое охватывает своим вниманием эту категорию педагогов.
-        </p>
-        <h6 class="program__btn mb-4" data-bs-toggle="modal" data-bs-target="#formModal">Стать партнером</h6>
-    </div>
-</div>
 <div class="container pt-3">
-    <p>
-        “Я вам дарю тепло своей души” - это цитата из книги Заслуженного Учителя России, Почетного гражданина Воронежа, писательницы и радиоведущей Марины Игнатьевны Картавцевой. Ее именем назван ежегодный региональный конкурс профессионального мастерства педагогов общеобразовательных учреждений Воронежской области среди учителей, обучающих детей с ограниченными возможностями здоровья. <br>
-        Учителя-участники каждый год демонстрируют не просто педагогическое мастерство в планировании и анализе эффективности занятий и подходов к обучению, но и представляют на суд жюри собственные методические разработки обучения детей, нуждающихся в специальном педагогическом подходе, а также изобретения и инновационные технологии в организации образовательного процесса.
+    <p id="description">
     </p>
     <p class="text-black-50">
         Для получения более подробной информации об оказании помощи на благотворительной основе обращайтесь на электронную почту <a class="" href="mailto:fond@dfvrn.ru ">fond@dfvrn.ru</a> или по телефону <a class="" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>.
