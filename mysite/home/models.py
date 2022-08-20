@@ -118,6 +118,7 @@ class AboutInfo(models.Model):
 class Report(models.Model):
     file = models.FileField(verbose_name='отчёт')
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
+
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
@@ -133,10 +134,21 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         MultiFieldPanel([InlinePanel('news', label='новость')],
                         heading='Новости'),
-        MultiFieldPanel([InlinePanel('programs', label='программу')],
-                        heading='Программы'),
         MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
                         heading='Отзывы'),
         MultiFieldPanel([InlinePanel('about', label='информацию', max_num=1)], heading='Информация'),
         MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты')
     ]
+
+
+class Partner(models.Model):
+
+    name = models.CharField(max_length=50, blank=False, verbose_name='Имя')
+    last_name = models.CharField(max_length=50, blank=False, verbose_name='Фамилия')
+    phone_number = models.CharField(max_length=20,
+                                    unique=True,
+                                    blank=False,
+                                    verbose_name='Номер телефона')
+    email = models.EmailField(blank=True, null=True, verbose_name='Email')
+    message = models.TextField(blank=True, null=True, verbose_name='Сообщение')
+    is_agree = models.BooleanField(default=False, verbose_name='Согласие с обработкой персональных данных')

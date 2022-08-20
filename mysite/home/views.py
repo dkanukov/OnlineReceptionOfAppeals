@@ -3,7 +3,9 @@ from django.http import HttpResponse
 from django.template import loader
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import status
 
+from . serializers import PartnerSerializer
 from . models import News, Programs, AboutInfo
 
 
@@ -83,3 +85,16 @@ def get_about_page(request):
 def get_personal_data_consent(request):
     temp = loader.get_template(('home/personalDataValidation.html'))
     return HttpResponse(temp.render())
+
+
+class APIPartner(APIView):
+
+    def post(self, request):
+        serializer = PartnerSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
