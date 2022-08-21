@@ -302,3 +302,12 @@ span {
 .feedback__card:not(:first-child) {
     margin-top: 20px;
 }
+
+.rating__star {
+    cursor: pointer;
+    fill: gray;
+}
+
+.rating__star__active {
+    fill: #FFD700;
+}
