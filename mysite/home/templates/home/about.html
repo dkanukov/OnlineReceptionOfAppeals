@@ -106,13 +106,16 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav flex-lg-wrap">
                     <li class="nav-item">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                            Оставить обращение
+                        </button>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="">Главная</a>
                     </li>
                     <li class="nav-item">
+<!--                       TODO: add dropdown menu-->
                         <a class="nav-link text-info" href="">О фонде</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Программы</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Хочу помочь</a>
@@ -121,13 +124,10 @@
                         <a class="nav-link" href="">Право голоса</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="">Программы</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Контакты</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -158,9 +158,6 @@
                 <button class="m-2 nav-link nav__btn" id="help-tab" data-bs-toggle="pill" data-bs-target="#help" type="button"
                         role="tab" aria-controls="help" aria-selected="false">Хочу помочь фонду
                 </button>
-                <button class="m-2 nav-link nav__btn" id="programs-tab" data-bs-toggle="pill" data-bs-target="#programs"
-                        type="button" role="tab" aria-controls="programs" aria-selected="false">Программы фонда
-                </button>
                 <button class="m-2 nav-link nav__btn" id="docs-tab" data-bs-toggle="pill" data-bs-target="#docs" type="button"
                         role="tab" aria-controls="docs" aria-selected="false">Документы
                 </button>
@@ -177,7 +174,6 @@
                 {{information|linebreaks}}
             </div>
             <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">1</div>
-            <div class="tab-pane fade" id="programs" role="tabpanel" aria-labelledby="programs-tab">2</div>
             <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">3</div>
             <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
                 <table class="table">
@@ -331,6 +327,34 @@
             </div>
             <button type="submit" class="btn btn-primary">Отправить</button>
         </form>
+    </div>
+</div>
+<div class="modal fade" id="appealModal" tabindex="-1" aria-labelledby="appealModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Оставьте свое обращение</h5>
+                <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+                    <div class="mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
+                        <label class="form-check-label" for="checkboxForm">
+                            Я согласен на <a href="./personalDataValidation.html">На обработку персональных данных</a>
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">
+                            Отправить
+                        </button>
+                        <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <footer class="container-fluid footer__bg">

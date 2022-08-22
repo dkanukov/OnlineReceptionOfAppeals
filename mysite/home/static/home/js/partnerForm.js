@@ -24,10 +24,8 @@ function isValid() {
         && (emailInput.value.length > 0 && emailInput.value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
         && checkBox.checked) {
         btnSubmit.disabled = false;
-        localStorage.setItem("isValid", JSON.stringify(true))
     } else {
         btnSubmit.disabled = true;
-        localStorage.setItem("isValid", JSON.stringify(false))
     }
 }
 
@@ -36,10 +34,8 @@ function isValidXs() {
         && (document.getElementById('mailFormInputXs').value.length > 0 && document.getElementById('mailFormInputXs').value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
         && document.getElementById('checkboxFormXs').checked) {
         document.getElementById('submitFormXs').disabled = false;
-        localStorage.setItem("isValid", JSON.stringify(true))
     } else {
         document.getElementById('submitFormXs').disabled = true;
-        localStorage.setItem("isValid", JSON.stringify(false))
     }
 }
 
@@ -77,7 +73,6 @@ function isValidXs() {
         emailInput.value = '';
         messageInput.value = '';
         surnameInput.value = '';
-        localStorage.setItem("isValid", JSON.stringify(false))
         btnSubmit.disabled = true;
     });
 
@@ -100,7 +95,6 @@ function isValidXs() {
         document.getElementById('phoneFormInputXs').value = '';
         document.getElementById('mailFormInputXs').value = '';
         document.getElementById('messageFormInputXs').value = '';
-        localStorage.setItem("isValid", JSON.stringify(false))
         btnSubmit.disabled = true;
     });
 })();
