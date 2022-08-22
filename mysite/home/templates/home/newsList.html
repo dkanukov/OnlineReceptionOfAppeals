@@ -146,7 +146,7 @@
         <h2>Новости</h2>
     </div>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-9">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div id="newsArea" class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 g-sm-3 g-3">
                 {% for news in page_obj %}
                 <div class="col">
@@ -179,69 +179,6 @@
                         {% endfor %}
                     </ul>
                 </nav>
-            </div>
-        </div>
-        <div class="col-md-4 col-lg-3 d-none d-md-block">
-            <div class="card sticky-top" style="border: 1px solid gray; border-radius: 15px">
-                <img src="{% static 'home/images/logo_1.svg' %}" class="card-img-top mt-1" style="height: 9rem" alt="">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Хотите стать нашим партнером?</h5>
-                    <p class="card-text text-center">Заполните анкету, наши специалисты свяжутся с вами</p>
-                    <hr>
-                    <h6 class="form__btn" data-bs-toggle="modal" data-bs-target="#formModal">Заполнить анкету</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Стать партнером</h5>
-                <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="mb-3">
-                        <label for="nameFormInput" class="form-label">Имя <strong style="color: red">*</strong></label>
-                        <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
-                    </div>
-                    <div class="mb-3">
-                        <label for="surnameFormInput" class="form-label">Фамилия <strong
-                                style="color: red">*</strong></label>
-                        <input required type="text" class="form-control" id="surnameFormInput" placeholder="Иванов">
-                    </div>
-                    <div class="mb-3">
-                        <label for="phoneFormInput" class="form-label">Номер телефона <strong
-                                style="color: red">*</strong></label>
-                        <input required type="tel" class="form-control" id="phoneFormInput"
-                               placeholder="(999)999-99-99">
-                    </div>
-                    <div class="mb-3">
-                        <label for="mailFormInput" class="form-label">Email <strong
-                                style="color: red">*</strong></label>
-                        <input type="email" class="form-control" id="mailFormInput" placeholder="example@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="messageFormInput" class="form-label">Сообщение</label>
-                        <input type="text" class="form-control" id="messageFormInput"
-                               placeholder="Мы будем рады узнать что-то о вас!">
-                    </div>
-                    <div class="mb-3">
-                        <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
-                        <label class="form-check-label" for="checkboxForm">
-                            Я согласен на <a href="./personalDataValidation.html">На обработку персональных данных</a>
-                        </label>
-                    </div>
-                    <div class="mb-3">
-                        <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">
-                            Отправить
-                        </button>
-                        <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
