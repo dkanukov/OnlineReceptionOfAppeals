@@ -32,7 +32,7 @@
             <div id="newsArea" class="row row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1 g-sm-3 g-3">
                 {% for news in page_obj %}
                 <div class="col">
-                    <a id="pageLink" href="news?id={{news.id}}">
+                    <a id="pageLink" href="{% url 'get_spec_news' %}?id={{news.id}}">
                         <div class="card" style="outline: 1px solid gray">
                             {% image news.image original as img %}
                             <img src="{{img.url}}" class="card-img-top" alt="">
@@ -44,7 +44,7 @@
                                         <p class="card-text"><small class="text-muted">Новости</small></p>
                                     </div>
                                     <div class="col">
-                                        <p class="card-text"><small class="text-muted">Дата: 01.01.2020</small></p>
+                                        <p class="card-text"><small class="text-muted">Дата: {{news.create_date}}</small></p>
                                     </div>
                                 </div>
                             </div>

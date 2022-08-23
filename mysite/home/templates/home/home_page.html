@@ -157,7 +157,7 @@
         <div class="row d-flex d-md-none">
             {% for news in page.news.all %}
             <div class="col-6">
-                <a href="./news.html">
+                <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                     <div class="card h-100">
                         {% image news.image original as img %}
                         <img src="{{ img.url }" alt="" srcset="">
@@ -174,7 +174,7 @@
         <div class="row d-none d-md-flex">
             {% for news in page.news.all %}
                 <div class="col-4">
-                    <a href="./news.html">
+                    <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                         <div class="card">
                             {% image news.image original as img %}
                             <img src="{{ img.url }}" class="card-img" alt="" srcset="">

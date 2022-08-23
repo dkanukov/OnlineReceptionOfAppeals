@@ -32,7 +32,7 @@
             {% for program in page_obj %}
             <div class="row row-cols-1 g-3">
                 <div class="col">
-                    <a href="program?id={{program.id}}">
+                    <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
                         <div class="p-lg-5 p-md-2 p-sm-0 program__card" style="border: 1px solid #E4E4EF">
                             <div class="row">
                                 <div class="col-lg-5 col-md-5 d-none d-md-block">
