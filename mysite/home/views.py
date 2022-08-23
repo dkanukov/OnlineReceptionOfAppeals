@@ -9,18 +9,25 @@ from . serializers import PartnerSerializer
 from . models import News, Programs, AboutInfo
 
 
+def get_about_context():
+    info = AboutInfo.objects.all()[0]
+    return info
+
+
 def get_news_page(request):
+    info = get_about_context()
     news_list = News.objects.all()
     paginator = Paginator(news_list, 4)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     temp = loader.get_template('home/newsList.html')
-    return HttpResponse(temp.render({'page_obj': page_obj, 'paginator': paginator}))
+    return HttpResponse(temp.render({'page_obj': page_obj, 'paginator': paginator, 'info': info}))
 
 
 def get_specific_news(request):
+    info = get_about_context()
     temp = loader.get_template('home/news.html')
-    return HttpResponse(temp.render())
+    return HttpResponse(temp.render({'info': info}))
 
 
 class APINews(APIView):
@@ -38,17 +45,19 @@ class APINews(APIView):
 
 
 def get_programs_page(request):
+    info = get_about_context()
     news_list = Programs.objects.all()
     paginator = Paginator(news_list, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     temp = loader.get_template('home/programsList.html')
-    return HttpResponse(temp.render({'page_obj': page_obj, 'paginator': paginator}))
+    return HttpResponse(temp.render({'page_obj': page_obj, 'paginator': paginator, 'info': info}))
 
 
 def get_specific_program(request):
+    info = get_about_context()
     temp = loader.get_template('home/program.html')
-    return HttpResponse(temp.render())
+    return HttpResponse(temp.render({'info': info}))
 
 
 class APIPrograms(APIView):
@@ -72,14 +81,9 @@ def format_date(date):
 
 
 def get_about_page(request):
-    info = AboutInfo.objects.all()[0]
-
+    info = get_about_context()
     temp = loader.get_template('home/about.html')
-    return HttpResponse(temp.render({'information': info.information,
-                                     'phone_number': info.phone_number,
-                                     'second_phone_number': info.second_phone_number,
-                                     'email': info.email,
-                                     'address': info.address}))
+    return HttpResponse(temp.render({'info': info}))
 
 
 def get_personal_data_consent(request):

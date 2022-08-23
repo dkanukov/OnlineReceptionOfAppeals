@@ -96,7 +96,7 @@ class AboutInfo(models.Model):
                                            unique=True,
                                            blank=True,
                                            null=True,
-                                           verbose_name='дополнительный номер теелфона')
+                                           verbose_name='дополнительный номер телефона')
 
     email = models.EmailField(max_length=255, verbose_name='адрес электронной почты')
     address = models.TextField(verbose_name='полный адрес')

@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    {% for info in page.about.all %}
     <header class="header container-fluid pb-5">
         <div class="row align-content-center">
             <div class="col-lg-1 col-md-1 col-sm-2 col-2">
@@ -27,7 +28,7 @@
             <div class="d-block d-sm-none col-7 align-self-center">
                 <p class="text-info text-uppercase">
                     Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-                    <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                    <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
                 </p>
             </div>
             <div class="d-block d-sm-none col-1 align-self-center">
@@ -36,12 +37,12 @@
                     <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
-                    <li><a class="dropdown-item" href="#">Главная</a></li>
-                    <li><a class="dropdown-item" href="#">О фонде</a></li>
-                    <li><a class="dropdown-item" href="#">Программы</a></li>
+                    <li><a class="dropdown-item" href="/">Главная</a></li>
+                    <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                    <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                     <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
                     <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                    <li><a class="dropdown-item" href="#">Новости</a></li>
+                    <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
                     <li><a class="dropdown-item" href="#">Контакты</a></li>
                 </ul>
             </div>
@@ -50,7 +51,7 @@
             <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
                 <p class="text-info text-uppercase">
                     Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-                    <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                    <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
                 </p>
             </div>
             <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
@@ -59,12 +60,12 @@
                     <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
-                    <li><a class="dropdown-item" href="#">Главная</a></li>
-                    <li><a class="dropdown-item" href="#">О фонде</a></li>
-                    <li><a class="dropdown-item" href="#">Программы</a></li>
+                    <li><a class="dropdown-item" href="/">Главная</a></li>
+                    <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                    <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                     <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
                     <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                    <li><a class="dropdown-item" href="#">Новости</a></li>
+                    <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
                     <li><a class="dropdown-item" href="#">Контакты</a></li>
                 </ul>
             </div>
@@ -74,7 +75,7 @@
                 <p class="text-info text-uppercase">
                     Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
                     детский фонд”<br>
-                    <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                    <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
                 </p>
             </div>
             <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
@@ -83,12 +84,12 @@
                     <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item" href="#">Главная</a></li>
-                    <li><a class="dropdown-item" href="#">О фонде</a></li>
-                    <li><a class="dropdown-item" href="#">Программы</a></li>
+                    <li><a class="dropdown-item" href="/">Главная</a></li>
+                    <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                    <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                     <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
                     <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                    <li><a class="dropdown-item" href="#">Новости</a></li>
+                    <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
                     <li><a class="dropdown-item" href="#">Контакты</a></li>
                 </ul>
             </div>
@@ -100,20 +101,25 @@
                     общероссийского общественного <br>
                     благотворительного фонда <br>
                     “Российский детский фонд” <br>
-                    <a class="phone__link" href="tel:+7(473)2104705">+{{page.about.phone_number}}</a>
+                    <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
                 </p>
             </div>
             <nav class="navbar navbar-expand-lg col-lg-7">
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav flex-lg-wrap">
                         <li class="nav-item">
-                            <a class="nav-link" href="">Главная</a>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                            Оставить обращение
+                        </button>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">О фонде</a>
+                            <a class="nav-link" href="/">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Программы</a>
+                            <a class="nav-link" href="{% url 'about' %}">О фонде</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'programs' %}">Программы</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Хочу помочь</a>
@@ -122,7 +128,7 @@
                             <a class="nav-link" href="">Право голоса</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Новости</a>
+                            <a class="nav-link" href="{% url 'news' %}">Новости</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Контакты</a>
@@ -144,36 +150,26 @@
             </div>
         </div>
     </header>
+    {% endfor %}
     <div class="our__news container-fluid  pb-5">
         <h2>Наши новости</h2>
         <!-- extra small devices -->
         <div class="row d-flex d-md-none">
+            {% for news in page.news.all %}
             <div class="col-6">
                 <a href="./news.html">
                     <div class="card h-100">
-                        <img src="{% static 'home/images/news_1.png' %}" alt="" srcset="">
+                        {% image news.image original as img %}
+                        <img src="{{ img.url }" alt="" srcset="">
                         <div class="card-body">
                             <h5 class="card-title text-black-50">Новости</h5>
-                            <p class="card-text text-dark">Для маленьких детей-сирот в Воронежской области начнут искать
-                                семьи по пилотной программе</p>
+                            <p class="card-text text-dark">{{news.caption}}</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-6">
-                <a href="./news.html">
-                    <div class="card h-100">
-                        <img src="{% static 'home/images/news_2.png' %}" alt="" srcset="">
-                        <div class="card-body">
-                            <h5 class="card-title text-black-50">Новости</h5>
-                            <p class="card-text text-dark">Елена Губина поздравила с первым днем рождения подопечного
-                                Фонда</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            {% endfor %}
         </div>
-
         <!-- all rest devices -->
         <div class="row d-none d-md-flex">
             {% for news in page.news.all %}
@@ -192,10 +188,13 @@
                     </a>
                 </div>
             {% endfor %}
+        </div>
+
         <div class="d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
             <button class="btn btn__browse__more text-nowrap" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
         </div>
     </div>
+
     <div class="about__part container-fluid pb-5 pl-2">
         <div class="row justify-content-start">
             <h2>О фонде</h2>
@@ -307,40 +306,39 @@
         </div>
     </div>
     <hr>
-    <footer class="container-fluid">
+    {% for info in page.about.all %}
+            <footer class="container-fluid">
         <div
             class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
             <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
                 <ul>
-                    <li><a class="link-dark" href="">ГЛАВНАЯ</a></li>
-                    <li><a class="link-dark" href="">О ФОНДЕ</a></li>
-                    <li><a class="link-dark" href="">ПРОГРАММЫ</a></li>
+                    <li><a class="link-dark" href="/">ГЛАВНАЯ</a></li>
+                    <li><a class="link-dark" href="{% url 'about' %}">О ФОНДЕ</a></li>
+                    <li><a class="link-dark" href="{% url 'programs' %}">ПРОГРАММЫ</a></li>
                     <li><a class="link-dark" href="">ХОЧУ ПОМОЧЬ</a></li>
                     <li><a class="link-dark" href="">ПРАВО ГОЛОСА</a></li>
-                    <li><a class="link-dark" href="">НОВОСТИ</a></li>
+                    <li><a class="link-dark" href="{% url 'news' %}">НОВОСТИ</a></li>
                     <li><a class="link-dark" href="">КОНТАКТЫ</a></li>
                 </ul>
             </div>
             <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
                 <ul>
                     <li>
-                        <a class="link-dark" href="tel:+7(473)2104705">
+                        <a class="link-dark" href="tel:{{info.phone_number}}">
                             <i class="bi bi-telephone-fill"></i>
-                            +7 (473) 210-47-05
+                            {{info.phone_number}}
                         </a>
                     </li>
                     <li class="mt-2">
-                        <a class="" href="mailto:fond@dfvrn.ru ">
+                        <a class="" href="mailto:{{info.email}}">
                             <i class="bi bi-envelope"></i>
-                            fond@dfvrn.ru
+                            {{info.email}}
                         </a>
                     </li>
                     <li class="mt-2">
                         <a href="">
                             <i class="bi bi-geo-alt-fill"></i>
-                            394036, Россия, г. Воронеж,
-                            ул. Комиссаржевской, д. 15а,
-                            3 этаж, офис 3
+                            {{info.address}}
                         </a>
                     </li>
                 </ul>
@@ -370,21 +368,21 @@
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <div class="row">
-                        <a class="link-dark" href="tel:+7(473)2104705">
+                        <a class="link-dark" href="tel:{{info.phone_number}}">
                             <i class="bi bi-telephone-fill"></i>
-                            +7 (473) 210-47-05
+                            {{info.phone_number}}
                         </a>
                     </div>
                     <div class="row mt-2">
-                        <a class="" href="mailto:fond@dfvrn.ru ">
+                        <a class="" href="mailto:{{info.email}} ">
                             <i class="bi bi-envelope"></i>
-                            fond@dfvrn.ru
+                            {{info.email}}
                         </a>
                     </div>
                     <div class="row mt-2">
                         <a href="">
                             <i class="bi bi-geo-alt-fill"></i>
-                            394036, Россия, г. Воронеж, <br> ул. Комиссаржевской, д. 15а,<br> 3 этаж, офис 3
+                            {{info.address}}
                         </a>
                     </div>
                 </div>
@@ -405,6 +403,7 @@
             </div>
         </div>
     </footer>
+    {% endfor %}
     <script src="{% static 'home/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 
