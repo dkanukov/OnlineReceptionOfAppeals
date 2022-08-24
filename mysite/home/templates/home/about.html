@@ -165,7 +165,7 @@
     <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-5 mb-3">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button class="m-2 nav-link nav__btn " id="about-tab" data-bs-toggle="pill"
+                <button class="m-2 nav-link nav__btn active" id="about-tab" data-bs-toggle="pill"
                         data-bs-target="#about"
                         type="button" role="tab" aria-controls="about" aria-selected="true">О фонде
                 </button>
@@ -173,7 +173,7 @@
                         type="button"
                         role="tab" aria-controls="help" aria-selected="false">Хочу помочь фонду
                 </button>
-                <button class="m-2 nav-link nav__btn active" id="docs-tab" data-bs-toggle="pill" data-bs-target="#docs"
+                <button class="m-2 nav-link nav__btn " id="docs-tab" data-bs-toggle="pill" data-bs-target="#docs"
                         type="button"
                         role="tab" aria-controls="docs" aria-selected="false">Документы
                 </button>
@@ -188,7 +188,7 @@
             </div>
         </div>
         <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12 " id="v-pills-tabContent">
-            <div class="tab-pane fade " id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
                 {{information|linebreaks}}
             </div>
             <div class="tab-pane fade " id="help" role="tabpanel" aria-labelledby="help-tab">
@@ -241,7 +241,7 @@
                     Возрастное ограничение 16+
                 </p>
             </div>
-            <div class="tab-pane fade show active" id="docs" role="tabpanel" aria-labelledby="docs-tab">
+            <div class="tab-pane fade " id="docs" role="tabpanel" aria-labelledby="docs-tab">
                 <div>
                     <h2 class="text-center">
                         Учредительные документы
@@ -637,5 +637,6 @@
         crossorigin="anonymous"></script>
 <script defer type="module" src="{% static 'home/js/feedback.js' %}"></script>
 <script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
+<script defer type="module" src="{% static 'home/js/aboutPageUrlManage.js' %}"></script>
 </body>
 </html>
