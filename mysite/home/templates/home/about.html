@@ -165,10 +165,11 @@
     <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-4 col-5 mb-3">
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button class="m-2 nav-link nav__btn" id="about-tab" data-bs-toggle="pill" data-bs-target="#about"
+                <button class="m-2 nav-link nav__btn " id="about-tab" data-bs-toggle="pill"
+                        data-bs-target="#about"
                         type="button" role="tab" aria-controls="about" aria-selected="true">О фонде
                 </button>
-                <button class="m-2 nav-link nav__btn" id="help-tab" data-bs-toggle="pill" data-bs-target="#help"
+                <button class="m-2 nav-link nav__btn active" id="help-tab" data-bs-toggle="pill" data-bs-target="#help"
                         type="button"
                         role="tab" aria-controls="help" aria-selected="false">Хочу помочь фонду
                 </button>
@@ -180,17 +181,56 @@
                         data-bs-target="#requisites"
                         type="button" role="tab" aria-controls="requisites" aria-selected="false">Реквизиты
                 </button>
-                <button class="m-2 nav-link nav__btn active" id="feedbacks-tab" data-bs-toggle="pill"
+                <button class="m-2 nav-link nav__btn " id="feedbacks-tab" data-bs-toggle="pill"
                         data-bs-target="#feedbacks"
                         type="button" role="tab" aria-controls="feedbacks" aria-selected="false">Отзывы
                 </button>
             </div>
         </div>
-        <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12" id="v-pills-tabContent">
+        <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12 " id="v-pills-tabContent">
             <div class="tab-pane fade " id="about" role="tabpanel" aria-labelledby="about-tab">
                 {{information|linebreaks}}
             </div>
-            <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">1</div>
+            <div class="tab-pane fade show active" id="help" role="tabpanel" aria-labelledby="help-tab">
+                <h2 class="text-center text-bo">Пожертвование с помощью онлайн платежа</h2>
+                <p class="text-center">Чтобы внести пожертвование с помощью онлайн платежа воспользуйтесь формой платежной системы, введите сумму и нажмите кнопку "Оплатить", вы будете перенаправлены на веб-страницу платежной системы для совершения платежа.</p>
+                <div style="border: 1px solid red">
+                    <h1>Здесь будет отправка доната</h1>
+                </div>
+                <h2 class="text-center">Пожертвование с помощью мобильного телефона</h2>
+                <p>
+                    Чтобы внести пожертвование прямо сейчас отправьте SMS на номер 3443 со словом ДЕТФОНД или DETFOND и через пробел укажите сумму пожертвования.
+                </p>
+                <p>
+                    Например, ДетФонд 200. В этом случае Вы пожертвуете 200 рублей. Если отправите просто слово ДЕТФОНД без указания суммы, то с Вашего телефона спишется 100 рублей.
+                </p>
+                <p>
+                    В ответ вы получите SMS для подтверждения платежа. Подтверждение платежа может прийти с короткого номера, на который отправляли первоначальное SMS-сообщение, или с сервисного номера оператора связи.
+                </p>
+                <p>
+                    Чтобы Ваша поддержка была регулярной, отправьте SMS на 3443 текстом: ДЕТФОНД 200 ПОДПИСКА и Вам ежемесячно будет приходить SMS-напоминание с просьбой подтвердить данный платеж. Чтобы отписаться от регулярного пожертвования, отправьте SMS на 3443 с текстом ДЕТФОНД СТОП.
+                </p>
+                <p>
+                    Услуга доступна для абонентов МТС, Билайн, Мегафон, Теле2, Тинькофф Мобайл, Yota.
+                </p>
+                <p>
+                    Допустимый размер пожертвования — от 1 до 15 000 рублей. Стоимость отправки SMS на 3443 – бесплатно. Комиссия с абонента - 0%.
+                </p>
+                <hr>
+                <a href="https://info.gmmobile.ru">Техническая поддержка сервиса осуществляется компанией GmMobile.ru</a>
+                <p>Информация для абонентов: <br>
+                    <a href="https://pay.mts.ru/webportal/terms-account">МТС Договор оферты</a> <br>
+                    <a href="http://ru.tele2.ru/offer">ТЕЛЕ2 Договор оферты</a> <br>
+                    <a href="http://moskva.beeline.ru/customers/products/mobile/services/details/mobilnyy-platezh">БИЛАЙН Договор оферты</a> <br>
+                    <a href="http://moscow.megafon.ru/popups/oferta_m_payment.html">МЕГАФОН Комиссия с абонента — 0%</a>
+                </p>
+                <p>
+                    Прием онлайн платежей осуществляется с помощью платежной системы <a href="https://robokassa.com">ROBOKASSA</a>
+                </p>
+                <p class="text-danger">
+                    Возрастное ограничение 16+
+                </p>
+            </div>
             <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">3</div>
             <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
                 <table class="table">
@@ -251,7 +291,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="tab-pane fade show active" id="feedbacks" role="tabpanel" aria-labelledby="feedbacks-tab">
+            <div class="tab-pane fade " id="feedbacks" role="tabpanel" aria-labelledby="feedbacks-tab">
                 <p class="text-center">Всегда рады Вашим отзывам, они мотивируют нас на новые достижения!</p>
                 <div class="col-12 text-center">
                     <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="offcanvas"
@@ -396,7 +436,8 @@
                     </nav>
                     <div class="tab-content mt-3" id="nav-tabContent">
                         <div class="mb-3">
-                            <label for="nameFormInput" class="form-label">Имя <strong style="color: red">*</strong></label>
+                            <label for="nameFormInput" class="form-label">Имя <strong
+                                    style="color: red">*</strong></label>
                             <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
                         </div>
                         <div class="mb-3">
@@ -549,5 +590,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 <script defer type="module" src="{% static 'home/js/feedback.js' %}"></script>
+<script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
 </body>
 </html>
