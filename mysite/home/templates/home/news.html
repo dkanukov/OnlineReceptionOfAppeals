@@ -14,7 +14,7 @@
     <title>News</title>
 </head>
 <body>
-    <header class="header container-fluid pb-1">
+<header class="header container-fluid pb-1">
     <div class="row align-content-center">
         <div class="col-lg-1 col-md-1 col-sm-2 col-2">
             <a href="">
@@ -25,8 +25,11 @@
         <div class="d-block d-sm-none col-7 align-self-center">
             <p class="text-info text-uppercase">
                 Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
             </p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appealModal">
+                Оставить обращение
+            </button>
         </div>
         <div class="d-block d-sm-none col-1 align-self-center">
             <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
@@ -34,22 +37,26 @@
                 <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
-                <li><a class="dropdown-item" href="#">Главная</a></li>
-                <li><a class="dropdown-item" href="#">О фонде</a></li>
-                <li><a class="dropdown-item" href="#">Программы</a></li>
-                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item text-info" href="about">О фонде</a></li>
+                <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
                 <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="programs_list">Программы</a></li>
+                <li><a class="dropdown-item" href="news_list">Новости</a></li>
                 <li><a class="dropdown-item" href="#">Контакты</a></li>
             </ul>
+
         </div>
 
         <!-- small devices -->
         <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
             <p class="text-info text-uppercase">
                 Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
             </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                Оставить обращение
+            </button>
         </div>
         <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
             <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
@@ -57,12 +64,12 @@
                 <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
-                <li><a class="dropdown-item" href="#">Главная</a></li>
-                <li><a class="dropdown-item" href="#">О фонде</a></li>
-                <li><a class="dropdown-item" href="#">Программы</a></li>
-                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item text-info" href="about">О фонде</a></li>
+                <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
                 <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="programs_list">Программы</a></li>
+                <li><a class="dropdown-item" href="news_list">Новости</a></li>
                 <li><a class="dropdown-item" href="#">Контакты</a></li>
             </ul>
         </div>
@@ -72,8 +79,11 @@
             <p class="text-info text-uppercase">
                 Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
                 детский фонд”<br>
-                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
             </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                Оставить обращение
+            </button>
         </div>
         <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
             <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
@@ -81,12 +91,12 @@
                 <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                <li><a class="dropdown-item" href="#">Главная</a></li>
-                <li><a class="dropdown-item" href="#">О фонде</a></li>
-                <li><a class="dropdown-item" href="#">Программы</a></li>
-                <li><a class="dropdown-item" href="#">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item text-info" href="about">О фонде</a></li>
+                <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
                 <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="programs_list">Программы</a></li>
+                <li><a class="dropdown-item" href="news_list">Новости</a></li>
                 <li><a class="dropdown-item" href="#">Контакты</a></li>
             </ul>
         </div>
@@ -98,35 +108,46 @@
                 общероссийского общественного <br>
                 благотворительного фонда <br>
                 “Российский детский фонд” <br>
-                <a class="phone__link" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>
+                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
             </p>
         </div>
         <nav class="navbar navbar-expand-lg col-lg-7">
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav flex-lg-wrap">
                     <li class="nav-item">
-                        <a class="nav-link" href="">Главная</a>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                            Оставить обращение
+                        </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">О фонде</a>
+                        <a class="nav-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            О фонде
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="about">О фонде</a></li>
+                            <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
+                            <li><a class="dropdown-item" href="about#docs-tab">Документы</a></li>
+                            <li><a class="dropdown-item" href="about#requisites-tab">Реквизиты</a></li>
+                            <li><a class="dropdown-item" href="about#feedbacks-tab">Отзывы</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Программы</a>
+                        <a class="nav-link" href="about#help-tab">Хочу помочь</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Хочу помочь</a>
+                        <a class="nav-link" href="#">Право голоса</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Право голоса</a>
+                        <a class="nav-link" href="programs_list">Программы</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Новости</a>
+                        <a class="nav-link" href="news_list">Новости</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Контакты</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Контакты</a>
+                        <a class="nav-link" href="#">Контакты</a>
                     </li>
                 </ul>
             </div>
