@@ -15,150 +15,9 @@
     <title>About</title>
 </head>
 <body>
-<<<<<<< HEAD
+
 {% include "home/header.html" %}
-=======
-<header class="header container-fluid pb-1">
-    <div class="row align-content-center">
-        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
-            <a href="">
-                <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="50px" height="100px">
-            </a>
-        </div>
-        <!-- extra small devices -->
-        <div class="d-block d-sm-none col-7 align-self-center">
-            <p class="text-info text-uppercase">
-                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-            </p>
-            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appealModal">
-                Оставить обращение
-            </button>
-        </div>
-        <div class="d-block d-sm-none col-1 align-self-center">
-            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
-               aria-expanded="false">
-                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
-                <li><a class="dropdown-item" href="/">Главная</a></li>
-                <li><a class="dropdown-item text-info" href="about">О фонде</a></li>
-                <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
-                <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                <li><a class="dropdown-item" href="programs_list">Программы</a></li>
-                <li><a class="dropdown-item" href="news_list">Новости</a></li>
-                <li><a class="dropdown-item" href="#">Контакты</a></li>
-            </ul>
 
-        </div>
-
-        <!-- small devices -->
-        <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
-            <p class="text-info text-uppercase">
-                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
-                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-            </p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
-                Оставить обращение
-            </button>
-        </div>
-        <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
-            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
-               aria-expanded="false">
-                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
-                <li><a class="dropdown-item" href="/">Главная</a></li>
-                <li><a class="dropdown-item text-info" href="about">О фонде</a></li>
-                <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
-                <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                <li><a class="dropdown-item" href="programs_list">Программы</a></li>
-                <li><a class="dropdown-item" href="news_list">Новости</a></li>
-                <li><a class="dropdown-item" href="#">Контакты</a></li>
-            </ul>
-        </div>
-
-        <!-- medium devices -->
-        <div class="d-none d-md-block d-lg-none col-md-10 align-self-center">
-            <p class="text-info text-uppercase">
-                Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
-                детский фонд”<br>
-                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-            </p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
-                Оставить обращение
-            </button>
-        </div>
-        <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
-            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
-               aria-expanded="false">
-                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                <li><a class="dropdown-item" href="/">Главная</a></li>
-                <li><a class="dropdown-item text-info" href="about">О фонде</a></li>
-                <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
-                <li><a class="dropdown-item" href="#">Право голоса</a></li>
-                <li><a class="dropdown-item" href="programs_list">Программы</a></li>
-                <li><a class="dropdown-item" href="news_list">Новости</a></li>
-                <li><a class="dropdown-item" href="#">Контакты</a></li>
-            </ul>
-        </div>
-
-        <!-- large divices -->
-        <div class="align-self-end col-lg-4 mt-lg-2">
-            <p class="text-uppercase text-info d-none d-lg-block">
-                Воронежское областное отделение <br>
-                общероссийского общественного <br>
-                благотворительного фонда <br>
-                “Российский детский фонд” <br>
-                <a class="phone__link" href="tel:+7(473)2104705">{{phone_number}}</a>
-            </p>
-        </div>
-        <nav class="navbar navbar-expand-lg col-lg-7">
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav flex-lg-wrap">
-                    <li class="nav-item">
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
-                            Оставить обращение
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Главная</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            О фонде
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="about">О фонде</a></li>
-                            <li><a class="dropdown-item" href="about#help-tab">Хочу помочь</a></li>
-                            <li><a class="dropdown-item" href="about#docs-tab">Документы</a></li>
-                            <li><a class="dropdown-item" href="about#requisites-tab">Реквизиты</a></li>
-                            <li><a class="dropdown-item" href="about#feedbacks-tab">Отзывы</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about#help-tab">Хочу помочь</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Право голоса</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="programs_list">Программы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news_list">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</header>
->>>>>>> 689b9af6e40b4e4f8cf145086a2e3061602665b6
 <div class="container-lg container-md container-fluid-sm pt-1">
     <div class="row">
         <nav aria-label="breadcrumb">
@@ -199,20 +58,10 @@
                 </button>
             </div>
         </div>
-<<<<<<< HEAD
-        <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12" id="v-pills-tabContent">
-            <div class="tab-pane fade " id="about" role="tabpanel" aria-labelledby="about-tab">
-                {{info.information|linebreaks}}
-            </div>
-            <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="help-tab">1</div>
-            <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs-tab">3
-                {% for report in reports %}
-                <p><a href="{{report.file.url}}">{{report.file.name}}</a></p>
-                {% endfor %}
-=======
+
         <div class="tab-content col-lg-8 col-md-8 col-sm-8 col-12 " id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
-                {{information|linebreaks}}
+                {{info.information|linebreaks}}
             </div>
             <div class="tab-pane fade " id="help" role="tabpanel" aria-labelledby="help-tab">
                 <h2 class="text-center">Пожертвование с помощью онлайн платежа</h2>
@@ -297,10 +146,12 @@
                         Отчеты
                     </h2>
                     <div class="row row-cols-1">
-
+                        {% for report in reports %}
+                        <p><a href="{{report.file.url}}">{{report.file.name}}</a></p>
+                        {% endfor %}
                     </div>
                 </div>
->>>>>>> 689b9af6e40b4e4f8cf145086a2e3061602665b6
+
             </div>
             <div class="tab-pane fade" id="requisites" role="tabpanel" aria-labelledby="requisites-tab">
                 <table class="table">
@@ -370,6 +221,7 @@
                 </div>
                 <div class="row row-cols-1">
                     <div class="col mt-4 feedbacks">
+                        {% for feedback in feedbacks %}
                         <div class="feedback__card">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -417,18 +269,16 @@
                                 <div class="row mt-4">
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                                         <p class="text">
-                                            Хочу выразить огромную благодарность российскому детскому фонду за
-                                            приобретение билетов в г Пенза реабилитационный центр Адели для моего сына
-                                            Вани. Спасибо, что вы есть, что помогаете семьям попавшим в трудную
-                                            жизненную ситуацию. Процветания вашему фонду
+                                            {{ feedback.content }}
                                         </p>
                                     </div>
                                     <div class="col-lg-5 col-md-12 col-sm-12 col-12 ">
-                                        <h3>Колесникова Е.С.</h3>
+                                        <h3>{{ feedback.author }}</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

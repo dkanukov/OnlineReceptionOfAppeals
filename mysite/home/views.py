@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 from . serializers import PartnerSerializer
-from . models import News, Programs, AboutInfo, Report
+from . models import News, Programs, AboutInfo, Report, Feedback
 
 
 def get_about_context():
@@ -83,9 +83,9 @@ def format_date(date):
 def get_about_page(request):
     info = get_about_context()
     reports = Report.objects.all()
-
+    feedbacks = Feedback.objects.all()
     temp = loader.get_template('home/about.html')
-    return HttpResponse(temp.render({'info': info, 'reports': reports}))
+    return HttpResponse(temp.render({'info': info, 'reports': reports, 'feedbacks': feedbacks}))
 
 
 def get_personal_data_consent(request):
