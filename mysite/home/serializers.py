@@ -1,4 +1,5 @@
-from .models import Partner
+from .models import Feedback
+#Partner
 from rest_framework import serializers
 
 
@@ -12,15 +13,25 @@ class NewsSerializer(serializers.Serializer):
     )
 
 
-class PartnerSerializer(serializers.Serializer):
-    name = serializers.CharField(max_length=50)
-    last_name = serializers.CharField(max_length=50)
-    phone_number = serializers.CharField(max_length=20)
-    email = serializers.EmailField()
-    message = serializers.CharField(max_length=1000)
-    is_agree = serializers.BooleanField(default=False)
+#class PartnerSerializer(serializers.Serializer):
+#    name = serializers.CharField(max_length=50)
+#    last_name = serializers.CharField(max_length=50)
+#    phone_number = serializers.CharField(max_length=20)
+#   email = serializers.EmailField()
+#   message = serializers.CharField(max_length=1000)
+#    is_agree = serializers.BooleanField(default=False)
+#
+#    def create(self, validated_data):
+#       return Partner.objects.create(**validated_data)
+
+
+class FeedbackSerializer(serializers.Serializer):
+    author = serializers.CharField(max_length=100)
+    content = serializers.CharField(max_length=1000)
+    stars = serializers.IntegerField(default=5)
 
     def create(self, validated_data):
-        return Partner.objects.create(**validated_data)
+        return Feedback.objects.create(**validated_data)
+
 
 ''' прописать все поля и метод create, в апиview прописать метод пост, is_valid(), save() '''
