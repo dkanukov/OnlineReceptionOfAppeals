@@ -15,7 +15,19 @@
 <body>
 {% include "home/header.html" %}
 
-<p>контакты</p>
+<div class="container pt-1">
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row mb-3">
+        <h2 id="mainHeader" class="">Контакты</h2>
+    </div>
+</div>
 
 {% include "home/footer.html" %}
 </body>
