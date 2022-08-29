@@ -104,3 +104,8 @@ class APIPartner(APIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+def get_contacts_page(request):
+    info = get_about_context()
+    temp = loader.get_template("home/contacts.html")
+    return HttpResponse(temp.render({'info': info}))
+
