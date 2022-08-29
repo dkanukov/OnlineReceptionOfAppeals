@@ -182,7 +182,7 @@
                 <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                     <div class="card h-100">
                         {% image news.image original as img %}
-                        <img src="{{ img.url }" alt="" srcset="">
+                        <img src="{{ img.url }}" alt="" srcset="">
                         <div class="card-body">
                             <h5 class="card-title text-black-50">Новости</h5>
                             <p class="card-text text-dark">{{news.caption}}</p>
