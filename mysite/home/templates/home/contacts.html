@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    \
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425&lang=ru_RU"
+            type="text/javascript">
+    </script>
     <title>News</title>
 </head>
 <body>
@@ -25,8 +30,43 @@
         </nav>
     </div>
     <div class="row mb-3">
-        <h2 id="mainHeader" class="">Контакты</h2>
+        <h1>Контакты</h1>
     </div>
+    <hr>
+    <div class="row row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
+        <div>
+            <div class="row">
+                <h2>394036, г. Воронеж, ул. Комиссаржевской, д. 15а, 3 этаж, офис 3</h2>
+            </div>
+            <div class="row row-cols-2 mt-4">
+                <div>
+                    <p class="text-secondary mb-1">E-MAIL</p>
+                    <p>fond@dfvrn.ru</p>
+                </div>
+                <div>
+                    <p class="text-secondary mb-1">ТЕЛЕФОН</p>
+                    <p>+7 (473) 210-47-05 <br> +7 (919) 240-10-48</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <h3>Воронежское областное отделение Российского детского фонда</h3>
+            </div>
+            <div class="row mt-4">
+                <h4>Контактное лицо: Председатель ВООООБФ "Российский детский фонд" Марина Алексеевна Севергина</h4>
+            </div>
+            <div class="row">
+                <p class="text-muted">
+                    Дорогие друзья! Если у Вас есть вопросы по работе фонда или Вам требуется помощь фонда, Вы можете
+                    прийти к нам в офис, связаться с нами по телефону, по электронной почте или через форму обратной
+                    связи.
+                </p>
+            </div>
+        </div>
+        <div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e219e9474ddcfd127f20fef9bc1dd35e4fe403d2e49eee4183bc7202eda015e&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </div>
+
 </div>
 
 {% include "home/footer.html" %}
