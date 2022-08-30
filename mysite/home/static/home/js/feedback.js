@@ -57,17 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(feedbackJSON)
-		});
-
-		let res = await response.json();
-		console.log(res.message);
-
-
-		// const offcanvasBody = document.createElement("div");
-		// offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
-		// offcanvasBody.textContent = "Форма отправлена";
-		// feedbackForm.innerHTML = "";
-		// feedbackForm.append(offcanvasBody);
+		})
+			.then(res => {
+				if (res.ok) {
+					const offcanvasBody = document.createElement("div");
+					offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
+					offcanvasBody.textContent = "Форма отправлена";
+					feedbackForm.innerHTML = "";
+					feedbackForm.append(offcanvasBody);
+				}
+			})
+			.catch(err => {
+				const offcanvasBody = document.createElement("div");
+				offcanvasBody.classList.add("display-4", "text-danger", "offcanvas-body");
+				offcanvasBody.textContent = "Произошла ошибка, обновите страницу";
+				feedbackForm.innerHTML = "";
+				feedbackForm.append(offcanvasBody);
+			})
 
 	});
 
