@@ -72,10 +72,12 @@ class Feedback(models.Model):
 
     author = models.CharField(max_length=50, verbose_name='Имя автора')
     content = models.TextField(verbose_name='Текст отзыва')
+    stars = models.IntegerField(verbose_name='Количество звезд', default=5)
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
-        related_name='reviews'
+        related_name='reviews',
+        default=3
     )
 
     panels = [
@@ -141,14 +143,14 @@ class HomePage(Page):
     ]
 
 
-class Partner(models.Model):
-
-    name = models.CharField(max_length=50, blank=False, verbose_name='Имя')
-    last_name = models.CharField(max_length=50, blank=False, verbose_name='Фамилия')
-    phone_number = models.CharField(max_length=20,
-                                    unique=True,
-                                    blank=False,
-                                    verbose_name='Номер телефона')
-    email = models.EmailField(blank=True, null=True, verbose_name='Email')
-    message = models.TextField(blank=True, null=True, verbose_name='Сообщение')
-    is_agree = models.BooleanField(default=False, verbose_name='Согласие с обработкой персональных данных')
+#class Partner(models.Model):
+#
+#    name = models.CharField(max_length=50, blank=False, verbose_name='Имя')
+#    last_name = models.CharField(max_length=50, blank=False, verbose_name='Фамилия')
+#    phone_number = models.CharField(max_length=20,
+#                                    unique=True,
+#                                    blank=False,
+#                                    verbose_name='Номер телефона')
+#    email = models.EmailField(blank=True, null=True, verbose_name='Email')
+#    message = models.TextField(blank=True, null=True, verbose_name='Сообщение')
+#    is_agree = models.BooleanField(default=False, verbose_name='Согласие с обработкой персональных данных')
