@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	console.log(window.location.hash)
+	// console.log(window.location.hash)
 
 	switch (window.location.hash) {
 		case "#help-tab": document.getElementById("help-tab").click(); break;

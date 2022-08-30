@@ -376,19 +376,30 @@
                                     style="color: red">*</strong></label>
                             <select required class="form-select form-control mb-3" id="typeOfHelp"
                                     aria-label="Default select example">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option selected>Выберите из списка</option>
+                                <option value="1">SOS-размещение</option>
+                                <option value="2">Гуманитарная помощь</option>
+                                <option value="3">Необходим адресный сбор</option>
                             </select>
                         </div>
                         <div class="tab-pane fade" id="appealConsultation" role="tabpanel"
                              aria-labelledby="appealConsultation-tab">
-                            <!--                            content-->
+                            <label for="typeOfConsultation" class="form-label">Тип требуемой консультации <strong
+                                    style="color: red">*</strong></label>
+                            <select required class="form-select form-control mb-3" id="typeOfConsultation"
+                                    aria-label="Default select example">
+                                <option selected>Выберите из списка</option>
+                                <option value="1">Консультация психолога</option>
+                                <option value="2">Консультация юриста</option>
+                                <option value="3">Хочу в группу поддержки</option>
+                            </select>
                         </div>
-                        <div class="tab-pane fade" id="appealVolunteer" role="tabpanel"
+                        <div class="tab-pane fade mt-3" id="appealVolunteer" role="tabpanel"
                              aria-labelledby="appealVolunteer-tab">
-                            <!--                            content-->
+                            <select required class="form-select form-control mb-3" id="typeOfVolunteer"
+                                    aria-label="Default select example">
+                                <option value="1">Хочу быть волонтёром Фонда</option>
+                            </select>
                         </div>
                     </div>
                     <div class="mb-3">

@@ -42,14 +42,38 @@ document.addEventListener("DOMContentLoaded", () => {
 		feedbackSubmitBtn.disabled = !(feedbackText.value.trim() !== "" && feedbackName.value.trim() !== "" && [...document.getElementsByClassName("rating__star__active")].length !== 0);
 	});
 
-	feedbackSubmitBtn.addEventListener("click", () => {
-		//TODO: manage form sending
+	feedbackSubmitBtn.addEventListener("click", async (e) => {
+		e.preventDefault()
+		const feedbackJSON = {
+			author: feedbackName.value.trim(),
+			content: feedbackText.value.trim(),
+			rating: [...document.getElementsByClassName("rating__star__active")].length
+		}
 
-		// const offcanvasBody = document.createElement("div");
-		// offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
-		// offcanvasBody.textContent = "Форма отправлена";
-		// feedbackForm.innerHTML = "";
-		// feedbackForm.append(offcanvasBody);
+		let response = await fetch("http://127.0.0.1:8000/api/feedback", {
+			method: "POST",
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(feedbackJSON)
+		})
+			.then(res => {
+				if (res.ok) {
+					const offcanvasBody = document.createElement("div");
+					offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
+					offcanvasBody.textContent = "Форма отправлена";
+					feedbackForm.innerHTML = "";
+					feedbackForm.append(offcanvasBody);
+				}
+			})
+			.catch(err => {
+				const offcanvasBody = document.createElement("div");
+				offcanvasBody.classList.add("display-4", "text-danger", "offcanvas-body");
+				offcanvasBody.textContent = "Произошла ошибка, обновите страницу";
+				feedbackForm.innerHTML = "";
+				feedbackForm.append(offcanvasBody);
+			})
 
 	});
 
