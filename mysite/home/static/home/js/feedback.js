@@ -42,8 +42,26 @@ document.addEventListener("DOMContentLoaded", () => {
 		feedbackSubmitBtn.disabled = !(feedbackText.value.trim() !== "" && feedbackName.value.trim() !== "" && [...document.getElementsByClassName("rating__star__active")].length !== 0);
 	});
 
-	feedbackSubmitBtn.addEventListener("click", () => {
-		//TODO: manage form sending
+	feedbackSubmitBtn.addEventListener("click", async (e) => {
+		e.preventDefault()
+		const feedbackJSON = {
+			author: feedbackName.value.trim(),
+			content: feedbackText.value.trim(),
+			rating: [...document.getElementsByClassName("rating__star__active")].length
+		}
+
+		let response = await fetch("http://127.0.0.1:8000/api/feedback", {
+			method: "POST",
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(feedbackJSON)
+		});
+
+		let res = await response.json();
+		console.log(res.message);
+
 
 		// const offcanvasBody = document.createElement("div");
 		// offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
