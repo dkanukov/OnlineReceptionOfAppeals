@@ -334,13 +334,13 @@
                 <li><a class="link-dark" href="/">ГЛАВНАЯ</a></li>
                 <li><a class="link-dark" href="{% url 'about' %}">О ФОНДЕ</a></li>
                 <li><a class="link-dark" href="{% url 'programs' %}">ПРОГРАММЫ</a></li>
-                <li><a class="link-dark" href="{% url 'about' %}#help-tab %}">ХОЧУ ПОМОЧЬ</a></li>
+                <li><a class="link-dark" href="{% url 'about' %}#help-tab">ХОЧУ ПОМОЧЬ</a></li>
                 <li><a class="link-dark" href="">ПРАВО ГОЛОСА</a></li>
                 <li><a class="link-dark" href="{% url 'news' %}">НОВОСТИ</a></li>
-                <li><a class="link-dark" href="">КОНТАКТЫ</a></li>
+                <li><a class="link-dark" href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
             </ul>
         </div>
-        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
+        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contaccts">
             <ul>
                 <li>
                     <a class="link-dark" href="tel:{{info.phone_number}}">
