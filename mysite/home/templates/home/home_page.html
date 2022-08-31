@@ -272,9 +272,11 @@
                         </div>
                         <div class="col-3">
                             <div class="row row-cols-5">
-                                {% for i in i|rjust:feedback.stars %}
+                                {% with ''|center:feedback.rating as range %}
+                                {% for _ in range %}
                                 <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
                                 {% endfor %}
+                                {% endwith %}
                             </div>
                         </div>
                     </div>
@@ -297,9 +299,11 @@
                         </div>
                         <div class="col-3">
                             <div class="row row-cols-5">
-                                {% for i in i|rjust:feedback.stars %}
-                                <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
-                                {% endfor %}
+                                {% with ''|center:feedback.rating as range %}
+                                    {% for _ in range %}
+                                    <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
+                                    {% endfor %}
+                                {% endwith %}
                             </div>
                         </div>
                     </div>
