@@ -44,10 +44,6 @@ span {
     color: #000;
 }
 
-.header {
-    background-color: #F3FCFF;
-}
-
 .news__content {
     max-height: 60%;
     background-color: white;
@@ -105,8 +101,7 @@ span {
 .subheader {
     min-height: 60vh;
     max-height: 80vh;
-    background-color: #a3e9f839;
-    background-image: url(../images/boat.png);
+    background-image: url(../images/boat.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

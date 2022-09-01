@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     await fetch("http://127.0.0.1:8000/api/news?id=" + params, {method: 'GET'})
         .then((res) => res.json())
         .then(function(data) {
-            console.log(data.caption);
             header.innerText = data.caption;
             date.innerText = data.date;
             img.src = data.imageUrl;

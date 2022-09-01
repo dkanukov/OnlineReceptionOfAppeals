@@ -28,10 +28,7 @@
                     </a>
                 </li>
                 <li class="mt-2">
-                    <a href="">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        {{info.address}}
-                    </a>
+                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
                 </li>
             </ul>
 
@@ -72,9 +69,7 @@
                     </a>
                 </div>
                 <div class="row mt-2">
-                    <a href="">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        {{info.address}}                    </a>
+                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
                 </div>
             </div>
         </div>
@@ -93,4 +88,6 @@
             </div>
         </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425" type="text/javascript"></script>
 </footer>

@@ -5,13 +5,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{% static 'home/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'home/css/style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425" type="text/javascript"></script>
     <title>{{page.title}}</title>
 </head>
 
@@ -168,9 +170,6 @@
             </h1>
             <p class="subheader__subtext text-center text-nowrap">Основан в 1988 году</p>
         </div>
-        <div class="d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
-            <button class="btn btn__help text-nowrap" type="button">Помощь фонду</button>
-        </div>
     </div>
 </header>
 {% endfor %}
@@ -214,7 +213,7 @@
     </div>
 
     <div class="d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
-        <button class="btn btn__browse__more text-nowrap" type="button">ЗАГРУЗИТЬ ЕЩЁ</button>
+        <a href="{% url 'news' %}" class="btn btn-primary btn-sm" role="button">ЗАГРУЗИТЬ ЕЩЁ</a>
     </div>
 </div>
 
@@ -227,7 +226,7 @@
             {% for p in page.about.all %}
             {{p.information|linebreaks}}
             {% endfor %}
-            <button class="btn text-nowrap bg-danger text-white">ХОЧУ ПОМОЧЬ ФОНДУ</button>
+            <a href="{% url 'about' %}#help-tab" class="btn btn-primary btn-sm" role="button">ХОЧУ ПОМОЧЬ ФОНДУ</a>
         </div>
         <img src="{% static 'home/images/6eb2a55a02b296cd1b63307ed60c34a6 1.png' %}"
              class="offset-lg-1 col-lg-5 col-md-6 d-none d-md-block align-self-start about__part__img" alt="">
@@ -238,7 +237,7 @@
     <div class="row justify-content-start">
         <h2>Программы фонда</h2>
     </div>
-    <div class="row gy-2 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
+    <div class="row gy-2 row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3">
         {% for program in page.programs.all %}
         {% image program.image original as img %}
         <a href="">
@@ -283,9 +282,13 @@
                     <p>
                         {{ feedback.content }}
                     </p>
-                    <a href="#" class="btn btn-lg btn-outline-primary">
-                        Читать
-                    </a>
+                    <div class="row row-col-1">
+                        <div class="text-center">
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             {% else %}
@@ -310,9 +313,13 @@
                     <p>
                         {{ feedback.content }}
                     </p>
-                    <a href="#" class="btn btn-lg btn-outline-primary">
-                        Читать
-                    </a>
+                    <div class="row row-col-1">
+                        <div class="text-center">
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             {% endif %}
@@ -345,7 +352,7 @@
             </ul>
         </div>
         <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contaccts">
-            <ul>
+            <ul style="list-style: none">
                 <li>
                     <a class="link-dark" href="tel:{{info.phone_number}}">
                         <i class="bi bi-telephone-fill"></i>
@@ -359,10 +366,7 @@
                     </a>
                 </li>
                 <li class="mt-2">
-                    <a href="">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        {{info.address}}
-                    </a>
+                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
                 </li>
             </ul>
 
@@ -403,10 +407,7 @@
                     </a>
                 </div>
                 <div class="row mt-2">
-                    <a href="">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        {{info.address}}
-                    </a>
+                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
                 </div>
             </div>
         </div>
@@ -427,7 +428,104 @@
     </div>
 </footer>
 {% endfor %}
-<script src="{% static 'home/js/bootstrap.bundle.min.js' %}"></script>
+<div class="modal fade" id="appealModal" tabindex="-1" aria-labelledby="appealModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Оставьте свое обращение</h5>
+                <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
+                                    data-bs-target="#appealHelp" type="button" role="tab" aria-controls="appealHelp"
+                                    aria-selected="true">Помощь
+                            </button>
+                            <button class="nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
+                                    data-bs-target="#appealConsultation" type="button" role="tab"
+                                    aria-controls="appealConsultation" aria-selected="false">Консультации
+                            </button>
+                            <button class="nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
+                                    data-bs-target="#appealVolunteer" type="button" role="tab"
+                                    aria-controls="appealVolunteer" aria-selected="false">Волонтерство
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="tab-content mt-3" id="nav-tabContent">
+                        <div class="mb-3">
+                            <label for="nameFormInput" class="form-label">Имя <strong
+                                    style="color: red">*</strong></label>
+                            <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
+                        </div>
+                        <div class="mb-3">
+                            <label for="surnameFormInput" class="form-label">Фамилия <strong
+                                    style="color: red">*</strong></label>
+                            <input required type="text" class="form-control" id="surnameFormInput"
+                                   placeholder="Иванов">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneFormInput" class="form-label">Номер телефона <strong
+                                    style="color: red">*</strong></label>
+                            <input required type="tel" class="form-control" id="phoneFormInput"
+                                   placeholder="(999)999-99-99">
+                        </div>
+                        <div class="tab-pane fade show active " id="appealHelp" role="tabpanel"
+                             aria-labelledby="appealHelp-tab">
+
+                            <label for="typeOfHelp" class="form-label">Тип требуемой помощи <strong
+                                    style="color: red">*</strong></label>
+                            <select required class="form-select form-control mb-3" id="typeOfHelp"
+                                    aria-label="Default select example">
+                                <option selected>Выберите из списка</option>
+                                <option value="1">SOS-размещение</option>
+                                <option value="2">Гуманитарная помощь</option>
+                                <option value="3">Необходим адресный сбор</option>
+                            </select>
+                        </div>
+                        <div class="tab-pane fade" id="appealConsultation" role="tabpanel"
+                             aria-labelledby="appealConsultation-tab">
+                            <label for="typeOfConsultation" class="form-label">Тип требуемой консультации <strong
+                                    style="color: red">*</strong></label>
+                            <select required class="form-select form-control mb-3" id="typeOfConsultation"
+                                    aria-label="Default select example">
+                                <option selected>Выберите из списка</option>
+                                <option value="1">Консультация психолога</option>
+                                <option value="2">Консультация юриста</option>
+                                <option value="3">Хочу в группу поддержки</option>
+                            </select>
+                        </div>
+                        <div class="tab-pane fade mt-3" id="appealVolunteer" role="tabpanel"
+                             aria-labelledby="appealVolunteer-tab">
+                            <select required class="form-select form-control mb-3" id="typeOfVolunteer"
+                                    aria-label="Default select example">
+                                <option value="1">Хочу быть волонтёром Фонда</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
+                        <label class="form-check-label" for="checkboxForm">
+                            Я согласен на <a href="personal_data">На обработку персональных данных</a>
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">
+                            Отправить
+                        </button>
+                        <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
