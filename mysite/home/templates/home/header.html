@@ -182,32 +182,30 @@
                                     <input required type="tel" class="form-control" id="phoneFormInput"
                                            placeholder="(999)999-99-99">
                                 </div>
-                                <div class="tab-pane fade show active " id="appealHelp" role="tabpanel"
+                                <div class="tab-pane fade show active appeal" id="appealHelp" role="tabpanel"
                                      aria-labelledby="appealHelp-tab">
 
                                     <label for="typeOfHelp" class="form-label">Тип требуемой помощи <strong
                                             style="color: red">*</strong></label>
                                     <select required class="form-select form-control mb-3" id="typeOfHelp"
                                             aria-label="Default select example">
-                                        <option selected>Выберите из списка</option>
-                                        <option value="1">SOS-размещение</option>
+                                        <option value="1" selected>SOS-размещение</option>
                                         <option value="2">Гуманитарная помощь</option>
                                         <option value="3">Необходим адресный сбор</option>
                                     </select>
                                 </div>
-                                <div class="tab-pane fade" id="appealConsultation" role="tabpanel"
+                                <div class="tab-pane fade appeal" id="appealConsultation" role="tabpanel"
                                      aria-labelledby="appealConsultation-tab">
                                     <label for="typeOfConsultation" class="form-label">Тип требуемой консультации <strong
                                             style="color: red">*</strong></label>
                                     <select required class="form-select form-control mb-3" id="typeOfConsultation"
                                             aria-label="Default select example">
-                                        <option selected>Выберите из списка</option>
-                                        <option value="1">Консультация психолога</option>
+                                        <option value="1" selected>Консультация психолога</option>
                                         <option value="2">Консультация юриста</option>
                                         <option value="3">Хочу в группу поддержки</option>
                                     </select>
                                 </div>
-                                <div class="tab-pane fade mt-3" id="appealVolunteer" role="tabpanel"
+                                <div class="tab-pane fade mt-3 appeal" id="appealVolunteer" role="tabpanel"
                                      aria-labelledby="appealVolunteer-tab">
                                     <select required class="form-select form-control mb-3" id="typeOfVolunteer"
                                             aria-label="Default select example">
@@ -222,7 +220,7 @@
                                 </label>
                             </div>
                             <div class="mb-3">
-                                <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">
+                                <button disabled id="submitForm" type="button" class="btn btn-primary">
                                     Отправить
                                 </button>
                                 <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>

@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <script src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425"
+            type="text/javascript"></script>
     <title>{{page.title}}</title>
 </head>
 
@@ -303,9 +304,9 @@
                         <div class="col-3">
                             <div class="row row-cols-5">
                                 {% with ''|center:feedback.rating as range %}
-                                    {% for _ in range %}
-                                    <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
-                                    {% endfor %}
+                                {% for _ in range %}
+                                <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
+                                {% endfor %}
                                 {% endwith %}
                             </div>
                         </div>
@@ -473,32 +474,30 @@
                             <input required type="tel" class="form-control" id="phoneFormInput"
                                    placeholder="(999)999-99-99">
                         </div>
-                        <div class="tab-pane fade show active " id="appealHelp" role="tabpanel"
+                        <div class="tab-pane fade show active appeal" id="appealHelp" role="tabpanel"
                              aria-labelledby="appealHelp-tab">
 
                             <label for="typeOfHelp" class="form-label">Тип требуемой помощи <strong
                                     style="color: red">*</strong></label>
                             <select required class="form-select form-control mb-3" id="typeOfHelp"
                                     aria-label="Default select example">
-                                <option selected>Выберите из списка</option>
-                                <option value="1">SOS-размещение</option>
+                                <option value="1" selected>SOS-размещение</option>
                                 <option value="2">Гуманитарная помощь</option>
                                 <option value="3">Необходим адресный сбор</option>
                             </select>
                         </div>
-                        <div class="tab-pane fade" id="appealConsultation" role="tabpanel"
+                        <div class="tab-pane fade appeal" id="appealConsultation" role="tabpanel"
                              aria-labelledby="appealConsultation-tab">
                             <label for="typeOfConsultation" class="form-label">Тип требуемой консультации <strong
                                     style="color: red">*</strong></label>
                             <select required class="form-select form-control mb-3" id="typeOfConsultation"
                                     aria-label="Default select example">
-                                <option selected>Выберите из списка</option>
-                                <option value="1">Консультация психолога</option>
+                                <option value="1" selected>Консультация психолога</option>
                                 <option value="2">Консультация юриста</option>
                                 <option value="3">Хочу в группу поддержки</option>
                             </select>
                         </div>
-                        <div class="tab-pane fade mt-3" id="appealVolunteer" role="tabpanel"
+                        <div class="tab-pane fade mt-3 appeal" id="appealVolunteer" role="tabpanel"
                              aria-labelledby="appealVolunteer-tab">
                             <select required class="form-select form-control mb-3" id="typeOfVolunteer"
                                     aria-label="Default select example">
@@ -513,7 +512,7 @@
                         </label>
                     </div>
                     <div class="mb-3">
-                        <button disabled id="submitForm" data-bs-dismiss="modal" type="button" class="btn btn-primary">
+                        <button disabled id="submitForm"  type="button" class="btn btn-primary">
                             Отправить
                         </button>
                         <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
@@ -526,6 +525,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+<script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
+<script src="https://unpkg.com/imask"></script>
 </body>
 
 </html>

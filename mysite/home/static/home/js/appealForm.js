@@ -1,114 +1,79 @@
-// document.addEventListener("DOMContentLoaded", () => {
-// 	if (window.location.hash === "#help-tab") {
-// 		const helpTab = document.querySelector("#v-pills-tab #help-tab");
-// 		console.log(helpTab)
-// 		bootstrap.Tab.getInstance(helpTab).click()
-// 	}
-// });
+const nameInput = document.getElementById("nameFormInput");
+const surnameInput = document.getElementById("surnameFormInput");
+const phoneInput = document.getElementById("phoneFormInput");
+const typeOfHelpSelect = document.getElementById("typeOfHelp");
+const typeOfConsultationSelect = document.getElementById("typeOfConsultation");
+const personalDataValidstionCheckbox = document.getElementById("checkboxForm");
+const tabs = [...document.querySelectorAll(".tab-pane.appeal")];
+const submitBtn = document.getElementById("submitForm");
 
+const tabObserver = new MutationObserver(mutationRecords => {
+	mutationRecords.forEach(mutation => {
+		if (mutation.type === "attributes") manageCurrentTab();
+	})
+});
 
-// var triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
-// bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+tabs.forEach(tab => {
+	tabObserver.observe(tab, {attributes: true});
+})
 
+const maskOptions = {
+	mask: '+{7}(000)000-00-00'
+};
+const mask = IMask(phoneInput, maskOptions);
 
-// const btnSubmit = document.getElementById('submitForm');
-// const nameInput = document.getElementById('nameFormInput');
-// const surnameInput = document.getElementById('surnameFormInput');
-// const phoneInput = document.getElementById('phoneFormInput');
-// const emailInput = document.getElementById('mailFormInput');
-// const messageInput = document.getElementById('messageFormInput');
-// const checkBox = document.getElementById('checkboxForm');
-//
-// document.addEventListener('DOMContentLoaded', () => {
-//     if (localStorage.getItem("isValid")) {
-//         console.log(JSON.parse(localStorage.getItem("isValid")))
-//         if (JSON.parse(localStorage.getItem("isValid"))) {
-//             btnSubmit.disabled = false;
-//         }
-//     } else {
-//         localStorage.setItem("isValid", JSON.stringify(true));
-//     }
-//     IMask(phoneInput, {mask: '+{7}(000)000-00-00'});
-//     IMask(document.getElementById('phoneFormInputXs'), {mask: '+{7}(000)000-00-00'});
-// });
-//
-// function isValid() {
-//     if (nameInput.value.length > 0 && surnameInput.value.length > 0 && (phoneInput.value.length > 0 && phoneInput.value.length === 16)
-//         && (emailInput.value.length > 0 && emailInput.value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
-//         && checkBox.checked) {
-//         btnSubmit.disabled = false;
-//     } else {
-//         btnSubmit.disabled = true;
-//     }
-// }
-//
-// function isValidXs() {
-//     if (document.getElementById('nameFormInputXs').value.length > 0 && (document.getElementById('phoneFormInputXs').value.length > 0 && document.getElementById('phoneFormInputXs').value.length === 16)
-//         && (document.getElementById('mailFormInputXs').value.length > 0 && document.getElementById('mailFormInputXs').value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
-//         && document.getElementById('checkboxFormXs').checked) {
-//         document.getElementById('submitFormXs').disabled = false;
-//     } else {
-//         document.getElementById('submitFormXs').disabled = true;
-//     }
-// }
-//
-// (function () {
-//     nameInput.addEventListener('input', function () {
-//         isValid();
-//     });
-//     phoneInput.addEventListener('input', function () {
-//         isValid();
-//     });
-//     emailInput.addEventListener('input', function () {
-//         isValid();
-//     });
-//     checkBox.addEventListener('change', function () {
-//         isValid();
-//     });
-//     surnameInput.addEventListener('input', function () {
-//         isValid();
-//     });
-//     btnSubmit.addEventListener('click', async function () {
-//         //    TODO: here will be form sending dont forget about trim() for inputs, add check of last name to all devices
-//         // const partnerForm = {
-//         //     name: nameInput.value,
-//         //     last_name:
-//         // }
-//         // const response = await fetch("http://127.0.0.1:8000/api/partner", {
-//         //     method: "POST",
-//         //     headers: {
-//         //         'Content-Type': 'application/json;charset=utf-8'
-//         //     },
-//         //     body:
-//         // })
-//         nameInput.value = '';
-//         phoneInput.value = '';
-//         emailInput.value = '';
-//         messageInput.value = '';
-//         surnameInput.value = '';
-//         btnSubmit.disabled = true;
-//     });
-//
-//     // validating form for smaller devices
-//     document.getElementById('nameFormInputXs').addEventListener('input', function () {
-//         isValidXs();
-//     });
-//     document.getElementById('phoneFormInputXs').addEventListener('input', function (e) {
-//         isValidXs();
-//     });
-//     document.getElementById('mailFormInputXs').addEventListener('input', function () {
-//         isValidXs();
-//     });
-//     document.getElementById('checkboxFormXs').addEventListener('change', function () {
-//         isValidXs();
-//     });
-//     document.getElementById('submitFormXs').addEventListener('click', function () {
-//         //    here will be form sending dont forget about trim() for inputs
-//         document.getElementById('nameFormInputXs').value = '';
-//         document.getElementById('phoneFormInputXs').value = '';
-//         document.getElementById('mailFormInputXs').value = '';
-//         document.getElementById('messageFormInputXs').value = '';
-//         btnSubmit.disabled = true;
-//     });
-// })();
-//
+function manageCurrentTab() {
+	const currentTab = document.querySelector(".tab-pane.active.show");
+	if (currentTab) {
+		submitBtn.disabled = !(nameInput.value.trim() !== "" && surnameInput.value.trim() !== "" && phoneInput.value.length === 16 && personalDataValidstionCheckbox.checked)
+	}
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	submitBtn.addEventListener("click", async (e) => {
+		e.preventDefault();
+		const appealForm = {
+			data: 123
+		}
+
+		await fetch("http://127.0.0.1:8000/api/appeal", {
+			method: "POST", headers: {
+				'Accept': 'application/json', 'Content-Type': 'application/json'
+			}, body: JSON.stringify(appealForm)
+		})
+			.then(res => {
+				const modal = document.getElementsByClassName("modal-content");
+				const modalBody = document.createElement("div");
+				modalBody.classList.add("display-4", "text-success", "modal-body");
+				modalBody.textContent = "Форма отправлена";
+				modal[0].innerHTML = "";
+				modal[0].append(modalBody);
+			})
+
+	});
+
+	nameInput.addEventListener("input", () => {
+		manageCurrentTab();
+	});
+
+	surnameInput.addEventListener("input", () => {
+		manageCurrentTab();
+	});
+
+	phoneInput.addEventListener("input", () => {
+		manageCurrentTab();
+	});
+
+	typeOfHelpSelect.addEventListener("change", () => {
+		manageCurrentTab();
+	});
+
+	typeOfConsultationSelect.addEventListener("change", () => {
+		manageCurrentTab();
+	});
+
+	personalDataValidstionCheckbox.addEventListener("change", () => {
+		manageCurrentTab();
+	});
+
+});

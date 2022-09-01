@@ -10,6 +10,10 @@ const starsObserver = new MutationObserver(mutationsRecords => {
 	});
 });
 
+ratingStars.forEach(star => {
+	starsObserver.observe(star, {attributes: true});
+});
+
 function createRequestAns(isOk) {
 	if (isOk) {
 		const offcanvasBody = document.createElement("div");
@@ -24,12 +28,9 @@ function createRequestAns(isOk) {
 		feedbackForm.innerHTML = "";
 		feedbackForm.append(offcanvasBody);
 	}
-
 }
 
-ratingStars.forEach(star => {
-	starsObserver.observe(star, {attributes: true});
-})
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	//managed star rating mark
@@ -83,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				feedbackForm.append(offcanvasBody);
 				console.log("Ошибка: " + err)
 			})
-
 	});
 
 });
