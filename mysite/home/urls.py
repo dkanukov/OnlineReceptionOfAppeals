@@ -12,5 +12,6 @@ urlpatterns = [
         path('personal_data', views.get_personal_data_consent, name='pers_data'),
         #path('api/partner', views.APIPartner.as_view()),
         path('api/feedback', views.APIFeedback.as_view()),
-        path('contacts', views.get_contacts_page, name='contacts')
+        path('contacts', views.get_contacts_page, name='contacts'),
+        path('api/appeal', views.APIAppeal.as_view())
     ]

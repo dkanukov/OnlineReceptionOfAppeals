@@ -126,3 +126,9 @@ def get_contacts_page(request):
     temp = loader.get_template("home/contacts.html")
     return HttpResponse(temp.render({'info': info}))
 
+
+class APIAppeal(APIView):
+    def post(self, request):
+        return Response("форма отправилась", status=status.HTTP_200_OK)
+
+
