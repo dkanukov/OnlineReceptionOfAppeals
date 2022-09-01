@@ -46,7 +46,7 @@
                 <li><a class="dropdown-item" href="#">Право голоса</a></li>
                 <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                 <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
-                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
             </ul>
 
         </div>
@@ -73,7 +73,7 @@
                 <li><a class="dropdown-item" href="#">Право голоса</a></li>
                 <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                 <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
-                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
             </ul>
         </div>
 
@@ -101,7 +101,7 @@
                 <li><a class="dropdown-item" href="#">Право голоса</a></li>
                 <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                 <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
-                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
             </ul>
         </div>
 
@@ -154,7 +154,7 @@
                         <a class="nav-link" href="{% url 'news' %}">Новости</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
+                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -272,9 +272,11 @@
                         </div>
                         <div class="col-3">
                             <div class="row row-cols-5">
-                                {% for i in i|rjust:feedback.stars %}
+                                {% with ''|center:feedback.rating as range %}
+                                {% for _ in range %}
                                 <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
                                 {% endfor %}
+                                {% endwith %}
                             </div>
                         </div>
                     </div>
@@ -297,9 +299,11 @@
                         </div>
                         <div class="col-3">
                             <div class="row row-cols-5">
-                                {% for i in i|rjust:feedback.stars %}
-                                <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
-                                {% endfor %}
+                                {% with ''|center:feedback.rating as range %}
+                                    {% for _ in range %}
+                                    <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
+                                    {% endfor %}
+                                {% endwith %}
                             </div>
                         </div>
                     </div>
@@ -334,13 +338,13 @@
                 <li><a class="link-dark" href="/">ГЛАВНАЯ</a></li>
                 <li><a class="link-dark" href="{% url 'about' %}">О ФОНДЕ</a></li>
                 <li><a class="link-dark" href="{% url 'programs' %}">ПРОГРАММЫ</a></li>
-                <li><a class="link-dark" href="{% url 'about' %}#help-tab %}">ХОЧУ ПОМОЧЬ</a></li>
+                <li><a class="link-dark" href="{% url 'about' %}#help-tab">ХОЧУ ПОМОЧЬ</a></li>
                 <li><a class="link-dark" href="">ПРАВО ГОЛОСА</a></li>
                 <li><a class="link-dark" href="{% url 'news' %}">НОВОСТИ</a></li>
-                <li><a class="link-dark" href="">КОНТАКТЫ</a></li>
+                <li><a class="link-dark" href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
             </ul>
         </div>
-        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
+        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contaccts">
             <ul>
                 <li>
                     <a class="link-dark" href="tel:{{info.phone_number}}">

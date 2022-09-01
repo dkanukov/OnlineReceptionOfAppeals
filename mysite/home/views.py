@@ -109,16 +109,26 @@ def get_personal_data_consent(request):
 class APIFeedback(APIView):
 
     def post(self, request):
-        serializer = FeedbackSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        print(request.data)
+        if request.data["rating"] not in [1, 2, 3, 4, 5]:
+            return Response("wrong stars count", status=status.HTTP_400_BAD_REQUEST)
         else:
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            serializer = FeedbackSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 def get_contacts_page(request):
     info = get_about_context()
     temp = loader.get_template("home/contacts.html")
     return HttpResponse(temp.render({'info': info}))
+
+
+class APIAppeal(APIView):
+    def post(self, request):
+        return Response("форма отправилась", status=status.HTTP_200_OK)
+
 

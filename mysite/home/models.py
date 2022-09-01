@@ -72,7 +72,7 @@ class Feedback(models.Model):
 
     author = models.CharField(max_length=50, verbose_name='Имя автора')
     content = models.TextField(verbose_name='Текст отзыва')
-    stars = models.IntegerField(verbose_name='Количество звезд', default=5)
+    rating = models.IntegerField(verbose_name='Количество звезд', default=5)
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,

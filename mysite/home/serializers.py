@@ -28,7 +28,7 @@ class NewsSerializer(serializers.Serializer):
 class FeedbackSerializer(serializers.Serializer):
     author = serializers.CharField(max_length=100)
     content = serializers.CharField(max_length=1000)
-    stars = serializers.IntegerField(default=5)
+    rating = serializers.IntegerField(default=5)
 
     def create(self, validated_data):
         return Feedback.objects.create(**validated_data)
