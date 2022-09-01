@@ -10,6 +10,23 @@ const starsObserver = new MutationObserver(mutationsRecords => {
 	});
 });
 
+function createRequestAns(isOk) {
+	if (isOk) {
+		const offcanvasBody = document.createElement("div");
+		offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
+		offcanvasBody.textContent = "Форма отправлена";
+		feedbackForm.innerHTML = "";
+		feedbackForm.append(offcanvasBody);
+	} else {
+		const offcanvasBody = document.createElement("div");
+		offcanvasBody.classList.add("display-4", "text-danger", "offcanvas-body");
+		offcanvasBody.textContent = "Произошла ошибка, обновите страницу";
+		feedbackForm.innerHTML = "";
+		feedbackForm.append(offcanvasBody);
+	}
+
+}
+
 ratingStars.forEach(star => {
 	starsObserver.observe(star, {attributes: true});
 })
@@ -50,22 +67,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			rating: [...document.getElementsByClassName("rating__star__active")].length
 		}
 
-		let response = await fetch("http://127.0.0.1:8000/api/feedback", {
-			method: "POST",
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(feedbackJSON)
+		await fetch("http://127.0.0.1:8000/api/feedback", {
+			method: "POST", headers: {
+				'Accept': 'application/json', 'Content-Type': 'application/json'
+			}, body: JSON.stringify(feedbackJSON)
 		})
 			.then(res => {
-				if (res.ok) {
-					const offcanvasBody = document.createElement("div");
-					offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
-					offcanvasBody.textContent = "Форма отправлена";
-					feedbackForm.innerHTML = "";
-					feedbackForm.append(offcanvasBody);
-				}
+				createRequestAns(res.ok);
 			})
 			.catch(err => {
 				const offcanvasBody = document.createElement("div");
@@ -73,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				offcanvasBody.textContent = "Произошла ошибка, обновите страницу";
 				feedbackForm.innerHTML = "";
 				feedbackForm.append(offcanvasBody);
+				console.log("Ошибка: " + err)
 			})
 
 	});
