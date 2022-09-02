@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			name: nameInput.value,
 			last_name: surnameInput.value,
 			phone_number: phoneInput.value,
-			options: optionAppeal
+			option: optionAppeal
 		}
 
 		await fetch("http://127.0.0.1:8000/api/appeal", {
