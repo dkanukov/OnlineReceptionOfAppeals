@@ -39,7 +39,7 @@ class AppealSerializer(serializers.Serializer):
     type = serializers.IntegerField()
     name = serializers.CharField(max_length=20)
     last_name = serializers.CharField(max_length=20)
-    phone_number = serializers.CharField(max_length=12)
+    phone_number = serializers.CharField(max_length=20)
     option = serializers.IntegerField()
 
     def create(self, validated_data):
