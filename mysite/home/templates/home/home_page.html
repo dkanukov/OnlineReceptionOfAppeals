@@ -241,11 +241,11 @@
     <div class="row gy-2 row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3">
         {% for program in page.programs.all %}
         {% image program.image original as img %}
-        <a href="">
+        <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
             <div class="card text-white">
                 <img src="{{ img.url }}" class="card-img w-100 h-100" alt="...">
                 <div class="card-img-overlay">
-                    <h5 class="card-title text-dark">Card title</h5>
+                    <h5 class="card-title text-dark">{{ program.title }}</h5>
                 </div>
             </div>
         </a>
