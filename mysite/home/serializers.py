@@ -1,4 +1,4 @@
-from .models import Feedback
+from .models import Feedback, Appeal
 #Partner
 from rest_framework import serializers
 
@@ -34,4 +34,14 @@ class FeedbackSerializer(serializers.Serializer):
         return Feedback.objects.create(**validated_data)
 
 
+class AppealSerializer(serializers.Serializer):
+
+    type = serializers.IntegerField()
+    name = serializers.CharField(max_length=20)
+    last_name = serializers.CharField(max_length=20)
+    phone_number = serializers.CharField(max_length=12)
+    option = serializers.IntegerField()
+
+    def create(self, validated_data):
+        return Appeal.objects.create(**validated_data)
 ''' прописать все поля и метод create, в апиview прописать метод пост, is_valid(), save() '''

@@ -143,6 +143,15 @@ class HomePage(Page):
     ]
 
 
+class Appeal(models.Model):
+
+    type = models.IntegerField()
+    name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    phone_number = models.CharField(max_length=12)
+    option = models.IntegerField()
+
+
 #class Partner(models.Model):
 #
 #    name = models.CharField(max_length=50, blank=False, verbose_name='Имя')

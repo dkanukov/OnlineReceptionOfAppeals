@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
-from . serializers import FeedbackSerializer
+from . serializers import FeedbackSerializer, AppealSerializer
     #PartnerSerializer
 from . models import News, Programs, AboutInfo, Report, Feedback
 
@@ -129,6 +129,16 @@ def get_contacts_page(request):
 
 class APIAppeal(APIView):
     def post(self, request):
-        return Response("форма отправилась", status=status.HTTP_200_OK)
-
+        print(request.data)
+        if request.data["type"] not in [1, 2, 3]:
+            return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
+        elif request.data["option"] not in [1, 2, 3]:
+            return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
+        else:
+            serializer = AppealSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            else:
+                return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
