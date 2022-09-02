@@ -22,6 +22,22 @@ const maskOptions = {
 };
 const mask = IMask(phoneInput, maskOptions);
 
+function createRequestAnswer(isOk) {
+	const modal = document.getElementsByClassName("modal-content");
+	const modalBody = document.createElement("div");
+	if (isOk) {
+		modalBody.classList.add("display-4", "text-success", "modal-body");
+		modalBody.textContent = "Форма отправлена";
+		modal[0].innerHTML = "";
+		modal[0].append(modalBody);
+	} else {
+		modalBody.classList.add("display-4", "text-danger", "modal-body");
+		modalBody.textContent = "Произошла ошибка. Обновите страницу";
+		modal[0].innerHTML = "";
+		modal[0].append(modalBody);
+	}
+}
+
 function manageCurrentTab() {
 	const currentTab = document.querySelector(".tab-pane.active.show");
 	if (currentTab) {
@@ -32,8 +48,21 @@ function manageCurrentTab() {
 document.addEventListener("DOMContentLoaded", () => {
 	submitBtn.addEventListener("click", async (e) => {
 		e.preventDefault();
+		const currentTab = document.querySelector(".tab-pane.active.show");
+		let typeAppeal;
+		let optionAppeal;
+		switch (currentTab.id) {
+			case "appealHelp": typeAppeal = 1; optionAppeal = typeOfHelpSelect.value; break;
+			case "appealConsultation": typeAppeal = 2; optionAppeal = typeOfConsultationSelect.value; break;
+			case "appealVolunteer": typeAppeal = 3; optionAppeal = 1; break;
+			default: typeAppeal = null; optionAppeal = null;
+		}
 		const appealForm = {
-			data: 123
+			type: JSON.stringify(typeAppeal),
+			name: nameInput.value,
+			last_name: surnameInput.value,
+			phone_number: phoneInput.value,
+			options: optionAppeal
 		}
 
 		await fetch("http://127.0.0.1:8000/api/appeal", {
@@ -42,12 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			}, body: JSON.stringify(appealForm)
 		})
 			.then(res => {
-				const modal = document.getElementsByClassName("modal-content");
-				const modalBody = document.createElement("div");
-				modalBody.classList.add("display-4", "text-success", "modal-body");
-				modalBody.textContent = "Форма отправлена";
-				modal[0].innerHTML = "";
-				modal[0].append(modalBody);
+				createRequestAnswer(res.ok);
+			})
+			.catch(err => {
+				createRequestAnswer(false);
+				console.log("Error:" + err);
 			})
 
 	});

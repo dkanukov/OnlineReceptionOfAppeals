@@ -77,12 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				createRequestAns(res.ok);
 			})
 			.catch(err => {
-				const offcanvasBody = document.createElement("div");
-				offcanvasBody.classList.add("display-4", "text-danger", "offcanvas-body");
-				offcanvasBody.textContent = "Произошла ошибка, обновите страницу";
-				feedbackForm.innerHTML = "";
-				feedbackForm.append(offcanvasBody);
-				console.log("Ошибка: " + err)
+				createRequestAns(false);
+				console.log("Error: " + err);
 			})
 	});
 
