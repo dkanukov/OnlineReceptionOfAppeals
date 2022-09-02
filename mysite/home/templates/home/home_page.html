@@ -196,6 +196,7 @@
     <!-- all rest devices -->
     <div class="row d-none d-md-flex g-md-3">
         {% for news in page.news.all %}
+        {% if forloop.revcounter < 4 %}
         <div class="col-4">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                 <div class="card">
@@ -210,6 +211,7 @@
                 </div>
             </a>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 

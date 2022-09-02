@@ -11,14 +11,14 @@ class News(models.Model):
 
     caption = models.CharField(max_length=250, verbose_name="Описание новости")
 
-    text_before_photo = models.TextField(verbose_name="Текст над картинкой")
+    text_before_photo = models.TextField(verbose_name="Текст над картинкой", blank=True, null=True)
 
     image = models.ForeignKey('wagtailimages.Image',
                               on_delete=models.CASCADE,
                               related_name='+',
                               verbose_name='Картинка новости')
 
-    text_after_photo = models.TextField(verbose_name="Текст под картинкой")
+    text_after_photo = models.TextField(verbose_name="Текст под картинкой", blank=True, null=True)
 
     additional_images = StreamField([('photo', ImageChooserBlock())],
                                     verbose_name="Фотоотчет",
@@ -136,6 +136,8 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         MultiFieldPanel([InlinePanel('news', label='новость')],
                         heading='Новости'),
+        MultiFieldPanel([InlinePanel('programs', label='программу')],
+                        heading='Программы'),
         MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
                         heading='Отзывы'),
         MultiFieldPanel([InlinePanel('about', label='информацию', max_num=1)], heading='Информация'),
