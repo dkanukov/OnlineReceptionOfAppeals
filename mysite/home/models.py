@@ -148,7 +148,7 @@ class Appeal(models.Model):
     type = models.IntegerField()
     name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    phone_number = models.CharField(max_length=12)
+    phone_number = models.CharField(max_length=20)
     option = models.IntegerField()
 
 
