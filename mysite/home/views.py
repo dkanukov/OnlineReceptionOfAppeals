@@ -130,9 +130,9 @@ def get_contacts_page(request):
 class APIAppeal(APIView):
     def post(self, request):
         print(request.data)
-        if request.data["type"] not in [1, 2, 3]:
+        if request.data["type"] not in ['1', '2', '3']:
             return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
-        elif request.data["option"] not in [1, 2, 3]:
+        elif request.data["option"] not in ['1', '2', '3']:
             return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
         else:
             serializer = AppealSerializer(data=request.data)
