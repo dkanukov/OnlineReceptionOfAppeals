@@ -194,14 +194,14 @@
         {% endfor %}
     </div>
     <!-- all rest devices -->
-    <div class="row d-none d-md-flex g-md-3">
+    <div class="row row-col-md-3 row-col-lg-3 d-none d-md-flex g-md-3">
         {% for news in page.news.all %}
         {% if forloop.revcounter < 4 %}
         <div class="col-4">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card">
+                <div class="card h-100">
                     {% image news.image original as img %}
-                    <img src="{{ img.url }}" class="card-img" alt="" srcset="">
+                    <img src="{{ img.url }}" class="img-fluid" alt="" srcset="" style="height: 100%">
                     <div class="card-img-overlay row align-content-end justify-content-end">
                         <div class="col-auto news__content">
                             <h5 class="card-title text-black-50">Новости</h5>

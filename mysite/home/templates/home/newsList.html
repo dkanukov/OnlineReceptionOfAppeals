@@ -33,7 +33,7 @@
                 {% for news in page_obj %}
                 <div class="col">
                     <a id="pageLink" href="{% url 'get_spec_news' %}?id={{news.id}}">
-                        <div class="card  h-100" style="outline: 1px solid gray">
+                        <div class="card h-100" style="outline: 1px solid gray">
                             {% image news.image original as img %}
                             <img src="{{img.url}}" class="card-img-top" alt="">
                             <div class="card-body">
