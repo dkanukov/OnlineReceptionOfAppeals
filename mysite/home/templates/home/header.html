@@ -25,7 +25,7 @@
                 <li><a class="dropdown-item" href="/">Главная</a></li>
                 <li><a class="dropdown-item text-info" href="{% url 'about' %}">О фонде</a></li>
                 <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
-                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="{% url 'voting_right' %}">Право голоса</a></li>
                 <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                 <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
                 <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
@@ -52,7 +52,7 @@
                 <li><a class="dropdown-item" href="/">Главная</a></li>
                 <li><a class="dropdown-item text-info" href="{% url 'about' %}">О фонде</a></li>
                 <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
-                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="{% url 'voting_right' %}">Право голоса</a></li>
                 <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                 <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
                 <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
@@ -79,7 +79,7 @@
                 <li><a class="dropdown-item" href="/">Главная</a></li>
                 <li><a class="dropdown-item text-info" href="{% url 'about' %}">О фонде</a></li>
                 <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
-                <li><a class="dropdown-item" href="#">Право голоса</a></li>
+                <li><a class="dropdown-item" href="{% url 'voting_right' %}">Право голоса</a></li>
                 <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
                 <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
                 <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
@@ -123,7 +123,7 @@
                         <a class="nav-link" href="{% url 'about' %}#help-tab">Хочу помочь</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Право голоса</a>
+                        <a class="nav-link" href="{% url 'voting_right' %}">Право голоса</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'programs' %}">Программы</a>

@@ -141,3 +141,8 @@ class APIAppeal(APIView):
             else:
                 return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
+def get_voting_right_ptogram_page(request):
+    info = get_about_context()
+    temp = loader.get_template("home/votingRightProgram.html")
+    return HttpResponse(temp.render({'info': info}))
+
