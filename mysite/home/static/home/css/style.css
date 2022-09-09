@@ -306,3 +306,40 @@ span {
 .rating__star__active {
     fill: #FFD700;
 }
+
+.progam__container {
+    position: relative;
+}
+
+.program__photo {
+    height: 80vh;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.program__photo__overlay {
+    position: absolute;
+    top: 120px;
+}
+
+.program__photo__votingRight {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+}
+
+.program__photo__votingRight:before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    background: url("../../../../media/original_images/IMG_2538.JPG") center;
+}
+
+.program__photo__overlayVotingRight {
+    position: relative;
+}
