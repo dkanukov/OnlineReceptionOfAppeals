@@ -202,15 +202,11 @@
                 <div class="card">
                     {% image news.image original as img %}
                     <img src="{{ img.url }}" class="img-top img-fluid">
-<!--                    <div class="card-img-overlay row align-content-end justify-content-end">-->
-<!--                        <div class="col-auto news__content">-->
-<!--                            <h5 class="card-title text-black-50">Новости</h5>-->
-<!--                            <p class="card-text text-dark news__content__text">{{ news.caption }}</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="card-body">
-                        <h5 class="card-title">Новости</h5>
-                        <p class="card-text">{{ news.caption }}</p>
+                    <div class="card-img-overlay row align-content-end justify-content-end">
+                        <div class="col-auto news__content">
+                            <h5 class="card-title text-black-50">Новости</h5>
+                            <p class="card-text text-dark news__content__text">{{ news.caption }}</p>
+                        </div>
                     </div>
                 </div>
             </a>
