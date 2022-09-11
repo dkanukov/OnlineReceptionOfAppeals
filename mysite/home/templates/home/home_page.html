@@ -177,13 +177,13 @@
 <div class="our__news container-fluid  pb-5">
     <h2>Наши новости</h2>
     <!-- extra small devices -->
-    <div class="row d-flex d-md-none">
+    <div class="row d-flex d-md-none gx-3">
         {% for news in page.news.all %}
         <div class="col-6">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card h-100">
+                <div class="card">
                     {% image news.image original as img %}
-                    <img src="{{ img.url }}" alt="" srcset="">
+                    <img src="{{ img.url }}" class="img-fluid" alt="" srcset="">
                     <div class="card-body">
                         <h5 class="card-title text-black-50">Новости</h5>
                         <p class="card-text text-dark manage__text__overflow">{{news.caption}}</p>
@@ -199,9 +199,9 @@
         {% if forloop.revcounter < 4 %}
         <div class="col-4">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card h-100">
+                <div class="card">
                     {% image news.image original as img %}
-                    <img src="{{ img.url }}" class="img-fluid" alt="" srcset="" style="height: 100%">
+                    <img src="{{ img.url }}" class="img-top img-fluid">
                     <div class="card-img-overlay row align-content-end justify-content-end">
                         <div class="col-auto news__content">
                             <h5 class="card-title text-black-50">Новости</h5>
