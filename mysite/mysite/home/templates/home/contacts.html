@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
+          rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425&lang=ru_RU"
+            type="text/javascript">
+    </script>
+    <title>News</title>
+</head>
+<body>
+{% include "home/header.html" %}
+
+<div class="container pt-1">
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row mb-3">
+        <h1>Контакты</h1>
+    </div>
+    <hr>
+    <div class="row row-cols-xl-2 row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
+        <div>
+            <div class="row">
+                <h2>{{info.address}}</h2>
+            </div>
+            <div class="row row-cols-2 mt-4">
+                <div>
+                    <p class="text-secondary mb-1">E-MAIL</p>
+                    <p>{{info.email}}</p>
+                </div>
+                <div>
+                    <p class="text-secondary mb-1">ТЕЛЕФОН</p>
+                    <p>{{info.phone_number}} <br>{{info.second_phone_number}}</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <h3>Воронежское областное отделение Российского детского фонда</h3>
+            </div>
+            <div class="row mt-4">
+                <h4>Контактное лицо: Председатель ВООООБФ "Российский детский фонд" Марина Алексеевна Севергина</h4>
+            </div>
+            <div class="row">
+                <p class="text-muted">
+                    Дорогие друзья! Если у Вас есть вопросы по работе фонда или Вам требуется помощь фонда, Вы можете
+                    прийти к нам в офис, связаться с нами по телефону, по электронной почте или через форму обратной
+                    связи.
+                </p>
+            </div>
+        </div>
+        <div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e219e9474ddcfd127f20fef9bc1dd35e4fe403d2e49eee4183bc7202eda015e&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </div>
+
+</div>
+{% include "home/footer.html" %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
+</body>
+</html>
