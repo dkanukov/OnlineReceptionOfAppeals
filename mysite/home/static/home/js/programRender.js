@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             document.getElementById('caption').innerText = data.caption;
             document.getElementById('description').innerText = data.description;
             document.getElementById('bgcImg').style.backgroundImage = "url(" + data.imageUrl + ")";
+            document.getElementById('bgcImg').style.backgroundPosition = "center";
         });
 });
 
