@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         .then((res) => res.json())
         .then((data) => {
             document.getElementById('title').innerText = data.title;
-            document.getElementById('caption').innerText = data.caption;
             document.getElementById('description').innerText = data.description;
-            document.getElementById('bgcImg').style.backgroundImage = "url(" + data.imageUrl + ")";
+            document.getElementById('bgcImg').src = data.imageUrl;
         });
 });
-

@@ -13,19 +13,27 @@ const starsObserver = new MutationObserver(mutationsRecords => {
 ratingStars.forEach(star => {
 	starsObserver.observe(star, {attributes: true});
 });
-
 function createRequestAns(isOk) {
+	const offcanvasHeader = document.createElement("div");
+	const closeBtn = document.createElement("button");
+	const offcanvasBody = document.createElement("div");
+	closeBtn.classList.add("btn-close", "text-reset");
+	closeBtn.dataset.bsDismiss = "offcanvas";
+	closeBtn.dataset.ariaLabel = "Close";
+	offcanvasHeader.appendChild(closeBtn);
 	if (isOk) {
-		const offcanvasBody = document.createElement("div");
+
 		offcanvasBody.classList.add("display-4", "text-success", "offcanvas-body");
 		offcanvasBody.textContent = "Форма отправлена";
 		feedbackForm.innerHTML = "";
+		feedbackForm.append(offcanvasHeader);
 		feedbackForm.append(offcanvasBody);
 	} else {
 		const offcanvasBody = document.createElement("div");
 		offcanvasBody.classList.add("display-4", "text-danger", "offcanvas-body");
 		offcanvasBody.textContent = "Произошла ошибка, обновите страницу";
 		feedbackForm.innerHTML = "";
+		feedbackForm.append(offcanvasHeader);
 		feedbackForm.append(offcanvasBody);
 	}
 }
@@ -83,5 +91,3 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 });
-
-
