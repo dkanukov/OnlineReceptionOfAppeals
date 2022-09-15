@@ -135,7 +135,7 @@ span {
 }
 
 .card {
-    border: none;
+    /*border: none;*/
 }
 
 .card:hover {
