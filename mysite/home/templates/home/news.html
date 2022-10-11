@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
+{% load static wagtailimages_tags %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Главная</a></li>
-                <li class="breadcrumb-item"><a href="{% url 'news' %}">Пресс центр</a></li>
+                <li class="breadcrumb-item"><a href="#">Пресс центр</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Новость</li>
             </ol>
         </nav>
@@ -57,60 +57,29 @@
             <h3>Новости</h3>
         </div>
         <div class="row row-cols-xl-3 row-cols-lg-3 row-cols-md-3 row-cols-sm-1 row-cols-1 g-sm-3 g-3">
+            {% for news in latest_news %}
             <div class="col">
-                <div class="card" style="outline: 1px solid gray">
-                    <img src="{% static 'home/images/news_1.png' %}" class="card-img-top" alt="">
+            <a id="pageLink" href="{% url 'get_spec_news' %}?id={{news.id}}">
+            <div class="card" style="outline: 1px solid gray">
+                    {% image news.image original as img %}
+                    <img src="{{img.url}}" class="card-img-top" alt="">
                     <div class="card-body">
-                        <h5 class="card-title">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
-                        <p class="card-text">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами
-                            и над теми, кто находится в приюте Покров.</p>
+                        <h5 class="card-title">{{news.caption}}</h5>
+                        <p class="card-text">{{news.text_up}}</p>
                         <div class="row">
                             <div class="col">
                                 <p class="card-text"><small class="text-muted">Новости</small></p>
                             </div>
                             <div class="col">
-                                <p class="card-text"><small class="text-muted">Дата: 01.01.2020</small></p>
+                                <p class="card-text"><small class="text-muted">{{news.create_date}}</small></p>
                             </div>
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
-            <div class="col">
-                <div class="card" style="outline: 1px solid gray">
-                    <img src="{% static 'home/images/news_2.png' %}" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
-                        <p class="card-text">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами
-                            и над теми, кто находится в приюте Покров.</p>
-                        <div class="row">
-                            <div class="col">
-                                <p class="card-text"><small class="text-muted">Новости</small></p>
-                            </div>
-                            <div class="col">
-                                <p class="card-text"><small class="text-muted">Дата: 01.01.2020</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card" style="outline: 1px solid gray">
-                    <img src="{% static 'home/images/news_3.png' %}" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Елена Губина поздравила с первым днем рождения подопечного Фонда</h5>
-                        <p class="card-text">Российский детский фонд взял шефство над всеми грудничками, детьми-сиротами
-                            и над теми, кто находится в приюте Покров.</p>
-                        <div class="row">
-                            <div class="col">
-                                <p class="card-text"><small class="text-muted">Новости</small></p>
-                            </div>
-                            <div class="col">
-                                <p class="card-text"><small class="text-muted">Дата: 01.01.2020</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+
         </div>
     </div>
 </div>

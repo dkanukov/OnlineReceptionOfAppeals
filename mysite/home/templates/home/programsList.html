@@ -20,7 +20,7 @@
     <div class="row">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Программы</li>
             </ol>
         </nav>
@@ -33,7 +33,11 @@
             {% for program in page_obj %}
             <div class="row row-cols-1 g-3">
                 <div class="col">
-                    <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
+                    {% if "Право голоса" in program.title %}
+                        <a href="{% url 'voting_right' %}">
+                    {% else %}
+                        <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
+                    {% endif %}
                         <div class="p-lg-5 p-md-2 p-sm-0 program__card" style="border: 1px solid #E4E4EF">
                             <div class="row">
                                 <div class="col-lg-5 col-md-5 d-none d-md-block">

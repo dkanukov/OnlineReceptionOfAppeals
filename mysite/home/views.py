@@ -27,8 +27,9 @@ def get_news_page(request):
 
 def get_specific_news(request):
     info = get_about_context()
+    latest_news = News.objects.order_by('-id')[3:]
     temp = loader.get_template('home/news.html')
-    return HttpResponse(temp.render({'info': info}))
+    return HttpResponse(temp.render({'info': info, 'latest_news': latest_news}))
 
 
 class APINews(APIView):

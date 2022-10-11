@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+{% load static wagtailcore_tags wagtailimages_tags %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425"
+            type="text/javascript"></script>
+    <title>{{page.title}}</title>
+</head>
+
+<body>
+{% for info in page.about.all %}
+<header class="header container-fluid pb-5">
+    <div class="row align-content-center">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2">
+            <a href="">
+                <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="50px" height="100px">
+            </a>
+        </div>
+        <!-- extra small devices -->
+        <div class="d-block d-sm-none col-7 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
+                <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
+            </p>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appealModal">
+                Оставить обращение
+            </button>
+        </div>
+        <div class="d-block d-sm-none col-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-xs" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-xs">
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="{% url 'voting_right' %}">Право голоса</a></li>
+                <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
+                <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
+            </ul>
+
+        </div>
+
+        <!-- small devices -->
+        <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское отделение благотворительного фонда “Российский детский фонд”<br>
+                <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                Оставить обращение
+            </button>
+        </div>
+        <div class="d-none d-sm-block d-md-none col-sm-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2-sm" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2-sm">
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="{% url 'voting_right' %}">Право голоса</a></li>
+                <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
+                <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- medium devices -->
+        <div class="d-none d-md-block d-lg-none col-md-10 align-self-center">
+            <p class="text-info text-uppercase">
+                Воронежское областное отделение общероссийского общественного благотворительного фонда “Российский
+                детский фонд”<br>
+                <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
+
+            </p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                Оставить обращение
+            </button>
+        </div>
+        <div class="d-none d-md-block d-lg-none col-md-1 align-self-center">
+            <a class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+               aria-expanded="false">
+                <img src="{% static 'home/images/menu.svg' %}" alt="menu" srcset="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
+                <li><a class="dropdown-item" href="{% url 'voting_right' %}">Право голоса</a></li>
+                <li><a class="dropdown-item" href="{% url 'programs' %}">Программы</a></li>
+                <li><a class="dropdown-item" href="{% url 'news' %}">Новости</a></li>
+                <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- large divices -->
+        <div class="align-self-end col-lg-4 mt-lg-2">
+            <p class="text-uppercase text-info d-none d-lg-block">
+                Воронежское областное отделение <br>
+                общероссийского общественного <br>
+                благотворительного фонда <br>
+                “Российский детский фонд” <br>
+
+                <a class="phone__link" href="tel:{{info.phone_number}}">{{info.phone_number}}</a>
+            </p>
+        </div>
+        <nav class="navbar navbar-expand-lg col-lg-7">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav flex-lg-wrap">
+                    <li class="nav-item">
+
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                            Оставить обращение
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            О фонде
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'about' %}">О фонде</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about' %}#docs-tab">Документы</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about' %}#requisites-tab">Реквизиты</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about' %}#feedbacks-tab">Отзывы</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}#help-tab">Хочу помочь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'voting_right' %}">Право голоса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'programs' %}">Программы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news' %}">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid subheader">
+        <div>
+            <h1 class="subheader__text text-center pt-5">
+                Воронежское областное отделение<br>
+                «Российский детский фонд»
+            </h1>
+            <p class="subheader__subtext text-center text-nowrap">Основан в 1988 году</p>
+        </div>
+    </div>
+</header>
+{% endfor %}
+<div class="our__news container-fluid  pb-5">
+    <h2>Наши новости</h2>
+    <!-- extra small devices -->
+    <div class="row d-flex d-md-none gx-3">
+        {% for news in page.news.all %}
+        <div class="col-6">
+            <a href="{% url 'get_spec_news' %}?id={{news.id}}">
+                <div class="card">
+                    {% image news.image original as img %}
+                    <img src="{{ img.url }}" class="img-fluid" alt="" srcset="">
+                    <div class="card-body">
+                        <h5 class="card-title text-black-50">Новости</h5>
+                        <p class="card-text text-dark manage__text__overflow">{{news.caption}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- all rest devices -->
+    <div class="row row-col-md-3 row-col-lg-3 d-none d-md-flex g-md-3">
+        {% for news in page.news.all %}
+        {% if forloop.revcounter < 4 %}
+        <div class="col-4">
+            <a href="{% url 'get_spec_news' %}?id={{news.id}}">
+                <div class="card">
+                    {% image news.image original as img %}
+                    <img src="{{ img.url }}" class="img-top img-fluid">
+                    <div class="card-img-overlay row align-content-end justify-content-end">
+                        <div class="col-auto news__content">
+                            <h5 class="card-title text-black-50">Новости</h5>
+                            <p class="card-text text-dark news__content__text">{{ news.caption }}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
+        <a href="{% url 'news' %}" class="btn btn-primary btn-sm" role="button">ЗАГРУЗИТЬ ЕЩЁ</a>
+    </div>
+</div>
+
+<div class="about__part container-fluid pb-5 pl-2">
+    <div class="row justify-content-start">
+        <h2>О фонде</h2>
+    </div>
+    <div class="row ml">
+        <div class="col col-lg-6 col-md-6 ps-3">
+            {% for p in page.about.all %}
+            {{p.information|linebreaks}}
+            {% endfor %}
+            <a href="{% url 'about' %}#help-tab" class="btn btn-primary btn-sm" role="button">ХОЧУ ПОМОЧЬ ФОНДУ</a>
+        </div>
+        <img src="{% static 'home/images/6eb2a55a02b296cd1b63307ed60c34a6 1.png' %}"
+             class="offset-lg-1 col-lg-5 col-md-6 d-none d-md-block align-self-start about__part__img" alt="">
+    </div>
+</div>
+
+<div class="programs__section container-fluid pb-5 pl-2">
+    <div class="row justify-content-start">
+        <h2>Программы фонда</h2>
+    </div>
+    <div class="row gy-2 row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3">
+        {% for program in page.programs.all %}
+        {% image program.image original as img %}
+        <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
+            <div class="card text-white">
+                <img src="{{ img.url }}" class="card-img w-100 h-100" alt="...">
+                <div class="card-img-overlay">
+                    <h5 class="card-title text-dark">{{ program.title }}</h5>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+
+    </div>
+</div>
+<hr class="d-none d-md-flex">
+<div class="programs__section container-fluid pl-2 d-none d-md-block">
+    <div class="row justify-content-start">
+        <h2>Отзывы</h2>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for feedback in page.reviews.all %}
+            {% if forloop.first %}
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                            <h3 class="d-block">
+                                {{ feedback.author }}
+                            </h3>
+                        </div>
+                        <div class="col-3">
+                            <div class="row row-cols-5">
+                                {% with ''|center:feedback.rating as range %}
+                                {% for _ in range %}
+                                <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
+                                {% endfor %}
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        {{ feedback.content }}
+                    </p>
+                    <div class="row row-col-1">
+                        <div class="text-center">
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-9">
+                            <h3 class="d-block">
+                                {{ feedback.author }}
+                            </h3>
+                        </div>
+                        <div class="col-3">
+                            <div class="row row-cols-5">
+                                {% with ''|center:feedback.rating as range %}
+                                {% for _ in range %}
+                                <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
+                                {% endfor %}
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        {{ feedback.content }}
+                    </p>
+                    <div class="row row-col-1">
+                        <div class="text-center">
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
+</div>
+<hr>
+{% for info in page.about.all %}
+<footer class="container-fluid">
+    <div
+            class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
+        <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
+            <ul>
+                <li><a class="link-dark" href="/">ГЛАВНАЯ</a></li>
+                <li><a class="link-dark" href="{% url 'about' %}">О ФОНДЕ</a></li>
+                <li><a class="link-dark" href="{% url 'programs' %}">ПРОГРАММЫ</a></li>
+                <li><a class="link-dark" href="{% url 'about' %}#help-tab">ХОЧУ ПОМОЧЬ</a></li>
+                <li><a class="link-dark" href="{% url 'voting_right' %}">ПРАВО ГОЛОСА</a></li>
+                <li><a class="link-dark" href="{% url 'news' %}">НОВОСТИ</a></li>
+                <li><a class="link-dark" href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contaccts">
+            <ul style="list-style: none">
+                <li>
+                    <a class="link-dark" href="tel:{{info.phone_number}}">
+                        <i class="bi bi-telephone-fill"></i>
+                        {{info.phone_number}}
+                    </a>
+                </li>
+                <li class="mt-2">
+                    <a class="" href="mailto:{{info.email}}">
+                        <i class="bi bi-envelope"></i>
+                        {{info.email}}
+                    </a>
+                </li>
+                <li class="mt-2">
+                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-2 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center text-black-50">
+            <i class="bi bi-printer"></i>
+            <p class="">Версия для печати</p>
+        </div>
+        <hr>
+        <div class="row row-cols-2 justify-content-between">
+            <div class="col-4">
+                <p class="text-black-50">
+                    © Воронежское областное отделение общероссийского общественного благотворительного фонда
+                    «Российский детский фонд» 1988-2022
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="text-black-50">
+                    Политика конфиденциальности
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- extra small devices -->
+    <div class="d-block d-sm-none row row-cols-1">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="row">
+                    <a class="link-dark" href="tel:{{info.phone_number}}">
+                        <i class="bi bi-telephone-fill"></i>
+                        {{info.phone_number}}
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <a class="" href="mailto:{{info.email}} ">
+                        <i class="bi bi-envelope"></i>
+                        {{info.email}}
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <p class="text-black-50">
+                    © Воронежское областное отделение общероссийского общественного <br> благотворительного фонда
+                    «Российский детский фонд» 1988-2022
+                </p>
+            </div>
+            <div class="col-auto">
+                <p class="text-black-50">
+                    Политика конфиденциальности
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endfor %}
+<div class="modal fade" id="appealModal" tabindex="-1" aria-labelledby="appealModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Оставьте свое обращение</h5>
+                <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
+                                    data-bs-target="#appealHelp" type="button" role="tab" aria-controls="appealHelp"
+                                    aria-selected="true">Помощь
+                            </button>
+                            <button class="nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
+                                    data-bs-target="#appealConsultation" type="button" role="tab"
+                                    aria-controls="appealConsultation" aria-selected="false">Консультации
+                            </button>
+                            <button class="nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
+                                    data-bs-target="#appealVolunteer" type="button" role="tab"
+                                    aria-controls="appealVolunteer" aria-selected="false">Волонтерство
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="tab-content mt-3" id="nav-tabContent">
+                        <div class="mb-3">
+                            <label for="nameFormInput" class="form-label">Имя <strong
+                                    style="color: red">*</strong></label>
+                            <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
+                        </div>
+                        <div class="mb-3">
+                            <label for="surnameFormInput" class="form-label">Фамилия <strong
+                                    style="color: red">*</strong></label>
+                            <input required type="text" class="form-control" id="surnameFormInput"
+                                   placeholder="Иванов">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneFormInput" class="form-label">Номер телефона <strong
+                                    style="color: red">*</strong></label>
+                            <input required type="tel" class="form-control" id="phoneFormInput"
+                                   placeholder="(999)999-99-99">
+                        </div>
+                        <div class="tab-pane fade show active appeal" id="appealHelp" role="tabpanel"
+                             aria-labelledby="appealHelp-tab">
+
+                            <label for="typeOfHelp" class="form-label">Тип требуемой помощи <strong
+                                    style="color: red">*</strong></label>
+                            <select required class="form-select form-control mb-3" id="typeOfHelp"
+                                    aria-label="Default select example">
+                                <option value="1" selected>SOS-размещение</option>
+                                <option value="2">Гуманитарная помощь</option>
+                                <option value="3">Необходим адресный сбор</option>
+                            </select>
+                        </div>
+                        <div class="tab-pane fade appeal" id="appealConsultation" role="tabpanel"
+                             aria-labelledby="appealConsultation-tab">
+                            <label for="typeOfConsultation" class="form-label">Тип требуемой консультации <strong
+                                    style="color: red">*</strong></label>
+                            <select required class="form-select form-control mb-3" id="typeOfConsultation"
+                                    aria-label="Default select example">
+                                <option value="1" selected>Консультация психолога</option>
+                                <option value="2">Консультация юриста</option>
+                                <option value="3">Хочу в группу поддержки</option>
+                            </select>
+                        </div>
+                        <div class="tab-pane fade mt-3 appeal" id="appealVolunteer" role="tabpanel"
+                             aria-labelledby="appealVolunteer-tab">
+                            <select required class="form-select form-control mb-3" id="typeOfVolunteer"
+                                    aria-label="Default select example">
+                                <option value="1">Хочу быть волонтёром Фонда</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
+                        <label class="form-check-label" for="checkboxForm">
+                            Я согласен на <a href="personal_data">На обработку персональных данных</a>
+                        </label>
+                    </div>
+                    <div class="mb-3">
+                        <button disabled id="submitForm"  type="button" class="btn btn-primary">
+                            Отправить
+                        </button>
+                        <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
+<script src="https://unpkg.com/imask"></script>
+</body>
+
+</html>

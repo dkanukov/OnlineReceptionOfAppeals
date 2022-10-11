@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
+          rel="stylesheet">
+    <title>program</title>
+</head>
+<body>
+{% include "home/header.html" %}
+<div  class="container-fluid progam__container">
+    <div id="bgcImg" class="program__photo"></div>
+    <div class="container program__photo__overlay">
+        <div class="row к row-cols-1">
+            <div class="col-12 mt-5">
+                <h2 id="title" class="text-dark fw-bold"></h2>
+            </div>
+            <div class="col-12">
+                <h3 class="text-dark" id="caption">
+
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container pt-3">
+    <p id="description">
+    </p>
+    <p class="text-black-50">
+        Для получения более подробной информации об оказании помощи на благотворительной основе обращайтесь на электронную почту <a class="" href="mailto:fond@dfvrn.ru ">fond@dfvrn.ru</a> или по телефону <a class="" href="tel:+7(473)2104705">+7 (473) 210-47-05</a>.
+    </p>
+    <div class="row align-items-center">
+        <div class="col">
+            <a href="{% url 'programs' %}" class="text-nowrap">
+                <i class="bi bi-arrow-left"></i>
+                Назад к списку
+            </a>
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-evenly">
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div class="ya-share2" data-curtain data-size="m" data-shape="round" data-services="vkontakte,odnoklassniki,telegram,viber,whatsapp"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "home/footer.html" %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script defer type="module" src="{% static 'home/js/programRender.js' %}"></script>
+<script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
+</body>
+</html>

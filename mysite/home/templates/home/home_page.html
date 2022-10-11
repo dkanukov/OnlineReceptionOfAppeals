@@ -196,7 +196,7 @@
     <!-- all rest devices -->
     <div class="row row-col-md-3 row-col-lg-3 d-none d-md-flex g-md-3">
         {% for news in page.news.all %}
-        {% if forloop.revcounter < 4 %}
+        {% if forloop.counter < 4 %}
         <div class="col-4">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                 <div class="card h-100">
@@ -205,12 +205,12 @@
                     <div class="card-body">
                         <p class="card-text text-dark manage__text__overflow">{{ news.caption }}</p>
                     </div>
-<!--                    <div class="card-img-overlay row align-content-end justify-content-end">-->
-<!--                        <div class="col-auto news__content">-->
-<!--                            <h5 class="card-title text-black-50">Новости</h5>-->
-<!--                            <p class="card-text text-dark news__content__text">{{ news.caption }}</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="card-img-overlay row align-content-end justify-content-end">-->
+                    <!--                        <div class="col-auto news__content">-->
+                    <!--                            <h5 class="card-title text-black-50">Новости</h5>-->
+                    <!--                            <p class="card-text text-dark news__content__text">{{ news.caption }}</p>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
                 </div>
             </a>
         </div>
@@ -533,4 +533,5 @@
 <script defer type="module" src="{% static 'home/js/appealForm.js' %}"></script>
 <script src="https://unpkg.com/imask"></script>
 </body>
+
 </html>
