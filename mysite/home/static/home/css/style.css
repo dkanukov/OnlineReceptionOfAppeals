@@ -94,8 +94,8 @@ span {
     height: 40px;
     background-image: url(../images/phone_img.svg);
     background-repeat: no-repeat;
-    right: 100px;
-    top: -5px;
+    /*right: 80px;*/
+    /*top: -5px;*/
 }
 
 .subheader {

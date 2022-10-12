@@ -94,7 +94,7 @@ span {
     height: 40px;
     background-image: url(../images/phone_img.svg);
     background-repeat: no-repeat;
-    right: 100px;
+    /*right: 100px;*/
     top: -5px;
 }
 
