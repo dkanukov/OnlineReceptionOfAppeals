@@ -1,5 +1,20 @@
 /* font-family: 'Source Serif Pro', serif; */
 
+@media all and (min-width: 1450px) {
+    /* screen size until 1200px */
+    body {
+        font-size: 2em; /* 1.5x default size */
+    }
+
+    .card-title {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        font-size: 0.8em;
+    }
+}
+
 p {
     font-family: 'Source Serif Pro', serif;
     font-style: normal;
@@ -69,6 +84,7 @@ span {
     overflow: hidden;
 }
 
+
 .search__icon {
     position: relative;
 }
@@ -81,21 +97,6 @@ span {
     height: 40px;
     background-image: url(../images/loupe.svg);
     background-repeat: no-repeat;
-}
-
-.phone__link {
-    position: relative;
-}
-
-.phone__link::before {
-    position: absolute;
-    content: "";
-    width: 40px;
-    height: 40px;
-    background-image: url(../images/phone_img.svg);
-    background-repeat: no-repeat;
-    /*right: 80px;*/
-    /*top: -5px;*/
 }
 
 .subheader {
@@ -152,9 +153,9 @@ span {
     display: -moz-box;
     -moz-box-orient: vertical;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    line-clamp: 3;
+    line-clamp: 2;
     box-orient: vertical;
 }
 
