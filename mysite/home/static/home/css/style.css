@@ -108,11 +108,6 @@ span {
     background-position: center;
 }
 
-
-.subheader__subtext {
-    font-family: 'Source Serif Pro';
-}
-
 .btn__help {
     max-width: 200px;
     color: #847FD2;
@@ -168,8 +163,7 @@ span {
     background-image: none;
 }
 
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
     margin-left: 110px;
     content: '>';
     font-size: 30px;
@@ -182,7 +176,7 @@ span {
 }
 
 .footer__links ul,
-.footer__contacts ul{
+.footer__contacts ul {
     list-style: none;
 }
 
@@ -197,7 +191,7 @@ span {
     transition: fill .3s ease-in-out;
 }
 
-.social__link:hover .vk__icon{
+.social__link:hover .vk__icon {
     fill: #3375F6;
 }
 
@@ -205,24 +199,24 @@ span {
 .social__link:hover .odno__icon path,
 .social__link:hover .telegram__icon path,
 .social__link:hover .whats__icon path,
-.social__link:hover .viber__icon path{
+.social__link:hover .viber__icon path {
     fill-opacity: 1;
     fill: #FFFFFF;
 }
 
-.social__link:hover .odno__icon{
+.social__link:hover .odno__icon {
     fill: #EE9622;
 }
 
-.social__link:hover .telegram__icon{
+.social__link:hover .telegram__icon {
     fill: #5BA6DD;
 }
 
-.social__link:hover .whats__icon{
+.social__link:hover .whats__icon {
     fill: #65D072;
 }
 
-.social__link:hover .viber__icon{
+.social__link:hover .viber__icon {
     fill: #7A5DE8;
 }
 
@@ -323,4 +317,8 @@ span {
     top: 33%;
     left: 5%;
     position: absolute;
+}
+
+.program__main__page {
+
 }
