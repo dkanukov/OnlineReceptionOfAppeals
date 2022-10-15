@@ -21,7 +21,7 @@
 <body>
 {% for info in page.about.all %}
 <header class="header container-fluid conta pb-5">
-    <div class="row align-content-center">
+    <div class="row align-content-center justify-content-md-between">
         <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-2 col-2">
             <a href="">
                 <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="70px" height="120px">
@@ -30,9 +30,14 @@
         <!-- extra small devices -->
         <div class="d-block d-sm-none col-7 align-self-center">
             <p class="text-info text-uppercase">
-                <a href="tel:{{info.phone_number}}">
-                    <i class="bi bi-telephone-fill"></i>
+                <a class="d-block" href="tel:{{info.phone_number}}">
                     {{info.phone_number}}</a>
+                <a class="" href="https://vk.com/detfondvrn">
+                    <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 48C0 25.3726 0 14.0589 7.02944 7.02944C14.0589 0 25.3726 0 48 0L52 0C74.6274 0 85.9411 0 92.9706 7.02944C100 14.0589 100 25.3726 100 48V52C100 74.6274 100 85.9411 92.9706 92.9706C85.9411 100 74.6274 100 52 100H48C25.3726 100 14.0589 100 7.02944 92.9706C0 85.9411 0 74.6274 0 52L0 48Z" fill="#0077FF"/>
+                        <path d="M53.2085 72.0418C30.4168 72.0418 17.4169 56.4169 16.8752 30.4169H28.2919C28.6669 49.5002 37.0834 57.5835 43.75 59.2501V30.4169H54.5004V46.8751C61.0837 46.1668 67.9995 38.6669 70.3329 30.4169H81.0832C79.2915 40.5835 71.7915 48.0835 66.4582 51.1668C71.7915 53.6668 80.3336 60.2085 83.5836 72.0418H71.7499C69.2082 64.1252 62.8754 58.0001 54.5004 57.1668L54.5004 72.0418H53.2085Z" fill="white"/>
+                    </svg>
+                </a>
             </p>
             <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appealModal">
                 Оставить обращение
@@ -56,13 +61,19 @@
         </div>
 
         <!-- small devices -->
-        <div class="d-none d-sm-block d-md-none col-sm-8 align-self-center">
-            <p class="text-info text-uppercase">
+        <div class="d-none d-sm-flex d-md-none col-sm-8 align-self-center">
+            <p class="text-info text-uppercase col-sm-5">
+                <a href="https://vk.com/detfondvrn">
+                    <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 48C0 25.3726 0 14.0589 7.02944 7.02944C14.0589 0 25.3726 0 48 0L52 0C74.6274 0 85.9411 0 92.9706 7.02944C100 14.0589 100 25.3726 100 48V52C100 74.6274 100 85.9411 92.9706 92.9706C85.9411 100 74.6274 100 52 100H48C25.3726 100 14.0589 100 7.02944 92.9706C0 85.9411 0 74.6274 0 52L0 48Z" fill="#0077FF"/>
+                        <path d="M53.2085 72.0418C30.4168 72.0418 17.4169 56.4169 16.8752 30.4169H28.2919C28.6669 49.5002 37.0834 57.5835 43.75 59.2501V30.4169H54.5004V46.8751C61.0837 46.1668 67.9995 38.6669 70.3329 30.4169H81.0832C79.2915 40.5835 71.7915 48.0835 66.4582 51.1668C71.7915 53.6668 80.3336 60.2085 83.5836 72.0418H71.7499C69.2082 64.1252 62.8754 58.0001 54.5004 57.1668L54.5004 72.0418H53.2085Z" fill="white"/>
+                    </svg>
+                </a> <br>
                 <a href="tel:{{info.phone_number}}">
                     <i class="bi bi-telephone-fill"></i>
                     {{info.phone_number}}</a>
             </p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+            <button class="btn btn-primary col-sm-5 p-0" data-bs-toggle="modal" data-bs-target="#appealModal">
                 Оставить обращение
             </button>
         </div>
@@ -83,13 +94,19 @@
         </div>
 
         <!-- medium devices -->
-        <div class="d-none d-md-block d-lg-none col-md-10 align-self-center row">
-            <span class="text-info text-uppercase">
+        <div class="d-none d-md-block d-lg-none col-md-10 align-content-center row mt-3">
+            <span class=" text-info text-uppercase">
+                <a href="https://vk.com/detfondvrn">
+                    <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 48C0 25.3726 0 14.0589 7.02944 7.02944C14.0589 0 25.3726 0 48 0L52 0C74.6274 0 85.9411 0 92.9706 7.02944C100 14.0589 100 25.3726 100 48V52C100 74.6274 100 85.9411 92.9706 92.9706C85.9411 100 74.6274 100 52 100H48C25.3726 100 14.0589 100 7.02944 92.9706C0 85.9411 0 74.6274 0 52L0 48Z" fill="#0077FF"/>
+                        <path d="M53.2085 72.0418C30.4168 72.0418 17.4169 56.4169 16.8752 30.4169H28.2919C28.6669 49.5002 37.0834 57.5835 43.75 59.2501V30.4169H54.5004V46.8751C61.0837 46.1668 67.9995 38.6669 70.3329 30.4169H81.0832C79.2915 40.5835 71.7915 48.0835 66.4582 51.1668C71.7915 53.6668 80.3336 60.2085 83.5836 72.0418H71.7499C69.2082 64.1252 62.8754 58.0001 54.5004 57.1668L54.5004 72.0418H53.2085Z" fill="white"/>
+                    </svg>
+                </a> <br>
                 <a href="tel:{{info.phone_number}}">
                     <i class="bi bi-telephone-fill"></i>
                     {{info.phone_number}}</a>
             </span>
-            <button class="btn btn-primary col-3" data-bs-toggle="modal" data-bs-target="#appealModal">
+            <button class="col-3 pl-4 btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#appealModal">
                 Оставить обращение
             </button>
         </div>
