@@ -319,6 +319,15 @@ span {
     position: absolute;
 }
 
-.program__main__page {
+.card-img-overlay {
+    color: white;
+}
 
+.img_wrap_programs {
+    border: none;
+    background-color: black;
+}
+
+.img_wrap_programs img {
+    opacity: 0.73;
 }
