@@ -14,5 +14,6 @@ urlpatterns = [
         path('api/feedback', views.APIFeedback.as_view()),
         path('contacts', views.get_contacts_page, name='contacts'),
         path('api/appeal', views.APIAppeal.as_view()),
-        path('voting_right', views.get_voting_right_ptogram_page, name='voting_right')
+        path('voting_right', views.get_voting_right_ptogram_page, name='voting_right'),
+        path('stuff/login/', views.login_view, name='login'),
     ]

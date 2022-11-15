@@ -1,9 +1,15 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import redirect
 from django.template import loader
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+from django.views import View
+import json
+from django.contrib.auth import authenticate
+
 
 from . serializers import FeedbackSerializer, AppealSerializer
     #PartnerSerializer
@@ -110,7 +116,6 @@ def get_personal_data_consent(request):
 class APIFeedback(APIView):
 
     def post(self, request):
-        print(request.data)
         if request.data["rating"] not in [1, 2, 3, 4, 5]:
             return Response("wrong stars count", status=status.HTTP_400_BAD_REQUEST)
         else:
@@ -142,8 +147,33 @@ class APIAppeal(APIView):
             else:
                 return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
+
 def get_voting_right_ptogram_page(request):
     info = get_about_context()
     temp = loader.get_template("home/votingRightProgram.html")
     return HttpResponse(temp.render({'info': info}))
+
+
+@csrf_exempt
+def login_view(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            response = {'success': True,
+                        'username': user.username
+                        }
+            return redirect('/appeal')
+
+            #return HttpResponseRedirect(response, status=status.HTTP_200_OK)
+        else:
+            return HttpResponse("Такого пользователя нет")
+    else:
+        temp = loader.get_template('home/login.html')
+        return HttpResponse(temp.render(), status=status.HTTP_200_OK)
+
+
+
 
