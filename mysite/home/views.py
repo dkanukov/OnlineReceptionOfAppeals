@@ -6,7 +6,6 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from django.views import View
 import json
 from django.contrib.auth import authenticate
 
@@ -153,7 +152,7 @@ def get_voting_right_ptogram_page(request):
     temp = loader.get_template("home/votingRightProgram.html")
     return HttpResponse(temp.render({'info': info}))
 
-
+'''
 @csrf_exempt
 def login_view(request):
     if request.method == "POST":
@@ -165,7 +164,7 @@ def login_view(request):
             response = {'success': True,
                         'username': user.username
                         }
-            return redirect('/appeal')
+            return HttpResponse('/appeal')
 
             #return HttpResponseRedirect(response, status=status.HTTP_200_OK)
         else:
@@ -173,7 +172,4 @@ def login_view(request):
     else:
         temp = loader.get_template('home/login.html')
         return HttpResponse(temp.render(), status=status.HTTP_200_OK)
-
-
-
-
+'''
