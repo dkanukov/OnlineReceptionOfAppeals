@@ -1,23 +1,24 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld/>
+      <HeaderComponent/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from '@/components/HeaderComponent';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    HeaderComponent,
   },
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+    }
+  },
 }
 </script>
