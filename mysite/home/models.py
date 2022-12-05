@@ -2,12 +2,12 @@ from django.db import models
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
-from wagtail.models import Page
+from wagtail.models import Page, Orderable
 from modelcluster.fields import ParentalKey
 from wagtail.fields import StreamField
 
 
-class News(models.Model):
+class News(Orderable):
 
     caption = models.CharField(max_length=250, verbose_name="Описание новости")
 
@@ -41,7 +41,7 @@ class News(models.Model):
     ]
 
 
-class Programs(models.Model):
+class Programs(Orderable):
     title = models.CharField(max_length=100, null=True, verbose_name='Название программы')
 
     caption = models.TextField(null=True, verbose_name="Подпись")
@@ -68,7 +68,7 @@ class Programs(models.Model):
     ]
 
 
-class Feedback(models.Model):
+class Feedback(Orderable):
 
     author = models.CharField(max_length=50, verbose_name='Имя автора')
     content = models.TextField(verbose_name='Текст отзыва')
@@ -117,7 +117,7 @@ class AboutInfo(models.Model):
     ]
 
 
-class Report(models.Model):
+class Report(Orderable):
     file = models.FileField(verbose_name='отчёт')
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
 
@@ -132,6 +132,8 @@ class Report(models.Model):
 
 
 class HomePage(Page):
+
+    email = models.EmailField(default="dfvrn@admin.ru", null=True, blank=True)
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([InlinePanel('news', label='новость')],

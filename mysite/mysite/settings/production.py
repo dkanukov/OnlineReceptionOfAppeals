@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["dfvrn.pythonanywhere.com"]
+ALLOWED_HOSTS = ["dfvrn.pythonanywhere.com", "localhost"]
 
 ROOT_URLCONF = "mysite.urls"
 
