@@ -149,11 +149,44 @@ class HomePage(Page):
 
 class Appeal(models.Model):
 
-    type = models.IntegerField()
-    name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
-    phone_number = models.CharField(max_length=20)
-    option = models.IntegerField()
+    TYPE_CHOICES = (
+        (1, 'Помощь'),
+        (2, 'Консультация'),
+        (3, 'Волонтерство')
+    )
+
+    OPTION_CHOICES = (
+        (1, 'SOS размещение'),
+        (2, 'Гуманитарная помощь'),
+        (3, 'Необходим адресный сбор'),
+        (4, 'Koнсультация психолога'),
+        (5, 'Консультация юриста'),
+        (6, 'Хочу в группу поддержки'),
+        (7, 'Хочу быть волонтером фонда')
+    )
+
+    type = models.IntegerField(
+        verbose_name='Тип обращения',
+        choices=TYPE_CHOICES
+    )
+    name = models.CharField(max_length=20, verbose_name='Имя')
+    last_name = models.CharField(
+        max_length=20, verbose_name='Фамилия',
+        blank=True, null=True
+    )
+    phone_number = models.CharField(
+        max_length=20, verbose_name='Телефон',
+        blank=True, null=True
+    )
+    option = models.IntegerField(
+        verbose_name='Тип требуемой помощи',
+        choices=OPTION_CHOICES
+    )
+
+    class Meta:
+        verbose_name = 'Обращение'
+        verbose_name_plural = 'Обращения'
+
 
 
 #class Partner(models.Model):

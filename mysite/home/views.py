@@ -136,7 +136,10 @@ class APIAppeal(APIView):
     def post(self, request):
         if request.data["type"] not in ['1', '2', '3']:
             return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
-        elif request.data["option"] not in ['1', '2', '3']:
+        elif request.data["option"] not in [
+            '1', '2', '3',
+            '4', '5', '6', '7'
+        ]:
             return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
         else:
             serializer = AppealSerializer(data=request.data)
