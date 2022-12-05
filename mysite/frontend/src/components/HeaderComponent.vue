@@ -1,7 +1,5 @@
 <template>
-  <v-app-bar
-      :elevation="3"
-  >
+  <v-app-bar>
     <v-text-field
         prepend-inner-icon="mdi-magnify"
         variant="solo"
