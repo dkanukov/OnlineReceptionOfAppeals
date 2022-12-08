@@ -165,6 +165,13 @@ class Appeal(models.Model):
         (7, 'Хочу быть волонтером фонда')
     )
 
+    STATUS_CHOICES = (
+        ('new', 'Новый'),
+        ('work', 'В работе'),
+        ('done', 'Выполнен'),
+        ('archive', 'В архиве')
+    )
+
     type = models.IntegerField(
         verbose_name='Тип обращения',
         choices=TYPE_CHOICES
@@ -181,6 +188,11 @@ class Appeal(models.Model):
     option = models.IntegerField(
         verbose_name='Тип требуемой помощи',
         choices=OPTION_CHOICES
+    )
+    status = models.CharField(
+        max_length=50, verbose_name="Статус",
+        choices=STATUS_CHOICES, default='new',
+        null=False
     )
 
     class Meta:

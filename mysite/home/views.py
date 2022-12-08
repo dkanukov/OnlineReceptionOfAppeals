@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from .models import Appeal
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -147,10 +148,15 @@ class APIAppeal(APIView):
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             else:
-                return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def get(self, request):
+        object_list = Appeal.objects.all()
+        seializer = AppealSerializer(instance=object_list, many=True)
+        return Response(seializer.data)
 
 
-def get_voting_right_ptogram_page(request):
+def get_voting_right_program_page(request):
     info = get_about_context()
     temp = loader.get_template("home/votingRightProgram.html")
     return HttpResponse(temp.render({'info': info}))
