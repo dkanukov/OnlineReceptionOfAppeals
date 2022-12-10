@@ -13,7 +13,7 @@ from django.contrib.auth import authenticate
 
 from . serializers import FeedbackSerializer, AppealSerializer
     #PartnerSerializer
-from . models import News, Programs, AboutInfo, Report, Feedback
+from . models import News, Programs, AboutInfo, Report, Feedback, Document
 
 
 def get_about_context():
@@ -91,9 +91,34 @@ def format_date(date):
 def get_about_page(request):
     info = get_about_context()
     reports = Report.objects.all()
+    documents = Document.objects.all()
+    report_names = [report.file.name for report in reports]
+    report_urls = [report.file.url for report in reports]
+    document_names = [document.file.name for document in documents]
+    document_urls= [document.file.url for document in documents]
+
+    for index, report_name in enumerate(report_names):
+        report_name = report_name.replace('reports/', '')
+        report_name = report_name.replace('_', ' ')
+        report_name = report_name.replace('.pdf', '')
+        report_names[index] = report_name
+    report_files = zip(report_names, report_urls)
+
+    for index, document_name in enumerate(document_names):
+        document_name = document_name.replace('documents/', '')
+        document_name = document_name.replace('_', ' ')
+        document_name = document_name.replace('.pdf', '')
+        document_names[index] = document_name
+    document_files = zip(document_names, document_urls)
+
     feedbacks = Feedback.objects.all()
     temp = loader.get_template('home/about.html')
-    return HttpResponse(temp.render({'info': info, 'reports': reports, 'feedbacks': feedbacks}))
+    return HttpResponse(temp.render({
+        'info': info,
+        'reports': report_files,
+        'documents': document_files,
+        'feedbacks': feedbacks,
+    }))
 
 
 def get_personal_data_consent(request):

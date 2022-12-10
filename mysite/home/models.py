@@ -118,13 +118,27 @@ class AboutInfo(models.Model):
 
 
 class Report(Orderable):
-    file = models.FileField(verbose_name='отчёт')
+    file = models.FileField(upload_to='reports/', verbose_name='отчёт')
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
 
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
         related_name='reports'
+    )
+    panels = [
+        FieldPanel('file')
+    ]
+
+
+class Document(models.Model):
+    file = models.FileField(upload_to='documents/', verbose_name='документ')
+    create_date = models.DateField(auto_now_add=True, blank=True, null=True)
+
+    page = ParentalKey(
+        'home.HomePage',
+        on_delete=models.CASCADE,
+        related_name='documents'
     )
     panels = [
         FieldPanel('file')
@@ -143,7 +157,9 @@ class HomePage(Page):
         MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
                         heading='Отзывы'),
         MultiFieldPanel([InlinePanel('about', label='информацию', max_num=1)], heading='Информация'),
-        MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты')
+        MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты'),
+        MultiFieldPanel([InlinePanel('documents', label='документ')],
+                        heading='Документы')
     ]
 
 
