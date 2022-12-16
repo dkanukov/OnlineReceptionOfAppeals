@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "search",
     "rest_framework",
     "wagtail.contrib.forms",
+    "wagtail.contrib.modeladmin",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
     "wagtail.sites",

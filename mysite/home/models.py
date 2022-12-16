@@ -73,6 +73,8 @@ class Feedback(Orderable):
     author = models.CharField(max_length=50, verbose_name='Имя автора')
     content = models.TextField(verbose_name='Текст отзыва')
     rating = models.IntegerField(verbose_name='Количество звезд', default=5)
+    is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
+
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
@@ -82,8 +84,18 @@ class Feedback(Orderable):
 
     panels = [
         FieldPanel('author'),
-        FieldPanel('content')
+        FieldPanel('content'),
+        FieldPanel('rating'),
+        FieldPanel('is_published')
     ]
+
+    def __str__(self):
+        return f"Отзыв номер {self.id}"
+
+
+    class Meta:
+        verbose_name = "Отзыв"
+        verbose_name_plural = "Отзывы"
 
 
 class AboutInfo(models.Model):
@@ -154,8 +166,8 @@ class HomePage(Page):
                         heading='Новости'),
         MultiFieldPanel([InlinePanel('programs', label='программу')],
                         heading='Программы'),
-        MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
-                        heading='Отзывы'),
+        #MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
+        #                heading='Отзывы'),
         MultiFieldPanel([InlinePanel('about', label='информацию', max_num=1)], heading='Информация'),
         MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты'),
         MultiFieldPanel([InlinePanel('documents', label='документ')],

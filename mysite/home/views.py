@@ -111,7 +111,7 @@ def get_about_page(request):
         document_names[index] = document_name
     document_files = zip(document_names, document_urls)
 
-    feedbacks = Feedback.objects.all()
+    feedbacks = Feedback.objects.filter(is_published=True)
     temp = loader.get_template('home/about.html')
     return HttpResponse(temp.render({
         'info': info,
