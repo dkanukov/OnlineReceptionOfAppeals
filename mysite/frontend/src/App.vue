@@ -46,6 +46,14 @@ export default {
     return {
     }
   },
+  mounted() {
+    fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
+        .then((res) => {
+          console.log(res)
+        }).catch((e) => {
+          console.error(`Ошибка CORS ${e}`)
+    })
+  }
 }
 </script>
 
