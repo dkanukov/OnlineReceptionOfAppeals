@@ -3,17 +3,22 @@
     <v-col>
       <DragndropTableColumn
           column-name="Новое"
-          list="list1"
+          list-id="1"
+          :list="list1"
       />
     </v-col>
     <v-col>
       <DragndropTableColumn
           column-name="В работе"
+          list-id="2"
+          :list="list2"
       />
     </v-col>
     <v-col>
       <DragndropTableColumn
           column-name="Завершено"
+          list-id="3"
+          :list="list3"
       />
     </v-col>
   </div>
