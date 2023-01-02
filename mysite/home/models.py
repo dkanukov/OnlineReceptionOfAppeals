@@ -2,12 +2,12 @@ from django.db import models
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
-from wagtail.models import Page
+from wagtail.models import Page, Orderable
 from modelcluster.fields import ParentalKey
 from wagtail.fields import StreamField
 
 
-class News(models.Model):
+class News(Orderable):
 
     caption = models.CharField(max_length=250, verbose_name="Описание новости")
 
@@ -41,7 +41,7 @@ class News(models.Model):
     ]
 
 
-class Programs(models.Model):
+class Programs(Orderable):
     title = models.CharField(max_length=100, null=True, verbose_name='Название программы')
 
     caption = models.TextField(null=True, verbose_name="Подпись")
@@ -68,11 +68,13 @@ class Programs(models.Model):
     ]
 
 
-class Feedback(models.Model):
+class Feedback(Orderable):
 
     author = models.CharField(max_length=50, verbose_name='Имя автора')
     content = models.TextField(verbose_name='Текст отзыва')
     rating = models.IntegerField(verbose_name='Количество звезд', default=5)
+    is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
+
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
@@ -82,8 +84,18 @@ class Feedback(models.Model):
 
     panels = [
         FieldPanel('author'),
-        FieldPanel('content')
+        FieldPanel('content'),
+        FieldPanel('rating'),
+        FieldPanel('is_published')
     ]
+
+    def __str__(self):
+        return f"Отзыв номер {self.id}"
+
+
+    class Meta:
+        verbose_name = "Отзыв"
+        verbose_name_plural = "Отзывы"
 
 
 class AboutInfo(models.Model):
@@ -117,8 +129,8 @@ class AboutInfo(models.Model):
     ]
 
 
-class Report(models.Model):
-    file = models.FileField(verbose_name='отчёт')
+class Report(Orderable):
+    file = models.FileField(upload_to='reports/', verbose_name='отчёт')
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
 
     page = ParentalKey(
@@ -131,27 +143,90 @@ class Report(models.Model):
     ]
 
 
+class Document(models.Model):
+    file = models.FileField(upload_to='documents/', verbose_name='документ')
+    create_date = models.DateField(auto_now_add=True, blank=True, null=True)
+
+    page = ParentalKey(
+        'home.HomePage',
+        on_delete=models.CASCADE,
+        related_name='documents'
+    )
+    panels = [
+        FieldPanel('file')
+    ]
+
+
 class HomePage(Page):
+
+    email = models.EmailField(default="dfvrn@admin.ru", null=True, blank=True)
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([InlinePanel('news', label='новость')],
                         heading='Новости'),
         MultiFieldPanel([InlinePanel('programs', label='программу')],
                         heading='Программы'),
-        MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
-                        heading='Отзывы'),
+        #MultiFieldPanel([InlinePanel('reviews', label='отзыв')],
+        #                heading='Отзывы'),
         MultiFieldPanel([InlinePanel('about', label='информацию', max_num=1)], heading='Информация'),
-        MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты')
+        MultiFieldPanel([InlinePanel('reports', label='отчёт')], heading='Отчеты'),
+        MultiFieldPanel([InlinePanel('documents', label='документ')],
+                        heading='Документы')
     ]
 
 
 class Appeal(models.Model):
 
-    type = models.IntegerField()
-    name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
-    phone_number = models.CharField(max_length=20)
-    option = models.IntegerField()
+    TYPE_CHOICES = (
+        (1, 'Помощь'),
+        (2, 'Консультация'),
+        (3, 'Волонтерство')
+    )
+
+    OPTION_CHOICES = (
+        (1, 'SOS размещение'),
+        (2, 'Гуманитарная помощь'),
+        (3, 'Необходим адресный сбор'),
+        (4, 'Koнсультация психолога'),
+        (5, 'Консультация юриста'),
+        (6, 'Хочу в группу поддержки'),
+        (7, 'Хочу быть волонтером фонда')
+    )
+
+    STATUS_CHOICES = (
+        ('new', 'Новый'),
+        ('work', 'В работе'),
+        ('done', 'Выполнен'),
+        ('archive', 'В архиве')
+    )
+
+    type = models.IntegerField(
+        verbose_name='Тип обращения',
+        choices=TYPE_CHOICES
+    )
+    name = models.CharField(max_length=20, verbose_name='Имя')
+    last_name = models.CharField(
+        max_length=20, verbose_name='Фамилия',
+        blank=True, null=True
+    )
+    phone_number = models.CharField(
+        max_length=20, verbose_name='Телефон',
+        blank=True, null=True
+    )
+    option = models.IntegerField(
+        verbose_name='Тип требуемой помощи',
+        choices=OPTION_CHOICES
+    )
+    status = models.CharField(
+        max_length=50, verbose_name="Статус",
+        choices=STATUS_CHOICES, default='new',
+        null=False
+    )
+
+    class Meta:
+        verbose_name = 'Обращение'
+        verbose_name_plural = 'Обращения'
+
 
 
 #class Partner(models.Model):

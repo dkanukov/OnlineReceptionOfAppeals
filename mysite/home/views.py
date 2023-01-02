@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from .models import Appeal
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -12,7 +13,7 @@ from django.contrib.auth import authenticate
 
 from . serializers import FeedbackSerializer, AppealSerializer
     #PartnerSerializer
-from . models import News, Programs, AboutInfo, Report, Feedback
+from . models import News, Programs, AboutInfo, Report, Feedback, Document
 
 
 def get_about_context():
@@ -90,9 +91,34 @@ def format_date(date):
 def get_about_page(request):
     info = get_about_context()
     reports = Report.objects.all()
-    feedbacks = Feedback.objects.all()
+    documents = Document.objects.all()
+    report_names = [report.file.name for report in reports]
+    report_urls = [report.file.url for report in reports]
+    document_names = [document.file.name for document in documents]
+    document_urls= [document.file.url for document in documents]
+
+    for index, report_name in enumerate(report_names):
+        report_name = report_name.replace('reports/', '')
+        report_name = report_name.replace('_', ' ')
+        report_name = report_name.replace('.pdf', '')
+        report_names[index] = report_name
+    report_files = zip(report_names, report_urls)
+
+    for index, document_name in enumerate(document_names):
+        document_name = document_name.replace('documents/', '')
+        document_name = document_name.replace('_', ' ')
+        document_name = document_name.replace('.pdf', '')
+        document_names[index] = document_name
+    document_files = zip(document_names, document_urls)
+
+    feedbacks = Feedback.objects.filter(is_published=True)
     temp = loader.get_template('home/about.html')
-    return HttpResponse(temp.render({'info': info, 'reports': reports, 'feedbacks': feedbacks}))
+    return HttpResponse(temp.render({
+        'info': info,
+        'reports': report_files,
+        'documents': document_files,
+        'feedbacks': feedbacks,
+    }))
 
 
 def get_personal_data_consent(request):
@@ -136,7 +162,10 @@ class APIAppeal(APIView):
     def post(self, request):
         if request.data["type"] not in ['1', '2', '3']:
             return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
-        elif request.data["option"] not in ['1', '2', '3']:
+        elif request.data["option"] not in [
+            '1', '2', '3',
+            '4', '5', '6', '7'
+        ]:
             return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
         else:
             serializer = AppealSerializer(data=request.data)
@@ -144,10 +173,15 @@ class APIAppeal(APIView):
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             else:
-                return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def get(self, request):
+        object_list = Appeal.objects.all()
+        serializer = AppealSerializer(instance=object_list, many=True)
+        return Response(serializer.data)
 
 
-def get_voting_right_ptogram_page(request):
+def get_voting_right_program_page(request):
     info = get_about_context()
     temp = loader.get_template("home/votingRightProgram.html")
     return HttpResponse(temp.render({'info': info}))

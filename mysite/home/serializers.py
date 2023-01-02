@@ -41,6 +41,7 @@ class AppealSerializer(serializers.Serializer):
     last_name = serializers.CharField(max_length=20)
     phone_number = serializers.CharField(max_length=20)
     option = serializers.IntegerField()
+    status = serializers.CharField(max_length=50)
 
     def create(self, validated_data):
         return Appeal.objects.create(**validated_data)
