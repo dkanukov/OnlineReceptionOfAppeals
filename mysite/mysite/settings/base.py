@@ -174,6 +174,51 @@ WAGTAILADMIN_BASE_URL = "http://example.com"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s %(levelname)s %(message)s',
+        },
+        'verbose': {
+            'format': '%(asctime)s %(levelname)s %(module)s %(message)s'
+        },
+        'rich': {
+            "datefmt": "[%X]"
+        }
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        }
+    },
+    'handlers': {
+        'console': {
+            'class': 'rich.logging.RichHandler',
+        #    'filter': 'require_debug_true',
+            'formatter': 'rich'
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': '../site.log',
+            'level': 'WARNING',
+            'formatter': 'simple'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file']
+        },
+        #'django.requests': {
+        #    'handlers': ['file']
+        #},
+    }
+}
+
 WEBPACK_LOADER = {
   'DEFAULT': {
     'STATS_FILE': os.path.join(FRONTEND_DIR, 'webpack-stats.json'),

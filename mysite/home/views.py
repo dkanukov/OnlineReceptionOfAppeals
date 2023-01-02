@@ -177,8 +177,8 @@ class APIAppeal(APIView):
 
     def get(self, request):
         object_list = Appeal.objects.all()
-        seializer = AppealSerializer(instance=object_list, many=True)
-        return Response(seializer.data)
+        serializer = AppealSerializer(instance=object_list, many=True)
+        return Response(serializer.data)
 
 
 def get_voting_right_program_page(request):

@@ -2,12 +2,12 @@ const BundleTracker = require('webpack-bundle-tracker')
 const DEPLOYMENT_PATH = '/static/dist/'
 
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production' ? DEPLOYMENT_PATH : 'http://localhost:8080/',
+    publicPath: process.env.NODE_ENV === 'production' ? DEPLOYMENT_PATH : 'http://localhost:8000/',
     outputDir: '../static/dist',
 
     devServer: {
         host: 'localhost',
-        port: '8080',
+        port: '8000',
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
