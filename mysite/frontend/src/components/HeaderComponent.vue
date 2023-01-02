@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar>
+  <div class="d-flex align-center justify-space-between">
     <v-text-field
         prepend-inner-icon="mdi-magnify"
         variant="solo"
@@ -7,17 +7,12 @@
         label="Поиск"
         hide-details="auto"
     />
-    <template
-        v-slot:append
-    >
-      <v-btn
-          icon="mdi-exit-to-app"
-      />
+    <div >
       <v-avatar color="surface-variant" size="50">
         <span class="text-h5">NC</span>
       </v-avatar>
-    </template>
-  </v-app-bar>
+    </div>
+  </div>
 </template>
 
 <script>

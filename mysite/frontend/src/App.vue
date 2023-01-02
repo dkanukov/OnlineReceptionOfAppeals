@@ -44,15 +44,23 @@ export default {
 
   data() {
     return {
+      tickets: null,
     }
   },
-  mounted() {
-    fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
-        .then((res) => {
-          console.log(res)
-        }).catch((e) => {
-          console.error(`Ошибка CORS ${e}`)
-    })
+  async mounted() {
+    try {
+      const ans = await fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
+      this.tickets = await ans.json()
+      console.log(this.tickets)
+    } catch (e) {
+      console.log(`Error during fetch in mount: ${e}`)
+    }
+    // fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
+    //     .then((res) => {
+    //       console.log(res)
+    //     }).catch((e) => {
+    //       console.error(`Ошибка CORS ${e}`)
+    // })
   }
 }
 </script>
