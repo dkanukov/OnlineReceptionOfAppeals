@@ -3,22 +3,19 @@
     <v-col>
       <DragndropTableColumn
           column-name="Новое"
-          list-id="1"
-          :list="list1"
+          :tickets="newTicketsProp"
       />
     </v-col>
     <v-col>
       <DragndropTableColumn
           column-name="В работе"
-          list-id="2"
-          :list="list2"
+          :tickets="inProgressTickets"
       />
     </v-col>
     <v-col>
       <DragndropTableColumn
           column-name="Завершено"
-          list-id="3"
-          :list="list3"
+          :tickets="[]"
       />
     </v-col>
   </div>
@@ -31,25 +28,31 @@ export default {
   components:{
     DragndropTableColumn,
   },
+  props: {
+    tickets: Array,
+  },
   data() {
     return {
-      list1: [
-        {
-          id: 1
-        }
+      newTicketsProp: [
+        { name: "John", id: 1 },
       ],
-      list2: [
-        {
-          id: 2
-        }
-      ],
-      list3: [
-        {
-          id: 3
-        }
-      ]
+      inProgressTickets: []
     }
   },
+  computed: {
+    sortNewTickets() {
+      if (this.tickets) {
+        return this.tickets.filter((ticket) => ticket.status === 'new') || []
+      }
+      return []
+    },
+    sortInProgressTickets() {
+      if (this.tickets) {
+        return this.tickets.filter((ticket) => ticket.status === 'inProgress')
+      }
+      return []
+    }
+  }
 }
 </script>
 

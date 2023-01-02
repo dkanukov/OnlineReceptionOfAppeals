@@ -1,8 +1,9 @@
 <template>
   <h2 class="text-center">{{ columnName }}</h2>
   <Draggable
-      :list="list"
-      item-key="list.id"
+      :list="tickets"
+      item-key="tickets.name"
+      group="tickets"
   >
     <template
         #item="{element}"
@@ -23,9 +24,8 @@ export default {
     Draggable,
   },
   props: {
+    tickets: Array,
     columnName: String,
-    list: Array,
-    listId: String,
   },
   data() {
     return {}

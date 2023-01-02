@@ -23,7 +23,9 @@
 <!--        <v-spacer/>-->
 
         <v-col>
-          <DragndropTable/>
+          <DragndropTable
+              :tickets="tickets"
+          />
         </v-col>
       </v-row>
     </v-main>

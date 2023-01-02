@@ -1,5 +1,5 @@
 <template>
-  <div class="headerWrapper d-flex align-center justify-space-between">
+  <div class="headerWrapper d-flex align-center justify-space-around">
     <v-text-field
         prepend-inner-icon="mdi-magnify"
         variant="solo"
