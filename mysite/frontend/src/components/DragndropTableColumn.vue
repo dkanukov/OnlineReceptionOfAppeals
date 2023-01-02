@@ -1,24 +1,31 @@
 <template>
-<div>
-  <h2 class="text-center">{{columnName}}</h2>
-  <Draggable>
-    <DraggableTicket/>
+  <h2 class="text-center">{{ columnName }}</h2>
+  <Draggable
+      :list="list"
+  >
+    <template
+        #item="{element}"
+    >
+      {{ element }}
+    </template>
   </Draggable>
-</div>
 </template>
 
 <script>
 import Draggable from 'vuedraggable'
-import DraggableTicket from '@/components/DraggableTicket.vue';
+
 export default {
   name: "DragndropTableColumn",
   components: {
-    DraggableTicket,
     Draggable,
   },
   props: {
     columnName: String,
-  }
+    list: Array
+  },
+  data() {
+    return {}
+  },
 }
 </script>
 

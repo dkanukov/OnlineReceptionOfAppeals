@@ -1,10 +1,13 @@
-<template>
-  <h2>dragme</h2>
+<template #item>
+  <h2>{{ticket}}</h2>
 </template>
 
 <script>
 export default {
-  name: "DraggableTicket"
+  name: "DraggableTicket",
+  props: {
+    ticket: Object,
+  },
 }
 </script>
 
