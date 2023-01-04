@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from .payments import YooKassaPayment
+
 
 urlpatterns = [
         path('news_list', views.get_news_page, name='news'),
@@ -16,4 +18,6 @@ urlpatterns = [
         path('api/appeal', views.APIAppeal.as_view()),
         path('voting_right', views.get_voting_right_program_page, name='voting_right'),
         #path('stuff/login/', views.login_view, name='login'),
+        path('api/pay', YooKassaPayment.as_view())
     ]
+
