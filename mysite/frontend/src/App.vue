@@ -24,7 +24,7 @@
 
         <v-col>
           <DragndropTable
-              :tickets="tickets"
+              :tickets="$store.state.tickets"
           />
         </v-col>
       </v-row>
@@ -35,6 +35,7 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
+import {mapActions} from 'vuex';
 
 export default {
   name: 'App',
@@ -48,14 +49,11 @@ export default {
       tickets: [],
     }
   },
+  methods: {
+    ...mapActions(['fetchTickets'])
+  },
   async mounted() {
-    try {
-      const ans = await fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
-      this.tickets = await ans.json()
-      console.log(this.tickets)
-    } catch (e) {
-      console.log(`Error during fetch in mount: ${e}`)
-    }
+    this.fetchTickets()
   }
 }
 </script>
