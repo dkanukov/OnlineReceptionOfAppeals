@@ -1,14 +1,17 @@
 <template>
   <h2 class="text-center">{{ columnName }}</h2>
   <Draggable
+      @change="handleTicketMove"
       :list="tickets"
+      :group="options"
       item-key="tickets.name"
-      group="tickets"
   >
     <template
         #item="{element}"
     >
-      <div>
+      <div
+          :data-status="options.name"
+      >
         {{ element }}
       </div>
     </template>
@@ -26,9 +29,18 @@ export default {
   props: {
     tickets: Array,
     columnName: String,
+    options: {
+      name: String,
+      pur: Array
+    }
   },
   data() {
     return {}
+  },
+  methods: {
+    handleTicketMove({added}) {
+      console.log(added, this.columnName)
+    }
   },
 }
 </script>

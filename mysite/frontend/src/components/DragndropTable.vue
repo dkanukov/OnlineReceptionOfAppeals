@@ -3,19 +3,31 @@
     <v-col>
       <DragndropTableColumn
           column-name="Новое"
-          :tickets="newTicketsProp"
+          :options="{
+            name: 'new',
+            put: ['inProgress', 'closed']
+          }"
+          :tickets="tickets"
       />
     </v-col>
     <v-col>
       <DragndropTableColumn
           column-name="В работе"
+          :options="{
+            name: 'inProgress',
+            put: ['new', 'closed']
+          }"
           :tickets="inProgressTickets"
       />
     </v-col>
     <v-col>
       <DragndropTableColumn
           column-name="Завершено"
-          :tickets="[]"
+          :options="{
+            name: 'closed',
+            put: ['inProgress', 'closed']
+          }"
+          :tickets="closedTickets"
       />
     </v-col>
   </div>
@@ -23,9 +35,10 @@
 
 <script>
 import DragndropTableColumn from '@/components/DragndropTableColumn.vue';
+
 export default {
   name: "DragndropTable",
-  components:{
+  components: {
     DragndropTableColumn,
   },
   props: {
@@ -34,25 +47,13 @@ export default {
   data() {
     return {
       newTicketsProp: [
-        { name: "John", id: 1 },
+        {name: "John", id: 1},
       ],
-      inProgressTickets: []
+      inProgressTickets: [],
+      closedTickets: [],
     }
   },
-  computed: {
-    sortNewTickets() {
-      if (this.tickets) {
-        return this.tickets.filter((ticket) => ticket.status === 'new') || []
-      }
-      return []
-    },
-    sortInProgressTickets() {
-      if (this.tickets) {
-        return this.tickets.filter((ticket) => ticket.status === 'inProgress')
-      }
-      return []
-    }
-  }
+  computed: {}
 }
 </script>
 

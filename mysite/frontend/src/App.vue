@@ -43,10 +43,9 @@ export default {
     HeaderComponent,
     DragndropTable,
   },
-
   data() {
     return {
-      tickets: null,
+      tickets: [],
     }
   },
   async mounted() {
