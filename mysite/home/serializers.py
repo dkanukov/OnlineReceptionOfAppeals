@@ -36,12 +36,13 @@ class FeedbackSerializer(serializers.Serializer):
 
 class AppealSerializer(serializers.Serializer):
 
+    id = serializers.IntegerField(read_only=True)
     type = serializers.IntegerField()
     name = serializers.CharField(max_length=20)
     last_name = serializers.CharField(max_length=20)
     phone_number = serializers.CharField(max_length=20)
     option = serializers.IntegerField()
-    status = serializers.CharField(max_length=50)
+    status = serializers.CharField(default='new',)
 
     def create(self, validated_data):
         return Appeal.objects.create(**validated_data)
