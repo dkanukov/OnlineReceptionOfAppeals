@@ -39,6 +39,9 @@ export default {
   },
   methods: {
     handleTicketMove({added}) {
+      // TODO: сделать словарь с русского названия столбца на англ +
+      // написать экшен который будет патчить +
+      // мутация для локального изменения статуса
       console.log(added, this.columnName)
     }
   },

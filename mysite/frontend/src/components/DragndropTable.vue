@@ -25,7 +25,7 @@
           column-name="Завершено"
           :options="{
             name: 'closed',
-            put: ['inProgress', 'closed']
+            put: ['inProgress', 'new']
           }"
           :tickets="closedTickets"
       />

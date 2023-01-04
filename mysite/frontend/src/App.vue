@@ -24,7 +24,7 @@
 
         <v-col>
           <DragndropTable
-              :tickets="$store.state.tickets"
+              :tickets="this.tickets"
           />
         </v-col>
       </v-row>
@@ -35,7 +35,7 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
-import {mapActions} from 'vuex';
+import {mapActions, mapState} from 'vuex';
 
 export default {
   name: 'App',
@@ -45,14 +45,15 @@ export default {
     DragndropTable,
   },
   data() {
-    return {
-      tickets: [],
-    }
+    return {}
   },
   methods: {
     ...mapActions(['fetchTickets'])
   },
-  async mounted() {
+  computed: {
+    ...mapState(['tickets'])
+  },
+  async created() {
     this.fetchTickets()
   }
 }
