@@ -25,6 +25,7 @@
         <v-col>
           <DragndropTable
               :tickets="this.tickets"
+              :patchNewTicketStatusById="this.patchNewTicketStatusById"
           />
         </v-col>
       </v-row>
@@ -48,7 +49,7 @@ export default {
     return {}
   },
   methods: {
-    ...mapActions(['fetchTickets'])
+    ...mapActions(['fetchTickets', 'patchNewTicketStatusById'])
   },
   computed: {
     ...mapState(['tickets'])

@@ -7,6 +7,9 @@ export default createStore({
 	mutations: {
 		setFetchedTickets(state, tickets) {
 			state.tickets = tickets
+		},
+		setNewTicketStatusById(state, element){
+			state.tickets.find((ticket) => ticket.id === element.elementId).status = element.newStatus
 		}
 	},
 	actions: {
@@ -19,6 +22,23 @@ export default createStore({
 			} catch (e) {
 				console.error(`Error during fetch in mount: ${e}`)
 			}
+		},
+		async patchNewTicketStatusById(ctx, element) {
+			console.log(element)
+			ctx.commit('setNewTicketStatusById', element)
+			await fetch('http://127.0.0.1:8000/api/appeal', {
+				method: 'PATCH',
+				body: {
+					'id': element.elementId,
+					'status': element.newStatus
+				}
+			})
 		}
 	}
 })
+
+// PATCH http://127.0.0.1:8000/api/appeal с телом
+// {
+// 	"id": 4,
+// 	"status": "done"
+// }

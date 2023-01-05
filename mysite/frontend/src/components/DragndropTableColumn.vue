@@ -20,6 +20,11 @@
 
 <script>
 import Draggable from 'vuedraggable'
+const STATUS_TUPLE = {
+  'Новое': 'new',
+  'В работе': 'work',
+  'Завершено': 'done'
+}
 
 export default {
   name: "DragndropTableColumn",
@@ -32,17 +37,20 @@ export default {
     options: {
       name: String,
       pur: Array
-    }
+    },
+    patchNewTicketStatusById: Function
   },
   data() {
     return {}
   },
   methods: {
     handleTicketMove({added}) {
-      // TODO: сделать словарь с русского названия столбца на англ +
-      // написать экшен который будет патчить +
-      // мутация для локального изменения статуса
-      console.log(added, this.columnName)
+      if (added) {
+        this.patchNewTicketStatusById({
+          elementId: added.element.id,
+          newStatus: STATUS_TUPLE[this.columnName]
+        })
+      }
     }
   },
 }

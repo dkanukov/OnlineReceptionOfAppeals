@@ -8,6 +8,7 @@
             put: ['inProgress', 'closed']
           }"
           :tickets="newTickets"
+          :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
     <v-col>
@@ -18,6 +19,7 @@
             put: ['new', 'closed']
           }"
           :tickets="inProgressTickets"
+          :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
     <v-col>
@@ -28,6 +30,7 @@
             put: ['inProgress', 'new']
           }"
           :tickets="closedTickets"
+          :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
   </div>
@@ -43,6 +46,7 @@ export default {
   },
   props: {
     tickets: Array,
+    patchNewTicketStatusById: Function,
   },
   data() {
     return {
