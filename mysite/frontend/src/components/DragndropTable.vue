@@ -7,7 +7,7 @@
             name: 'new',
             put: ['inProgress', 'closed']
           }"
-          :tickets="tickets"
+          :tickets="newTickets"
       />
     </v-col>
     <v-col>
@@ -46,14 +46,19 @@ export default {
   },
   data() {
     return {
-      newTicketsProp: [
-        {name: "John", id: 1},
-      ],
-      inProgressTickets: [],
-      closedTickets: [],
+      newTickets: this.tickets.filter((ticket) => ticket.status === 'new'),
+      inProgressTickets: this.tickets.filter((ticket) => ticket.status === 'work'),
+      closedTickets: this.tickets.filter((ticket) => ticket.status === 'done'),
     }
   },
-  computed: {}
+  computed: {},
+  watch: {
+    tickets() {
+      this.newTickets = this.tickets.filter((ticket) => ticket.status === 'new')
+      this.inProgressTickets = this.tickets.filter((ticket) => ticket.status === 'work')
+      this.closedTickets = this.tickets.filter((ticket) => ticket.status === 'done')
+    },
+  },
 }
 </script>
 

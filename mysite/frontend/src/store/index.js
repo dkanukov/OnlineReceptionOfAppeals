@@ -15,8 +15,9 @@ export default createStore({
 				const ans = await fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
 				const res = await ans.json()
 				ctx.commit('setFetchedTickets', res)
+				console.log(res)
 			} catch (e) {
-				console.log(`Error during fetch in mount: ${e}`)
+				console.error(`Error during fetch in mount: ${e}`)
 			}
 		}
 	}
