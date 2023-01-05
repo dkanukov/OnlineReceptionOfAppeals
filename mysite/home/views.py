@@ -7,6 +7,7 @@ from .models import Appeal
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+from django.shortcuts import get_object_or_404
 import json
 from django.contrib.auth import authenticate
 
@@ -163,11 +164,13 @@ class APIAppeal(APIView):
         if request.data["type"] not in ['1', '2', '3']:
             return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
         elif request.data["option"] not in [
-            '1', '2', '3',
+           '1', '2', '3',
             '4', '5', '6', '7'
         ]:
             return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
         else:
+        #Appeal.objects.create(**request.data)
+        #return Response(status=status.HTTP_201_CREATED)
             serializer = AppealSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
@@ -179,6 +182,19 @@ class APIAppeal(APIView):
         object_list = Appeal.objects.all()
         serializer = AppealSerializer(instance=object_list, many=True)
         return Response(serializer.data)
+
+    def patch(self, request):
+        if request.data['status'] not in [
+            'new', 'work',
+            'done', 'archive',
+        ]:
+            return Response("wrong status", status=status.HTTP_400_BAD_REQUEST)
+        else:
+            appeal = get_object_or_404(Appeal, id=request.data['id'])
+            appeal.status = request.data['status']
+            appeal.save()
+            return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
+
 
 
 def get_voting_right_program_page(request):
