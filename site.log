@@ -872,3 +872,25 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-05 15:53:56,881 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
 2023-01-05 15:53:59,298 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-05 15:53:59,299 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:59:27,198 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:59:27,199 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:59:33,805 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:59:33,806 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:59:37,633 WARNING Forbidden: /api/appeal
+2023-01-05 15:59:37,636 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 16:00:15,309 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:00:15,310 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:00:18,141 WARNING Forbidden: /api/appeal
+2023-01-05 16:00:18,143 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 16:00:21,928 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:00:21,929 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:00:56,423 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:00:56,425 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:01:13,380 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:01:13,381 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:01:13,866 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:01:13,867 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:01:16,109 WARNING Forbidden: /api/appeal
+2023-01-05 16:01:16,112 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 16:01:18,551 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:01:18,552 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872

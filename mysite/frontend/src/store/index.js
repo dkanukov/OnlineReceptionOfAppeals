@@ -28,17 +28,11 @@ export default createStore({
 			ctx.commit('setNewTicketStatusById', element)
 			await fetch('http://127.0.0.1:8000/api/appeal', {
 				method: 'PATCH',
-				body: {
+				body: JSON.stringify({
 					'id': element.elementId,
 					'status': element.newStatus
-				}
+				})
 			})
 		}
 	}
 })
-
-// PATCH http://127.0.0.1:8000/api/appeal с телом
-// {
-// 	"id": 4,
-// 	"status": "done"
-// }
