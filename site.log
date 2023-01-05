@@ -1,0 +1,896 @@
+2023-01-05 14:40:57,637 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 14:40:57,638 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 14:46:14,411 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  51:7  error  Duplicated key 'newTicketsProp'     vue/no-dupe-keys
+  52:7  error  Duplicated key 'inProgressTickets'  vue/no-dupe-keys
+  53:7  error  Duplicated key 'closedTickets'      vue/no-dupe-keys
+
+✖ 3 problems (3 errors, 0 warnings)
+
+            
+2023-01-05 14:46:14,439 ERROR "GET /appeal/ HTTP/1.1" 500 122187
+2023-01-05 14:48:07,657 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleBuildError in 
+            Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue: Unexpected token (14:61)
+
+  12 |   data() {
+  13 |     return {
+> 14 |       newTicketsProp: this.tickets.filter((ticket) => ticket.),
+     |                                                              ^
+  15 |       inProgressTickets: [],
+  16 |       closedTickets: [],
+  17 |     }
+    at instantiate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:67:32)
+    at constructor (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:364:12)
+    at JSXParserMixin.raise (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3364:19)
+    at JSXParserMixin.unexpected (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3397:16)
+    at JSXParserMixin.parseIdentifierName (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12404:18)
+    at JSXParserMixin.parseIdentifier (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12387:23)
+    at JSXParserMixin.parseMember (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11238:28)
+    at JSXParserMixin.parseSubscript (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11214:21)
+    at JSXParserMixin.parseSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11184:19)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11175:17)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at JSXParserMixin.parseFunctionBody (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12279:24)
+    at JSXParserMixin.parseArrowExpression (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12260:10)
+    at JSXParserMixin.parseParenAndDistinguishExpression (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11829:12)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11446:23)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:7238:20)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11171:23)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12640:12)
+    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:17)
+    at JSXParserMixin.parseExprListItem (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12380:18)
+    at JSXParserMixin.parseCallExpressionArguments (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11367:22)
+    at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11279:29)
+    at JSXParserMixin.parseSubscript (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11210:19)
+    at JSXParserMixin.parseSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11184:19)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11175:17)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12640:12)
+    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:17)
+    at JSXParserMixin.parseObjectProperty (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12127:83)
+    at JSXParserMixin.parseObjPropValue (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12154:100)
+    at JSXParserMixin.parsePropertyDefinition (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12083:17)
+    at JSXParserMixin.parseObjectLike (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11993:21)
+            
+2023-01-05 14:48:07,703 ERROR "GET /appeal/ HTTP/1.1" 500 171643
+2023-01-05 14:48:08,668 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleBuildError in 
+            Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue: Unexpected token (14:61)
+
+  12 |   data() {
+  13 |     return {
+> 14 |       newTicketsProp: this.tickets.filter((ticket) => ticket.),
+     |                                                              ^
+  15 |       inProgressTickets: [],
+  16 |       closedTickets: [],
+  17 |     }
+    at instantiate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:67:32)
+    at constructor (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:364:12)
+    at JSXParserMixin.raise (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3364:19)
+    at JSXParserMixin.unexpected (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3397:16)
+    at JSXParserMixin.parseIdentifierName (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12404:18)
+    at JSXParserMixin.parseIdentifier (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12387:23)
+    at JSXParserMixin.parseMember (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11238:28)
+    at JSXParserMixin.parseSubscript (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11214:21)
+    at JSXParserMixin.parseSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11184:19)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11175:17)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at JSXParserMixin.parseFunctionBody (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12279:24)
+    at JSXParserMixin.parseArrowExpression (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12260:10)
+    at JSXParserMixin.parseParenAndDistinguishExpression (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11829:12)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11446:23)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:7238:20)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11171:23)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12640:12)
+    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:17)
+    at JSXParserMixin.parseExprListItem (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12380:18)
+    at JSXParserMixin.parseCallExpressionArguments (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11367:22)
+    at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11279:29)
+    at JSXParserMixin.parseSubscript (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11210:19)
+    at JSXParserMixin.parseSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11184:19)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11175:17)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12640:12)
+    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:17)
+    at JSXParserMixin.parseObjectProperty (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12127:83)
+    at JSXParserMixin.parseObjPropValue (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12154:100)
+    at JSXParserMixin.parsePropertyDefinition (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12083:17)
+    at JSXParserMixin.parseObjectLike (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11993:21)
+            
+2023-01-05 14:48:08,750 ERROR "GET /appeal/ HTTP/1.1" 500 171644
+2023-01-05 14:48:27,518 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 14:48:27,522 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 14:49:42,466 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 14:49:42,467 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 14:50:11,513 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 14:50:11,515 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 14:59:40,111 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 14:59:40,113 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:00:12,917 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:00:12,918 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:01:08,634 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:01:08,635 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:02:36,873 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:02:36,875 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:03:47,013 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:03:47,015 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:03:52,838 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:03:52,839 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:13:21,212 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:13:21,214 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:20:50,297 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:20:50,299 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:21:01,836 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:21:01,838 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:23:05,611 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue
+  23:7  error  'STATUS_TUPLE' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-05 15:23:05,760 ERROR "GET /appeal/ HTTP/1.1" 500 121312
+2023-01-05 15:23:13,371 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue
+  23:7  error  'STATUS_TUPLE' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-05 15:23:13,395 ERROR "GET /appeal/ HTTP/1.1" 500 121312
+2023-01-05 15:23:14,935 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:23:14,936 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:29:16,343 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/templateLoader.js):
+
+VueCompilerError: v-bind is missing expression.
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue:31:11
+29 |            }"
+30 |            :tickets="closedTickets"
+31 |            :setNewTicketStatusById
+   |            ^^^^^^^^^^^^^^^^^^^^^^^
+32 |        />
+33 |      </v-col>
+
+            
+2023-01-05 15:29:16,376 ERROR "GET /appeal/ HTTP/1.1" 500 123017
+2023-01-05 15:29:17,459 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue
+  23:7  error  'STATUS_TUPLE' is assigned a value but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+            
+2023-01-05 15:29:17,510 ERROR "GET /appeal/ HTTP/1.1" 500 123013
+2023-01-05 15:29:18,451 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue
+  23:7  error  'STATUS_TUPLE' is assigned a value but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+            
+2023-01-05 15:29:18,504 ERROR "GET /appeal/ HTTP/1.1" 500 123013
+2023-01-05 15:29:29,494 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue
+  23:7  error  'STATUS_TUPLE' is assigned a value but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+            
+2023-01-05 15:29:29,511 ERROR "GET /appeal/ HTTP/1.1" 500 123013
+2023-01-05 15:29:30,739 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-05 15:29:30,831 ERROR "GET /appeal/ HTTP/1.1" 500 121264
+2023-01-05 15:29:31,442 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-05 15:29:31,495 ERROR "GET /appeal/ HTTP/1.1" 500 121264
+2023-01-05 15:29:49,672 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-05 15:29:49,741 ERROR "GET /appeal/ HTTP/1.1" 500 121264
+2023-01-05 15:30:55,062 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue
+  31:11  error  'v-bind' directives require an attribute value  vue/valid-v-bind
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-05 15:30:55,076 ERROR "GET /appeal/ HTTP/1.1" 500 121264
+2023-01-05 15:30:56,227 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/index.js):
+
+VueCompilerError: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<).
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue:33:1
+30 |              put: ['inProgress', 'new']
+31 |            }"
+32 |            :tickets="closedTickets"
+   |                                     ^
+33 |  <!--          :setNewTicketStatusById="this.setNewTicketStatusById"-->
+34 |        />
+
+            
+2023-01-05 15:30:56,328 ERROR "GET /appeal/ HTTP/1.1" 500 124174
+2023-01-05 15:30:57,204 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/index.js):
+
+VueCompilerError: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<).
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTable.vue:33:1
+30 |              put: ['inProgress', 'new']
+31 |            }"
+32 |            :tickets="closedTickets"
+   |                                     ^
+33 |  <!--          :setNewTicketStatusById="this.setNewTicketStatusById"-->
+34 |        />
+
+            
+2023-01-05 15:30:57,259 ERROR "GET /appeal/ HTTP/1.1" 500 124175
+2023-01-05 15:31:20,151 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:31:20,155 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:31:21,596 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:31:21,597 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:31:38,943 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:31:38,945 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:32:13,273 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:32:13,275 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:32:48,683 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:32:48,685 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:32:59,669 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:32:59,670 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:33:01,021 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:33:01,025 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:33:08,441 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:33:08,442 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:33:22,157 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:33:22,159 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:33:42,794 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:33:42,796 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:33:58,797 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:33:58,798 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:34:19,354 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:34:19,356 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:34:33,648 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:34:33,649 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:34:33,949 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:34:33,950 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:35:57,236 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:35:57,237 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:36:44,040 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:36:44,042 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:36:44,360 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:36:44,361 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:37:13,446 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:37:13,447 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:37:22,536 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:37:22,537 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:39:04,900 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:39:04,901 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:39:22,992 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:39:22,993 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:43:15,439 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:43:15,440 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:43:15,795 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:43:15,797 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:43:27,230 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:43:27,231 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:43:46,160 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:43:46,161 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:43:46,575 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:43:46,577 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:44:22,360 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:44:22,361 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:44:22,759 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:44:22,761 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:45:53,001 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:45:53,003 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:46:19,753 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:46:19,754 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:46:23,510 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:46:23,511 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:50:38,071 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:50:38,072 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:52:22,858 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:52:22,860 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:52:28,138 WARNING Forbidden: /api/appeal
+2023-01-05 15:52:28,141 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 15:52:40,971 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:52:40,973 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:52:44,194 WARNING Forbidden: /api/appeal
+2023-01-05 15:52:44,195 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 15:52:50,079 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:52:50,082 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:52:55,510 WARNING Forbidden: /api/appeal
+2023-01-05 15:52:55,512 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 15:53:53,160 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:53:53,163 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:53:56,878 WARNING Forbidden: /api/appeal
+2023-01-05 15:53:56,881 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 15:53:59,298 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:53:59,299 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:59:27,198 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:59:27,199 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:59:33,805 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 15:59:33,806 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 15:59:37,633 WARNING Forbidden: /api/appeal
+2023-01-05 15:59:37,636 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 16:00:15,309 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:00:15,310 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:00:18,141 WARNING Forbidden: /api/appeal
+2023-01-05 16:00:18,143 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 16:00:21,928 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:00:21,929 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:00:56,423 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:00:56,425 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:01:13,380 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:01:13,381 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:01:13,866 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:01:13,867 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:01:16,109 WARNING Forbidden: /api/appeal
+2023-01-05 16:01:16,112 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 16:01:18,551 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:01:18,552 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872

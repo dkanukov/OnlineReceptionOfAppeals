@@ -12,9 +12,16 @@ module.exports = {
             'Access-Control-Allow-Origin': '*',
         },
     },
+
     configureWebpack: {
         plugins: [
             new BundleTracker({ path: __dirname, filename: 'webpack-stats.json' }),
         ],
     },
+
+    pluginOptions: {
+      vuetify: {
+			// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
+		}
+    }
 }

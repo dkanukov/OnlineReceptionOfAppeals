@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "home",
     "search",
     "rest_framework",
+    "corsheaders",
     "wagtail.contrib.forms",
     "wagtail.contrib.modeladmin",
     "wagtail.contrib.redirects",
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -223,4 +225,14 @@ WEBPACK_LOADER = {
   'DEFAULT': {
     'STATS_FILE': os.path.join(FRONTEND_DIR, 'webpack-stats.json'),
   }
+}
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_URLS_REGEX = r'^/api/.*$'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        #'rest_framework.permissions.AllowAny',
+         'rest_framework.permissions.IsAuthenticated',
+     ),
 }

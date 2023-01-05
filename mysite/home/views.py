@@ -3,11 +3,14 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
+
 from .models import Appeal
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.shortcuts import get_object_or_404
+from rest_framework.permissions import IsAuthenticated, AllowAny
 import json
 from django.contrib.auth import authenticate
 
@@ -127,18 +130,6 @@ def get_personal_data_consent(request):
     return HttpResponse(temp.render())
 
 
-
-#class APIPartner(APIView):
-#
-#    def post(self, request):
-#        serializer = PartnerSerializer(data=request.data)
-#        if serializer.is_valid():
-#            serializer.save()
-#            return Response(serializer.data, status=status.HTTP_201_CREATED)
-#        else:
-#            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 class APIFeedback(APIView):
 
     def post(self, request):
@@ -160,6 +151,7 @@ def get_contacts_page(request):
 
 
 class APIAppeal(APIView):
+
     def post(self, request):
         if request.data["type"] not in ['1', '2', '3']:
             return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
@@ -195,6 +187,23 @@ class APIAppeal(APIView):
             appeal.save()
             return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
 
+
+'''
+@api_view(['GET', 'PATCH'])
+def appeal_api(request):
+    print(request.user)
+    print(request.user.has_perm('home.change_appeal'))
+    print(request.user.is_authenticated)
+    print(request.data)
+
+    if request.method == 'GET':
+        object_list = Appeal.objects.all()
+        serializer = AppealSerializer(instance=object_list, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'PATCH':
+        return Response("patch request", status=203)
+'''
 
 
 def get_voting_right_program_page(request):
