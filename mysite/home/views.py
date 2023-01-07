@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, AllowAny
-
+from django.db.utils import IntegrityError
 from . serializers import FeedbackSerializer, AppealSerializer
 
 from . models import (
@@ -157,36 +157,28 @@ class APIAppeal(APIView):
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
 
     def post(self, request):
-        if request.data["type"] not in ['1', '2', '3']:
-            return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
-        elif request.data["option"] not in [
-           '1', '2', '3',
-            '4', '5', '6', '7'
-        ]:
-            return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
-        else:
-            serializer = AppealSerializer(data=request.data)
-            if serializer.is_valid():
+        serializer = AppealSerializer(data=request.data)
+        if serializer.is_valid():
+            try:
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
-            else:
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            except IntegrityError:
+                return Response("wrong type/option data", status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class APIAppealDetail(APIView):
-    permission_classes = [IsAuthenticated,]
+    permission_classes = [IsAuthenticated]
 
     def patch(self, request, id):
-        if request.data['status'] not in [
-            'new', 'work',
-            'done', 'archive',
-        ]:
-            return Response("wrong status", status=status.HTTP_400_BAD_REQUEST)
-        else:
             appeal = get_object_or_404(Appeal, id=id)
             appeal.status = request.data['status']
-            appeal.save()
-            return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
+            try:
+                appeal.save()
+                return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
+            except IntegrityError:
+                return Response("wrong status value", status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, id):
         appeal = get_object_or_404(Appeal, id=id)
