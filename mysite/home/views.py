@@ -1,20 +1,19 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import redirect
+from django.http import HttpResponse
 from django.template import loader
-from django.views.decorators.csrf import csrf_exempt
-from .models import Appeal
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.shortcuts import get_object_or_404
-import json
-from django.contrib.auth import authenticate
-
+from rest_framework.permissions import IsAuthenticated, AllowAny
 
 from . serializers import FeedbackSerializer, AppealSerializer
-    #PartnerSerializer
-from . models import News, Programs, AboutInfo, Report, Feedback, Document
+
+from . models import (
+    News, Programs,
+    AboutInfo, Report,
+    Feedback, Document, Appeal
+)
 
 
 def get_about_context():
@@ -127,18 +126,6 @@ def get_personal_data_consent(request):
     return HttpResponse(temp.render())
 
 
-
-#class APIPartner(APIView):
-#
-#    def post(self, request):
-#        serializer = PartnerSerializer(data=request.data)
-#        if serializer.is_valid():
-#            serializer.save()
-#            return Response(serializer.data, status=status.HTTP_201_CREATED)
-#        else:
-#            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 class APIFeedback(APIView):
 
     def post(self, request):
@@ -160,6 +147,15 @@ def get_contacts_page(request):
 
 
 class APIAppeal(APIView):
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            object_list = Appeal.objects.all()
+            serializer = AppealSerializer(instance=object_list, many=True)
+            return Response(serializer.data)
+        else:
+            return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
+
     def post(self, request):
         if request.data["type"] not in ['1', '2', '3']:
             return Response("wrong type value", status=status.HTTP_400_BAD_REQUEST)
@@ -169,8 +165,6 @@ class APIAppeal(APIView):
         ]:
             return Response("wrong option value", status=status.HTTP_400_BAD_REQUEST)
         else:
-        #Appeal.objects.create(**request.data)
-        #return Response(status=status.HTTP_201_CREATED)
             serializer = AppealSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save()
@@ -178,23 +172,44 @@ class APIAppeal(APIView):
             else:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request):
-        object_list = Appeal.objects.all()
-        serializer = AppealSerializer(instance=object_list, many=True)
-        return Response(serializer.data)
 
-    def patch(self, request):
+class APIAppealDetail(APIView):
+    permission_classes = [IsAuthenticated,]
+
+    def patch(self, request, id):
         if request.data['status'] not in [
             'new', 'work',
             'done', 'archive',
         ]:
             return Response("wrong status", status=status.HTTP_400_BAD_REQUEST)
         else:
-            appeal = get_object_or_404(Appeal, id=request.data['id'])
+            appeal = get_object_or_404(Appeal, id=id)
             appeal.status = request.data['status']
             appeal.save()
             return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
 
+    def delete(self, request, id):
+        appeal = get_object_or_404(Appeal, id=id)
+        appeal.delete()
+        return Response('object deleted', status=status.HTTP_204_NO_CONTENT)
+
+
+'''
+@api_view(['GET', 'PATCH'])
+def appeal_api(request):
+    print(request.user)
+    print(request.user.has_perm('home.change_appeal'))
+    print(request.user.is_authenticated)
+    print(request.data)
+
+    if request.method == 'GET':
+        object_list = Appeal.objects.all()
+        serializer = AppealSerializer(instance=object_list, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'PATCH':
+        return Response("patch request", status=203)
+'''
 
 
 def get_voting_right_program_page(request):
@@ -202,24 +217,3 @@ def get_voting_right_program_page(request):
     temp = loader.get_template("home/votingRightProgram.html")
     return HttpResponse(temp.render({'info': info}))
 
-'''
-@csrf_exempt
-def login_view(request):
-    if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-
-        if user is not None:
-            response = {'success': True,
-                        'username': user.username
-                        }
-            return HttpResponse('/appeal')
-
-            #return HttpResponseRedirect(response, status=status.HTTP_200_OK)
-        else:
-            return HttpResponse("Такого пользователя нет")
-    else:
-        temp = loader.get_template('home/login.html')
-        return HttpResponse(temp.render(), status=status.HTTP_200_OK)
-'''
