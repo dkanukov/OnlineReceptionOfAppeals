@@ -894,3 +894,375 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-05 16:01:16,112 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
 2023-01-05 16:01:18,551 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-05 16:01:18,552 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:03:12,461 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-05 16:03:12,462 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 16:03:15,548 WARNING Forbidden: /api/appeal
+2023-01-05 16:03:15,551 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-07 14:12:26,613 WARNING Not Found: /favicon.ico
+2023-01-07 14:12:26,614 WARNING "GET /favicon.ico HTTP/1.1" 404 5780
+2023-01-07 14:12:59,880 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:12:59,881 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:12:59,955 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:12:59,957 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:13:02,854 WARNING Forbidden: /api/appeal
+2023-01-07 14:13:02,858 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-07 14:13:04,216 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:13:04,217 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:14:43,027 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleBuildError in 
+            Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/store/index.js: Unexpected token (29:51)
+
+  27 | 			console.log(element)
+  28 | 			ctx.commit('setNewTicketStatusById', element)
+> 29 | 			await fetch(`http://127.0.0.1:8000/api/appeal/${}`, {
+     | 			                                                ^
+  30 | 				method: 'PATCH',
+  31 | 				body: JSON.stringify({
+  32 | 					'status': element.newStatus
+    at instantiate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:67:32)
+    at constructor (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:364:12)
+    at JSXParserMixin.raise (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3364:19)
+    at JSXParserMixin.unexpected (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3397:16)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11568:22)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:7238:20)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11171:23)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at JSXParserMixin.parseExpressionBase (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10845:23)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10840:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12640:12)
+    at JSXParserMixin.parseExpression (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10840:17)
+    at JSXParserMixin.parseTemplateSubstitution (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11964:17)
+    at JSXParserMixin.parseTemplate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11956:34)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11476:21)
+    at JSXParserMixin.parseExprAtom (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:7238:20)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11171:23)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12640:12)
+    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10863:17)
+    at JSXParserMixin.parseExprListItem (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12380:18)
+    at JSXParserMixin.parseCallExpressionArguments (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11367:22)
+    at JSXParserMixin.parseCoverCallAndAsyncArrowHead (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11279:29)
+    at JSXParserMixin.parseSubscript (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11210:19)
+    at JSXParserMixin.parseSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11184:19)
+    at JSXParserMixin.parseExprSubscripts (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11175:17)
+    at JSXParserMixin.parseUpdate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11153:21)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11127:23)
+    at JSXParserMixin.parseAwait (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12496:28)
+    at JSXParserMixin.parseMaybeUnary (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:11092:25)
+    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10956:61)
+    at JSXParserMixin.parseExprOps (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10962:23)
+    at JSXParserMixin.parseMaybeConditional (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10937:23)
+    at JSXParserMixin.parseMaybeAssign (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10895:21)
+    at JSXParserMixin.parseExpressionBase (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10845:23)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10840:39
+    at JSXParserMixin.allowInAnd (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12635:16)
+    at JSXParserMixin.parseExpression (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:10840:17)
+    at JSXParserMixin.parseStatementContent (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13043:23)
+            
+2023-01-07 14:14:43,189 ERROR "GET /appeal/ HTTP/1.1" 500 171800
+2023-01-07 14:14:56,343 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:14:56,346 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:15:09,570 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:15:09,572 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:15:14,790 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:15:14,797 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70229
+2023-01-07 14:18:30,230 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:18:30,231 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:18:32,372 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:18:32,382 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:20:27,899 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:20:27,901 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:20:30,503 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:20:30,513 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:20:51,247 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:20:51,251 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:20:53,252 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:20:53,262 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:21:12,354 ERROR Internal Server Error: /api/appeal/8
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/8/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:21:12,364 ERROR "PATCH /api/appeal/8 HTTP/1.1" 500 70359
+2023-01-07 14:21:14,388 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:21:14,390 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:21:46,528 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:21:46,530 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:21:48,848 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:21:48,858 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:22:01,822 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:01,824 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:06,807 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:06,809 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:10,809 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:10,811 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:12,733 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:22:12,743 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:22:25,524 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:25,525 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:27,811 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:22:27,821 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:22:35,742 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:35,744 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:37,488 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:22:37,496 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:22:42,574 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:42,575 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:43,696 ERROR Internal Server Error: /api/appeal/8
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/8/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:22:43,706 ERROR "PATCH /api/appeal/8 HTTP/1.1" 500 70359
+2023-01-07 14:22:55,610 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:22:55,611 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:22:57,149 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:22:57,159 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:23:16,513 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:23:16,514 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:23:18,129 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:23:18,138 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
+2023-01-07 14:23:28,246 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:23:28,249 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:23:30,649 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:23:30,660 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70229
+2023-01-07 14:24:39,049 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:24:39,051 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:24:44,315 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:24:44,317 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:24:49,315 ERROR Internal Server Error: /api/appeal/8
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/8/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:24:49,325 ERROR "PATCH /api/appeal/8 HTTP/1.1" 500 70213
+2023-01-07 14:25:13,301 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:25:13,302 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:25:14,841 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:25:14,851 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70229
+2023-01-07 14:25:30,209 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:25:30,210 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:25:32,522 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:25:32,531 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70229
+2023-01-07 14:25:46,643 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:25:46,644 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:27:36,792 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:27:36,794 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:27:38,576 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:27:38,586 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70229
+2023-01-07 14:28:10,727 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-07 14:28:10,728 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-07 14:28:15,294 ERROR Internal Server Error: /api/appeal/12
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/12/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-07 14:28:15,304 ERROR "PATCH /api/appeal/12 HTTP/1.1" 500 70375
