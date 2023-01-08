@@ -18,18 +18,20 @@ export default createStore({
 				const ans = await fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
 				const res = await ans.json()
 				ctx.commit('setFetchedTickets', res)
-				console.log(res)
 			} catch (e) {
 				console.error(`Error during fetch in mount: ${e}`)
 			}
 		},
 		async patchNewTicketStatusById(ctx, element) {
-			console.log(element)
+			const cookie = document.cookie
 			ctx.commit('setNewTicketStatusById', element)
-			await fetch('http://127.0.0.1:8000/api/appeal', {
+			await fetch(`http://127.0.0.1:8000/api/appeal/${element.elementId}`, {
 				method: 'PATCH',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				},
 				body: JSON.stringify({
-					'id': element.elementId,
 					'status': element.newStatus
 				})
 			})

@@ -10,7 +10,6 @@
         #item="{element}"
     >
       <div
-          :data-status="options.name"
       >
         {{ element }}
       </div>
