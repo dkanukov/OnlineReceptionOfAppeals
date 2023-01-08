@@ -894,3 +894,577 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-05 16:01:16,112 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
 2023-01-05 16:01:18,551 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-05 16:01:18,552 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 5872
+2023-01-05 19:37:13,303 WARNING Forbidden: /api/appeal
+2023-01-05 19:37:13,307 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 19:37:16,675 WARNING Forbidden: /api/appeal
+2023-01-05 19:37:16,679 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 19:37:39,714 WARNING Forbidden: /api/appeal
+2023-01-05 19:37:39,718 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 19:37:42,268 WARNING Forbidden: /api/appeal
+2023-01-05 19:37:42,273 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 19:37:58,321 WARNING Forbidden: /api/appeal
+2023-01-05 19:37:58,324 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 19:38:24,307 WARNING Forbidden: /api/appeal
+2023-01-05 19:38:24,310 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 19:45:00,649 WARNING Forbidden: /api/appeal
+2023-01-05 19:45:00,653 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:03:40,248 WARNING Forbidden: /api/appeal
+2023-01-05 20:03:40,251 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:04:04,898 WARNING Forbidden: /api/appeal
+2023-01-05 20:04:04,901 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:05:51,261 WARNING Not Found: /admin-django/
+2023-01-05 20:05:51,264 WARNING "GET /admin-django/ HTTP/1.1" 404 5874
+2023-01-05 20:10:26,608 WARNING Forbidden: /api/appeal
+2023-01-05 20:10:26,615 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:11:18,020 WARNING Forbidden: /api/appeal
+2023-01-05 20:11:18,023 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:12:35,429 WARNING Forbidden: /api/appeal
+2023-01-05 20:12:35,432 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:16:14,562 WARNING Forbidden: /api/appeal
+2023-01-05 20:16:14,564 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:16:23,508 WARNING Forbidden: /api/appeal
+2023-01-05 20:16:23,510 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 20:17:24,100 WARNING Forbidden: /api/appeal
+2023-01-05 20:17:24,103 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 23:49:42,297 WARNING Forbidden: /api/appeal
+2023-01-05 23:49:42,300 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 23:55:12,335 WARNING Forbidden: /api/appeal
+2023-01-05 23:55:12,337 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 23:55:44,718 WARNING Forbidden: /api/appeal
+2023-01-05 23:55:44,721 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-05 23:56:10,771 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 211, in appeal_api
+    print(request.user.permissions)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'permissions'
+2023-01-05 23:56:10,787 ERROR "GET /api/appeal HTTP/1.1" 500 101453
+2023-01-06 00:32:03,964 WARNING Forbidden: /api/appeal
+2023-01-06 00:32:03,969 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:32:14,924 WARNING Forbidden: /api/appeal
+2023-01-06 00:32:14,926 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:37:46,192 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 209, in appeal_api
+    request.user.chech_permissions(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'chech_permissions'
+2023-01-06 00:37:46,203 ERROR "GET /api/appeal HTTP/1.1" 500 101576
+2023-01-06 00:37:58,690 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 209, in appeal_api
+    request.user.check_permissions(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'check_permissions'
+2023-01-06 00:37:58,714 ERROR "GET /api/appeal HTTP/1.1" 500 101576
+2023-01-06 00:39:59,569 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 211, in appeal_api
+    print(request.user.is_authentificated())
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_authentificated'
+2023-01-06 00:39:59,587 ERROR "GET /api/appeal HTTP/1.1" 500 101560
+2023-01-06 00:40:52,726 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 211, in appeal_api
+    print(request.user.is_authentificate())
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_authentificate'
+2023-01-06 00:40:52,740 ERROR "GET /api/appeal HTTP/1.1" 500 101496
+2023-01-06 00:42:14,608 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 211, in appeal_api
+    print(request.user.is_authenticated())
+TypeError: 'bool' object is not callable
+2023-01-06 00:42:14,626 ERROR "GET /api/appeal HTTP/1.1" 500 97570
+2023-01-06 00:43:14,744 WARNING Forbidden: /api/appeal
+2023-01-06 00:43:14,746 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:43:36,021 WARNING Forbidden: /api/appeal
+2023-01-06 00:43:36,024 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:53:19,870 WARNING Forbidden: /api/appeal
+2023-01-06 00:53:19,873 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:54:13,087 WARNING Forbidden: /api/appeal
+2023-01-06 00:54:13,090 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:55:50,087 WARNING Forbidden: /api/appeal
+2023-01-06 00:55:50,091 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:56:38,965 WARNING Forbidden: /api/appeal
+2023-01-06 00:56:38,969 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 00:59:28,240 WARNING Forbidden: /api/appeal
+2023-01-06 00:59:28,245 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 01:03:57,538 WARNING Forbidden: /api/appeal
+2023-01-06 01:03:57,541 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 01:04:48,009 WARNING Method Not Allowed: /api/appeal
+2023-01-06 01:04:48,012 WARNING "POST /api/appeal HTTP/1.1" 405 55
+2023-01-06 01:07:28,002 WARNING Forbidden: /api/appeal
+2023-01-06 01:07:28,005 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 02:04:15,092 WARNING Forbidden: /api/appeal
+2023-01-06 02:04:15,096 WARNING "PATCH /api/appeal HTTP/1.1" 403 45
+2023-01-06 02:10:12,952 WARNING Unsupported Media Type: /api/appeal
+2023-01-06 02:10:12,954 WARNING "PATCH /api/appeal HTTP/1.1" 415 113
+2023-01-06 02:11:16,449 WARNING Unsupported Media Type: /api/appeal
+2023-01-06 02:11:16,453 WARNING "PATCH /api/appeal HTTP/1.1" 415 113
+2023-01-06 02:11:31,307 WARNING Unsupported Media Type: /api/appeal
+2023-01-06 02:11:31,310 WARNING "PATCH /api/appeal HTTP/1.1" 415 113
+2023-01-06 02:20:34,909 WARNING Forbidden: /api/appeal
+2023-01-06 02:20:34,912 WARNING "PATCH /api/appeal HTTP/1.1" 403 82
+2023-01-06 02:22:01,192 WARNING Forbidden: /api/appeal
+2023-01-06 02:22:01,194 WARNING "PATCH /api/appeal HTTP/1.1" 403 82
+2023-01-06 02:24:00,957 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 175, in get
+    print(request.user.session_id)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'session_id'
+2023-01-06 02:24:00,974 ERROR "GET /api/appeal HTTP/1.1" 500 97428
+2023-01-06 02:24:12,101 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 175, in get
+    print(request.user.sessionid)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'sessionid'
+2023-01-06 02:24:12,122 ERROR "GET /api/appeal HTTP/1.1" 500 97419
+2023-01-06 02:24:24,649 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 175, in get
+    print(request.user.cookie)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'cookie'
+2023-01-06 02:24:24,669 ERROR "GET /api/appeal HTTP/1.1" 500 97385
+2023-01-06 02:27:05,085 WARNING Forbidden: /api/appeal
+2023-01-06 02:27:05,087 WARNING "GET /api/appeal HTTP/1.1" 403 82
+2023-01-06 02:27:05,104 WARNING Forbidden: /api/appeal
+2023-01-06 02:27:05,106 WARNING "PATCH /api/appeal HTTP/1.1" 403 46
+2023-01-06 02:27:18,062 WARNING Forbidden: /api/appeal
+2023-01-06 02:27:18,065 WARNING "GET /api/appeal HTTP/1.1" 403 82
+2023-01-06 02:28:19,116 WARNING Forbidden: /api/appeal
+2023-01-06 02:28:19,119 WARNING "PATCH /api/appeal HTTP/1.1" 403 46
+2023-01-06 02:30:52,924 WARNING Forbidden: /api/appeal
+2023-01-06 02:30:52,926 WARNING "PATCH /api/appeal HTTP/1.1" 403 46
+2023-01-06 15:31:01,136 WARNING Forbidden: /api/appeal
+2023-01-06 15:31:01,139 WARNING "GET /api/appeal HTTP/1.1" 403 82
+2023-01-06 15:35:29,313 WARNING Forbidden: /api/appeal
+2023-01-06 15:35:29,317 WARNING "GET /api/appeal HTTP/1.1" 403 231
+2023-01-06 15:35:44,196 WARNING Forbidden: /api/appeal
+2023-01-06 15:35:44,199 WARNING "GET /api/appeal HTTP/1.1" 403 82
+2023-01-06 15:35:55,802 WARNING Forbidden: /api/appeal
+2023-01-06 15:35:55,806 WARNING "GET /api/appeal HTTP/1.1" 403 231
+2023-01-06 15:53:32,238 WARNING Not Found: /js/chunk-vendors.js
+2023-01-06 15:53:32,240 WARNING "GET /js/chunk-vendors.js HTTP/1.1" 404 5976
+2023-01-06 15:53:32,529 WARNING Not Found: /js/app.js
+2023-01-06 15:53:32,532 WARNING "GET /js/app.js HTTP/1.1" 404 5946
+2023-01-06 15:57:25,270 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 156, in get
+    print(request.COOKIE)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'COOKIE'
+2023-01-06 15:57:25,286 ERROR "GET /api/appeal HTTP/1.1" 500 101647
+2023-01-06 15:59:37,070 WARNING Forbidden: /api/appeal
+2023-01-06 15:59:37,072 WARNING "GET /api/appeal HTTP/1.1" 403 82
+2023-01-06 16:02:55,340 WARNING Forbidden: /api/appeal
+2023-01-06 16:02:55,342 WARNING "POST /api/appeal HTTP/1.1" 403 82
+2023-01-06 16:03:05,728 WARNING Forbidden: /api/appeal
+2023-01-06 16:03:05,730 WARNING "POST /api/appeal HTTP/1.1" 403 46
+2023-01-06 16:04:14,927 WARNING Unsupported Media Type: /api/appeal
+2023-01-06 16:04:14,929 WARNING "POST /api/appeal HTTP/1.1" 415 99
+2023-01-06 16:05:05,856 WARNING Forbidden: /api/appeal
+2023-01-06 16:05:05,859 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-06 16:05:19,209 WARNING Unsupported Media Type: /api/appeal
+2023-01-06 16:05:19,211 WARNING "POST /api/appeal HTTP/1.1" 415 99
+2023-01-06 16:05:28,300 WARNING Forbidden: /api/appeal
+2023-01-06 16:05:28,303 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-06 16:05:49,289 WARNING Forbidden: /api/appeal
+2023-01-06 16:05:49,291 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-06 16:06:20,525 WARNING Forbidden: /api/appeal
+2023-01-06 16:06:20,527 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-06 16:06:35,939 WARNING Bad Request: /api/appeal
+2023-01-06 16:06:35,942 WARNING "POST /api/appeal HTTP/1.1" 400 18
+2023-01-06 16:08:09,999 WARNING Forbidden: /api/appeal/7
+2023-01-06 16:08:10,000 WARNING "PATCH /api/appeal/7 HTTP/1.1" 403 82
+2023-01-06 16:08:21,520 WARNING Forbidden: /api/appeal/7
+2023-01-06 16:08:21,522 WARNING "PATCH /api/appeal/7 HTTP/1.1" 403 45
+2023-01-06 16:08:35,667 ERROR Internal Server Error: /api/appeal/7
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: APIAppealDetail.patch() got an unexpected keyword argument 'id'
+2023-01-06 16:08:35,676 ERROR "PATCH /api/appeal/7 HTTP/1.1" 500 88609
+2023-01-06 16:08:59,465 ERROR Internal Server Error: /api/appeal/7
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: APIAppealDetail.patch() got an unexpected keyword argument 'id'
+2023-01-06 16:08:59,472 ERROR "PATCH /api/appeal/7 HTTP/1.1" 500 88609
+2023-01-06 16:11:57,280 WARNING Bad Request: /api/appeal/7
+2023-01-06 16:11:57,283 WARNING "PATCH /api/appeal/7 HTTP/1.1" 400 73
+2023-01-06 16:12:22,290 WARNING Bad Request: /api/appeal/7
+2023-01-06 16:12:22,293 WARNING "PATCH /api/appeal/7 HTTP/1.1" 400 73
+2023-01-06 16:18:16,798 WARNING Not Found: /api/appeal/17
+2023-01-06 16:18:16,801 WARNING "DELETE /api/appeal/17 HTTP/1.1" 404 50
+2023-01-06 16:40:59,363 WARNING Method Not Allowed: /api/appeal
+2023-01-06 16:40:59,366 WARNING "PATCH /api/appeal HTTP/1.1" 405 56
+2023-01-06 16:41:38,644 WARNING Forbidden: /api/appeal/12
+2023-01-06 16:41:38,648 WARNING "PATCH /api/appeal/12 HTTP/1.1" 403 82
+2023-01-06 16:42:12,957 ERROR Internal Server Error: /api/appeal/7
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 183, in patch
+    if request.data['status'] not in [
+KeyError: 'status'
+2023-01-06 16:42:12,967 ERROR "PATCH /api/appeal/7 HTTP/1.1" 500 92252
+2023-01-06 16:42:49,825 WARNING Forbidden: /api/appeal/7
+2023-01-06 16:42:49,827 WARNING "PATCH /api/appeal/7 HTTP/1.1" 403 45
+2023-01-06 16:43:04,032 WARNING Forbidden: /api/appeal/12
+2023-01-06 16:43:04,034 WARNING "PATCH /api/appeal/12 HTTP/1.1" 403 82
+2023-01-06 16:45:49,042 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 156, in get
+    if request.user.is_authentificated():
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\utils\functional.py", line 259, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_authentificated'
+2023-01-06 16:45:49,062 ERROR "GET /api/appeal HTTP/1.1" 500 97488
+2023-01-06 16:49:16,223 WARNING Forbidden: /api/appeal/12
+2023-01-06 16:49:16,226 WARNING "GET /api/appeal/12 HTTP/1.1" 403 82
+2023-01-06 16:49:42,586 WARNING Forbidden: /api/appeal/12
+2023-01-06 16:49:42,589 WARNING "GET /api/appeal/12 HTTP/1.1" 403 82
+2023-01-06 16:50:03,052 WARNING Not Found: /api/appeal/
+2023-01-06 16:50:03,056 WARNING "GET /api/appeal/ HTTP/1.1" 404 6040
+2023-01-06 16:50:18,776 WARNING Forbidden: /api/appeal
+2023-01-06 16:50:18,779 WARNING "GET /api/appeal HTTP/1.1" 403 26
+2023-01-08 01:43:22,090 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: CHECK constraint failed: appeal_option_constraint
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 162, in post
+    serializer.save()
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\serializers.py", line 48, in create
+    return Appeal.objects.create(**validated_data)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: CHECK constraint failed: appeal_option_constraint
+2023-01-08 01:43:22,243 ERROR "POST /api/appeal HTTP/1.1" 500 189610
+2023-01-08 01:49:06,390 WARNING Bad Request: /api/appeal
+2023-01-08 01:49:06,400 WARNING "POST /api/appeal HTTP/1.1" 400 24
+2023-01-08 01:51:32,419 WARNING Method Not Allowed: /api/appeal
+2023-01-08 01:51:32,425 WARNING "PATCH /api/appeal HTTP/1.1" 405 56
+2023-01-08 01:51:54,623 WARNING Method Not Allowed: /api/appeal
+2023-01-08 01:51:54,632 WARNING "PATCH /api/appeal HTTP/1.1" 405 56
+2023-01-08 01:52:27,048 WARNING Not Found: /js/app.js
+2023-01-08 01:52:27,060 WARNING Not Found: /js/chunk-vendors.js
+2023-01-08 01:52:27,064 WARNING "GET /js/app.js HTTP/1.1" 404 5946
+2023-01-08 01:52:27,074 WARNING "GET /js/chunk-vendors.js HTTP/1.1" 404 5976
+2023-01-08 01:53:26,420 WARNING Method Not Allowed: /api/appeal
+2023-01-08 01:53:26,432 WARNING "PATCH /api/appeal HTTP/1.1" 405 56
+2023-01-08 01:53:29,604 WARNING Not Found: /js/chunk-vendors.js
+2023-01-08 01:53:29,614 WARNING Not Found: /js/app.js
+2023-01-08 01:53:29,619 WARNING "GET /js/chunk-vendors.js HTTP/1.1" 404 5976
+2023-01-08 01:53:29,636 WARNING "GET /js/app.js HTTP/1.1" 404 5946
+2023-01-08 01:54:30,710 WARNING Not Found: /js/chunk-vendors.js
+2023-01-08 01:54:30,718 WARNING Not Found: /js/app.js
+2023-01-08 01:54:30,722 WARNING "GET /js/chunk-vendors.js HTTP/1.1" 404 5976
+2023-01-08 01:54:30,726 WARNING "GET /js/app.js HTTP/1.1" 404 5946
+2023-01-08 01:58:23,004 WARNING Bad Request: /api/appeal/15
+2023-01-08 01:58:23,019 WARNING "PATCH /api/appeal/15 HTTP/1.1" 400 20
