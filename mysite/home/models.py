@@ -226,6 +226,21 @@ class Appeal(models.Model):
     class Meta:
         verbose_name = 'Обращение'
         verbose_name_plural = 'Обращения'
+        constraints = (
+            models.CheckConstraint(
+                check=models.Q(type__gte=1) & models.Q(type__lte=3),
+                name='appeal_type_constraint'
+            ),
+            models.CheckConstraint(
+                check=models.Q(option__gte=1) & models.Q(option__lte=7),
+                name='appeal_option_constraint'
+            ),
+            models.CheckConstraint(
+                check=models.Q(status='new') | models.Q(status='work') |
+                models.Q(status='done') | models.Q(status='archive'),
+                name='appeal_status_constraint'
+            )
+        )
 
 
 
