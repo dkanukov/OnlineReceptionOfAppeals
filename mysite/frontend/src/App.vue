@@ -55,7 +55,10 @@ export default {
     ...mapState(['tickets'])
   },
   async created() {
-    this.fetchTickets()
+    this.fetchTickets().then(() => {
+      console.log(this.tickets)
+    })
+
   }
 }
 </script>
