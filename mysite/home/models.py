@@ -222,6 +222,7 @@ class Appeal(models.Model):
         choices=STATUS_CHOICES, default='new',
         null=False
     )
+    create_date = models.DateField(auto_now_add=True, verbose_name="Дата обращения")
 
     class Meta:
         verbose_name = 'Обращение'

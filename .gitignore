@@ -3,6 +3,9 @@
 .jshintrc
 node_modules
 /dist
+/mysite/home/testAPi.py
+/mysite/home/__pycache__
+*.pyc
 
 
 # local env files
@@ -14,6 +17,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+site.log
 
 # Editor directories and files
 .idea
