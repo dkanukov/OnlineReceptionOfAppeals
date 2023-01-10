@@ -2,7 +2,8 @@ import {createStore} from 'vuex';
 
 export default createStore({
 	state: () =>  ({
-		tickets: []
+		tickets: [],
+		isShowNewTicketDialog: false,
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -10,6 +11,9 @@ export default createStore({
 		},
 		setNewTicketStatusById(state, element){
 			state.tickets.find((ticket) => ticket.id === element.elementId).status = element.newStatus
+		},
+		toggleIsShowNewTicketDialog(state) {
+			state.isShowNewTicketDialog = !state.isShowNewTicketDialog
 		}
 	},
 	actions: {

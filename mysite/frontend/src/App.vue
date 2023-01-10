@@ -13,6 +13,7 @@
             ПРИЕМНАЯ <br> ОБРАЩЕНИЙ
           </v-row>
           <div class="btnGroup">
+            <v-btn color="success" prepend-icon="mdi-plus" class="mt-4" block>Новое обращение</v-btn>
             <v-btn color="primary" class="mt-4" block>Все</v-btn>
             <v-btn color="primary" class="mt-4" block>Помощь</v-btn>
             <v-btn color="primary" class="mt-4" block>Консультации</v-btn>
@@ -36,7 +37,7 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
-import {mapActions, mapState} from 'vuex';
+import {mapActions, mapState, mapMutations} from 'vuex';
 
 export default {
   name: 'App',
@@ -49,10 +50,11 @@ export default {
     return {}
   },
   methods: {
-    ...mapActions(['fetchTickets', 'patchNewTicketStatusById'])
+    ...mapActions(['fetchTickets', 'patchNewTicketStatusById']),
+    ...mapMutations(['toggleIsShowNewTicketDialog'])
   },
   computed: {
-    ...mapState(['tickets'])
+    ...mapState(['tickets', 'isShowNewTicketDialog'])
   },
   async created() {
     this.fetchTickets().then(() => {

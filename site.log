@@ -1468,3 +1468,329 @@ django.db.utils.IntegrityError: CHECK constraint failed: appeal_option_constrain
 2023-01-08 01:54:30,726 WARNING "GET /js/app.js HTTP/1.1" 404 5946
 2023-01-08 01:58:23,004 WARNING Bad Request: /api/appeal/15
 2023-01-08 01:58:23,019 WARNING "PATCH /api/appeal/15 HTTP/1.1" 400 20
+2023-01-10 11:07:26,928 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:07:26,929 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:07:29,205 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:07:29,205 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:07:41,392 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:07:41,393 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:08:58,971 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:08:58,972 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:09:00,228 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:09:00,229 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:09:00,896 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:09:00,897 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:09:21,621 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleNotFoundError in 
+            Module not found: Error: Can't resolve 'path' in '/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/convert-source-map'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+            
+2023-01-10 11:09:21,630 ERROR "GET /appeal/ HTTP/1.1" 500 125080
+2023-01-10 11:09:23,029 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleNotFoundError in 
+            Module not found: Error: Can't resolve 'path' in '/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/convert-source-map'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+            
+2023-01-10 11:09:23,042 ERROR "GET /appeal/ HTTP/1.1" 500 125080
+2023-01-10 11:09:23,799 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleNotFoundError in 
+            Module not found: Error: Can't resolve 'path' in '/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/convert-source-map'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+            
+2023-01-10 11:09:23,808 ERROR "GET /appeal/ HTTP/1.1" 500 125080
+2023-01-10 11:09:24,435 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleNotFoundError in 
+            Module not found: Error: Can't resolve 'path' in '/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/convert-source-map'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+            
+2023-01-10 11:09:24,448 ERROR "GET /appeal/ HTTP/1.1" 500 125081
+2023-01-10 11:10:02,671 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleNotFoundError in 
+            Module not found: Error: Can't resolve 'path' in '/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/convert-source-map'
+
+BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
+This is no longer the case. Verify if you need this module and configure a polyfill for it.
+
+If you want to include a polyfill, you need to:
+	- add a fallback 'resolve.fallback: { "path": require.resolve("path-browserify") }'
+	- install 'path-browserify'
+If you don't want to include a polyfill, you can use an empty module like this:
+	resolve.fallback: { "path": false }
+            
+2023-01-10 11:10:02,679 ERROR "GET /appeal/ HTTP/1.1" 500 125080
+2023-01-10 11:10:03,476 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:10:03,477 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:10:03,622 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:10:03,623 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:10:03,729 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:10:03,730 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:10:10,109 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:10:10,110 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:10:17,699 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:10:17,701 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:10:18,714 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:10:18,715 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:18:51,479 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-10 11:18:51,481 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-10 11:18:51,482 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:18:51,483 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:18:51,516 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-10 11:18:51,517 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-10 11:18:51,518 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-10 11:18:51,519 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:18:51,520 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:18:51,522 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:18:53,835 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-10 11:18:53,843 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5632
+2023-01-10 11:19:15,958 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-10 11:19:15,959 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:16,008 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-10 11:19:16,013 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:16,016 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-10 11:19:16,019 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:16,021 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-10 11:19:16,025 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-10 11:19:16,031 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:16,032 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:21,269 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-10 11:19:21,274 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:21,275 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-10 11:19:21,277 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-10 11:19:21,277 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-10 11:19:21,280 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-10 11:19:21,280 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:21,280 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:21,318 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:21,319 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:24,597 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-10 11:19:24,598 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-10 11:19:24,599 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:24,600 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:24,611 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-10 11:19:24,639 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:24,647 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-10 11:19:24,648 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-10 11:19:24,649 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:24,687 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:27,355 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-10 11:19:27,356 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:27,358 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-10 11:19:27,380 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-10 11:19:27,383 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-10 11:19:27,383 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-10 11:19:27,390 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:27,391 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:27,393 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:19:27,394 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5622
+2023-01-10 11:21:50,670 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:21:50,671 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:22:15,318 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:22:15,319 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:22:21,923 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:22:21,926 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:23:20,724 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:23:20,725 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:23:49,853 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:23:49,854 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:24:26,251 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:24:26,252 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:24:33,124 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:24:33,125 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:24:40,725 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:24:40,726 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:25:16,597 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:25:16,598 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-10 11:27:48,741 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-10 11:27:48,742 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
