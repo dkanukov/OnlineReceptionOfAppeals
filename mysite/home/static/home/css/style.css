@@ -331,3 +331,14 @@ span {
 .img_wrap_programs img {
     opacity: 0.73;
 }
+
+.donateSender {
+    width: 50%;
+    display: flex;
+    align-content: center;
+}
+
+.btnSendDonate {
+    height: 40px;
+    margin-left: 15px;
+}
