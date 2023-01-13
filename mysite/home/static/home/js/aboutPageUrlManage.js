@@ -10,15 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 
 	btnSendDonate.addEventListener('click', async () => {
-		console.log(`http//:127.0.0.1:8000/api/pay?value=${inputSendDonate.value.trim()}`)
-		const res = await fetch('http//:127.0.0.1:8000/api/pay?value=' + inputSendDonate.value,
-			{
-				method: 'GET'
-			}
-		)
-		if (res.ok) {
-			console.log('success')
-		}
+		const res = await fetch(`/api/pay?value=${inputSendDonate.value}`, {
+			mode: 'no-cors',
+			method: 'GET',
+		});
+		console.log(res)
 	})
 
 	switch (window.location.hash) {
