@@ -174,6 +174,7 @@ class APIAppealDetail(APIView):
     def patch(self, request, id):
             appeal = get_object_or_404(Appeal, id=id)
             appeal.status = request.data['status']
+            appeal.notes = request.data['notes']
             try:
                 appeal.save()
                 return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
