@@ -13,7 +13,13 @@
             ПРИЕМНАЯ <br> ОБРАЩЕНИЙ
           </v-row>
           <div class="btnGroup">
-            <v-btn color="success" prepend-icon="mdi-plus" class="mt-4" block>Новое обращение</v-btn>
+            <v-btn
+                @click="handleNewTicketBtnClick"
+                color="success"
+                prepend-icon="mdi-plus"
+                class="mt-4"
+                block
+            >Новое обращение</v-btn>
             <v-btn color="primary" class="mt-4" block>Все</v-btn>
             <v-btn color="primary" class="mt-4" block>Помощь</v-btn>
             <v-btn color="primary" class="mt-4" block>Консультации</v-btn>
@@ -31,12 +37,16 @@
         </v-col>
       </v-row>
     </v-main>
+    <NewTicketDialog
+        :isShow="this.isShowNewTicketDialog"
+    />
   </v-app>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
+import NewTicketDialog from '@/components/NewTicketDialog.vue';
 import {mapActions, mapState, mapMutations} from 'vuex';
 
 export default {
@@ -45,13 +55,17 @@ export default {
   components: {
     HeaderComponent,
     DragndropTable,
+    NewTicketDialog,
   },
   data() {
     return {}
   },
   methods: {
     ...mapActions(['fetchTickets', 'patchNewTicketStatusById']),
-    ...mapMutations(['toggleIsShowNewTicketDialog'])
+    ...mapMutations(['toggleIsShowNewTicketDialog']),
+    handleNewTicketBtnClick() {
+      this.toggleIsShowNewTicketDialog()
+    }
   },
   computed: {
     ...mapState(['tickets', 'isShowNewTicketDialog'])

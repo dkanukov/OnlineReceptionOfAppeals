@@ -1,7 +1,9 @@
+import json
 import uuid
 
-from django.http import HttpResponseRedirect
+from django.http import JsonResponse
 from rest_framework.views import View
+from rest_framework.response import Response
 from yookassa import Configuration, Payment
 
 
@@ -22,6 +24,6 @@ class YooKassaPayment(View):
             "capture": True,
             "description": "Тестовый заказ"
         }, uuid.uuid4())
-
-        return HttpResponseRedirect(payment.confirmation.confirmation_url)
+        response = {'redirect_url': payment.confirmation.confirmation_url}
+        return JsonResponse(response)
 

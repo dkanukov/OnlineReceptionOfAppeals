@@ -1794,13 +1794,110 @@ If you don't want to include a polyfill, you can use an empty module like this:
 2023-01-10 11:25:16,598 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
 2023-01-10 11:27:48,741 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-10 11:27:48,742 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
-2023-01-13 20:05:36,274 WARNING Forbidden: /api/appeal
-2023-01-13 20:05:36,278 WARNING "GET /api/appeal?value=100 HTTP/1.1" 403 26
-2023-01-13 20:06:54,555 WARNING Forbidden: /api/appeal
-2023-01-13 20:06:54,557 WARNING "GET /api/appeal?value=100 HTTP/1.1" 403 26
-2023-01-13 20:11:48,808 WARNING Not Found: /favicon.ico
-2023-01-13 20:11:48,810 WARNING "GET /favicon.ico HTTP/1.1" 404 5952
-2023-01-13 20:12:00,373 ERROR Internal Server Error: /api/pay
+2023-01-14 17:02:28,447 ERROR Unsafe redirect to URL with protocol '127.0.0.1'
+2023-01-14 17:02:28,532 WARNING Bad Request: /api/pay
+2023-01-14 17:02:28,534 WARNING "GET /api/pay?value=1000 HTTP/1.1" 400 81600
+2023-01-14 17:02:45,419 ERROR Unsafe redirect to URL with protocol '127.0.0.1'
+2023-01-14 17:02:45,450 WARNING Bad Request: /api/pay
+2023-01-14 17:02:45,452 WARNING "GET /api/pay?value=100 HTTP/1.1" 400 81590
+2023-01-14 17:18:27,992 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: home_appeal.notes
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 155, in get
+    return Response(serializer.data)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\query.py", line 320, in __iter__
+    self._fetch_all()
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 477, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: home_appeal.notes
+2023-01-14 17:18:28,048 ERROR "GET /api/appeal HTTP/1.1" 500 165871
+2023-01-14 17:18:28,349 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-14 17:18:28,355 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6044
+2023-01-14 18:13:00,526 ERROR Internal Server Error: /api/pay
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+2023-01-14 18:13:00,535 ERROR "GET /api/pay?value=250 HTTP/1.1" 500 72204
+2023-01-14 18:13:43,482 ERROR Internal Server Error: /api/pay
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+2023-01-14 18:13:43,489 ERROR "GET /api/pay?value=250 HTTP/1.1" 500 72341
+2023-01-14 18:14:37,895 ERROR Internal Server Error: /api/pay
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+2023-01-14 18:14:37,903 ERROR "GET /api/pay?value=100 HTTP/1.1" 500 69291
+2023-01-14 18:15:11,580 ERROR Internal Server Error: /api/pay
 Traceback (most recent call last):
   File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
     response = get_response(request)
@@ -1810,17 +1907,9 @@ Traceback (most recent call last):
     return self.dispatch(request, *args, **kwargs)
   File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
     return handler(request, *args, **kwargs)
-  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\payments.py", line 13, in get
-    payment = Payment.create({
-  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\yookassa\payment.py", line 52, in create
-    params_object = PaymentRequest(params)
-  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\yookassa\domain\common\base_object.py", line 15, in __init__
-    setattr(self, key, dictionary[key])
-  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\yookassa\domain\request\payment_request.py", line 65, in amount
-    self.__amount = Amount(value)
-  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\yookassa\domain\common\base_object.py", line 15, in __init__
-    setattr(self, key, dictionary[key])
-  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\yookassa\domain\models\amount.py", line 24, in value
-    self.__value = Decimal(str(float(value))).quantize(Decimal('1.11'), rounding=ROUND_HALF_UP)
-TypeError: float() argument must be a string or a real number, not 'NoneType'
-2023-01-13 20:12:00,403 ERROR "GET /api/pay HTTP/1.1" 500 99034
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\payments.py", line 28, in get
+    return JsonResponse(response)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\http\response.py", line 648, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+2023-01-14 18:15:11,591 ERROR "GET /api/pay?value=100 HTTP/1.1" 500 79583
