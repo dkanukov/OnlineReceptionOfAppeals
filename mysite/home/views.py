@@ -149,6 +149,7 @@ def get_contacts_page(request):
 class APIAppeal(APIView):
 
     def get(self, request):
+        print(request.COOKIES)
         if request.user.is_authenticated:
             object_list = Appeal.objects.all()
             serializer = AppealSerializer(instance=object_list, many=True)
@@ -173,11 +174,13 @@ class APIAppealDetail(APIView):
 
     def patch(self, request, id):
             appeal = get_object_or_404(Appeal, id=id)
-            appeal.status = request.data['status']
-            appeal.notes = request.data['notes']
+            if 'status' in request.data:
+                appeal.status = request.data['status']
+            if 'notes' in request.data:
+                appeal.notes = request.data['notes']
             try:
                 appeal.save()
-                return Response("status changed", status=status.HTTP_205_RESET_CONTENT)
+                return Response("updated", status=status.HTTP_205_RESET_CONTENT)
             except IntegrityError:
                 return Response("wrong status value", status=status.HTTP_400_BAD_REQUEST)
 
@@ -186,6 +189,19 @@ class APIAppealDetail(APIView):
         appeal.delete()
         return Response('object deleted', status=status.HTTP_204_NO_CONTENT)
 
+
+class APIUser(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            response_data = {
+                'first_name': request.user.first_name,
+                'last_name': request.user.last_name,
+            }
+            return Response(data=response_data)
+        else:
+            return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
 
 '''
 @api_view(['GET', 'PATCH'])
