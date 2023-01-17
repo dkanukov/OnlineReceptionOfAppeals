@@ -26,6 +26,24 @@ document.addEventListener("DOMContentLoaded", () => {
 		default: document.getElementById("about-tab").click();
 	}
 
+	document.getElementById("help-tab").addEventListener('click', () => {
+		document.getElementById("help-tab").click()
+	})
+	document.getElementById("docs-tab").addEventListener('click', () => {
+		console.log(1)
+		location.hash = '#docs-tab'
+	})
+	document.getElementById("requisites-tab").addEventListener('click', () => {
+		document.getElementById("requisites-tab").click()
+	})
+	document.getElementById("feedbacks-tab").addEventListener('click', () => {
+		document.getElementById("feedbacks-tab").click()
+	})
+	document.getElementById("about-tab").addEventListener('click', () => {
+		document.getElementById("feedbacks-tab").click()
+	})
+
+
 	window.onhashchange = () => {
 		switch (window.location.hash) {
 			case "#help-tab": document.getElementById("help-tab").click(); break;

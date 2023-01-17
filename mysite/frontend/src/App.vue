@@ -19,15 +19,14 @@
                 prepend-icon="mdi-plus"
                 class="mt-4"
                 block
-            >Новое обращение</v-btn>
+            >Новое обращение
+            </v-btn>
             <v-btn color="primary" class="mt-4" block>Все</v-btn>
             <v-btn color="primary" class="mt-4" block>Помощь</v-btn>
             <v-btn color="primary" class="mt-4" block>Консультации</v-btn>
             <v-btn color="primary" class="mt-4" block>Волонтерство</v-btn>
           </div>
         </v-col>
-
-<!--        <v-spacer/>-->
 
         <v-col>
           <DragndropTable
@@ -37,38 +36,171 @@
         </v-col>
       </v-row>
     </v-main>
-    <NewTicketDialog
-        :isShow="this.isShowNewTicketDialog"
-    />
+    <v-dialog class="dialog" v-model="isShowDialog">
+      <v-card>
+        <v-container>
+          <v-card-title>
+            Создание нового обращения
+          </v-card-title>
+          <v-card-text>
+            <v-row>
+              <v-col>
+                <v-text-field
+                    label="Введите имя"
+                    type=""
+                    required
+                    v-model="newTicket.name"
+                />
+              </v-col>
+              <v-col>
+                <v-text-field
+                    label="Введите фамилию"
+                    required
+                    v-model="newTicket.surname"
+                />
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-text-field
+                    label="Номер телефона"
+                    v-model="newTicket.phoneNumber"
+                />
+              </v-col>
+              <v-col>
+                <v-select
+                    label="Требуемый тип помощи"
+                    v-model="newTicket.helpType"
+                    :items="helpType"
+                />
+              </v-col>
+            </v-row>
+            <v-row v-if="isShowNewTicketOption">
+              <v-col>
+                <v-select
+                    label="Выберите опцию"
+                    :items="newTicketOptionRelatedOnType"
+                    v-model="newTicket.helpOption"
+                />
+              </v-col>
+            </v-row>
+            <v-row>
+              <v-col>
+                <v-textarea
+                    label="Заметка"
+                    v-model="newTicket.notes"
+                />
+              </v-col>
+            </v-row>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn-group class="d-flex justify-end">
+              <v-btn @click="sendForm" color="success">Сохранить</v-btn>
+              <v-btn @click="discardForm" color="error">Отменить</v-btn>
+            </v-btn-group>
+          </v-card-actions>
+        </v-container>
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
-import NewTicketDialog from '@/components/NewTicketDialog.vue';
 import {mapActions, mapState, mapMutations} from 'vuex';
-
+const HELP_TYPE = {
+  'Помощь': 1,
+  'Консультация': 2,
+  'Волонтерство': 3,
+}
+const HELP_OPTION = {
+  'SOS размещение': 1,
+  'Гуманитарная помощь': 2,
+  'Необходим адресный сбор': 3,
+  'Консультация психолога': 4,
+  'Консультация юриста': 5,
+  'Хочу в группу поддержки': 6,
+}
 export default {
   name: 'App',
-
   components: {
     HeaderComponent,
     DragndropTable,
-    NewTicketDialog,
   },
   data() {
-    return {}
+    return {
+      isShowDialog: false,
+      newTicket: {
+        name: '',
+        surname: '',
+        phoneNumber: null,
+        notes: '',
+        helpType: '',
+        helpOption: ''
+      },
+      helpType: [
+        'Помощь', 'Консультация', 'Волонтерство',
+      ]
+    }
   },
   methods: {
     ...mapActions(['fetchTickets', 'patchNewTicketStatusById']),
-    ...mapMutations(['toggleIsShowNewTicketDialog']),
+    ...mapMutations([]),
     handleNewTicketBtnClick() {
-      this.toggleIsShowNewTicketDialog()
+      this.isShowDialog = true
+    },
+    async sendForm() {
+      console.log(JSON.stringify({
+        'name': this.newTicket.name,
+        'las_name': this.newTicket.surname,
+        'phone_number': this.newTicket.phoneNumber,
+        'type': HELP_TYPE[this.newTicket.helpType],
+        'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
+        'notes': this.newTicket.notes,
+      }))
+      // TODO: запрос не отправляется 400
+      const res = await fetch('http://127.0.0.1:8000/api/appeal', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: {
+          'name': this.newTicket.name,
+          'las_name': this.newTicket.surname,
+          'phone_number': this.newTicket.phoneNumber,
+          'type': HELP_TYPE[this.newTicket.helpType],
+          'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
+          'notes': this.newTicket.notes,
+        }
+      })
+      console.log(res)
+    },
+    discardForm() {
+      this.isShowDialog = false
+      this.newTicket = {}
     }
   },
   computed: {
-    ...mapState(['tickets', 'isShowNewTicketDialog'])
+    ...mapState(['tickets']),
+    isShowNewTicketOption() {
+      return this.newTicket.helpType === 'Помощь' || this.newTicket.helpType === 'Консультация'
+    },
+    newTicketOptionRelatedOnType() {
+      if (this.newTicket.helpType === 'Помощь') {
+        return [
+          'SOS размещение',
+          'Гуманитарная помощь',
+          'Необходим адресный сбор',
+        ]
+      } else {
+        return [
+          'Koнсультация психолога',
+          'Консультация юриста',
+          'Хочу в группу поддержки',
+        ]
+      }
+    }
   },
   async created() {
     this.fetchTickets().then(() => {
@@ -87,5 +219,9 @@ export default {
 
 .btnGroup {
   margin-top: 70px;
+}
+
+.dialog {
+  width: 40vw;
 }
 </style>

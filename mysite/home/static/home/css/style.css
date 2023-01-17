@@ -1,9 +1,8 @@
 /* font-family: 'Source Serif Pro', serif; */
 
 @media all and (min-width: 1450px) {
-    /* screen size until 1200px */
     body {
-        font-size: 2em; /* 1.5x default size */
+        font-size: 1.4em; /* 1.5x default size */
     }
 
     .card-title {
@@ -345,4 +344,8 @@ span {
 
 .downloadLink {
     margin-left: auto;
+}
+
+.navbarAllign {
+    align-items: center !important;
 }
