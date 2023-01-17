@@ -220,9 +220,10 @@ class Appeal(models.Model):
     status = models.CharField(
         max_length=50, verbose_name="Статус",
         choices=STATUS_CHOICES, default='new',
-        null=False
+        null=False, blank=False
     )
     create_date = models.DateField(auto_now_add=True, verbose_name="Дата обращения")
+    notes = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Обращение'
