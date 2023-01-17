@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 
 	btnSendDonate.addEventListener('click', async () => {
-		const res = await fetch(`/api/pay?value=${inputSendDonate.value}`, {
+		const ans = await fetch(`/api/pay?value=${inputSendDonate.value}`, {
 			mode: 'no-cors',
 			method: 'GET',
 		});
-		console.log(res)
+		const res = await ans.json()
+		window.location.href = res.redirect_url
 	})
 
 	switch (window.location.hash) {
