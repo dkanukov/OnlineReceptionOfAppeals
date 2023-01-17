@@ -126,7 +126,7 @@
                     </h2>
                     <div class="row row-cols-1">
                         {% for document in documents %}
-                        <div class="col d-flex mt-2 justify-content-around p-3" style="border: 3px solid #E4E4EF">
+                        <div class="col d-flex mt-2 p-3" style="border: 3px solid #E4E4EF">
                             <svg class="d-none d-sm-block" width="64" height="65" viewBox="0 0 64 65" fill="none"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path d="M0 5C0 2.23858 2.23858 0 5 0H59C61.7614 0 64 2.23858 64 5V65H0V5Z"
@@ -141,7 +141,7 @@
                                 </defs>
                             </svg>
                             <h3 class="align-self-center">{{ document.0 }}</h3>
-                            <a href="{{ document.1 }}" download="filename" target="_blank">
+                            <a class="downloadLink" href="{{ document.1 }}" download="filename" target="_blank">
                                 <svg class="align-self-center" width="45" height="45" viewBox="0 0 45 45" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="44" height="44" rx="4.5" stroke="#E4E4EF"/>
@@ -151,7 +151,6 @@
                                           stroke-linecap="round"/>
                                 </svg>
                             </a>
-
                         </div>
                         {% endfor %}
                     </div>
@@ -162,7 +161,7 @@
                     </h2>
                     <div class="row row-cols-1">
                         {% for report in reports %}
-                        <div class="col d-flex mt-2 justify-content-around p-3" style="border: 3px solid #E4E4EF">
+                        <div class="col d-flex mt-2 p-3" style="border: 3px solid #E4E4EF">
                             <svg class="d-none d-sm-block" width="64" height="65" viewBox="0 0 64 65" fill="none"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path d="M0 5C0 2.23858 2.23858 0 5 0H59C61.7614 0 64 2.23858 64 5V65H0V5Z"
@@ -177,7 +176,7 @@
                                 </defs>
                             </svg>
                             <h3 class="align-self-center">{{ report.0 }}</h3>
-                            <a href="{{ report.1 }}" download="filename" target="_blank">
+                            <a class="downloadLink" href="{{ report.1 }}" download="filename" target="_blank">
                                 <svg class="align-self-center" width="45" height="45" viewBox="0 0 45 45" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="44" height="44" rx="4.5" stroke="#E4E4EF"/>

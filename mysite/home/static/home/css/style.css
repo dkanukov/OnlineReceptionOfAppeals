@@ -342,3 +342,7 @@ span {
     height: 40px;
     margin-left: 15px;
 }
+
+.downloadLink {
+    margin-left: auto;
+}
