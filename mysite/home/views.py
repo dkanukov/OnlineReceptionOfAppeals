@@ -178,6 +178,11 @@ class APIAppealDetail(APIView):
                 appeal.status = request.data['status']
             if 'notes' in request.data:
                 appeal.notes = request.data['notes']
+            if 'flag' in request.data:
+                print(request.data)
+                print(type(request.data['flag']))
+                print(request.data['flag'])
+                appeal.flag = request.data['flag']
             try:
                 appeal.save()
                 return Response("updated", status=status.HTTP_205_RESET_CONTENT)

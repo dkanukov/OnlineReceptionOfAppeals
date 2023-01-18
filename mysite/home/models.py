@@ -223,7 +223,8 @@ class Appeal(models.Model):
         null=False, blank=False
     )
     create_date = models.DateField(auto_now_add=True, verbose_name="Дата обращения")
-    notes = models.CharField(max_length=255, blank=True, null=True)
+    notes = models.CharField(max_length=255, blank=True, null=True, verbose_name="Заметка")
+    flag = models.BooleanField(default=False, verbose_name="Важное")
 
     class Meta:
         verbose_name = 'Обращение'
