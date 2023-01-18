@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex justify-center">
-    <v-col>
+  <v-row>
+    <v-col cols="4">
       <DragndropTableColumn
           column-name="Новое"
           :options="{
@@ -11,7 +11,7 @@
           :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
-    <v-col>
+    <v-col cols="4">
       <DragndropTableColumn
           column-name="В работе"
           :options="{
@@ -22,7 +22,7 @@
           :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
-    <v-col>
+    <v-col cols="4">
       <DragndropTableColumn
           column-name="Завершено"
           :options="{
@@ -33,7 +33,7 @@
           :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
-  </div>
+  </v-row>
 </template>
 
 <script>

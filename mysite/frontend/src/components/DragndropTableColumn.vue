@@ -8,22 +8,40 @@
         item-key="id"
     >
       <template #item="ticket">
-        <div class="card">
+        <div @click="whenTicketClick(ticket.element)" class="card">
           <div class="cardHeader d-flex justify-space-between">
             <h4>
               {{this.TICKET_NAME[ticket.element.type]}}
+              <span class="ticketOption">
+                ({{this.HELP_OPTION[ticket.element.option - 1]}})
+              </span>
             </h4>
             <span class="text-grey-darken-1">
               id: {{ticket.element.id}}
             </span>
           </div>
-          <div class="cardBody">
-
+<!--          TODO: починить для длинных строк-->
+          <div v-if="ticket.element.notes" class="text-truncate">
+            {{ticket.element.notes}}
           </div>
         </div>
       </template>
     </Draggable>
   </div>
+  <v-dialog class="dialog" v-model="isShowDialog">
+    <v-card>
+      <v-container>
+        <v-card-title>
+          {{this.selectedTicket}}
+        </v-card-title>
+        <v-card-text>
+
+        </v-card-text>
+        <v-card-actions>
+        </v-card-actions>
+      </v-container>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script>
@@ -45,7 +63,7 @@ export default {
     columnName: String,
     options: {
       name: String,
-      pur: Array
+      put: Array
     },
     patchNewTicketStatusById: Function
   },
@@ -56,6 +74,17 @@ export default {
         2: 'Консультация',
         3: 'Волонтерство',
       },
+      HELP_OPTION: [
+        'SOS размещение',
+        'Гуманитарная помощь',
+        'Необходим адресный сбор',
+        'Консультация психолога',
+        'Консультация юриста',
+        'Хочу в группу поддержки',
+        'Хочу быть волонтером фонда',
+      ],
+      isShowDialog: false,
+      selectedTicket: null,
     }
   },
   methods: {
@@ -67,6 +96,11 @@ export default {
         })
       }
     },
+    whenTicketClick(ticket) {
+      this.selectedTicket = ticket
+      this.isShowDialog = true
+      console.log(ticket)
+    }
   },
 }
 </script>
@@ -80,10 +114,32 @@ export default {
 }
 
 .card {
+  cursor: pointer;
   padding: 10px;
   margin-top: 14px;
   background-color: #fff;
   border-radius: 20px;
 }
 
+.dialog {
+  width: 50vw;
+}
+
+.ticketOption {
+  color: #171725;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 36px;
+}
 </style>
+
+
+//.cardText {
+//  word-wrap: break-word;
+//  text-overflow:ellipsis;
+//  overflow:hidden;
+//  display: -webkit-box !important;
+//  -webkit-line-clamp: 3;
+//  -webkit-box-orient: vertical;
+//  white-space: normal;
+//}
