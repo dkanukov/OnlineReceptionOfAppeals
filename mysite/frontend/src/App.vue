@@ -165,14 +165,14 @@ export default {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
+        body: {
           'name': this.newTicket.name,
           'las_name': this.newTicket.surname,
           'phone_number': this.newTicket.phoneNumber,
           'type': HELP_TYPE[this.newTicket.helpType],
           'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
           'notes': this.newTicket.notes,
-        })
+        }
 
       })
       console.log(res)
