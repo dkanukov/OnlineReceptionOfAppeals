@@ -2102,3 +2102,7 @@ Traceback (most recent call last):
     appeal.notes = request.data['notes']
 KeyError: 'notes'
 2023-01-15 16:31:31,987 ERROR "PATCH /api/appeal/7 HTTP/1.1" 500 92433
+2023-01-18 18:31:07,659 WARNING Not Found: /js/app.js
+2023-01-18 18:31:07,662 WARNING Not Found: /js/chunk-vendors.js
+2023-01-18 18:31:07,665 WARNING "GET /js/app.js HTTP/1.1" 404 6117
+2023-01-18 18:31:07,668 WARNING "GET /js/chunk-vendors.js HTTP/1.1" 404 6147
