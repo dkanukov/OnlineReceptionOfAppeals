@@ -1,5 +1,15 @@
 <template>
   <div class="headerWrapper d-flex align-center justify-space-around">
+    <div class="align-center">
+      <div class="logo">
+        <v-img
+            width="83px"
+            height="83px"
+            :src="require('@/assets/hand.png')"
+        />
+        <p>ПРИЕМНАЯ ОБРАЩЕНИЙ</p>
+      </div>
+    </div>
     <v-text-field
         prepend-inner-icon="mdi-magnify"
         variant="solo"
@@ -7,7 +17,7 @@
         label="Поиск"
         hide-details="auto"
     />
-    <div >
+    <div>
       <v-avatar color="surface-variant" size="50">
         <span class="text-h5">NC</span>
       </v-avatar>
@@ -27,12 +37,18 @@ export default {
 <style scoped>
 
 .textInput {
-  margin-left: 20%;
   max-width: 800px;
 }
 
 .headerWrapper {
+  display: flex;
+  align-content: center;
   margin-top: 20px;
+}
+
+.logo {
+  display: flex;
+  align-content: center;
 }
 
 </style>

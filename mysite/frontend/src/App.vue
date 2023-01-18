@@ -3,15 +3,7 @@
     <v-main>
       <HeaderComponent/>
       <v-row class="content">
-        <v-col class="mt-16" cols="2">
-          <v-row class="align-center">
-            <v-img
-                width="83px"
-                height="83px"
-                :src="require('@/assets/hand.png')"
-            />
-            ПРИЕМНАЯ <br> ОБРАЩЕНИЙ
-          </v-row>
+        <v-col cols="2">
           <div class="btnGroup">
             <v-btn
                 @click="handleNewTicketBtnClick"
@@ -21,10 +13,6 @@
                 block
             >Новое обращение
             </v-btn>
-            <v-btn color="primary" class="mt-4" block>Все</v-btn>
-            <v-btn color="primary" class="mt-4" block>Помощь</v-btn>
-            <v-btn color="primary" class="mt-4" block>Консультации</v-btn>
-            <v-btn color="primary" class="mt-4" block>Волонтерство</v-btn>
           </div>
         </v-col>
 
@@ -153,11 +141,10 @@ export default {
     async sendForm() {
       console.log(JSON.stringify({
         'name': this.newTicket.name,
-        'las_name': this.newTicket.surname,
+        'last_name': this.newTicket.surname,
         'phone_number': this.newTicket.phoneNumber,
         'type': HELP_TYPE[this.newTicket.helpType],
         'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
-        'notes': this.newTicket.notes,
       }))
       // TODO: запрос не отправляется 400 + добавить валидацию формы, без токена 403
       const res = await fetch('http://127.0.0.1:8000/api/appeal', {
@@ -167,11 +154,10 @@ export default {
         },
         body: {
           'name': this.newTicket.name,
-          'las_name': this.newTicket.surname,
+          'last_name': this.newTicket.surname,
           'phone_number': this.newTicket.phoneNumber,
           'type': HELP_TYPE[this.newTicket.helpType],
           'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
-          'notes': this.newTicket.notes,
         }
 
       })
