@@ -45,6 +45,7 @@ class AppealSerializer(serializers.Serializer):
     status = serializers.CharField(default='new')
     create_date = serializers.DateField(read_only=True)
     notes = serializers.CharField(max_length=255, read_only=True)
+    flag = serializers.BooleanField(read_only=True)
 
     def create(self, validated_data):
         return Appeal.objects.create(**validated_data)
