@@ -2106,3 +2106,400 @@ KeyError: 'notes'
 2023-01-18 18:31:07,662 WARNING Not Found: /js/chunk-vendors.js
 2023-01-18 18:31:07,665 WARNING "GET /js/app.js HTTP/1.1" 404 6117
 2023-01-18 18:31:07,668 WARNING "GET /js/chunk-vendors.js HTTP/1.1" 404 6147
+2023-01-18 22:18:58,971 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:18:58,973 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:19:12,450 WARNING Bad Request: /api/appeal
+2023-01-18 22:19:12,453 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:19:35,806 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:19:35,808 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:19:43,638 WARNING Bad Request: /api/appeal
+2023-01-18 22:19:43,642 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:21:27,878 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:21:27,879 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:21:33,272 WARNING Bad Request: /api/appeal
+2023-01-18 22:21:33,275 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:22:10,000 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:22:10,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:22:12,336 WARNING Bad Request: /api/appeal
+2023-01-18 22:22:12,338 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:22:17,799 WARNING Bad Request: /api/appeal
+2023-01-18 22:22:17,802 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:22:28,425 WARNING Bad Request: /api/appeal
+2023-01-18 22:22:28,426 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:22:50,387 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:22:50,389 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:22:58,446 WARNING Bad Request: /api/appeal
+2023-01-18 22:22:58,449 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:23:46,522 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:23:46,523 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:27:22,425 WARNING Bad Request: /api/appeal
+2023-01-18 22:27:22,431 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:28:17,439 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:28:17,441 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:28:25,623 WARNING Bad Request: /api/appeal
+2023-01-18 22:28:25,627 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:28:50,679 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:28:50,681 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:28:59,103 WARNING Bad Request: /api/appeal
+2023-01-18 22:28:59,104 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:30:17,424 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:30:17,425 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:30:44,789 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:30:44,790 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:31:32,132 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:31:32,134 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:31:41,836 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/index.js):
+
+VueCompilerError: Element is missing end tag.
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/HeaderComponent.vue:2:3
+1  |  <template>
+2  |    <div class="headerWrapper d-flex align-center justify-space-around">
+   |    ^
+3  |      <div class="align-center">
+4  |        <v-img
+
+            
+2023-01-18 22:31:41,863 ERROR "GET /appeal/ HTTP/1.1" 500 123236
+2023-01-18 22:31:43,269 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:31:43,270 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:32:16,254 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:32:16,256 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:32:17,641 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:32:17,643 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:33:48,391 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:33:48,393 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:34:29,824 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:34:29,826 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:35:06,603 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:35:06,605 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:37:40,165 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:37:40,168 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:37:42,194 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:37:42,195 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:37:49,726 WARNING Bad Request: /api/appeal
+2023-01-18 22:37:49,728 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:38:15,190 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:38:15,191 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:38:20,253 WARNING Unsupported Media Type: /api/appeal
+2023-01-18 22:38:20,256 WARNING "POST /api/appeal HTTP/1.1" 415 113
+2023-01-18 22:39:43,733 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:39:43,751 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:40:18,623 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:40:18,625 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:40:43,335 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:40:43,338 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:40:44,733 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:40:44,735 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:40:45,857 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:40:45,859 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:41:22,902 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:41:22,903 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:41:29,243 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:41:29,246 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:41:55,246 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:41:55,247 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:42:08,786 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:42:08,789 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:42:19,514 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:42:19,516 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:42:48,701 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:42:48,703 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:43:16,572 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:43:16,573 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:43:26,664 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:43:26,666 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:43:37,331 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:43:37,334 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:45:13,125 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:45:13,127 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:45:22,207 WARNING Unsupported Media Type: /api/appeal
+2023-01-18 22:45:22,210 WARNING "POST /api/appeal HTTP/1.1" 415 113
+2023-01-18 22:45:47,561 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:45:47,563 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:45:49,785 WARNING Unsupported Media Type: /api/appeal
+2023-01-18 22:45:49,787 WARNING "POST /api/appeal HTTP/1.1" 415 113
+2023-01-18 22:47:46,316 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:47:46,319 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:47:47,917 WARNING Bad Request: /api/appeal
+2023-01-18 22:47:47,919 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 22:48:13,027 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:48:13,030 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:49:15,978 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:49:15,979 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:49:32,911 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:49:32,913 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:50:05,960 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:50:05,963 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:50:34,888 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:50:34,890 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:50:47,670 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:50:47,671 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:51:23,413 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:51:23,414 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:52:31,247 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:52:31,248 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:53:13,871 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:53:13,873 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:55:43,399 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:55:43,400 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:55:44,517 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:55:44,518 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:55:45,600 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:55:45,601 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:56:01,306 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:56:01,312 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:57:27,362 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 59, in get_bundle
+    assets = self.get_assets()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 38, in get_assets
+    return self.load_assets()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 26, in load_assets
+    return json.load(f)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-01-18 22:57:27,373 ERROR "GET /appeal/ HTTP/1.1" 500 140450
+2023-01-18 22:57:28,365 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/templateLoader.js):
+
+VueCompilerError: Error parsing JavaScript expression: Unexpected token, expected "," (1:26)
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue:38:13
+36 |          </v-card-title>
+37 |          <v-card-subtitle>
+38 |            {{this.selectedTicket.name this.selectedTicket.last_name}}
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+39 |          </v-card-subtitle>
+40 |          <v-card-text>
+
+            
+2023-01-18 22:57:28,378 ERROR "GET /appeal/ HTTP/1.1" 500 124206
+2023-01-18 22:57:29,151 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/templateLoader.js):
+
+VueCompilerError: Error parsing JavaScript expression: Unexpected token, expected "," (1:26)
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue:38:13
+36 |          </v-card-title>
+37 |          <v-card-subtitle>
+38 |            {{this.selectedTicket.name this.selectedTicket.last_name}}
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+39 |          </v-card-subtitle>
+40 |          <v-card-text>
+
+            
+2023-01-18 22:57:29,159 ERROR "GET /appeal/ HTTP/1.1" 500 124206
+2023-01-18 22:57:53,318 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/templateLoader.js):
+
+VueCompilerError: Error parsing JavaScript expression: Unexpected token, expected "," (1:26)
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue:38:13
+36 |          </v-card-title>
+37 |          <v-card-subtitle>
+38 |            {{this.selectedTicket.name this.selectedTicket.last_name}}
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+39 |          </v-card-subtitle>
+40 |          <v-card-text>
+
+            
+2023-01-18 22:57:53,327 ERROR "GET /appeal/ HTTP/1.1" 500 124206
+2023-01-18 22:57:54,752 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:57:54,753 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:57:55,363 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:57:55,365 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:58:05,295 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:58:05,297 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:58:10,000 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:58:10,002 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:58:24,636 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:58:24,637 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:58:31,422 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:58:31,425 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 22:59:38,054 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 22:59:38,057 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:00:10,886 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:00:10,888 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:00:37,126 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:00:37,128 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:00:48,246 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:00:48,247 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:01:19,300 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:01:19,302 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:01:35,873 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:01:35,874 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:02:05,793 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:02:05,795 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:02:06,434 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:02:06,437 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:02:55,059 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:02:55,061 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:03:46,475 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:03:46,477 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:04:09,743 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:04:09,745 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215

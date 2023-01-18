@@ -1,5 +1,5 @@
 <template>
-  <div class="headerWrapper d-flex align-center justify-space-around">
+  <div class="headerWrapper d-flex align-center justify-space-between ml">
     <div class="align-center">
       <div class="logo">
         <v-img
@@ -7,16 +7,16 @@
             height="83px"
             :src="require('@/assets/hand.png')"
         />
-        <p>ПРИЕМНАЯ ОБРАЩЕНИЙ</p>
+        <h3 class="ml-2">ПРИЕМНАЯ ОБРАЩЕНИЙ</h3>
       </div>
     </div>
-    <v-text-field
-        prepend-inner-icon="mdi-magnify"
-        variant="solo"
-        class="textInput"
-        label="Поиск"
-        hide-details="auto"
-    />
+<!--    <v-text-field-->
+<!--        prepend-inner-icon="mdi-magnify"-->
+<!--        variant="solo"-->
+<!--        class="textInput"-->
+<!--        label="Поиск"-->
+<!--        hide-details="auto"-->
+<!--    />-->
     <div>
       <v-avatar color="surface-variant" size="50">
         <span class="text-h5">NC</span>
@@ -48,7 +48,7 @@ export default {
 
 .logo {
   display: flex;
-  align-content: center;
+  align-items: center;
 }
 
 </style>

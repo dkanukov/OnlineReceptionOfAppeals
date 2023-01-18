@@ -1,19 +1,16 @@
 <template>
-  <v-app>
-    <v-main>
+  <v-app class="containerCustom">
       <HeaderComponent/>
       <v-row class="content">
         <v-col cols="2">
-          <div class="btnGroup">
-            <v-btn
-                @click="handleNewTicketBtnClick"
-                color="success"
-                prepend-icon="mdi-plus"
-                class="mt-4"
-                block
-            >Новое обращение
-            </v-btn>
-          </div>
+          <v-btn
+              @click="handleNewTicketBtnClick"
+              color="success"
+              prepend-icon="mdi-plus"
+              class="mt-4"
+              block
+          >Новое обращение
+          </v-btn>
         </v-col>
 
         <v-col>
@@ -23,7 +20,6 @@
           />
         </v-col>
       </v-row>
-    </v-main>
     <v-dialog class="dialog" v-model="isShowDialog">
       <v-card>
         <v-container>
@@ -97,6 +93,7 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
 import {mapActions, mapState, mapMutations} from 'vuex';
+
 const HELP_TYPE = {
   'Помощь': 1,
   'Консультация': 2,
@@ -204,8 +201,8 @@ export default {
   margin-top: 10px;
 }
 
-.btnGroup {
-  margin-top: 70px;
+.containerCustom {
+  margin: 30px;
 }
 
 .dialog {
