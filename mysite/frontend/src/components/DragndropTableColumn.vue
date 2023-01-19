@@ -42,9 +42,17 @@
           </p>
         </v-card-title>
         <v-card-text>
-
+          <v-textarea
+              auto-grow
+              label="Заметки"
+              v-model="selectedTicketNotes"
+          />
         </v-card-text>
         <v-card-actions>
+          <v-btn-group class="d-flex justify-end">
+            <v-btn @click="sendForm" color="success">Сохранить</v-btn>
+            <v-btn color="error">Отменить</v-btn>
+          </v-btn-group>
         </v-card-actions>
       </v-container>
     </v-card>
@@ -92,6 +100,7 @@ export default {
       ],
       isShowDialog: false,
       selectedTicket: null,
+      selectedTicketNotes: ''
     }
   },
   methods: {
@@ -105,8 +114,24 @@ export default {
     },
     whenTicketClick(ticket) {
       this.selectedTicket = ticket
+      this.selectedTicketNotes = this.selectedTicket.notes
       this.isShowDialog = true
-      console.log(ticket)
+    },
+    async sendForm() {
+      const cookie = document.cookie
+      if (this.selectedTicket.notes !== this.selectedTicketNotes) {
+        await fetch(`http://127.0.0.1:8000/api/appeal/${this.selectedTicket.id}`, {
+          method: 'PATCH',
+          headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+            },
+          body: JSON.stringify({
+            'notes': this.selectedTicketNotes
+          })
+        })
+        this.selectedTicket.notes = this.selectedTicketNotes
+      }
     }
   },
 }

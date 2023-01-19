@@ -2503,3 +2503,65 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-18 23:03:46,477 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
 2023-01-18 23:04:09,743 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-18 23:04:09,745 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:24:07,466 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:24:07,470 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:24:15,392 WARNING Bad Request: /api/appeal
+2023-01-18 23:24:15,395 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 23:24:21,659 WARNING Bad Request: /api/appeal
+2023-01-18 23:24:21,661 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-18 23:37:51,616 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:37:51,618 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:39:11,237 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:39:11,239 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:41:41,597 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:41:41,597 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:41:54,089 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:41:54,090 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:42:01,835 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:42:01,837 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:42:28,852 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:42:28,853 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:49:30,969 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:49:30,971 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:49:34,934 WARNING Bad Request: /api/appeal/11
+2023-01-18 23:49:34,936 WARNING "PATCH /api/appeal/11 HTTP/1.1" 400 73
+2023-01-18 23:49:50,213 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:49:50,215 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:49:54,803 WARNING Bad Request: /api/appeal/19
+2023-01-18 23:49:54,806 WARNING "PATCH /api/appeal/19 HTTP/1.1" 400 73
+2023-01-18 23:50:18,181 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:50:18,182 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:50:22,134 WARNING Bad Request: /api/appeal/19
+2023-01-18 23:50:22,136 WARNING "PATCH /api/appeal/19 HTTP/1.1" 400 73
+2023-01-18 23:50:49,986 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:50:49,987 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:50:52,683 WARNING Bad Request: /api/appeal/11
+2023-01-18 23:50:52,685 WARNING "PATCH /api/appeal/11 HTTP/1.1" 400 73
+2023-01-18 23:52:15,899 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:52:15,901 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:52:17,856 WARNING Bad Request: /api/appeal/11
+2023-01-18 23:52:17,858 WARNING "PATCH /api/appeal/11 HTTP/1.1" 400 73
+2023-01-18 23:52:40,150 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:52:40,152 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:52:44,169 WARNING Bad Request: /api/appeal/19
+2023-01-18 23:52:44,170 WARNING "PATCH /api/appeal/19 HTTP/1.1" 400 73
+2023-01-18 23:55:01,762 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:55:01,763 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:55:17,659 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:55:17,662 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:55:56,670 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:55:56,673 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:56:04,343 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:56:04,344 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:56:11,334 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:56:11,336 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:56:44,760 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:56:44,762 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:56:52,621 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:56:52,622 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:57:36,703 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-18 23:57:36,705 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-18 23:57:44,862 WARNING Forbidden: /api/appeal
+2023-01-18 23:57:44,864 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-18 23:58:28,876 WARNING Forbidden: /api/appeal
+2023-01-18 23:58:28,878 WARNING "POST /api/appeal HTTP/1.1" 403 45
