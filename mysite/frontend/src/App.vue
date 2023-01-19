@@ -143,20 +143,18 @@ export default {
         'type': HELP_TYPE[this.newTicket.helpType],
         'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
       }))
-      // TODO: запрос не отправляется 400 + добавить валидацию формы, без токена 403
       const res = await fetch('http://127.0.0.1:8000/api/appeal', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: {
+        body: JSON.stringify({
           'name': this.newTicket.name,
           'last_name': this.newTicket.surname,
           'phone_number': this.newTicket.phoneNumber,
           'type': HELP_TYPE[this.newTicket.helpType],
           'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
-        }
-
+        })
       })
       console.log(res)
     },

@@ -147,6 +147,7 @@ def get_contacts_page(request):
 
 
 class APIAppeal(APIView):
+    permission_classes = [AllowAny]
 
     def get(self, request):
         print(request.COOKIES)

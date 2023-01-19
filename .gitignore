@@ -4,6 +4,7 @@
 node_modules
 /dist
 /mysite/home/testAPi.py
+/mysite/home/test_api_post.py
 /mysite/home/__pycache__
 *.pyc
 
