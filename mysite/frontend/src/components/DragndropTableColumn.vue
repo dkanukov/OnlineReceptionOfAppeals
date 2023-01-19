@@ -16,9 +16,9 @@
                 ({{this.HELP_OPTION[ticket.element.option - 1]}})
               </span>
             </h4>
-            <span class="text-grey-darken-1">
+            <p class="text-grey-darken-1">
               id: {{ticket.element.id}}
-            </span>
+            </p>
           </div>
 <!--          TODO: починить для длинных строк-->
           <div v-if="ticket.element.notes" class="text-truncate">
@@ -32,7 +32,14 @@
     <v-card>
       <v-container>
         <v-card-title>
-          {{this.selectedTicket}}
+          <p>
+            (id: {{this.selectedTicket.id}})
+            {{this.HELP_OPTION[this.selectedTicket.type - 1]}}
+          </p>
+          <p class="text-grey-darken-1">
+            {{this.selectedTicket.name}}
+            {{this.selectedTicket.last_name}}
+          </p>
         </v-card-title>
         <v-card-text>
 

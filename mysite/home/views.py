@@ -158,14 +158,17 @@ class APIAppeal(APIView):
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
 
     def post(self, request):
+        print(request.data)
         serializer = AppealSerializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             except IntegrityError:
+                print("ошибка записи")
                 return Response("wrong type/option data", status=status.HTTP_400_BAD_REQUEST)
         else:
+            print(serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
