@@ -136,6 +136,7 @@ export default {
       this.isShowDialog = true
     },
     async sendForm() {
+      const cookie = document.cookie
       console.log(JSON.stringify({
         'name': this.newTicket.name,
         'last_name': this.newTicket.surname,
@@ -147,6 +148,7 @@ export default {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
         },
         body: JSON.stringify({
           'name': this.newTicket.name,

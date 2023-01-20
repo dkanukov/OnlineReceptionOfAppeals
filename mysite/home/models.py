@@ -8,7 +8,7 @@ from wagtail.fields import StreamField
 
 
 class News(Orderable):
-
+    """Модель новости для сайта"""
     caption = models.CharField(max_length=250, verbose_name="Описание новости")
 
     text_before_photo = models.TextField(verbose_name="Текст над картинкой", blank=True, null=True)
@@ -42,11 +42,12 @@ class News(Orderable):
 
 
 class Programs(Orderable):
-    title = models.CharField(max_length=100, null=True, verbose_name='Название программы')
+    """Модель программы фонда"""
+    title = models.CharField(max_length=100, verbose_name='Название программы')
 
-    caption = models.TextField(null=True, verbose_name="Подпись")
+    caption = models.TextField(null=True, blank=True, verbose_name="Подпись")
 
-    description = models.TextField(null=True, verbose_name="Описание программы")
+    description = models.TextField(null=True, blank=True, verbose_name="Описание программы")
 
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
 
@@ -69,17 +70,24 @@ class Programs(Orderable):
 
 
 class Feedback(Orderable):
-
+    """Модель отзыва"""
+    RATES = (
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (4, 4),
+        (5, 5)
+    )
     author = models.CharField(max_length=50, verbose_name='Имя автора')
     content = models.TextField(verbose_name='Текст отзыва')
-    rating = models.IntegerField(verbose_name='Количество звезд', default=5)
+    rating = models.IntegerField(verbose_name='Количество звезд', choices=RATES, default=5)
     is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
+
 
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
         related_name='reviews',
-        default=3
     )
 
     panels = [
@@ -92,18 +100,23 @@ class Feedback(Orderable):
     def __str__(self):
         return f"Отзыв номер {self.id}"
 
-
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
+        #constraints = (
+        #        models.CheckConstraint(
+        #        check=models.Q(rating__gte=1) & models.Q(rating__lte=5),
+        #        name='feedback_rating_constraint'
+        #        )
+        #)
 
 
 class AboutInfo(models.Model):
+    """Модель информации о фонде"""
 
     information = models.TextField(verbose_name='информация о фонде')
     phone_number = models.CharField(max_length=20,
                                     unique=True,
-                                    blank=False,
                                     verbose_name='номер телефона')
 
     second_phone_number = models.CharField(max_length=20,
@@ -130,6 +143,7 @@ class AboutInfo(models.Model):
 
 
 class Report(Orderable):
+    """Модель учредительного отчета"""
     file = models.FileField(upload_to='reports/', verbose_name='отчёт')
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
 
@@ -144,6 +158,7 @@ class Report(Orderable):
 
 
 class Document(models.Model):
+    """Модель учредительного документа"""
     file = models.FileField(upload_to='documents/', verbose_name='документ')
     create_date = models.DateField(auto_now_add=True, blank=True, null=True)
 
@@ -158,9 +173,10 @@ class Document(models.Model):
 
 
 class HomePage(Page):
-
+    """Моедль страницы Wagtail, для работы админки"""
     email = models.EmailField(default="dfvrn@admin.ru", null=True, blank=True)
 
+    """Редактируемые через админку модели"""
     content_panels = Page.content_panels + [
         MultiFieldPanel([InlinePanel('news', label='новость')],
                         heading='Новости'),
@@ -176,6 +192,7 @@ class HomePage(Page):
 
 
 class Appeal(models.Model):
+    """"Модель обращения"""
 
     TYPE_CHOICES = (
         (1, 'Помощь'),
@@ -244,17 +261,3 @@ class Appeal(models.Model):
                 name='appeal_status_constraint'
             )
         )
-
-
-
-#class Partner(models.Model):
-#
-#    name = models.CharField(max_length=50, blank=False, verbose_name='Имя')
-#    last_name = models.CharField(max_length=50, blank=False, verbose_name='Фамилия')
-#    phone_number = models.CharField(max_length=20,
-#                                    unique=True,
-#                                    blank=False,
-#                                    verbose_name='Номер телефона')
-#    email = models.EmailField(blank=True, null=True, verbose_name='Email')
-#    message = models.TextField(blank=True, null=True, verbose_name='Сообщение')
-#    is_agree = models.BooleanField(default=False, verbose_name='Согласие с обработкой персональных данных')

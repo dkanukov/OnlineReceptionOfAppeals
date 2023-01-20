@@ -2503,6 +2503,26 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-18 23:03:46,477 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
 2023-01-18 23:04:09,743 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-18 23:04:09,745 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+<<<<<<< HEAD
+2023-01-19 02:10:28,478 WARNING Bad Request: /api/appeal
+2023-01-19 02:10:28,481 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:11:22,611 WARNING Bad Request: /api/appeal
+2023-01-19 02:11:22,614 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:12:31,656 WARNING Bad Request: /api/appeal
+2023-01-19 02:12:31,660 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:14:02,475 WARNING Bad Request: /api/appeal
+2023-01-19 02:14:02,478 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:14:54,918 WARNING Bad Request: /api/appeal
+2023-01-19 02:14:54,921 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:18:01,904 WARNING Bad Request: /api/appeal
+2023-01-19 02:18:01,909 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:27:43,757 WARNING Bad Request: /api/appeal
+2023-01-19 02:27:43,761 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:31:41,004 WARNING Bad Request: /api/appeal
+2023-01-19 02:31:41,009 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 02:40:31,844 WARNING Bad Request: /api/appeal
+2023-01-19 02:40:31,849 WARNING "POST /api/appeal HTTP/1.1" 400 73
+=======
 2023-01-18 23:24:07,466 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-18 23:24:07,470 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
 2023-01-18 23:24:15,392 WARNING Bad Request: /api/appeal
@@ -2565,5 +2585,150 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-18 23:57:44,864 WARNING "POST /api/appeal HTTP/1.1" 403 45
 2023-01-18 23:58:28,876 WARNING Forbidden: /api/appeal
 2023-01-18 23:58:28,878 WARNING "POST /api/appeal HTTP/1.1" 403 45
-2023-01-19 00:04:23,890 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-19 00:04:23,892 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+>>>>>>> 98ad8e7ebec856044716c8f5f6b2ca8261982ed6
+2023-01-19 03:07:12,024 WARNING Forbidden: /api/appeal
+2023-01-19 03:07:12,028 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-19 03:10:18,628 WARNING Unsupported Media Type: /api/appeal
+2023-01-19 03:10:18,631 WARNING "POST /api/appeal HTTP/1.1" 415 99
+2023-01-19 03:11:23,682 WARNING Unsupported Media Type: /api/appeal
+2023-01-19 03:11:23,685 WARNING "POST /api/appeal HTTP/1.1" 415 99
+2023-01-19 03:16:22,895 WARNING Forbidden: /api/appeal
+2023-01-19 03:16:22,900 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-19 22:16:26,976 WARNING Not Found: /favicon.ico/
+2023-01-19 22:16:27,254 WARNING "GET /favicon.ico/ HTTP/1.1" 404 6126
+2023-01-19 22:17:59,915 WARNING Forbidden: /api/appeal
+2023-01-19 22:17:59,920 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-19 22:41:33,912 WARNING Bad Request: /api/appeal
+2023-01-19 22:41:33,915 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 22:41:33,933 WARNING Forbidden: /api/appeal
+2023-01-19 22:41:33,935 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-19 22:41:33,956 WARNING Bad Request: /api/appeal
+2023-01-19 22:41:33,958 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 22:41:33,971 WARNING Bad Request: /api/appeal
+2023-01-19 22:41:33,973 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-19 22:43:20,992 WARNING Unsupported Media Type: /api/appeal
+2023-01-19 22:43:20,995 WARNING "POST /api/appeal HTTP/1.1" 415 99
+2023-01-19 22:43:21,040 WARNING Unsupported Media Type: /api/appeal
+2023-01-19 22:43:21,042 WARNING "POST /api/appeal HTTP/1.1" 415 99
+2023-01-19 22:43:21,056 WARNING Forbidden: /api/appeal
+2023-01-19 22:43:21,058 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-20 10:24:49,276 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-20 10:24:49,285 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-20 10:24:49,293 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5810
+2023-01-20 10:24:49,299 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-20 10:24:49,300 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5810
+2023-01-20 10:24:49,303 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-20 10:24:49,315 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-20 10:24:49,319 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5810
+2023-01-20 10:24:49,321 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5810
+2023-01-20 10:24:49,324 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5810
+2023-01-20 10:24:52,989 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-20 10:24:52,993 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5820
+2023-01-20 11:35:57,525 ERROR Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 79, in get_about_page
+    report_names[index] = format_date(report_name)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 56, in format_date
+    year, month, day = date.year, date.month, date.day
+AttributeError: 'str' object has no attribute 'year'
+2023-01-20 11:35:57,533 ERROR "GET /about HTTP/1.1" 500 79433
+2023-01-20 11:36:05,581 ERROR Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 79, in get_about_page
+    report_names[index] = format_date(report_name)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 56, in format_date
+    year, month, day = date.year, date.month, date.day
+AttributeError: 'str' object has no attribute 'year'
+2023-01-20 11:36:05,587 ERROR "GET /about HTTP/1.1" 500 79433
+2023-01-20 11:36:10,546 ERROR Internal Server Error: /about
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 79, in get_about_page
+    report_names[index] = format_date(report_name)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\views.py", line 56, in format_date
+    year, month, day = date.year, date.month, date.day
+AttributeError: 'str' object has no attribute 'year'
+2023-01-20 11:36:10,552 ERROR "GET /about HTTP/1.1" 500 79433
+2023-01-20 12:15:06,539 WARNING Method Not Allowed: /api/news
+2023-01-20 12:15:06,543 WARNING "POST /api/news HTTP/1.1" 405 55
+2023-01-20 12:15:11,933 ERROR Internal Server Error: /api/news
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\api.py", line 28, in get
+    id = int(request.GET.get('id'))
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-01-20 12:15:11,950 ERROR "GET /api/news HTTP/1.1" 500 91619
+2023-01-20 12:15:46,540 ERROR Internal Server Error: /api/news
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\api.py", line 31, in get
+    if serializer.is_valid():
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\serializers.py", line 220, in is_valid
+    assert hasattr(self, 'initial_data'), (
+AssertionError: Cannot call `.is_valid()` as no `data=` keyword argument was passed when instantiating the serializer instance.
+2023-01-20 12:15:46,553 ERROR "GET /api/news?id=9 HTTP/1.1" 500 96653
+2023-01-20 12:27:48,159 WARNING Not Found: /api/programs
+2023-01-20 12:27:48,163 WARNING "GET /api/programs?id=2 HTTP/1.1" 404 50
+2023-01-20 12:29:56,934 ERROR Internal Server Error: /api/programs
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\git_push\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\git_push\online_reception_of_appeals\mysite\home\api.py", line 34, in get
+    obj = Programs.objects.get(id=int(request.GET.get('id')))
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2023-01-20 12:29:56,947 ERROR "GET /api/programs HTTP/1.1" 500 91530
