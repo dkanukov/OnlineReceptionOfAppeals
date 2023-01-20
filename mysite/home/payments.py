@@ -5,6 +5,7 @@ from yookassa import Configuration, Payment
 
 
 class YooKassaPayment(APIView):
+    """Создание и принятие платежа ЮКАССА"""
     def get(self, request):
         Configuration.account_id = '973050'
         Configuration.secret_key = 'test_5N4ujI7BMHe4YRnB3luyFvcnw1fl52fTYXXEp6lAMe0'

@@ -1,13 +1,6 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.template import loader
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework import status
-from django.shortcuts import get_object_or_404
-from rest_framework.permissions import IsAuthenticated, AllowAny
-from django.db.utils import IntegrityError
-from . serializers import FeedbackSerializer, AppealSerializer
 
 from . models import (
     News, Programs,
@@ -17,7 +10,7 @@ from . models import (
 
 
 def get_about_context():
-    info = AboutInfo.objects.all()[0]
+    info = AboutInfo.objects.first()
     return info
 
 
@@ -38,20 +31,6 @@ def get_specific_news(request):
     return HttpResponse(temp.render({'info': info, 'latest_news': latest_news}))
 
 
-class APINews(APIView):
-    def get(self, request):
-        obj = News.objects.get(id=int(request.GET.get('id')))
-        additional_photos = []
-        for block_photo in obj.additional_images:
-            additional_photos.append(block_photo._as_tuple()[1].file.url)
-        return Response({'caption': obj.caption,
-                         'date': format_date(obj.create_date),
-                         'textBeforePhoto': obj.text_before_photo,
-                         'imageUrl': obj.image.file.url,
-                         'textAfterPhoto': obj.text_after_photo,
-                         'additionalPhotos': additional_photos})
-
-
 def get_programs_page(request):
     info = get_about_context()
     news_list = Programs.objects.all()
@@ -68,18 +47,8 @@ def get_specific_program(request):
     return HttpResponse(temp.render({'info': info}))
 
 
-class APIPrograms(APIView):
-    def get(self, request):
-        obj = Programs.objects.get(id=int(request.GET.get('id')))
-        return Response({'title': obj.title,
-                         'caption': obj.caption,
-                         'description': obj.description,
-                         'date': format_date(obj.create_date),
-                         'imageUrl': obj.image.file.url
-                         })
-
-
 def format_date(date):
+    """Форматирование даты"""
     month_dct = {1: 'января', 2: 'февраля', 3: 'марта', 4: 'апреля',
                  5: 'мая', 6: 'июня', 7: 'июля', 8: 'августа',
                  9: 'сентября', 10: 'октября', 11: 'ноября', 12: 'декабря'}
@@ -88,27 +57,30 @@ def format_date(date):
     return ' '.join(list(map(str, [day, month_dct[month], year])))
 
 
+def format_file_name(name):
+    """Форматирование имени файла"""
+    name = name.replace('documents/', '')
+    name = name.replace('reposrt/', '')
+    name = name.replace('_', ' ')
+    name = name.replace('.pdf', '')
+    return name
+
 def get_about_page(request):
+    """Представление страницы О Фонде"""
     info = get_about_context()
     reports = Report.objects.all()
     documents = Document.objects.all()
     report_names = [report.file.name for report in reports]
     report_urls = [report.file.url for report in reports]
     document_names = [document.file.name for document in documents]
-    document_urls= [document.file.url for document in documents]
+    document_urls = [document.file.url for document in documents]
 
     for index, report_name in enumerate(report_names):
-        report_name = report_name.replace('reports/', '')
-        report_name = report_name.replace('_', ' ')
-        report_name = report_name.replace('.pdf', '')
-        report_names[index] = report_name
+        report_names[index] = format_file_name(report_name)
     report_files = zip(report_names, report_urls)
 
     for index, document_name in enumerate(document_names):
-        document_name = document_name.replace('documents/', '')
-        document_name = document_name.replace('_', ' ')
-        document_name = document_name.replace('.pdf', '')
-        document_names[index] = document_name
+        document_names[index] = format_file_name(document_name)
     document_files = zip(document_names, document_urls)
 
     feedbacks = Feedback.objects.filter(is_published=True)
@@ -122,115 +94,20 @@ def get_about_page(request):
 
 
 def get_personal_data_consent(request):
+    """Представление страницы соглашения"""
     temp = loader.get_template(('home/personalDataValidation.html'))
     return HttpResponse(temp.render())
 
 
-class APIFeedback(APIView):
-
-    def post(self, request):
-        if request.data["rating"] not in [1, 2, 3, 4, 5]:
-            return Response("wrong stars count", status=status.HTTP_400_BAD_REQUEST)
-        else:
-            serializer = FeedbackSerializer(data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            else:
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
 def get_contacts_page(request):
+    """"Представление страницы Контакты"""
     info = get_about_context()
     temp = loader.get_template("home/contacts.html")
     return HttpResponse(temp.render({'info': info}))
 
 
-class APIAppeal(APIView):
-    permission_classes = [AllowAny]
-
-    def get(self, request):
-        print(request.COOKIES)
-        if request.user.is_authenticated:
-            object_list = Appeal.objects.all()
-            serializer = AppealSerializer(instance=object_list, many=True)
-            return Response(serializer.data)
-        else:
-            return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
-
-    def post(self, request):
-        print(request.data)
-        serializer = AppealSerializer(data=request.data)
-        if serializer.is_valid():
-            try:
-                serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
-            except IntegrityError:
-                print("ошибка записи")
-                return Response("wrong type/option data", status=status.HTTP_400_BAD_REQUEST)
-        else:
-            print(serializer.errors)
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class APIAppealDetail(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def patch(self, request, id):
-            appeal = get_object_or_404(Appeal, id=id)
-            if 'status' in request.data:
-                appeal.status = request.data['status']
-            if 'notes' in request.data:
-                appeal.notes = request.data['notes']
-            if 'flag' in request.data:
-                print(request.data)
-                print(type(request.data['flag']))
-                print(request.data['flag'])
-                appeal.flag = request.data['flag']
-            try:
-                appeal.save()
-                return Response("updated", status=status.HTTP_205_RESET_CONTENT)
-            except IntegrityError:
-                return Response("wrong status value", status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, id):
-        appeal = get_object_or_404(Appeal, id=id)
-        appeal.delete()
-        return Response('object deleted', status=status.HTTP_204_NO_CONTENT)
-
-
-class APIUser(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        if request.user.is_authenticated:
-            response_data = {
-                'first_name': request.user.first_name,
-                'last_name': request.user.last_name,
-            }
-            return Response(data=response_data)
-        else:
-            return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
-
-'''
-@api_view(['GET', 'PATCH'])
-def appeal_api(request):
-    print(request.user)
-    print(request.user.has_perm('home.change_appeal'))
-    print(request.user.is_authenticated)
-    print(request.data)
-
-    if request.method == 'GET':
-        object_list = Appeal.objects.all()
-        serializer = AppealSerializer(instance=object_list, many=True)
-        return Response(serializer.data)
-
-    elif request.method == 'PATCH':
-        return Response("patch request", status=203)
-'''
-
-
 def get_voting_right_program_page(request):
+    """Представление страницы программы Право Голоса"""
     info = get_about_context()
     temp = loader.get_template("home/votingRightProgram.html")
     return HttpResponse(temp.render({'info': info}))

@@ -1,25 +1,24 @@
 from django.urls import path
-from . import views
+from . import views, api
 from .payments import YooKassaPayment
 
 
 urlpatterns = [
-        path('news_list', views.get_news_page, name='news'),
-        path('api/news', views.APINews.as_view()),
-        path('news', views.get_specific_news, name='get_spec_news'),
+        path('news_list', views.get_news_page, name='news'), # поправить пагинацию
+        path('news', views.get_specific_news, name='get_spec_news'), # шаблонизировать новость
         path('programs_list', views.get_programs_page, name='programs'),
-        path('api/programs', views.APIPrograms.as_view()),
-        path('program', views.get_specific_program, name='get_spec_prog'),
+        path('program', views.get_specific_program, name='get_spec_prog'), # шаблонизировать
         path('about', views.get_about_page, name='about'),
         path('personal_data', views.get_personal_data_consent, name='pers_data'),
-        #path('api/partner', views.APIPartner.as_view()),
-        path('api/feedback', views.APIFeedback.as_view()),
         path('contacts', views.get_contacts_page, name='contacts'),
-        path('api/appeal', views.APIAppeal.as_view()),
-        path('api/appeal/<int:id>', views.APIAppealDetail.as_view()),
         path('voting_right', views.get_voting_right_program_page, name='voting_right'),
-        #path('stuff/login/', views.login_view, name='login'),
+
+        path('api/news', api.APINews.as_view()),
+        path('api/programs', api.APIPrograms.as_view()),
+        path('api/feedback', api.APIFeedback.as_view()),
+        path('api/appeal', api.APIAppeal.as_view()),
+        path('api/appeal/<int:id>', api.APIAppealDetail.as_view()),
         path('api/pay', YooKassaPayment.as_view(), name='payment'),
-        path('api/user', views.APIUser.as_view())
+        path('api/user', api.APIUser.as_view())
     ]
 
