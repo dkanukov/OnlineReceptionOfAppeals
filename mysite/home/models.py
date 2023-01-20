@@ -83,11 +83,11 @@ class Feedback(Orderable):
     rating = models.IntegerField(verbose_name='Количество звезд', choices=RATES, default=5)
     is_published = models.BooleanField(default=False, verbose_name="Опубликовано")
 
-
     page = ParentalKey(
         'home.HomePage',
         on_delete=models.CASCADE,
         related_name='reviews',
+        default=3
     )
 
     panels = [

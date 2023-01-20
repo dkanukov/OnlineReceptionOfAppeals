@@ -5,16 +5,19 @@ from django.template import loader
 from . models import (
     News, Programs,
     AboutInfo, Report,
-    Feedback, Document, Appeal
+    Feedback, Document
 )
 
 
 def get_about_context():
+    """Получить контекст для футера/хедера"""
     info = AboutInfo.objects.first()
     return info
 
 
 def get_news_page(request):
+    """Предоставить страницу новостей"""
+    print(request.user)
     info = get_about_context()
     news_list = News.objects.all()
     paginator = Paginator(news_list, 4)
@@ -25,13 +28,16 @@ def get_news_page(request):
 
 
 def get_specific_news(request):
+    """Предоставить подробную страницу новости"""
+    id = request.GET.get('id')
     info = get_about_context()
-    latest_news = News.objects.order_by('-id')[3:]
+    latest_news = News.objects.exclude(id=id).order_by('-id')[:3]
     temp = loader.get_template('home/news.html')
     return HttpResponse(temp.render({'info': info, 'latest_news': latest_news}))
 
 
 def get_programs_page(request):
+    """Предоставить страницу программ фонда"""
     info = get_about_context()
     news_list = Programs.objects.all()
     paginator = Paginator(news_list, 5)
@@ -42,6 +48,7 @@ def get_programs_page(request):
 
 
 def get_specific_program(request):
+    """Предоставить подробную страницу программы фонда"""
     info = get_about_context()
     temp = loader.get_template('home/program.html')
     return HttpResponse(temp.render({'info': info}))
@@ -64,6 +71,7 @@ def format_file_name(name):
     name = name.replace('_', ' ')
     name = name.replace('.pdf', '')
     return name
+
 
 def get_about_page(request):
     """Представление страницы О Фонде"""

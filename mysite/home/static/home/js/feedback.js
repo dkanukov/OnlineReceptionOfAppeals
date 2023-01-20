@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			rating: [...document.getElementsByClassName("rating__star__active")].length
 		}
 
-		await fetch("https://dfvrn.pythonanywhere.com/api/feedback", {
+		await fetch("http://127.0.0.1:8000/api/feedback", {
 			method: "POST", headers: {
 				'Accept': 'application/json', 'Content-Type': 'application/json'
 			}, body: JSON.stringify(feedbackJSON)
