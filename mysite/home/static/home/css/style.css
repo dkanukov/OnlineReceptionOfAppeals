@@ -1,8 +1,6 @@
-/* font-family: 'Source Serif Pro', serif; */
-
 @media all and (min-width: 1450px) {
     body {
-        font-size: 1.4em; /* 1.5x default size */
+        font-size: 1.3em; /* 1.5x default size */
     }
 
     .card-title {
@@ -15,43 +13,51 @@
 }
 
 p {
-    font-family: 'Source Serif Pro', serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.03em;
 }
 
 h1 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Vollkorn', serif;
     font-style: normal;
     font-weight: 400;
+    letter-spacing: 0.03em;
 }
 
 h2 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Vollkorn', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 50px;
+    letter-spacing: 0.03em;
 }
 
 h3 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Vollkorn', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
+    letter-spacing: 0.03em;
 }
 
 h4 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Vollkorn', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    letter-spacing: 0.03em;
 }
 
 a {
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.customBtnFont{
+    font-family: 'Poppins', sans-serif !important;
 }
 
 span {
@@ -88,6 +94,10 @@ span {
     position: relative;
 }
 
+.ymaps-geolink {
+    color: #0a58ca;
+}
+
 .search__icon::before {
     position: absolute;
     content: "";
@@ -105,6 +115,10 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.subheader__subtext {
+    font-weight: bolder;
 }
 
 .btn__help {
@@ -281,6 +295,7 @@ span {
 }
 
 .nav__btn {
+    text-align: start;
     border: 1px solid #E4E4EF !important;
 }
 
@@ -356,4 +371,37 @@ span {
 
 .modalTextSmaller {
     font-size: 18px;
+}
+
+.customMargin10px {
+    margin-right: 10px;
+}
+
+.customLinkColor {
+    color: #2656A1;
+}
+
+.customBGC {
+    background-color: #2656A1;
+}
+
+.customBGCRed {
+    color: #FFFFFF;
+    background-color: #BB0202;
+}
+
+.btnLoadMore {
+    border-color: #2656A1;
+    color: #2656A1;
+}
+
+.btnLoadMore:hover {
+    background-color: #2656A1;
+    border-color: #2656A1;
+    color: #FFFFFF;
+}
+
+.customBGCRed:hover {
+    background-color: #DB1111;
+    color: #FFFFFF;
 }

@@ -10,8 +10,13 @@
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600;700;900&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <script src="https://api-maps.yandex.ru/2.1/?load=Geolink&amp;lang=ru_RU&amp;apikey=eec37a3a-9c10-49b0-9bed-3a757cc0e425"
             type="text/javascript"></script>
@@ -27,7 +32,7 @@
                 <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="70px" height="120px">
             </a>
             <div class="row row-col-1 ms-xxl-5 ms-xl-4 ms-lg-1 ms-md-3 ms-2">
-                <a class="align-self-center" href="tel:{{info.phone_number}}">
+                <a class="align-self-center customLinkColor" href="tel:{{info.phone_number}}">
                     {{info.phone_number}}
                 </a>
                 <a href="https://vk.com/detfondvrn">
@@ -42,17 +47,17 @@
         </div>
         <nav class="navbar navbar-expand-lg col-xxl-7 col-xl-8 col-lg-8 d-none d-lg-flex">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav flex-lg-wrap">
-                    <li class="nav-item">
-                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                <ul class="navbar-nav flex-lg-wrap align-items-center justify-space-between">
+                    <li class="nav-item customMargin10px">
+                        <button class="customBtnFont btn btn-primary customBGC customBtnFont" data-bs-toggle="modal" data-bs-target="#appealModal">
                             Оставить обращение
                         </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Главная</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="/">Главная</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    <li class="nav-item dropdown ms-1">
+                        <a class="customBtnFont nav-link dropdown-toggle customLinkColor" href="#" id="navbarDarkDropdownMenuLink" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             О фонде
                         </a>
@@ -64,20 +69,20 @@
                             <li><a class="dropdown-item" href="{% url 'about' %}#feedbacks-tab">Отзывы</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}#help-tab">Хочу помочь</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'about' %}#help-tab">Хочу помочь</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'voting_right' %}">Право голоса</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'voting_right' %}">Право голоса</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'programs' %}">Программы</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'programs' %}">Программы</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'news' %}">Новости</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'news' %}">Новости</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'contacts' %}">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -100,7 +105,7 @@
     </div>
     <div class="container-fluid subheader">
         <div>
-            <h1 class="text-center pt-5">
+            <h1 class="text-center pt-3">
                 Воронежское областное отделение<br>
                 «Российский детский фонд»
             </h1>
@@ -136,7 +141,7 @@
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                 <div class="card h-100">
                     {% image news.image original as img %}
-                    <img src="{{ img.url }}" class="img-top img-fluid">
+                    <img src="{{ img.url }}" class="img-top h-100">
                     <div class="card-body">
                         <p class="card-text text-dark manage__text__overflow">{{ news.caption }}</p>
                     </div>
@@ -147,8 +152,8 @@
         {% endfor %}
     </div>
 
-    <div class="d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
-        <a href="{% url 'news' %}" class="btn btn-primary btn-sm" role="button">ЗАГРУЗИТЬ ЕЩЁ</a>
+    <div class="customBtnFont d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
+        <a href="{% url 'news' %}" class="btn btn-outline-primary btn-lg btnLoadMore" role="button">ЗАГРУЗИТЬ ЕЩЁ</a>
     </div>
 </div>
 
@@ -161,7 +166,7 @@
         {{p.information|linebreaks}}
         {% endfor %}
     </div>
-    <a href="{% url 'about' %}#help-tab" class="btn btn-primary btn-sm" role="button">ХОЧУ ПОМОЧЬ ФОНДУ</a>
+    <a href="{% url 'about' %}#help-tab" class="customBtnFont btn customBGCRed btn-lg" role="button">ХОЧУ ПОМОЧЬ ФОНДУ</a>
 </div>
 
 <div class="programs__section container-fluid pb-5 pl-2">
@@ -201,7 +206,7 @@
                             </h3>
                         </div>
                         <div class="col-3">
-                            <div class="row row-cols-5">
+                            <div class="row row-cols-5 g-0">
                                 {% with ''|center:feedback.rating as range %}
                                 {% for _ in range %}
                                 <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
@@ -215,8 +220,8 @@
                     </p>
                     <div class="row row-col-1">
                         <div class="text-center">
-                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary">
-                                Читать
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary btnLoadMore">
+                                ОТЗЫВ ПОЛНОСТЬЮ
                             </a>
                         </div>
                     </div>
@@ -232,7 +237,7 @@
                             </h3>
                         </div>
                         <div class="col-3">
-                            <div class="row row-cols-5">
+                            <div class="row row-cols-5 g-0">
                                 {% with ''|center:feedback.rating as range %}
                                 {% for _ in range %}
                                 <img src="{% static 'home/images/star.svg' %}" alt="" width="30px" height="30px">
@@ -246,8 +251,8 @@
                     </p>
                     <div class="row row-col-1">
                         <div class="text-center">
-                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary">
-                                Читать
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary btnLoadMore">
+                                ОТЗЫВ ПОЛНОСТЬЮ
                             </a>
                         </div>
                     </div>
@@ -256,11 +261,11 @@
             {% endif %}
             {% endfor %}
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <button class="customBtnFont carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Предыдущий</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <button class="customBtnFont carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Следующий</span>
         </button>
@@ -273,37 +278,37 @@
             class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
         <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
             <ul>
-                <li><a class="link-dark" href="/">ГЛАВНАЯ</a></li>
-                <li><a class="link-dark" href="{% url 'about' %}">О ФОНДЕ</a></li>
-                <li><a class="link-dark" href="{% url 'programs' %}">ПРОГРАММЫ</a></li>
-                <li><a class="link-dark" href="{% url 'about' %}#help-tab">ХОЧУ ПОМОЧЬ</a></li>
-                <li><a class="link-dark" href="{% url 'voting_right' %}">ПРАВО ГОЛОСА</a></li>
-                <li><a class="link-dark" href="{% url 'news' %}">НОВОСТИ</a></li>
-                <li><a class="link-dark" href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
+                <li><a class="customLinkColor" href="/">Главная </a></li>
+                <li><a class="customLinkColor" href="{% url 'about' %}">О фонде</a></li>
+                <li><a class="customLinkColor" href="{% url 'programs' %}">Программы</a></li>
+                <li><a class="customLinkColor" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
+                <li><a class="customLinkColor" href="{% url 'voting_right' %}">Право голоса</a></li>
+                <li><a class="customLinkColor" href="{% url 'news' %}">Новости</a></li>
+                <li><a class="customLinkColor" href="{% url 'contacts' %}">Контакты</a></li>
             </ul>
         </div>
         <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contaccts">
             <ul style="list-style: none">
-                <li>
-                    <a class="link-dark" href="tel:{{info.phone_number}}">
+                <li class="">
+                    <a class="customLinkColor" href="tel:{{info.phone_number}}">
                         <i class="bi bi-telephone-fill"></i>
                         {{info.phone_number}}
                     </a>
                 </li>
                 <li class="mt-2">
-                    <a class="" href="mailto:{{info.email}}">
+                    <a class="customLinkColor" href="mailto:{{info.email}}">
                         <i class="bi bi-envelope"></i>
                         {{info.email}}
                     </a>
                 </li>
-                <li class="mt-2">
+                <li class="mt-2 customLinkColor">
                     <p class="text-wrap ymaps-geolink">{{info.address}}</p>
                 </li>
             </ul>
 
         </div>
         <div class="col-2 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center text-black-50">
-            <i class="bi bi-printer"></i>
+            <i class="bi bi-printer me-1"></i>
             <p class="">Версия для печати</p>
         </div>
         <hr>
@@ -364,7 +369,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Оставьте свое обращение</h5>
-                <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
+                <button id="formBtn" type="button" class="customBtnFont btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
 
             </div>
@@ -372,15 +377,15 @@
                 <div class="container-fluid">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
+                            <button class="customBtnFont nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
                                     data-bs-target="#appealHelp" type="button" role="tab" aria-controls="appealHelp"
                                     aria-selected="true">Помощь
                             </button>
-                            <button class="nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
+                            <button class="customBtnFont nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
                                     data-bs-target="#appealConsultation" type="button" role="tab"
                                     aria-controls="appealConsultation" aria-selected="false">Консультации
                             </button>
-                            <button class="nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
+                            <button class="customBtnFont nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
                                     data-bs-target="#appealVolunteer" type="button" role="tab"
                                     aria-controls="appealVolunteer" aria-selected="false">Волонтерство
                             </button>
@@ -442,7 +447,7 @@
                         </label>
                     </div>
                     <div class="mb-3">
-                        <button disabled id="submitForm" type="button" class="btn btn-primary">
+                        <button disabled id="submitForm" type="button" class="customBtnFont btn btn-primary">
                             Отправить
                         </button>
                         <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>

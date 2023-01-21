@@ -4,37 +4,37 @@
             class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
         <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
             <ul>
-                <li><a class="link-dark" href="/">ГЛАВНАЯ</a></li>
-                <li><a class="link-dark" href="{% url 'about' %}">О ФОНДЕ</a></li>
-                <li><a class="link-dark" href="{% url 'programs' %}">ПРОГРАММЫ</a></li>
-                <li><a class="link-dark" href="{% url 'about' %}#help-tab">ХОЧУ ПОМОЧЬ</a></li>
-                <li><a class="link-dark" href="{% url 'voting_right' %}">ПРАВО ГОЛОСА</a></li>
-                <li><a class="link-dark" href="{% url 'news' %}">НОВОСТИ</a></li>
-                <li><a class="link-dark" href="{% url 'contacts' %}">КОНТАКТЫ</a></li>
+                <li><a class="customLinkColor" href="/">Главная </a></li>
+                <li><a class="customLinkColor" href="{% url 'about' %}">О фонде</a></li>
+                <li><a class="customLinkColor" href="{% url 'programs' %}">Программы</a></li>
+                <li><a class="customLinkColor" href="{% url 'about' %}#help-tab">Хочу помочь</a></li>
+                <li><a class="customLinkColor" href="{% url 'voting_right' %}">Право голоса</a></li>
+                <li><a class="customLinkColor" href="{% url 'news' %}">Новости</a></li>
+                <li><a class="customLinkColor" href="{% url 'contacts' %}">Контакты</a></li>
             </ul>
         </div>
-        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contacts">
-            <ul>
-                <li>
-                    <a class="link-dark" href="tel:{{info.phone_number}}">
+        <div class="col-7 col-sm-5 col-md-4 col-lg-4 footer__contaccts">
+            <ul style="list-style: none">
+                <li class="">
+                    <a class="customLinkColor" href="tel:{{info.phone_number}}">
                         <i class="bi bi-telephone-fill"></i>
                         {{info.phone_number}}
                     </a>
                 </li>
                 <li class="mt-2">
-                    <a class="" href="mailto:{{info.email}}">
+                    <a class="customLinkColor" href="mailto:{{info.email}}">
                         <i class="bi bi-envelope"></i>
                         {{info.email}}
                     </a>
                 </li>
-                <li class="mt-2">
+                <li class="mt-2 customLinkColor">
                     <p class="text-wrap ymaps-geolink">{{info.address}}</p>
                 </li>
             </ul>
 
         </div>
         <div class="col-2 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center text-black-50">
-            <i class="bi bi-printer"></i>
+            <i class="bi bi-printer me-1"></i>
             <p class="">Версия для печати</p>
         </div>
         <hr>
@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 <div class="row mt-2">
-                    <a class="" href="mailto:{{info.email}}">
+                    <a class="" href="mailto:{{info.email}} ">
                         <i class="bi bi-envelope"></i>
                         {{info.email}}
                     </a>

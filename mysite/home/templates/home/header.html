@@ -1,12 +1,12 @@
 {% load static %}
-<header class="header container-fluid pb-5">
+<header class="header container-fluid">
     <div class="row align-content-center justify-content-md-between">
         <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-5 col-sm-8 col-8 d-flex align-content-center m-4">
             <a href="/">
                 <img src="{% static 'home/images/logo.svg' %}" alt="logo" srcset="" width="70px" height="120px">
             </a>
             <div class="row row-col-1 ms-xxl-5 ms-xl-4 ms-lg-1 ms-md-3 ms-2">
-                <a class="align-self-center" href="tel:{{info.phone_number}}">
+                <a class="align-self-center customLinkColor" href="tel:{{info.phone_number}}">
                     {{info.phone_number}}
                 </a>
                 <a href="https://vk.com/detfondvrn">
@@ -21,17 +21,17 @@
         </div>
         <nav class="navbar navbar-expand-lg col-xxl-7 col-xl-8 col-lg-8 d-none d-lg-flex">
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav flex-lg-wrap navbarAllign">
-                    <li class="nav-item">
-                        <button class=" btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
+                <ul class="navbar-nav flex-lg-wrap align-items-center justify-space-between">
+                    <li class="nav-item customMargin10px">
+                        <button class="customBtnFont btn btn-primary customBGC customBtnFont" data-bs-toggle="modal" data-bs-target="#appealModal">
                             Оставить обращение
                         </button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Главная</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="/">Главная</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    <li class="nav-item dropdown ms-1">
+                        <a class="customBtnFont nav-link dropdown-toggle customLinkColor" href="#" id="navbarDarkDropdownMenuLink" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             О фонде
                         </a>
@@ -43,20 +43,20 @@
                             <li><a class="dropdown-item" href="{% url 'about' %}#feedbacks-tab">Отзывы</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}#help-tab">Хочу помочь</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'about' %}#help-tab">Хочу помочь</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'voting_right' %}">Право голоса</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'voting_right' %}">Право голоса</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'programs' %}">Программы</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'programs' %}">Программы</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'news' %}">Новости</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'news' %}">Новости</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link customLinkColor" href="{% url 'contacts' %}">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Оставьте свое обращение</h5>
-                    <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
+                    <button id="formBtn" type="button" class="customBtnFont btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
 
                 </div>
@@ -90,15 +90,15 @@
                     <div class="container-fluid">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button class="nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
+                                <button class="customBtnFont nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
                                         data-bs-target="#appealHelp" type="button" role="tab" aria-controls="appealHelp"
                                         aria-selected="true">Помощь
                                 </button>
-                                <button class="nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
+                                <button class="customBtnFont nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
                                         data-bs-target="#appealConsultation" type="button" role="tab"
                                         aria-controls="appealConsultation" aria-selected="false">Консультации
                                 </button>
-                                <button class="nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
+                                <button class="customBtnFont nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
                                         data-bs-target="#appealVolunteer" type="button" role="tab"
                                         aria-controls="appealVolunteer" aria-selected="false">Волонтерство
                                 </button>
@@ -155,12 +155,12 @@
                         </div>
                         <div class="mb-3">
                             <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
-                            <label class="form-check-label modalTextSmaller" for="checkboxForm">
+                            <label class="form-check-label text" for="checkboxForm">
                                 Я согласен на <a href="personal_data">На обработку персональных данных</a>
                             </label>
                         </div>
                         <div class="mb-3">
-                            <button disabled id="submitForm" type="button" class="btn btn-primary">
+                            <button disabled id="submitForm" type="button" class="customBtnFont btn btn-primary">
                                 Отправить
                             </button>
                             <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
