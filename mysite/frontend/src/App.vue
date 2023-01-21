@@ -2,13 +2,13 @@
   <v-app class="containerCustom">
     <HeaderComponent/>
     <div class="containerCustom">
-      <v-row class="fixRowHeight mb-15">
-        <v-col cols="2">
+      <v-row class="mb-15">
+        <v-col class="v-col-2 v-col-md-3">
           <v-btn
               @click="handleNewTicketBtnClick"
               color="success"
               prepend-icon="mdi-plus"
-              class="mt-4"
+              class="mt-4 setMinWidth"
               block
           >Новое обращение
           </v-btn>

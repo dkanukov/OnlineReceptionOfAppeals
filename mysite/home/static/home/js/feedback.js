@@ -68,9 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			rating: [...document.getElementsByClassName("rating__star__active")].length
 		}
 
+		const cookie = document.cookie
 		await fetch("http://127.0.0.1:8000/api/feedback", {
 			method: "POST", headers: {
-				'Accept': 'application/json', 'Content-Type': 'application/json'
+				'Accept': 'application/json', 'Content-Type': 'application/json',
+				'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
 			}, body: JSON.stringify(feedbackJSON)
 		})
 			.then(res => {

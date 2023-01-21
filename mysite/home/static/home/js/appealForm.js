@@ -22,6 +22,21 @@ const maskOptions = {
 };
 const mask = IMask(phoneInput, maskOptions);
 
+function getCookie(name) {
+	if (!document.cookie) {
+		return null;
+	}
+
+	const xsrfCookies = document.cookie.split(';')
+		.map(c => c.trim())
+		.filter(c => c.startsWith(name + '='));
+
+	if (xsrfCookies.length === 0) {
+		return null;
+	}
+	return decodeURIComponent(xsrfCookies[0].split('=')[1]);
+}
+
 function createRequestAnswer(isOk) {
 	const modal = document.getElementsByClassName("modal-content");
 	const modalBody = document.createElement("div");
@@ -58,18 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			default: typeAppeal = null; optionAppeal = null;
 		}
 		const appealForm = {
-			type: JSON.stringify(typeAppeal),
+			type: typeAppeal,
 			name: nameInput.value,
 			last_name: surnameInput.value,
 			phone_number: phoneInput.value,
-			option: optionAppeal
+			option: Number(optionAppeal)
 		}
 
 		console.log(appealForm)
-
+		const cookie = document.cookie
 		await fetch("http://127.0.0.1:8000/api/appeal", {
 			method: "POST", headers: {
-				'Accept': 'application/json', 'Content-Type': 'application/json'
+				'Accept': 'application/json', 'Content-Type': 'application/json',
+				'X-CSRFToken': getCookie('csrftoken')
 			}, body: JSON.stringify(appealForm)
 		})
 			.then(res => {

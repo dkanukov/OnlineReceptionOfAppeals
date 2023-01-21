@@ -349,3 +349,11 @@ span {
 .navbarAllign {
     align-items: center !important;
 }
+
+.modal-dialog {
+    max-width: 550px !important;
+}
+
+.modalTextSmaller {
+    font-size: 18px;
+}

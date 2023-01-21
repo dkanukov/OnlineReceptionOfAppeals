@@ -4398,3 +4398,523 @@ webpack_loader.exceptions.WebpackError:
 2023-01-21 15:16:24,647 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
 2023-01-21 15:17:11,551 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-21 15:17:11,553 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:23:02,176 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:23:02,177 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:24:33,766 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:24:33,768 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:24:40,232 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:24:40,233 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:07,954 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:07,957 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:10,863 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:10,864 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:15,410 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:15,412 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:23,795 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:23,796 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:27,274 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:27,276 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:31,970 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:31,972 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:35,402 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:35,403 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:25:58,561 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:25:58,563 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:26:14,064 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:26:14,065 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:26:26,129 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:26:26,130 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:27:06,334 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/index.js):
+
+VueCompilerError: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<).
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue:6:43
+4  |      <div class="containerCustom">
+5  |        <v-row class="mb-15">
+6  |          <v-col class="v-col-2 v-col-md-3" ">
+   |                                            ^
+7  |            <v-btn
+8  |                @click="handleNewTicketBtnClick"
+
+            
+2023-01-21 15:27:06,341 ERROR "GET /appeal/ HTTP/1.1" 500 123985
+2023-01-21 15:27:07,083 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/index.js):
+
+VueCompilerError: Attribute name cannot contain U+0022 ("), U+0027 ('), and U+003C (<).
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue:6:43
+4  |      <div class="containerCustom">
+5  |        <v-row class="mb-15">
+6  |          <v-col class="v-col-2 v-col-md-3" ">
+   |                                            ^
+7  |            <v-btn
+8  |                @click="handleNewTicketBtnClick"
+
+            
+2023-01-21 15:27:07,096 ERROR "GET /appeal/ HTTP/1.1" 500 123984
+2023-01-21 15:27:13,142 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:27:13,145 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:27:28,222 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:27:28,223 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:27:32,165 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:27:32,166 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:27:38,567 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:27:38,568 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 15:28:22,651 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 15:28:22,654 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 17:05:29,063 WARNING Forbidden: /api/appeal
+2023-01-21 17:05:29,065 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 17:09:59,975 WARNING Forbidden: /api/appeal
+2023-01-21 17:09:59,978 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 17:10:25,124 WARNING Forbidden: /api/appeal
+2023-01-21 17:10:25,127 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 17:11:01,105 WARNING Bad Request: /api/appeal
+2023-01-21 17:11:01,108 WARNING "POST /api/appeal HTTP/1.1" 400 73
+2023-01-21 17:11:36,397 WARNING Forbidden: /api/appeal
+2023-01-21 17:11:36,399 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 17:12:51,062 WARNING Forbidden: /api/appeal
+2023-01-21 17:12:51,065 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 17:14:51,387 WARNING Forbidden: /api/feedback
+2023-01-21 17:14:51,389 WARNING "POST /api/feedback HTTP/1.1" 403 45
+2023-01-21 17:15:28,535 WARNING Forbidden: /api/feedback
+2023-01-21 17:15:28,537 WARNING "POST /api/feedback HTTP/1.1" 403 45
+2023-01-21 17:15:58,418 WARNING Bad Request: /api/appeal
+2023-01-21 17:15:58,420 WARNING "POST /api/appeal HTTP/1.1" 400 67
+2023-01-21 17:16:17,111 WARNING Bad Request: /api/appeal
+2023-01-21 17:16:17,113 WARNING "POST /api/appeal HTTP/1.1" 400 67
+2023-01-21 17:17:36,417 WARNING Bad Request: /api/appeal
+2023-01-21 17:17:36,420 WARNING "POST /api/appeal HTTP/1.1" 400 67
+2023-01-21 17:17:48,264 WARNING Bad Request: /api/appeal
+2023-01-21 17:17:48,266 WARNING "POST /api/appeal HTTP/1.1" 400 67
+2023-01-21 17:19:57,769 WARNING Bad Request: /api/appeal
+2023-01-21 17:19:57,771 WARNING "POST /api/appeal HTTP/1.1" 400 67
+2023-01-21 17:20:57,340 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 17:20:57,342 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 17:22:28,902 WARNING Bad Request: /api/appeal
+2023-01-21 17:22:28,902 WARNING "POST /api/appeal HTTP/1.1" 400 67
+2023-01-21 17:24:02,721 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 17:24:02,724 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:50:31,589 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:50:31,591 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:50:42,669 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:50:42,671 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:50:42,673 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:50:42,675 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:42,676 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:50:42,677 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:42,677 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:42,679 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:42,681 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:50:42,683 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:58,548 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:50:58,551 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:58,552 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:50:58,554 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:50:58,558 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:58,560 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:58,561 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:50:58,563 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:50:58,564 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:50:58,565 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:05,938 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:51:05,940 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:05,942 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:51:05,943 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:05,968 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:51:05,969 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:05,979 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:51:05,982 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:51:05,985 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:05,990 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:08,395 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:51:08,398 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:08,399 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:51:08,402 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:51:08,403 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:08,406 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:51:08,406 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:08,408 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:08,408 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:51:08,410 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:11,019 WARNING Not Found: /media/images/IMG_2542.original.jpg}
+2023-01-21 19:51:11,020 WARNING "GET /media/images/IMG_2542.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:11,059 WARNING Not Found: /media/images/IMG_2544.original.jpg}
+2023-01-21 19:51:11,061 WARNING "GET /media/images/IMG_2544.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:11,062 WARNING Not Found: /media/images/IMG_2543.original.jpg}
+2023-01-21 19:51:11,073 WARNING "GET /media/images/IMG_2543.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:13,602 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:51:13,603 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:51:13,604 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:13,605 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:13,626 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:51:13,628 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:51:13,629 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:13,631 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:51:13,633 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:51:13,634 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:53:00,217 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:53:00,219 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:53:01,684 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:53:01,685 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:53:01,686 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:53:01,691 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:53:01,692 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:53:01,695 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:53:01,696 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:53:01,697 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:53:01,698 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:53:01,699 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:53:02,732 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:53:02,734 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:53:38,874 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:53:38,875 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:54:10,501 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:54:10,503 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:54:12,267 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:54:12,269 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:54:12,270 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:54:12,272 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:54:12,277 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:54:12,280 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:54:12,280 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:54:12,281 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:54:12,282 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:54:12,282 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:54:19,790 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:54:19,792 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:33,360 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:33,362 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:34,300 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:34,302 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:34,972 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:34,974 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:35,515 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:35,517 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:36,068 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:36,070 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:36,430 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:36,432 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:36,710 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:36,711 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:36,911 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:36,912 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:37,125 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:37,127 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:37,330 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:37,332 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:37,508 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:37,510 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:37,743 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:37,744 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:37,911 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:37,912 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:38,147 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:38,149 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:38,327 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:38,329 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:38,544 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:38,546 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:38,739 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-21 19:55:38,740 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-21 19:55:45,581 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:55:45,582 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:45,661 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:55:45,664 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:55:45,665 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:45,665 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:55:45,666 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:55:45,667 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:45,669 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:45,670 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:49,847 WARNING Forbidden: /api/appeal
+2023-01-21 19:55:49,849 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 19:55:53,646 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:55:53,650 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:53,653 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:55:53,656 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:53,661 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:55:53,663 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:53,676 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:55:53,683 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:53,689 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:55:53,692 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:55,193 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:55:55,196 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:55:55,197 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:55,198 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:55,203 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:55:55,211 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:55,219 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:55:55,220 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:55,235 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:55:55,237 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:56,077 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:55:56,078 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:56,082 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:55:56,082 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:55:56,083 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:56,086 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:56,097 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:55:56,103 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:55:56,112 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:55:56,113 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:00,537 WARNING Not Found: /media/images/IMG_2544.original.jpg}
+2023-01-21 19:56:00,539 WARNING Not Found: /media/images/IMG_2543.original.jpg}
+2023-01-21 19:56:00,540 WARNING "GET /media/images/IMG_2543.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:00,541 WARNING "GET /media/images/IMG_2544.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:00,545 WARNING Not Found: /media/images/IMG_2542.original.jpg}
+2023-01-21 19:56:00,547 WARNING "GET /media/images/IMG_2542.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:03,888 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 19:56:03,889 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 19:56:03,889 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 19:56:03,889 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:03,892 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:03,893 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:03,917 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 19:56:03,920 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 19:56:03,922 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 19:56:03,923 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:02,990 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:01:02,993 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:03,002 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:01:03,004 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:03,020 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:01:03,021 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:03,036 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:01:03,044 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:03,047 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:01:03,048 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:22,471 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:01:22,497 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:22,506 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:01:22,508 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:22,511 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:01:22,512 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:22,525 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:01:22,527 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:22,531 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:01:22,532 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:23,149 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:01:23,152 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:23,159 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:01:23,163 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:01:23,164 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:23,166 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:23,193 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:01:23,199 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:01:23,211 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:01:23,213 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:05,318 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:04:05,320 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:05,332 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:04:05,335 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:05,338 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:04:05,341 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:04:05,342 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:05,344 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:05,359 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:04:05,361 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:15,957 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:04:15,958 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:04:15,959 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:15,960 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:15,969 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:04:15,974 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:15,986 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:04:15,988 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:04:16,033 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:04:16,034 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:05:10,746 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:05:10,748 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:05:10,751 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:05:10,753 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:05:10,757 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:05:10,759 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:05:10,773 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:05:10,776 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:05:10,784 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:05:10,786 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:05:17,636 WARNING Forbidden: /api/appeal
+2023-01-21 20:05:17,638 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:06:06,353 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:06:06,357 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:06,357 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:06:06,359 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:06:06,361 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:06,361 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:06,379 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:06:06,380 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:06,391 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:06:06,394 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:11,570 WARNING Forbidden: /api/appeal
+2023-01-21 20:06:11,571 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:06:44,783 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:06:44,785 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:44,790 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:06:44,793 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:06:44,794 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:44,795 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:44,812 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:06:44,814 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:44,828 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:06:44,830 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:06:49,973 WARNING Forbidden: /api/appeal
+2023-01-21 20:06:49,975 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 20:10:11,479 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:10:11,480 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:10:11,484 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:11,486 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:11,492 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:10:11,494 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:11,506 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:10:11,512 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:11,518 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:10:11,520 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:34,594 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:10:34,596 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:10:34,601 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:10:34,602 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:34,605 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:34,607 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:34,629 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:10:34,630 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:34,653 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:10:34,654 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:39,501 WARNING Forbidden: /api/appeal
+2023-01-21 20:10:39,503 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:10:53,664 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:10:53,664 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:10:53,668 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:53,671 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:53,676 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:10:53,680 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:53,689 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:10:53,691 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:10:53,709 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:10:53,710 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:12:14,981 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:12:14,984 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:12:14,988 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:12:14,993 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:12:14,997 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:12:15,000 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:12:15,015 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:12:15,017 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:12:15,034 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:12:15,035 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:12:19,827 WARNING Forbidden: /api/appeal
+2023-01-21 20:12:19,831 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:13:13,819 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:13:13,821 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:13:13,822 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:13,823 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:13,829 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:13:13,830 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:13,852 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:13:13,853 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:13,856 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:13:13,857 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:17,749 WARNING Forbidden: /api/appeal
+2023-01-21 20:13:17,751 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:13:46,918 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:13:46,921 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:46,924 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:13:46,931 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:46,943 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:13:46,944 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:46,949 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:13:46,950 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:46,982 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:13:46,983 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:13:50,460 WARNING Forbidden: /api/appeal
+2023-01-21 20:13:50,461 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:14:16,447 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:14:16,449 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:16,452 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:14:16,454 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:14:16,455 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:16,457 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:16,476 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:14:16,478 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:16,485 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:14:16,485 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:20,910 WARNING Forbidden: /api/appeal
+2023-01-21 20:14:20,912 WARNING "POST /api/appeal HTTP/1.1" 403 93
+2023-01-21 20:14:46,386 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 20:14:46,395 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:46,401 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 20:14:46,406 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 20:14:46,407 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:46,409 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:46,430 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 20:14:46,436 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:14:46,450 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 20:14:46,451 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 20:15:02,551 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 20:15:02,552 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215

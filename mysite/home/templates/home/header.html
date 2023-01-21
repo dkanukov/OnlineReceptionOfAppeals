@@ -77,4 +77,97 @@
             </ul>
         </div>
     </div>
+    <div class="modal fade" id="appealModal" tabindex="-1" aria-labelledby="appealModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Оставьте свое обращение</h5>
+                    <button id="formBtn" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="appealHelp-tab" data-bs-toggle="tab"
+                                        data-bs-target="#appealHelp" type="button" role="tab" aria-controls="appealHelp"
+                                        aria-selected="true">Помощь
+                                </button>
+                                <button class="nav-link" id="appealConsultation-tab" data-bs-toggle="tab"
+                                        data-bs-target="#appealConsultation" type="button" role="tab"
+                                        aria-controls="appealConsultation" aria-selected="false">Консультации
+                                </button>
+                                <button class="nav-link" id="appealVolunteer-tab" data-bs-toggle="tab"
+                                        data-bs-target="#appealVolunteer" type="button" role="tab"
+                                        aria-controls="appealVolunteer" aria-selected="false">Волонтерство
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content mt-3" id="nav-tabContent">
+                            <div class="mb-3">
+                                <label for="nameFormInput" class="form-label">Имя <strong
+                                        style="color: red">*</strong></label>
+                                <input required type="text" class="form-control" id="nameFormInput" placeholder="Иван">
+                            </div>
+                            <div class="mb-3">
+                                <label for="surnameFormInput" class="form-label">Фамилия <strong
+                                        style="color: red">*</strong></label>
+                                <input required type="text" class="form-control" id="surnameFormInput"
+                                       placeholder="Иванов">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneFormInput" class="form-label">Номер телефона <strong
+                                        style="color: red">*</strong></label>
+                                <input required type="tel" class="form-control" id="phoneFormInput"
+                                       placeholder="(999)999-99-99">
+                            </div>
+                            <div class="tab-pane fade show active appeal" id="appealHelp" role="tabpanel"
+                                 aria-labelledby="appealHelp-tab">
+
+                                <label for="typeOfHelp" class="form-label">Тип требуемой помощи <strong
+                                        style="color: red">*</strong></label>
+                                <select required class="form-select form-control mb-3" id="typeOfHelp"
+                                        aria-label="Default select example">
+                                    <option value="1" selected>SOS-размещение</option>
+                                    <option value="2">Гуманитарная помощь</option>
+                                    <option value="3">Необходим адресный сбор</option>
+                                </select>
+                            </div>
+                            <div class="tab-pane fade appeal" id="appealConsultation" role="tabpanel"
+                                 aria-labelledby="appealConsultation-tab">
+                                <label for="typeOfConsultation" class="form-label">Тип требуемой консультации <strong
+                                        style="color: red">*</strong></label>
+                                <select required class="form-select form-control mb-3" id="typeOfConsultation"
+                                        aria-label="Default select example">
+                                    <option value="1" selected>Консультация психолога</option>
+                                    <option value="2">Консультация юриста</option>
+                                    <option value="3">Хочу в группу поддержки</option>
+                                </select>
+                            </div>
+                            <div class="tab-pane fade mt-3 appeal" id="appealVolunteer" role="tabpanel"
+                                 aria-labelledby="appealVolunteer-tab">
+                                <select required class="form-select form-control mb-3" id="typeOfVolunteer"
+                                        aria-label="Default select example">
+                                    <option value="1">Хочу быть волонтёром Фонда</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="checkboxForm" checked>
+                            <label class="form-check-label modalTextSmaller" for="checkboxForm">
+                                Я согласен на <a href="personal_data">На обработку персональных данных</a>
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <button disabled id="submitForm" type="button" class="btn btn-primary">
+                                Отправить
+                            </button>
+                            <p><small><strong style="color: red">*</strong> - Обязательные поля</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
