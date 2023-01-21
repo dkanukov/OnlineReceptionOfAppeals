@@ -43,7 +43,7 @@ export default {
   },
   props: {
     tickets: Array,
-    patchNewTicketStatusById: Function,
+    patchTicketStatusById: Function,
   },
   data() {
     return {

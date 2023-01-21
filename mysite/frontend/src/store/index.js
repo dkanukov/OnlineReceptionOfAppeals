@@ -3,6 +3,8 @@ import {createStore} from 'vuex';
 export default createStore({
 	state: () =>  ({
 		tickets: [],
+		user: null,
+		filterHelpType: []
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -11,8 +13,16 @@ export default createStore({
 		setNewTicketStatusById(state, element){
 			state.tickets.find((ticket) => ticket.id === element.elementId).status = element.newStatus
 		},
+		setUser(state, user) {
+			state.user = user
+		}
 	},
 	actions: {
+		async getUser(ctx) {
+			const ans = await fetch('http://127.0.0.1:8000/api/user', {method: 'GET'})
+			const res = await ans.json()
+			ctx.commit('setUser', res)
+		},
 		async fetchTickets(ctx) {
 			try {
 				const ans = await fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
@@ -22,7 +32,7 @@ export default createStore({
 				console.error(`Error during fetch in mount: ${e}`)
 			}
 		},
-		async patchNewTicketStatusById(ctx, element) {
+		async patchTicketStatusById(ctx, element) {
 			const cookie = document.cookie
 			ctx.commit('setNewTicketStatusById', element)
 			await fetch(`http://127.0.0.1:8000/api/appeal/${element.elementId}`, {
@@ -50,16 +60,6 @@ export default createStore({
 					})
 				})
 			}
-		},
-		async deleteTicketById(ctx, ticketId) {
-			const cookie = document.cookie
-			await fetch(`http://127.0.0.1:8000/api/appeal/${ticketId}`, {
-				method: 'DELETE',
-				headers: {
-					'Content-Type': 'application/json',
-					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
-				}
-			})
 		},
 	}
 })

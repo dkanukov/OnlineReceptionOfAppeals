@@ -13,10 +13,19 @@
           >Новое обращение
           </v-btn>
         </v-col>
+        <v-col cols="3">
+          <v-autocomplete
+              v-model="filterHelpType"
+              multiple
+              label="Тип заявки"
+              :items="helpType"
+              variant="solo"
+          ></v-autocomplete>
+        </v-col>
       </v-row>
       <v-row>
         <DragndropTable
-            :tickets="this.tickets"
+            :tickets="this.filteredTickets"
         />
       </v-row>
     </div>
@@ -126,11 +135,12 @@ export default {
       },
       helpType: [
         'Помощь', 'Консультация', 'Волонтерство',
-      ]
+      ],
+      filterHelpType: [],
     }
   },
   methods: {
-    ...mapActions(['fetchTickets', 'patchNewTicketStatusById', 'patchTicketNotes']),
+    ...mapActions(['fetchTickets', 'patchTicketStatusById', 'patchTicketNotes', 'getUser']),
     ...mapMutations([]),
     handleNewTicketBtnClick() {
       this.isShowDialog = true
@@ -177,13 +187,24 @@ export default {
           'Хочу в группу поддержки',
         ]
       }
+    },
+    filteredTickets() {
+      if (!this.filterHelpType.length) {
+        return this.tickets
+      }
+      const filteredTickets = this.tickets.filter((ticket) => {
+        if (this.filterHelpType.includes(this.helpType[ticket.type - 1])) {
+          return ticket
+        }
+      })
+      return filteredTickets
     }
   },
   async created() {
     this.fetchTickets().then(() => {
       console.log(this.tickets)
     })
-
+    await this.getUser()
   }
 }
 </script>

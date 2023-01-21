@@ -105,10 +105,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchNewTicketStatusById']),
+    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchTicketStatusById']),
     handleTicketMove({added}) {
       if (added) {
-        this.patchNewTicketStatusById({
+        this.patchTicketStatusById({
           elementId: added.element.id,
           newStatus: STATUS_TUPLE[this.columnName]
         })

@@ -10,14 +10,8 @@
         <h3 class="ml-2">ПРИЕМНАЯ ОБРАЩЕНИЙ</h3>
       </div>
     </div>
-<!--    <v-text-field-->
-<!--        prepend-inner-icon="mdi-magnify"-->
-<!--        variant="solo"-->
-<!--        class="textInput"-->
-<!--        label="Поиск"-->
-<!--        hide-details="auto"-->
-<!--    />-->
-    <div>
+    <div class="d-flex align-center">
+      <p class="mr-5" v-if="user">{{user.last_name}} {{user.first_name}}</p>
       <v-avatar color="surface-variant" size="50">
         <span class="text-h5">NC</span>
       </v-avatar>
@@ -26,19 +20,20 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
+
 export default {
   name: 'HeaderComponent',
   data() {
     return {}
   },
+  computed: {
+    ...mapState(['user']),
+  },
 }
 </script>
 
 <style scoped>
-
-.textInput {
-  max-width: 800px;
-}
 
 .headerWrapper {
   display: flex;
