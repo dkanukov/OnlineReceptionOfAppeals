@@ -1,7 +1,8 @@
 <template>
   <v-app class="containerCustom">
-      <HeaderComponent/>
-      <v-row class="content">
+    <HeaderComponent/>
+    <div class="containerCustom">
+      <v-row class="fixRowHeight mb-15">
         <v-col cols="2">
           <v-btn
               @click="handleNewTicketBtnClick"
@@ -12,14 +13,13 @@
           >Новое обращение
           </v-btn>
         </v-col>
-
-        <v-col>
-          <DragndropTable
-              :tickets="this.tickets"
-              :patchNewTicketStatusById="this.patchNewTicketStatusById"
-          />
-        </v-col>
       </v-row>
+      <v-row>
+        <DragndropTable
+            :tickets="this.tickets"
+        />
+      </v-row>
+    </div>
     <v-dialog class="dialog" v-model="isShowDialog">
       <v-card>
         <v-container>
@@ -130,20 +130,13 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchTickets', 'patchNewTicketStatusById']),
+    ...mapActions(['fetchTickets', 'patchNewTicketStatusById', 'patchTicketNotes']),
     ...mapMutations([]),
     handleNewTicketBtnClick() {
       this.isShowDialog = true
     },
     async sendForm() {
       const cookie = document.cookie
-      console.log(JSON.stringify({
-        'name': this.newTicket.name,
-        'last_name': this.newTicket.surname,
-        'phone_number': this.newTicket.phoneNumber,
-        'type': HELP_TYPE[this.newTicket.helpType],
-        'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
-      }))
       const res = await fetch('http://127.0.0.1:8000/api/appeal', {
         method: 'POST',
         headers: {
@@ -158,7 +151,7 @@ export default {
           'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
         })
       })
-      console.log(res)
+      this.patchTicketNotes(res.json(), this.newTicket.notes)
     },
     discardForm() {
       this.isShowDialog = false
@@ -196,16 +189,15 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  padding: 20px;
-  margin-top: 10px;
-}
-
 .containerCustom {
-  margin: 30px;
+  padding: 20px;
 }
 
 .dialog {
   width: 40vw;
+}
+
+.fixRowHeight {
+  height: 50px !important;
 }
 </style>

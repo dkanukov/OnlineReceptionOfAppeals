@@ -8,7 +8,6 @@
             put: ['inProgress', 'closed']
           }"
           :tickets="newTickets"
-          :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
     <v-col cols="4">
@@ -19,7 +18,6 @@
             put: ['new', 'closed']
           }"
           :tickets="inProgressTickets"
-          :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
     <v-col cols="4">
@@ -30,7 +28,6 @@
             put: ['inProgress', 'new']
           }"
           :tickets="closedTickets"
-          :patchNewTicketStatusById="this.patchNewTicketStatusById"
       />
     </v-col>
   </v-row>

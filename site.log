@@ -2847,3 +2847,753 @@ Traceback (most recent call last):
     raise FieldError(
 django.core.exceptions.FieldError: Cannot resolve keyword 'crate_date' into field. Choices are: additional_images, caption, create_date, id, image, image_id, page, page_id, sort_order, text_after_photo, text_before_photo
 2023-01-20 18:39:52,833 ERROR "GET /news?id=9 HTTP/1.1" 500 88198
+2023-01-21 13:23:52,418 WARNING Not Found: /favicon.ico
+2023-01-21 13:23:52,421 WARNING "GET /favicon.ico HTTP/1.1" 404 6123
+2023-01-21 13:34:09,485 WARNING Forbidden: /api/appeal
+2023-01-21 13:34:09,485 WARNING "POST /api/appeal HTTP/1.1" 403 45
+2023-01-21 13:34:45,890 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-21 13:34:45,894 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-21 13:34:45,896 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:45,897 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-21 13:34:45,898 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-21 13:34:45,899 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:45,900 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-21 13:34:45,900 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:45,900 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:45,903 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:48,961 WARNING Not Found: /media/images/IMG_2544.original.jpg}
+2023-01-21 13:34:48,962 WARNING Not Found: /media/images/IMG_2542.original.jpg}
+2023-01-21 13:34:48,963 WARNING Not Found: /media/images/IMG_2543.original.jpg}
+2023-01-21 13:34:48,964 WARNING "GET /media/images/IMG_2544.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:48,965 WARNING "GET /media/images/IMG_2542.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:34:48,966 WARNING "GET /media/images/IMG_2543.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-21 13:38:58,604 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:38:58,612 ERROR "GET /appeal/ HTTP/1.1" 500 120377
+2023-01-21 13:39:01,203 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:01,234 ERROR "GET /appeal/ HTTP/1.1" 500 120377
+2023-01-21 13:39:12,149 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:12,162 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:12,978 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:12,991 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:13,514 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:13,524 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:14,013 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:14,027 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:14,176 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:14,184 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:14,356 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:14,367 ERROR "GET /appeal/ HTTP/1.1" 500 120733
+2023-01-21 13:39:14,494 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:14,501 ERROR "GET /appeal/ HTTP/1.1" 500 120735
+2023-01-21 13:39:14,666 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:14,677 ERROR "GET /appeal/ HTTP/1.1" 500 120735
+2023-01-21 13:39:14,848 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:14,860 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:15,005 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:15,014 ERROR "GET /appeal/ HTTP/1.1" 500 120735
+2023-01-21 13:39:15,174 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  147:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:39:15,185 ERROR "GET /appeal/ HTTP/1.1" 500 120734
+2023-01-21 13:39:53,152 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:39:53,153 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:39:53,197 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:39:53,198 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:40:38,321 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:40:38,322 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:40:38,968 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:40:38,969 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:40:47,089 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:40:47,091 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:40:56,390 WARNING Bad Request: /api/appeal
+2023-01-21 13:40:56,391 WARNING "POST /api/appeal HTTP/1.1" 400 47
+2023-01-21 13:41:27,926 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:41:27,927 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:42:08,526 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:42:08,528 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:43:33,132 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:43:33,133 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:44:01,981 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:44:01,982 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:45:27,863 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:45:27,864 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:49:56,380 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ESLintError in 
+            [eslint] 
+/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue
+  140:13  error  'res' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+            
+2023-01-21 13:49:56,392 ERROR "GET /appeal/ HTTP/1.1" 500 120861
+2023-01-21 13:52:12,274 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:52:12,274 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:53:47,064 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:53:47,066 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:56:17,391 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:56:17,391 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:56:33,842 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:56:33,842 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:56:35,886 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:56:35,887 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:56:37,656 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:56:37,658 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:00,153 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:00,154 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:11,705 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:11,706 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:16,288 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:16,290 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:18,947 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:18,948 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:20,921 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:20,923 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:22,405 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:22,407 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:24,068 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:24,069 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:25,879 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:25,882 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:27,529 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:27,530 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:29,453 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:29,454 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:31,772 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:31,773 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:33,869 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:33,870 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:37,143 WARNING Not Found: /api/appeal/26
+2023-01-21 13:58:37,146 WARNING "DELETE /api/appeal/26 HTTP/1.1" 404 50
+2023-01-21 13:58:39,240 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:39,241 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:49,248 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:49,250 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:52,268 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:52,269 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 13:58:54,451 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 13:58:54,452 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:03:31,910 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:03:31,911 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:05:59,528 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:05:59,529 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:06:07,675 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:06:07,676 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:07:54,952 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:07:54,953 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:09:13,923 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:09:13,924 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:09:38,588 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:09:38,589 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:09:46,844 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:09:46,845 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:10:01,481 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:10:01,482 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:10:51,654 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:10:51,655 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:11:16,189 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:11:16,190 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:12:10,493 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:12:10,494 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:12:25,950 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:12:25,952 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:13:52,742 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:13:52,743 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:14:04,018 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:14:04,019 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:16:31,370 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:16:31,371 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:16:32,560 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:16:32,562 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:17:23,474 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:17:23,477 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:17:33,754 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:17:33,754 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:17:34,971 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:17:34,974 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:17:38,663 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:17:38,665 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:18:10,366 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:18:10,367 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:18:45,329 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:18:45,330 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:08,412 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:08,413 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:10,124 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:10,125 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:10,778 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:10,780 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:10,937 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:10,938 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:11,121 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:11,123 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:32,613 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:32,614 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:34,042 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:34,044 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:55,144 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:55,146 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:19:56,309 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:19:56,311 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:20:04,340 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:20:04,341 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:20:08,736 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:20:08,737 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:20:12,001 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:20:12,002 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:20:17,664 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:20:17,665 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:20:45,426 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:20:45,427 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
+2023-01-21 14:22:27,509 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-21 14:22:27,510 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215

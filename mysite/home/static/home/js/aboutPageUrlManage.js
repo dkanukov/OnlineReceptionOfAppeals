@@ -27,20 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	document.getElementById("help-tab").addEventListener('click', () => {
-		document.getElementById("help-tab").click()
+		location.hash = '#help-tab'
 	})
 	document.getElementById("docs-tab").addEventListener('click', () => {
-		console.log(1)
 		location.hash = '#docs-tab'
 	})
 	document.getElementById("requisites-tab").addEventListener('click', () => {
-		document.getElementById("requisites-tab").click()
+		location.hash = '#requisites-tab'
 	})
 	document.getElementById("feedbacks-tab").addEventListener('click', () => {
-		document.getElementById("feedbacks-tab").click()
+		location.hash = '#requisites-tab'
 	})
 	document.getElementById("about-tab").addEventListener('click', () => {
-		document.getElementById("feedbacks-tab").click()
+		location.hash = 'about-tab'
 	})
 
 

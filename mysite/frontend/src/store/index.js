@@ -35,6 +35,31 @@ export default createStore({
 					'status': element.newStatus
 				})
 			})
-		}
+		},
+		async patchTicketNotes(ctx, element, newNote) {
+			const cookie = document.cookie
+			if (element.notes !== newNote) {
+				await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+					method: 'PATCH',
+					headers: {
+						'Content-Type': 'application/json',
+						'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+					},
+					body: JSON.stringify({
+						'notes': newNote
+					})
+				})
+			}
+		},
+		async deleteTicketById(ctx, ticketId) {
+			const cookie = document.cookie
+			await fetch(`http://127.0.0.1:8000/api/appeal/${ticketId}`, {
+				method: 'DELETE',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				}
+			})
+		},
 	}
 })

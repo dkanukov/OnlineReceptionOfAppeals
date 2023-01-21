@@ -40,6 +40,7 @@
             {{this.selectedTicket.name}}
             {{this.selectedTicket.last_name}}
           </p>
+          <v-btn @click="deleteTicket">Удалить</v-btn>
         </v-card-title>
         <v-card-text>
           <v-textarea
@@ -61,6 +62,7 @@
 
 <script>
 import Draggable from 'vuedraggable'
+import {mapActions} from 'vuex';
 
 const STATUS_TUPLE = {
   'Новое': 'new',
@@ -80,7 +82,6 @@ export default {
       name: String,
       put: Array
     },
-    patchNewTicketStatusById: Function
   },
   data() {
     return {
@@ -104,6 +105,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchNewTicketStatusById']),
     handleTicketMove({added}) {
       if (added) {
         this.patchNewTicketStatusById({
@@ -117,23 +119,15 @@ export default {
       this.selectedTicketNotes = this.selectedTicket.notes
       this.isShowDialog = true
     },
+    deleteTicket() {
+      this.deleteTicketById(this.selectedTicket.id)
+      this.isShowDialog = false
+    },
     async sendForm() {
-      const cookie = document.cookie
-      if (this.selectedTicket.notes !== this.selectedTicketNotes) {
-        await fetch(`http://127.0.0.1:8000/api/appeal/${this.selectedTicket.id}`, {
-          method: 'PATCH',
-          headers: {
-              'Content-Type': 'application/json',
-              'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
-            },
-          body: JSON.stringify({
-            'notes': this.selectedTicketNotes
-          })
-        })
+      this.patchTicketNotes(this.selectedTicket, this.selectedTicketNotes)
         this.selectedTicket.notes = this.selectedTicketNotes
-      }
+      },
     }
-  },
 }
 </script>
 
