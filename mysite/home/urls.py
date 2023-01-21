@@ -2,12 +2,18 @@ from django.urls import path
 from . import views, api
 from .payments import YooKassaPayment
 
+# форма обащнеий уходит
+# грузится страницы новости и программы
+# отправляются отзывы
+# анонимного и авторизованного пользователя
+# добавить капчу
+# корректные последние три новости
 
 urlpatterns = [
-        path('news_list', views.get_news_page, name='news'), # поправить пагинацию
-        path('news', views.get_specific_news, name='get_spec_news'), # шаблонизировать новость
+        path('news_list', views.get_news_page, name='news'),
+        path('news', views.get_specific_news, name='get_spec_news'),
         path('programs_list', views.get_programs_page, name='programs'),
-        path('program', views.get_specific_program, name='get_spec_prog'), # шаблонизировать
+        path('program', views.get_specific_program, name='get_spec_prog'),
         path('about', views.get_about_page, name='about'),
         path('personal_data', views.get_personal_data_consent, name='pers_data'),
         path('contacts', views.get_contacts_page, name='contacts'),

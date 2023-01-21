@@ -5,7 +5,7 @@ const img = document.getElementById('img');
 const textAfterPhoto = document.getElementById('textAfterPhoto');
 document.addEventListener('DOMContentLoaded', async function () {
     const params = new URLSearchParams(window.location.search).get('id');
-    await fetch("https://dfvrn.pythonanywhere.com/api/news?id=" + params, {method: 'GET'})
+    await fetch("http://127.0.0.1:8000/api/news?id=" + params, {method: 'GET'})
         .then((res) => res.json())
         .then(function(data) {
             header.innerText = data.caption;
