@@ -4942,3 +4942,31 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue:6
 2023-01-21 22:53:38,819 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
 2023-01-21 22:53:38,819 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
 2023-01-21 22:53:38,820 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 12:01:44,194 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-23 12:01:44,195 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-23 12:01:44,197 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-23 12:01:44,199 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-23 12:01:44,199 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 12:01:44,200 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 12:01:44,201 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-23 12:01:44,201 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 12:01:44,201 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 12:01:44,203 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 12:01:45,328 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-23 12:01:45,330 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-23 12:05:05,287 WARNING Not Found: /favicon.ico
+2023-01-23 12:05:05,290 WARNING "GET /favicon.ico HTTP/1.1" 404 6123
+2023-01-23 23:22:52,555 WARNING Not Found: /favicon.ico
+2023-01-23 23:22:52,556 WARNING "GET /favicon.ico HTTP/1.1" 404 6123
+2023-01-23 23:27:59,485 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-23 23:27:59,487 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 5803
+2023-01-23 23:57:20,594 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-23 23:57:20,595 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-23 23:57:20,597 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 23:57:20,598 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 23:57:20,601 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-23 23:57:20,604 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 23:57:20,617 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-23 23:57:20,620 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-23 23:57:20,627 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-23 23:57:20,628 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793

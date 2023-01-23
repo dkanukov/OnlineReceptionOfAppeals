@@ -95,7 +95,11 @@ span {
 }
 
 .ymaps-geolink {
-    color: #0a58ca;
+    color: #0a58ca !important;
+}
+
+.ymaps-2-1-79-geolink-processed::after {
+    content: '' !important;
 }
 
 .search__icon::before {
@@ -383,6 +387,7 @@ span {
 
 .customBGC {
     background-color: #2656A1;
+    border-color: #2656A1;
 }
 
 .customBGCRed {
