@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.db.utils import IntegrityError
 from .serializers import FeedbackSerializer, AppealSerializer
-from .views import format_date
+from .utils import format_date
 
 from .models import (
     News, Programs, Appeal
