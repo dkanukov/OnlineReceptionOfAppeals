@@ -141,7 +141,7 @@
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
                 <div class="card h-100">
                     {% image news.image original as img %}
-                    <img src="{{ img.url }}" class="img-top h-100">
+                    <img src="{{ img.url }}" class="img-top">
                     <div class="card-body">
                         <p class="card-text text-dark manage__text__overflow">{{ news.caption }}</p>
                     </div>
