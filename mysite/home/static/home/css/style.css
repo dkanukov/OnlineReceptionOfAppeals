@@ -148,7 +148,7 @@ span {
 }
 
 .card {
-    /*border: none;*/
+    border: none;
 }
 
 .card:hover {
@@ -190,6 +190,15 @@ span {
     margin-left: -130px;
     content: '<';
     font-size: 30px;
+}
+
+.ya-share2__icon {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.ya-share2__item:not(:first-child) {
+    margin-left: 5px !important;
 }
 
 .footer__links ul,
@@ -266,11 +275,6 @@ span {
 .program__card svg {
     transition: background-color .3s ease-in-out;
     transition: color .3s ease-in-out;
-}
-
-.program__card:hover svg {
-    background-color: #2D60E0;
-    color: #FFFFFF;
 }
 
 .manage__header__text__overflow {

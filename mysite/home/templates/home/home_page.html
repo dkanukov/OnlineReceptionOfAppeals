@@ -121,7 +121,7 @@
         {% for news in page.news.all %}
         <div class="col-6 g-2">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card h-100">
+                <div class="card h-100" style="border: 1px solid gray">
                     {% image news.image original as img %}
                     <img src="{{ img.url }}" class="img-fluid" alt="" srcset="">
                     <div class="card-body">
@@ -139,7 +139,7 @@
         {% if forloop.counter < 4 %}
         <div class="col-4">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card h-100">
+                <div class="card h-100" style="border: 1px solid gray">
                     {% image news.image original as img %}
                     <img src="{{ img.url }}" class="img-top">
                     <div class="card-body">
@@ -177,7 +177,7 @@
         {% for program in page.programs.all %}
         {% image program.image original as img %}
         <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
-            <div class="card img_wrap_programs">
+            <div class="card img_wrap_programs" style="border: 1px solid gray">
                 <img src="{{ img.url }}" class="card-img w-100 h-100" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">{{ program.title }}</h5>
