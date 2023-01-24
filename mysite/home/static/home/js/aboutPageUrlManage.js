@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		case "#requisites-tab": document.getElementsByClassName("requisites-tab")[0].click(); break;
 		case "#feedbacks-tab": document.getElementsByClassName("feedbacks-tab")[0].click(); break;
 		default: {
-			console.log(1)
 			document.getElementsByClassName("about-tab")[0].click()
 		}
 	}
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			case "#requisites-tab": document.getElementsByClassName("requisites-tab")[0].click(); break;
 			case "#feedbacks-tab": document.getElementsByClassName("feedbacks-tab")[0].click(); break;
 			default: {
-				console.log(1)
 				document.getElementsByClassName("about-tab")[0].click()
 			}
 		}
