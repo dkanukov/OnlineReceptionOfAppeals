@@ -1,29 +1,34 @@
 <template>
   <v-app class="containerCustom">
     <HeaderComponent/>
-    <div class="containerCustom">
-      <v-row class="mb-15">
-        <v-col class="v-col-2 v-col-md-3">
-          <v-btn
-              @click="handleNewTicketBtnClick"
-              color="success"
-              prepend-icon="mdi-plus"
-              class="mt-4 setMinWidth"
-              block
-          >Новое обращение
-          </v-btn>
-        </v-col>
-        <v-col cols="3">
-          <v-autocomplete
-              v-model="filterHelpType"
-              multiple
-              label="Тип заявки"
-              :items="helpType"
-              variant="solo"
-          ></v-autocomplete>
-        </v-col>
+    <div class="containerCustom mt-10">
+      <v-row align="center">
+        <v-btn
+            variant="tonal"
+            @click="handleNewTicketBtnClick"
+            prepend-icon="mdi-plus"
+            class="setMinWidth customColorBtn height100"
+        >Новое обращение
+        </v-btn>
+        <v-btn
+            variant="tonal"
+            class="ml-4 setMinWidth customColorBtn"
+        >
+          <v-icon icon="mdi-cached"></v-icon>
+        </v-btn>
+        <v-autocomplete
+            class="ml-4"
+            v-model="filterHelpType"
+            density="comfortable"
+            hide-details="auto"
+            multiple
+            label="Тип заявки"
+            :items="helpType"
+            variant="solo"
+            style="max-width: 400px"
+        ></v-autocomplete>
       </v-row>
-      <v-row>
+      <v-row class="mt-10">
         <DragndropTable
             :tickets="this.filteredTickets"
         />
@@ -211,11 +216,18 @@ export default {
 
 <style scoped>
 .containerCustom {
-  padding: 20px;
+  background-color: #F5F5F5;
+  padding: 10px 20px;
 }
 
 .dialog {
   width: 40vw;
+}
+
+.customColorBtn {
+  background-color: #DFEAF6;
+  color: #004DD7;
+  font-weight: bold;
 }
 
 .fixRowHeight {

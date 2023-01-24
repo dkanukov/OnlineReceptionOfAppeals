@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <h2 class="text-center">{{ columnName }}</h2>
+    <h3 style="color: #696974" class="text-left ml-2">{{ columnName }}</h3>
     <Draggable
         @change="handleTicketMove"
         :list="tickets"
@@ -23,6 +23,9 @@
 <!--          TODO: починить для длинных строк-->
           <div v-if="ticket.element.notes" class="text-truncate">
             {{ticket.element.notes}}
+          </div>
+          <div>
+            {{ticket.element.create_date}}
           </div>
         </div>
       </template>
@@ -120,7 +123,7 @@ export default {
       this.isShowDialog = true
     },
     deleteTicket() {
-      this.deleteTicketById(this.selectedTicket.id)
+      this.deleteTicketById(this.selectedTicket)
       this.isShowDialog = false
     },
     async sendForm() {
@@ -134,7 +137,7 @@ export default {
 <style scoped>
 .column {
   padding: 10px;
-  background-color: #FAFAFB;
+  background-color: #F5F5F5;
   border: 3px solid #E2E2EA;
   border-radius: 26px;
 }

@@ -58,7 +58,7 @@
                     <ul class="pagination pagination-lg justify-content-center">
                         {% for p in paginator.page_range %}
                             {% if page_obj.number == p %}
-                                <li class="page-item">
+                                <li class="page-item active">
                                     <a class="page-link" href="?page={{p}}">{{ p }}</a>
                                 </li>
                             {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2  %}

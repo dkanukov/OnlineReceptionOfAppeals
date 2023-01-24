@@ -1,7 +1,7 @@
 import {createStore} from 'vuex';
 
 export default createStore({
-	state: () =>  ({
+	state: () => ({
 		tickets: [],
 		user: null,
 		filterHelpType: []
@@ -10,7 +10,7 @@ export default createStore({
 		setFetchedTickets(state, tickets) {
 			state.tickets = tickets
 		},
-		setNewTicketStatusById(state, element){
+		setNewTicketStatusById(state, element) {
 			state.tickets.find((ticket) => ticket.id === element.elementId).status = element.newStatus
 		},
 		setUser(state, user) {
@@ -61,5 +61,15 @@ export default createStore({
 				})
 			}
 		},
+		async deleteTicketById(ctx, element) {
+			const cookie = document.cookie
+			await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+				method: 'DELETE',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				},
+			})
+		}
 	}
 })
