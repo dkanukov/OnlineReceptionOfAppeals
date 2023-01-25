@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			option: Number(optionAppeal)
 		}
 
-		console.log(appealForm)
 		const cookie = document.cookie
 		await fetch("http://127.0.0.1:8000/api/appeal", {
 			method: "POST", headers: {

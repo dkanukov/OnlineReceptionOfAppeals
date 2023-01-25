@@ -1,33 +1,76 @@
 <template>
   <v-app class="containerCustom">
     <HeaderComponent/>
-    <div class="containerCustom">
-      <v-row class="mb-15">
-        <v-col class="v-col-2 v-col-md-3">
+    <div v-if="currentPage==='dashBoard'" class="containerCustom mt-10">
+      <v-row align="center" justify="space-between">
+        <v-row align="center">
           <v-btn
+              variant="tonal"
               @click="handleNewTicketBtnClick"
-              color="success"
               prepend-icon="mdi-plus"
-              class="mt-4 setMinWidth"
-              block
+              class="setMinWidth customColorBtn height100"
           >Новое обращение
           </v-btn>
-        </v-col>
-        <v-col cols="3">
+          <v-btn
+              @click="updateTickets"
+              variant="tonal"
+              class="ml-4 setMinWidth customColorBtn"
+          >
+            <v-icon icon="mdi-cached"></v-icon>
+          </v-btn>
           <v-autocomplete
+              class="ml-4"
               v-model="filterHelpType"
+              density="comfortable"
+              hide-details="auto"
               multiple
               label="Тип заявки"
               :items="helpType"
               variant="solo"
+              style="max-width: 400px"
           ></v-autocomplete>
-        </v-col>
+        </v-row>
+        <v-btn
+            @click="redirectToArchive"
+            variant="text"
+        >
+          Архив
+        </v-btn>
       </v-row>
-      <v-row>
+      <v-row class="mt-10">
         <DragndropTable
             :tickets="this.filteredTickets"
         />
       </v-row>
+    </div>
+    <div v-else-if="currentPage==='archive'" class="containerCustom mt-10">
+      <v-row justify="end">
+        <v-btn variant="text" @click="redirectToDashboard">Обращения</v-btn>
+      </v-row>
+      <div class="mt-10">
+        <v-expansion-panels variant="popout" class="my-4" multiple>
+          <v-expansion-panel
+              v-for="ticket in archiveTickets"
+              :key="ticket.id"
+          >
+            <v-expansion-panel-title>
+              <v-row no-gutters align="center">
+                <h3>{{ticket.last_name}} {{ticket.name}}</h3>
+                <p class="ml-3">{{HELP_OPTION_ARR[ticket.option - 1]}}</p>
+                <p class="ml-3">{{ticket.create_date}}</p>
+                <p class="ml-3">{{ticket.phone_number}}</p>
+              </v-row>
+            </v-expansion-panel-title>
+
+            <v-expansion-panel-text>
+              <v-row no-gutters>
+                {{ticket.notes}}
+              </v-row>
+            </v-expansion-panel-text>
+
+          </v-expansion-panel>
+        </v-expansion-panels>
+      </div>
     </div>
     <v-dialog class="dialog" v-model="isShowDialog">
       <v-card>
@@ -136,7 +179,26 @@ export default {
       helpType: [
         'Помощь', 'Консультация', 'Волонтерство',
       ],
+      HELP_OPTION: {
+        'SOS размещение': 1,
+        'Гуманитарная помощь': 2,
+        'Необходим адресный сбор': 3,
+        'Консультация психолога': 4,
+        'Консультация юриста': 5,
+        'Хочу в группу поддержки': 6,
+      },
+      HELP_OPTION_ARR: [
+        'SOS размещение',
+        'Гуманитарная помощь',
+        'Необходим адресный сбор',
+        'Консультация психолога',
+        'Консультация юриста',
+        'Хочу в группу поддержки',
+        'Хочу быть волонтером фонда'
+      ],
       filterHelpType: [],
+      currentPage: 'dashBoard',
+      panel: [],
     }
   },
   methods: {
@@ -166,6 +228,16 @@ export default {
     discardForm() {
       this.isShowDialog = false
       this.newTicket = {}
+    },
+    updateTickets() {
+      console.log('upd')
+      this.fetchTickets()
+    },
+    redirectToArchive() {
+      this.currentPage = 'archive'
+    },
+    redirectToDashboard() {
+      this.currentPage = 'dashBoard'
     }
   },
   computed: {
@@ -198,6 +270,9 @@ export default {
         }
       })
       return filteredTickets
+    },
+    archiveTickets() {
+      return this.tickets.filter((ticket) => ticket.status === 'archive')
     }
   },
   async created() {
@@ -211,11 +286,18 @@ export default {
 
 <style scoped>
 .containerCustom {
-  padding: 20px;
+  background-color: #F5F5F5;
+  padding: 10px 20px;
 }
 
 .dialog {
   width: 40vw;
+}
+
+.customColorBtn {
+  background-color: #DFEAF6;
+  color: #004DD7;
+  font-weight: bold;
 }
 
 .fixRowHeight {

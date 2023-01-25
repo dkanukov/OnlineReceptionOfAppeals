@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav flex-lg-wrap align-items-center justify-space-between">
                     <li class="nav-item customMargin10px">
-                        <button class="customBtnFont btn btn-primary customBGC customBtnFont" data-bs-toggle="modal" data-bs-target="#appealModal">
+                        <button class="customBtnFont btn btn-primary" data-bs-toggle="modal" data-bs-target="#appealModal">
                             Оставить обращение
                         </button>
                     </li>
@@ -121,7 +121,7 @@
         {% for news in page.news.all %}
         <div class="col-6 g-2">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card h-100">
+                <div class="card h-100" style="border: 1px solid gray">
                     {% image news.image original as img %}
                     <img src="{{ img.url }}" class="img-fluid" alt="" srcset="">
                     <div class="card-body">
@@ -139,9 +139,9 @@
         {% if forloop.counter < 4 %}
         <div class="col-4">
             <a href="{% url 'get_spec_news' %}?id={{news.id}}">
-                <div class="card h-100">
+                <div class="card h-100" style="border: 1px solid gray">
                     {% image news.image original as img %}
-                    <img src="{{ img.url }}" class="img-top h-100">
+                    <img src="{{ img.url }}" class="img-top">
                     <div class="card-body">
                         <p class="card-text text-dark manage__text__overflow">{{ news.caption }}</p>
                     </div>
@@ -153,7 +153,7 @@
     </div>
 
     <div class="customBtnFont d-grid gap-2 col-4 justify-content-center mx-auto mt-5">
-        <a href="{% url 'news' %}" class="btn btn-outline-primary btn-lg btnLoadMore" role="button">ЗАГРУЗИТЬ ЕЩЁ</a>
+        <a href="{% url 'news' %}" class="btn btn-outline-primary btnLoadMore" role="button">ЗАГРУЗИТЬ ЕЩЁ</a>
     </div>
 </div>
 
@@ -166,7 +166,7 @@
         {{p.information|linebreaks}}
         {% endfor %}
     </div>
-    <a href="{% url 'about' %}#help-tab" class="customBtnFont btn customBGCRed btn-lg" role="button">ХОЧУ ПОМОЧЬ ФОНДУ</a>
+    <a href="{% url 'about' %}#help-tab" class="customBtnFont btn customBGCRed" role="button">ХОЧУ ПОМОЧЬ ФОНДУ</a>
 </div>
 
 <div class="programs__section container-fluid pb-5 pl-2">
@@ -177,7 +177,7 @@
         {% for program in page.programs.all %}
         {% image program.image original as img %}
         <a href="{% url 'get_spec_prog' %}?id={{program.id}}">
-            <div class="card img_wrap_programs">
+            <div class="card img_wrap_programs" style="border: 1px solid gray">
                 <img src="{{ img.url }}" class="card-img w-100 h-100" alt="...">
                 <div class="card-img-overlay">
                     <h5 class="card-title">{{ program.title }}</h5>
@@ -190,7 +190,7 @@
 </div>
 <hr class="d-none d-md-flex">
 <div class="programs__section container-fluid pl-2 d-none d-md-block">
-    <div class="row justify-content-start">
+    <div class="row justify-content-start mb-3">
         <h2>Отзывы</h2>
     </div>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -220,7 +220,7 @@
                     </p>
                     <div class="row row-col-1">
                         <div class="text-center">
-                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary btnLoadMore">
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-outline-primary btnLoadMore">
                                 ОТЗЫВ ПОЛНОСТЬЮ
                             </a>
                         </div>
@@ -251,7 +251,7 @@
                     </p>
                     <div class="row row-col-1">
                         <div class="text-center">
-                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-lg btn-outline-primary btnLoadMore">
+                            <a href="{% url 'about' %}#feedbacks-tab" class="btn btn-outline-primary btnLoadMore">
                                 ОТЗЫВ ПОЛНОСТЬЮ
                             </a>
                         </div>
@@ -271,9 +271,9 @@
         </button>
     </div>
 </div>
-<hr>
 {% for info in page.about.all %}
-<footer class="container-fluid">
+<footer class="container-fluid footer__bg">
+    <hr>
     <div
             class="d-none d-sm-flex row justify-content-lg-evenly justify-content-md-between justify-content-sm-between pt-3">
         <div class="col-5 col-sm-3 col-md-3 col-lg-2 footer__links">
@@ -301,8 +301,11 @@
                         {{info.email}}
                     </a>
                 </li>
-                <li class="mt-2 customLinkColor">
-                    <p class="text-wrap ymaps-geolink">{{info.address}}</p>
+                <li class="mt-2">
+                    <a class="customLinkColor" href="https://yandex.ru/maps/-/CCUzFCfw1C">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        {{info.address}}
+                    </a>
                 </li>
             </ul>
 

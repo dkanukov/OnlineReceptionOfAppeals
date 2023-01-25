@@ -19,37 +19,41 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 
 	switch (window.location.hash) {
-		case "#help-tab": document.getElementById("help-tab").click(); break;
-		case "#docs-tab": document.getElementById("docs-tab").click(); break;
-		case "#requisites-tab": document.getElementById("requisites-tab").click(); break;
-		case "#feedbacks-tab": document.getElementById("feedbacks-tab").click(); break;
-		default: document.getElementById("about-tab").click();
+		case "#help-tab": document.getElementsByClassName("help-tab")[0].click(); break;
+		case "#docs-tab": document.getElementsByClassName("docs-tab")[0].click(); break;
+		case "#requisites-tab": document.getElementsByClassName("requisites-tab")[0].click(); break;
+		case "#feedbacks-tab": document.getElementsByClassName("feedbacks-tab")[0].click(); break;
+		default: {
+			document.getElementsByClassName("about-tab")[0].click()
+		}
 	}
 
-	document.getElementById("help-tab").addEventListener('click', () => {
+	document.getElementsByClassName("help-tab")[0].addEventListener('click', () => {
 		location.hash = '#help-tab'
 	})
-	document.getElementById("docs-tab").addEventListener('click', () => {
+	document.getElementsByClassName("docs-tab")[0].addEventListener('click', () => {
 		location.hash = '#docs-tab'
 	})
-	document.getElementById("requisites-tab").addEventListener('click', () => {
+	document.getElementsByClassName("requisites-tab")[0].addEventListener('click', () => {
 		location.hash = '#requisites-tab'
 	})
-	document.getElementById("feedbacks-tab").addEventListener('click', () => {
+	document.getElementsByClassName("feedbacks-tab")[0].addEventListener('click', () => {
 		location.hash = '#requisites-tab'
 	})
-	document.getElementById("about-tab").addEventListener('click', () => {
+	document.getElementsByClassName("about-tab")[0].addEventListener('click', () => {
 		location.hash = 'about-tab'
 	})
 
 
 	window.onhashchange = () => {
 		switch (window.location.hash) {
-			case "#help-tab": document.getElementById("help-tab").click(); break;
-			case "#docs-tab": document.getElementById("docs-tab").click(); break;
-			case "#requisites-tab": document.getElementById("requisites-tab").click(); break;
-			case "#feedbacks-tab": document.getElementById("feedbacks-tab").click(); break;
-			default: document.getElementById("about-tab").click();
+			case "#help-tab": document.getElementsByClassName("help-tab")[0].click(); break;
+			case "#docs-tab": document.getElementsByClassName("docs-tab")[0].click(); break;
+			case "#requisites-tab": document.getElementsByClassName("requisites-tab")[0].click(); break;
+			case "#feedbacks-tab": document.getElementsByClassName("feedbacks-tab")[0].click(); break;
+			default: {
+				document.getElementsByClassName("about-tab")[0].click()
+			}
 		}
 	}
 });

@@ -3,11 +3,11 @@
     <div class="align-center">
       <div class="logo">
         <v-img
-            width="83px"
-            height="83px"
+            width="70px"
+            height="70px"
             :src="require('@/assets/hand.png')"
         />
-        <h3 class="ml-2">ПРИЕМНАЯ ОБРАЩЕНИЙ</h3>
+        <h2 class="ml-2 align-self-center">ПРИЕМНАЯ ОБРАЩЕНИЙ</h2>
       </div>
     </div>
     <div class="d-flex align-center">
