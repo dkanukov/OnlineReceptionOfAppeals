@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block html %}
+<!doctype html>
+<html>
+    <head>
+        {% block head %}{{ block.super }}{% endblock %}
+        <!-- html-webpack-inject will inject head assets below -->
+    <script defer src="http://127.0.0.1:8080/js/chunk-vendors.js"></script><script defer src="http://127.0.0.1:8080/js/app.js"></script></head>
+    <body>
+        {% block body %}{{ block.super }}{% endblock %}
+        <!-- html-webpack-inject will inject body assets below -->
+    </body>
+</html>
+{% endblock %}
