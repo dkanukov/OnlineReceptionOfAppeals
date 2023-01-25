@@ -50,6 +50,7 @@
       <div class="mt-10">
         <v-expansion-panels variant="popout" class="my-4" multiple>
           <v-expansion-panel
+              class="my-2"
               v-for="ticket in archiveTickets"
               :key="ticket.id"
           >
