@@ -15,7 +15,6 @@ urlpatterns = [
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
     path("", include('home.urls')),
-    path("", include(wagtail_urls)),
     path("login/", LoginView.as_view(), name="login"),
     path("appeal/", AppealView.as_view(), name="appeal"),
 
@@ -34,7 +33,7 @@ urlpatterns = urlpatterns + [
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
-    #path("", include(wagtail_urls)),
+    path("", include(wagtail_urls)),
     # Alternatively, if you want Wagtail pages to be served from a subpath
     # of your site, rather than the site root:
     #    path("pages/", include(wagtail_urls)),
