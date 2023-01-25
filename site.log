@@ -4942,3 +4942,11 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/App.vue:6
 2023-01-21 22:53:38,819 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5793
 2023-01-21 22:53:38,819 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5793
 2023-01-21 22:53:38,820 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5793
+2023-01-25 02:04:21,185 WARNING Not Found: /
+2023-01-25 02:04:21,192 WARNING "GET / HTTP/1.1" 404 5417
+2023-01-25 02:07:36,574 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-25 02:07:36,586 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 4054
+2023-01-25 02:07:53,793 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-25 02:07:53,799 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 6471
+2023-01-25 02:07:54,699 WARNING Not Found: /media/original_images/terra-100-1.jpeg
+2023-01-25 02:07:54,705 WARNING "GET /media/original_images/terra-100-1.jpeg HTTP/1.1" 404 6471
