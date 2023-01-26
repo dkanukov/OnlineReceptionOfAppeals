@@ -1,10 +1,27 @@
+from django.contrib.auth.models import User
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.models import Page, Orderable
 from modelcluster.fields import ParentalKey
 from wagtail.fields import StreamField
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    done_tasks_count = models.IntegerField(default=0, null=True)
+
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+             Profile.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
 
 
 class News(Orderable):
@@ -242,6 +259,10 @@ class Appeal(models.Model):
     create_date = models.DateField(auto_now_add=True, verbose_name="Дата обращения")
     notes = models.CharField(max_length=255, blank=True, null=True, verbose_name="Заметка")
     flag = models.BooleanField(default=False, verbose_name="Важное")
+    user = models.ForeignKey(
+        User, on_delete=models.SET_DEFAULT,
+        null=True, default=None
+    )
 
     class Meta:
         verbose_name = 'Обращение'
