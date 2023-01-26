@@ -6657,3 +6657,7 @@ Traceback (most recent call last):
     raise new from exc
 django.template.exceptions.TemplateDoesNotExist: base-vue.html
 2023-01-26 01:54:33,620 ERROR "GET /appeal/ HTTP/1.1" 500 137060
+2023-01-25 23:13:13,968 WARNING Not Found: /favicon.ico
+2023-01-25 23:13:13,969 WARNING "GET /favicon.ico HTTP/1.1" 404 6123
+2023-01-25 23:15:00,153 WARNING Not Found: /favicon.ico
+2023-01-25 23:15:00,155 WARNING "GET /favicon.ico HTTP/1.1" 404 6123
