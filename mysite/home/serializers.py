@@ -20,7 +20,7 @@ class AppealSerializer(serializers.Serializer):
     phone_number = serializers.CharField(max_length=20)
     option = serializers.IntegerField()
     status = serializers.CharField(default='new')
-    create_date = serializers.DateField(read_only=True)
+    create_date = serializers.DateField(read_only=True, format='%d-%m-%Y')
     notes = serializers.CharField(max_length=255, read_only=True)
     flag = serializers.BooleanField(read_only=True)
 
