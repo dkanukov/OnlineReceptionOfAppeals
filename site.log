@@ -6888,3 +6888,19 @@ django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app wi
 2023-01-26 01:24:04,314 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-26 01:24:04,315 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6215
 >>>>>>> 06277d87d603aef12da247c500247a59801eb07d
+2023-01-27 01:03:02,247 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-27 01:03:02,263 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-27 01:03:02,270 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-27 01:03:02,271 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-27 01:03:02,272 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-27 01:03:02,276 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:02,276 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:02,285 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:02,300 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:02,307 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:06,663 WARNING Not Found: /media/images/IMG_2542.original.jpg}
+2023-01-27 01:03:06,681 WARNING "GET /media/images/IMG_2542.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:06,725 WARNING Not Found: /media/images/IMG_2543.original.jpg}
+2023-01-27 01:03:06,733 WARNING Not Found: /media/images/IMG_2544.original.jpg}
+2023-01-27 01:03:06,766 WARNING "GET /media/images/IMG_2544.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 01:03:06,740 WARNING "GET /media/images/IMG_2543.original.jpg%7D HTTP/1.1" 404 5806
