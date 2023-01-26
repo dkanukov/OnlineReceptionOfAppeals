@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		const cookie = document.cookie
-		await fetch("http://127.0.0.1:8000/api/feedback", {
+		await fetch("http://158.160.35.42:8000/api/feedback", {
 			method: "POST", headers: {
 				'Accept': 'application/json', 'Content-Type': 'application/json',
 				'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)

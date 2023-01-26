@@ -210,7 +210,7 @@ export default {
     },
     async sendForm() {
       const cookie = document.cookie
-      const res = await fetch('http://127.0.0.1:8000/api/appeal', {
+      const res = await fetch('http://158.160.35.42:8000/api/appeal', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ class YooKassaPayment(APIView):
             },
             "confirmation": {
                 "type": "redirect",
-                "return_url": "http://127.0.0.1:8000/"
+                "return_url": "http://158.160.35.42:8000/"
             },
             "capture": True,
             "description": "Тестовый заказ"

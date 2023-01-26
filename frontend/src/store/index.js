@@ -22,7 +22,7 @@ export default createStore({
 	},
 	actions: {
 		async getUser(ctx) {
-			const ans = await fetch('http://127.0.0.1:8000/api/user', {method: 'GET'})
+			const ans = await fetch('http://158.160.35.42:8000/api/user', {method: 'GET'})
 			if (ans.ok) {
 				const res = await ans.json()
 				ctx.commit('setUser', res)
@@ -33,7 +33,7 @@ export default createStore({
 		},
 		async fetchTickets(ctx) {
 			try {
-				const ans = await fetch('http://127.0.0.1:8000/api/appeal', {method: 'GET'})
+				const ans = await fetch('http://158.160.35.42:8000/api/appeal', {method: 'GET'})
 				const res = await ans.json()
 				ctx.commit('setFetchedTickets', res)
 			} catch (e) {
@@ -42,7 +42,7 @@ export default createStore({
 		},
 		async patchTicketStatusById(ctx, element) {
 			const cookie = document.cookie
-			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.elementId}`, {
+			const res = await fetch(`http://158.160.35.42:8000/api/appeal/${element.elementId}`, {
 				method: 'PATCH',
 				headers: {
 					'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export default createStore({
 		async patchTicketNotes(ctx, element, newNote) {
 			const cookie = document.cookie
 			if (element.notes !== newNote) {
-				const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+				const res = await fetch(`http://158.160.35.42:8000/api/appeal/${element.id}`, {
 					method: 'PATCH',
 					headers: {
 						'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ export default createStore({
 		},
 		async deleteTicketById(ctx, element) {
 			const cookie = document.cookie
-			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+			const res = await fetch(`http://158.160.35.42:8000/api/appeal/${element.id}`, {
 				method: 'DELETE',
 				headers: {
 					'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export default createStore({
 		},
 		async pathTicketFlag(ctx, element) {
 			const cookie = document.cookie
-			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+			const res = await fetch(`http://158.160.35.42:8000/api/appeal/${element.id}`, {
 				method: 'PATCH',
 				headers: {
 					'Content-Type': 'application/json',

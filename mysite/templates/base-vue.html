@@ -1,14 +1,1 @@
-{% extends "base.html" %}
-{% block html %}
-<!doctype html>
-<html>
-    <head>
-        {% block head %}{{ block.super }}{% endblock %}
-        <!-- html-webpack-inject will inject head assets below -->
-    <script defer src="http://127.0.0.1:8080/js/chunk-vendors.js"></script><script defer src="http://127.0.0.1:8080/js/app.js"></script></head>
-    <body>
-        {% block body %}{{ block.super }}{% endblock %}
-        <!-- html-webpack-inject will inject body assets below -->
-    </body>
-</html>
-{% endblock %}
+{% extends "base.html" %} {% block html %}<!doctype html><html><head>{% block head %}{{ block.super }}{% endblock %}<script defer="defer" src="/static/dist/js/chunk-vendors.0d13c3c4.js"></script><script defer="defer" src="/static/dist/js/app.6e56ca27.js"></script><link href="/static/dist/css/chunk-vendors.0ec69f2d.css" rel="stylesheet"><link href="/static/dist/css/app.7426c753.css" rel="stylesheet"></head><body>{% block body %}{{ block.super }}{% endblock %}</body></html>{% endblock %}

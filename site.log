@@ -6657,3 +6657,157 @@ Traceback (most recent call last):
     raise new from exc
 django.template.exceptions.TemplateDoesNotExist: base-vue.html
 2023-01-26 01:54:33,620 ERROR "GET /appeal/ HTTP/1.1" 500 137060
+2023-01-26 02:07:26,572 WARNING "GET /static/dist/js/app.697e1e8e.js HTTP/1.1" 404 1942
+2023-01-26 02:07:26,574 WARNING "GET /static/dist/css/chunk-vendors.134b2750.css HTTP/1.1" 404 1978
+2023-01-26 02:07:26,578 WARNING "GET /static/dist/js/chunk-vendors.148b8147.js HTTP/1.1" 404 1972
+2023-01-26 02:08:36,402 WARNING "GET /static/dist/css/chunk-vendors.134b2750.css HTTP/1.1" 404 1978
+2023-01-26 02:09:12,297 WARNING "GET /static/dist/js/app.697e1e8e.js HTTP/1.1" 404 1942
+2023-01-26 02:09:12,299 WARNING "GET /static/dist/js/chunk-vendors.148b8147.js HTTP/1.1" 404 1972
+2023-01-26 02:09:12,302 WARNING "GET /static/dist/css/chunk-vendors.134b2750.css HTTP/1.1" 404 1978
+2023-01-26 02:13:58,739 WARNING "GET /static/dist/css/chunk-vendors.134b2750.css HTTP/1.1" 404 1978
+2023-01-26 02:13:58,741 WARNING "GET /static/dist/js/chunk-vendors.148b8147.js HTTP/1.1" 404 1972
+2023-01-26 02:13:58,751 WARNING "GET /static/dist/js/app.697e1e8e.js HTTP/1.1" 404 1942
+2023-01-26 02:17:59,147 WARNING Not Found: /appea;
+2023-01-26 02:17:59,150 WARNING "GET /appea; HTTP/1.1" 404 6110
+2023-01-26 02:21:40,189 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:21:40,192 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:21:40,193 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:21:40,194 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:21:44,989 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:21:44,994 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:23:17,635 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:23:17,639 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:23:17,640 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:23:17,653 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:25:05,076 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:25:05,081 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:25:05,091 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:25:05,095 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:26:39,765 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:26:39,770 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:26:39,775 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:26:39,780 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:30:25,171 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:30:25,174 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:30:25,176 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:30:25,181 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:30:34,611 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:30:34,613 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:30:34,618 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:30:34,625 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:33:23,303 WARNING "GET /static/dist/js/app.6e56ca27.js HTTP/1.1" 404 1942
+2023-01-26 02:33:23,306 WARNING "GET /static/dist/css/chunk-vendors.0ec69f2d.css HTTP/1.1" 404 1978
+2023-01-26 02:33:23,306 WARNING "GET /static/dist/css/app.7426c753.css HTTP/1.1" 404 1948
+2023-01-26 02:33:23,309 WARNING "GET /static/dist/js/chunk-vendors.0d13c3c4.js HTTP/1.1" 404 1972
+2023-01-26 02:36:04,046 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 489, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 419, in __init__
+    self.hashed_files = self.load_manifest()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 429, in load_manifest
+    content = self.read_manifest()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 423, in read_manifest
+    with self.manifest_storage.open(self.manifest_name) as manifest:
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\files\storage.py", line 41, in open
+    return self._open(name, mode)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\files\storage.py", line 277, in _open
+    return File(open(self.path(name), mode))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in path
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.
+2023-01-26 02:36:04,067 ERROR "GET / HTTP/1.1" 500 148493
+2023-01-26 03:32:22,778 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\templatetags\static.py", line 116, in render
+    url = self.url(context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\templatetags\static.py", line 113, in url
+    return self.handle_simple(path)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\templatetags\static.py", line 129, in handle_simple
+    return staticfiles_storage.url(path)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\functional.py", line 258, in inner
+    self._setup()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 489, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 419, in __init__
+    self.hashed_files = self.load_manifest()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 429, in load_manifest
+    content = self.read_manifest()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 423, in read_manifest
+    with self.manifest_storage.open(self.manifest_name) as manifest:
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\files\storage.py", line 41, in open
+    return self._open(name, mode)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\files\storage.py", line 277, in _open
+    return File(open(self.path(name), mode))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\staticfiles\storage.py", line 39, in path
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.
+2023-01-26 03:32:22,841 ERROR "GET / HTTP/1.1" 500 148493
+2023-01-26 03:38:47,726 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-26 03:38:47,728 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:38:47,740 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-26 03:38:47,742 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-26 03:38:47,745 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-26 03:38:47,749 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-26 03:38:47,751 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:38:47,753 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:38:47,753 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:38:47,758 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:39:36,522 WARNING Not Found: /media/images/IMG_2538.original.jpg}
+2023-01-26 03:39:36,525 WARNING Not Found: /media/images/IMG_2540.original.jpg}
+2023-01-26 03:39:36,532 WARNING "GET /media/images/IMG_2538.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:39:36,535 WARNING Not Found: /media/images/IMG_2539.original.jpg}
+2023-01-26 03:39:36,536 WARNING "GET /media/images/IMG_2540.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:39:36,549 WARNING "GET /media/images/IMG_2539.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:39:36,564 WARNING Not Found: /media/images/IMG_2556.original.jpg}
+2023-01-26 03:39:36,573 WARNING "GET /media/images/IMG_2556.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-26 03:39:36,582 WARNING Not Found: /media/images/IMG_2541.original.jpg}
+2023-01-26 03:39:36,587 WARNING "GET /media/images/IMG_2541.original.jpg%7D HTTP/1.1" 404 5806
