@@ -31,6 +31,12 @@
           ></v-autocomplete>
         </v-row>
         <v-btn
+            @click="redirectToStatistic"
+            variant="text"
+        >
+          Статистика
+        </v-btn>
+        <v-btn
             @click="redirectToArchive"
             variant="text"
         >
@@ -45,6 +51,12 @@
     </div>
     <div v-else-if="currentPage==='archive'" class="containerCustom mt-10">
       <v-row justify="end">
+        <v-btn
+            @click="redirectToStatistic"
+            variant="text"
+        >
+          Статистика
+        </v-btn>
         <v-btn variant="text" @click="redirectToDashboard">Обращения</v-btn>
       </v-row>
       <div class="mt-10">
@@ -71,6 +83,15 @@
 
           </v-expansion-panel>
         </v-expansion-panels>
+      </div>
+    </div>
+    <div v-else-if="currentPage==='statistic'" class="containerCustom mt-10">
+      <v-row justify="end">
+        <v-btn variant="text" @click="redirectToDashboard">Обращения</v-btn>
+        <v-btn @click="redirectToArchive" variant="text">Архив</v-btn>
+      </v-row>
+      <div class="mt-10">
+        <StatisticComponent/>
       </div>
     </div>
     <v-dialog class="dialog" v-model="isShowDialog">
@@ -145,6 +166,7 @@
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
+import StatisticComponent from '@/components/StatisticComponent.vue';
 import {mapActions, mapState, mapMutations} from 'vuex';
 
 const HELP_TYPE = {
@@ -165,6 +187,7 @@ export default {
   components: {
     HeaderComponent,
     DragndropTable,
+    StatisticComponent,
   },
   data() {
     return {
@@ -224,7 +247,7 @@ export default {
           'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
         })
       })
-      this.patchTicketNotes({element: res.json(), newNote: this.newTicket.notes})
+      this.patchTicketNotes({element: await res.json(), newNote: this.newTicket.notes})
     },
     discardForm() {
       this.isShowDialog = false
@@ -239,7 +262,10 @@ export default {
     },
     redirectToDashboard() {
       this.currentPage = 'dashBoard'
-    }
+    },
+    redirectToStatistic() {
+      this.currentPage = 'statistic'
+    },
   },
   computed: {
     ...mapState(['tickets']),
