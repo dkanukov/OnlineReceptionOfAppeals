@@ -58,21 +58,22 @@ export default createStore({
 				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
 			}
 		},
-		async patchTicketNotes(ctx, element, newNote) {
+		async patchTicketNotes(ctx, data) {
+			console.log(data)
 			const cookie = document.cookie
-			if (element.notes !== newNote) {
-				const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+			if (data.element.notes !== data.newNote) {
+				const res = await fetch(`http://127.0.0.1:8000/api/appeal/${data.element.id}`, {
 					method: 'PATCH',
 					headers: {
 						'Content-Type': 'application/json',
 						'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
 					},
 					body: JSON.stringify({
-						'notes': newNote
+						'notes': data.newNote
 					})
 				})
 				if (!res.ok) {
-					console.log(`Не удалось обновить заметку тикета с ID: ${element.id}`)
+					console.log(`Не удалось обновить заметку тикета с ID: ${data.element.id}`)
 				}
 			}
 		},

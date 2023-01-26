@@ -224,7 +224,7 @@ export default {
           'option': this.newTicket.helpOption === '' ? 7 : HELP_OPTION[this.newTicket.helpOption],
         })
       })
-      this.patchTicketNotes(res.json(), this.newTicket.notes)
+      this.patchTicketNotes({element: res.json(), newNote: this.newTicket.notes})
     },
     discardForm() {
       this.isShowDialog = false
