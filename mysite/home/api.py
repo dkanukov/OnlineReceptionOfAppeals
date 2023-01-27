@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -5,10 +6,10 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.db.utils import IntegrityError
 from .serializers import FeedbackSerializer, AppealSerializer
-from .utils import format_date
+from .utils import format_date, change_user_done_tasks_count
 
 from .models import (
-    News, Programs, Appeal
+    News, Programs, Appeal, Profile
 )
 
 
@@ -99,14 +100,27 @@ class APIAppealDetail(APIView):
     def patch(self, request, id):
             appeal = get_object_or_404(Appeal, id=id)
             if 'status' in request.data:
+                if appeal.user:
+                    change_user_done_tasks_count(
+                        old_status=appeal.status,
+                        new_status=request.data['status'],
+                        user=appeal.user
+                    )
+                else:
+                    pass
                 appeal.status = request.data['status']
             if 'notes' in request.data:
                 appeal.notes = request.data['notes']
             if 'flag' in request.data:
-                print(request.data)
-                print(type(request.data['flag']))
-                print(request.data['flag'])
+                #print(request.data)
+                #print(type(request.data['flag']))
+                #print(request.data['flag'])
                 appeal.flag = request.data['flag']
+            if 'user_id' in request.data:
+                try:
+                    appeal.user = User.objects.get(pk=request.data['user_id'])
+                except User.DoesNotExist:
+                    appeal.user = None
             try:
                 appeal.save()
                 return Response("updated", status=status.HTTP_205_RESET_CONTENT)
@@ -125,10 +139,92 @@ class APIUser(APIView):
 
     def get(self, request):
         if request.user.is_authenticated:
+            user = request.user
+            try:
+                user_done_tasks_count = user.profile.done_tasks_count
+            except Profile.DoesNotExist:
+                user_done_tasks_count = None
+
             response_data = {
-                'first_name': request.user.first_name,
-                'last_name': request.user.last_name,
+                'id': user.id,
+                'first_name': user.first_name,
+                'last_name': user.last_name,
+                'email': user.username,
+                'tasks_count': user_done_tasks_count
             }
+            print(response_data)
             return Response(data=response_data)
         else:
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
+
+
+class APIAllUsers(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        users = User.objects.exclude(username='admin')
+        response_data = []
+        for user in users:
+            try:
+                user_done_tasks_count = user.profile.done_tasks_count
+            except Profile.DoesNotExist:
+                user_done_tasks_count = None
+            response_data.append({
+                'id': user.id,
+                'first_name': user.first_name,
+                'last_name': user.last_name,
+                'email': user.username,
+                'tasks_count': user_done_tasks_count
+            })
+        return Response(data=response_data)
+
+
+def get_statistics(queryset):
+    response = {}
+    total = queryset.count()
+    response['total'] = total
+    total_status = {}
+    total_status['new'] = queryset.filter(status="new").count()
+    total_status['work'] = queryset.filter(status="work").count()
+    total_status['done'] = queryset.filter(status="done").count()
+    total_status['archive'] = queryset.filter(status="archive").count()
+    response['status'] = total_status
+    total_type = {}
+    total_type['1'] = queryset.filter(type=1).count()
+    total_type['2'] = queryset.filter(type=2).count()
+    total_type['3'] = queryset.filter(type=3).count()
+    response['type'] = total_type
+    total_option = {}
+    total_option['1'] = queryset.filter(option=1).count()
+    total_option['2'] = queryset.filter(option=2).count()
+    total_option['3'] = queryset.filter(option=3).count()
+    total_option['4'] = queryset.filter(option=4).count()
+    total_option['5'] = queryset.filter(option=5).count()
+    total_option['6'] = queryset.filter(option=6).count()
+    total_option['7'] = queryset.filter(option=7).count()
+    response['option'] = total_option
+    return response
+
+class APIStatistics(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        response_data = {}
+        appeals = Appeal.objects.all()
+        response_data = get_statistics(appeals)
+        return Response(data=response_data)
+
+
+class APIUserStatistics(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        users = User.objects.exclude(username="admin")
+        appeals = Appeal.objects.all()
+        response_data = {}
+        for user in users:
+            user_appeals = appeals.filter(user=user)
+            response_data.setdefault(user.username)
+            response_data[user.username] = get_statistics(user_appeals)
+
+        return Response(data=response_data)
