@@ -148,3 +148,24 @@ class APIUser(APIView):
             return Response(data=response_data)
         else:
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
+
+
+class APIAllUsers(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        users = User.objects.exclude(username='admin')
+        response_data = []
+        for user in users:
+            try:
+                user_done_tasks_count = user.profile.done_tasks_count
+            except Profile.DoesNotExist:
+                user_done_tasks_count = None
+            response_data.append({
+                'id': user.id,
+                'first_name': user.first_name,
+                'last_name': user.last_name,
+                'email': user.username,
+                'tasks_count': user_done_tasks_count
+            })
+        return Response(data=response_data)
