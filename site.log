@@ -7228,6 +7228,7 @@ AttributeError: 'NoneType' object has no attribute 'profile'
 2023-01-27 06:49:46,000 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
 2023-01-27 06:49:59,058 WARNING Bad Request: /api/appeal/8
 2023-01-27 06:49:59,064 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
+<<<<<<< HEAD
 2023-01-27 16:27:14,784 ERROR Internal Server Error: /api/appeal
 Traceback (most recent call last):
   File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
@@ -7262,3 +7263,180 @@ Traceback (most recent call last):
     return int(value)
 TypeError: int() argument must be a string, a bytes-like object or a real number, not 'User'
 2023-01-27 16:27:14,846 ERROR "GET /api/appeal HTTP/1.1" 500 126527
+=======
+2023-01-27 12:05:17,196 WARNING Not Found: /favicon.ico
+2023-01-27 12:05:17,197 WARNING "GET /favicon.ico HTTP/1.1" 404 6611
+2023-01-27 12:06:52,596 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:06:52,597 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:06:52,646 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:06:52,647 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:10:26,028 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:10:26,029 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:15:20,019 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:15:20,020 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:20:37,137 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:20:37,141 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:24:48,335 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:24:48,337 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:24:59,901 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:24:59,902 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:25:11,213 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:25:11,214 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:26:19,132 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:26:19,133 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:26:28,514 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:26:28,515 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:26:52,755 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:26:52,756 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:27:20,185 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:27:20,188 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:28:29,758 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:28:29,759 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:28:52,292 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:28:52,304 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:29:04,897 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:29:04,898 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:29:10,448 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:29:10,451 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:30:43,248 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:30:43,249 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:31:04,730 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:31:04,731 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:31:28,979 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleError in 
+            Module Error (from ./node_modules/vue-loader/dist/index.js):
+
+VueCompilerError: Element is missing end tag.
+at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/components/DragndropTableColumn.vue:50:11
+48 |              <v-btn variant="text" icon="mdi-close" @click="() => isShowDialog = false"/>
+49 |            </div>
+50 |            <p class="text-grey-darken-1 ">
+   |            ^
+51 |              {{ this.selectedTicket.name }}
+52 |              {{ this.selectedTicket.last_name }}
+
+            
+2023-01-27 12:31:28,988 ERROR "GET /appeal/ HTTP/1.1" 500 124018
+2023-01-27 12:31:30,616 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:31:30,617 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:31:59,697 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:31:59,698 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:32:12,878 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:32:12,879 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:32:48,306 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:32:48,307 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:32:57,951 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:32:57,953 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:33:05,045 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:33:05,046 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:33:24,407 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:33:24,409 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:33:25,212 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:33:25,212 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:33:41,476 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:33:41,477 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:34:16,130 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:34:16,132 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:35:05,984 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:35:05,985 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:35:22,891 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:35:22,892 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:35:57,532 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:35:57,534 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:36:27,896 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:36:27,897 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:36:47,656 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:36:47,659 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:41:00,938 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:41:00,940 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:42:00,465 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:42:00,467 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:42:59,463 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:42:59,464 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:43:14,390 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:43:14,392 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:43:15,203 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:43:15,204 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:43:46,813 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:43:46,815 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:44:17,009 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:44:17,011 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:45:09,420 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:45:09,422 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:45:38,189 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:45:38,191 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:46:25,247 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:46:25,249 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:47:35,812 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:47:35,813 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:52:27,143 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:52:27,146 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:58:24,738 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:58:24,739 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:58:57,575 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:58:57,576 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:59:06,002 ERROR Internal Server Error: /api/appeal/undefined
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/undefined/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-27 12:59:06,005 ERROR "PATCH /api/appeal/undefined HTTP/1.1" 500 70315
+2023-01-27 13:00:25,415 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:00:25,417 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:00:26,012 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:00:26,014 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:00:30,599 ERROR Internal Server Error: /api/appeal/undefined
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/undefined/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-27 13:00:30,605 ERROR "PATCH /api/appeal/undefined HTTP/1.1" 500 70315
+2023-01-27 13:00:50,914 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:00:50,915 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+>>>>>>> 3fe206ece553c733d89ba9af77d3de17aede1376
