@@ -7228,3 +7228,37 @@ AttributeError: 'NoneType' object has no attribute 'profile'
 2023-01-27 06:49:46,000 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
 2023-01-27 06:49:59,058 WARNING Bad Request: /api/appeal/8
 2023-01-27 06:49:59,064 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
+2023-01-27 16:27:14,784 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 77, in get
+    return Response(serializer.data)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\fields.py", line 915, in to_representation
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'User'
+2023-01-27 16:27:14,846 ERROR "GET /api/appeal HTTP/1.1" 500 126527
