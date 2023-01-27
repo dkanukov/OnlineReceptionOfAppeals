@@ -7202,3 +7202,29 @@ Traceback (most recent call last):
     return _iterencode(o, 0)
 TypeError: keys must be str, int, float, bool or None, not User
 2023-01-27 06:13:30,360 ERROR "GET /api/statistics-users HTTP/1.1" 500 107406
+2023-01-27 06:29:51,129 ERROR Internal Server Error: /api/appeal/5
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 103, in patch
+    print("before", appeal.user.profile.done_tasks_count)
+AttributeError: 'NoneType' object has no attribute 'profile'
+2023-01-27 06:29:51,153 ERROR "PATCH /api/appeal/5 HTTP/1.1" 500 94621
+2023-01-27 06:49:45,993 WARNING Bad Request: /api/appeal/8
+2023-01-27 06:49:46,000 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
+2023-01-27 06:49:59,058 WARNING Bad Request: /api/appeal/8
+2023-01-27 06:49:59,064 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78

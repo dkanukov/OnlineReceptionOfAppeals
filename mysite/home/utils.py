@@ -18,3 +18,12 @@ def format_file_name(name):
     name = name.replace('_', ' ')
     name = name.replace('.pdf', '')
     return name
+
+
+def change_user_done_tasks_count(old_status, new_status, user):
+    if old_status in ('new', 'work') and new_status == 'done':
+        user.profile.done_tasks_count += 1
+    if old_status in ('done', 'archive') and new_status in ('new', 'work'):
+        user.profile.done_tasks_count -= 1
+    user.save()
+    return

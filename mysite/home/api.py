@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.db.utils import IntegrityError
 from .serializers import FeedbackSerializer, AppealSerializer
-from .utils import format_date
+from .utils import format_date, change_user_done_tasks_count
 
 from .models import (
     News, Programs, Appeal, Profile
@@ -100,6 +100,14 @@ class APIAppealDetail(APIView):
     def patch(self, request, id):
             appeal = get_object_or_404(Appeal, id=id)
             if 'status' in request.data:
+                if appeal.user:
+                    change_user_done_tasks_count(
+                        old_status=appeal.status,
+                        new_status=request.data['status'],
+                        user=appeal.user
+                    )
+                else:
+                    pass
                 appeal.status = request.data['status']
             if 'notes' in request.data:
                 appeal.notes = request.data['notes']
