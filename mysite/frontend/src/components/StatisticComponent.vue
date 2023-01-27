@@ -23,6 +23,7 @@
 <script>
 import {Chart as ChartJS, ArcElement, Tooltip, Legend, Title, CategoryScale, LinearScale, BarElement} from 'chart.js'
 import {Pie, Bar} from 'vue-chartjs';
+import {mapActions} from 'vuex';
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title, CategoryScale, LinearScale, BarElement)
 
@@ -38,7 +39,7 @@ export default {
         labels: ['SOS размещение', 'Гуманитарная помощь', 'Необходим адресный сбор', 'Koнсультация психолога', 'Консультация юриста', 'Хочу в группу поддержки', 'Хочу быть волонтером фонда'],
         datasets: [{
           data: [40, 20, 80, 10, 5, 15, 20],
-          backgroundColor: ['#41B883'],
+          backgroundColor: ['#60C1CA', '#82C9EE', '#24527E', '#A0284D', '#DE5C64', '#EFAB63', '#EFAB63'],
         }]
       },
       monthOptionPie: {
@@ -83,6 +84,12 @@ export default {
       }
     }
   },
+  methods: {
+    ...mapActions(['fetchStatistic'])
+  },
+  async mounted() {
+    await this.fetchStatistic()
+  }
 }
 </script>
 

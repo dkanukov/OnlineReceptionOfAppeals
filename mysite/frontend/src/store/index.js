@@ -37,7 +37,6 @@ export default createStore({
 			} else {
 				console.log(`Не удалось получить пользователя`)
 			}
-
 		},
 		async getAllUsers(ctx) {
 			const ans = await fetch('http://127.0.0.1:8000/api/all-users', {method: 'GET'})
@@ -125,7 +124,6 @@ export default createStore({
 			}
 		},
 		async moveFromArchiveToNew(ctx, element) {
-			console.log(element)
 			const cookie = document.cookie
 			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
 				method: 'PATCH',
@@ -141,6 +139,15 @@ export default createStore({
 				ctx.commit('setNewStatusToTicket', element)
 			} else {
 				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
+			}
+		},
+		async fetchStatistic() {
+			const ans = await fetch('http://127.0.0.1:8000/api/statistics', {method: 'GET'})
+			if (ans.ok) {
+				const res = await ans.json()
+				console.log(res)
+			} else {
+				console.log(`Не удалось получить статистику за все время`)
 			}
 		}
 	}

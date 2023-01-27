@@ -79,7 +79,7 @@
               <v-row no-gutters>
                 {{ticket.notes}}
               </v-row>
-              <v-btn @click="moveTicketFromArchive(ticket)">Вернуть обращение в работу</v-btn>
+              <v-btn class="mt-5" @click="moveTicketFromArchive(ticket)">Вернуть обращение в работу</v-btn>
             </v-expansion-panel-text>
 
           </v-expansion-panel>
