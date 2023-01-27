@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -69,6 +70,7 @@ class APIAppeal(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
+        print(request.COOKIES)
         if request.user.is_authenticated:
             object_list = Appeal.objects.all()
             serializer = AppealSerializer(instance=object_list, many=True)
@@ -102,10 +104,15 @@ class APIAppealDetail(APIView):
             if 'notes' in request.data:
                 appeal.notes = request.data['notes']
             if 'flag' in request.data:
-                print(request.data)
-                print(type(request.data['flag']))
-                print(request.data['flag'])
+                #print(request.data)
+                #print(type(request.data['flag']))
+                #print(request.data['flag'])
                 appeal.flag = request.data['flag']
+            if 'user_id' in request.data:
+                try:
+                    appeal.user = User.objects.get(pk=request.data['user_id'])
+                except User.DoesNotExist:
+                    appeal.user = None
             try:
                 appeal.save()
                 return Response("updated", status=status.HTTP_205_RESET_CONTENT)
