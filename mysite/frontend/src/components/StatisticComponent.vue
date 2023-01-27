@@ -1,9 +1,9 @@
 <template>
-  <v-row class="mb-5" align="center" justify="space-between">
-    <v-btn size="x-large" icon="mdi-arrow-left-bold" variant="text"/>
-    <h3>Текущий месяц</h3>
-    <v-btn size="x-large" icon="mdi-arrow-right-bold" variant="text"/>
-  </v-row>
+<!--  <v-row class="mb-5" align="center" justify="space-between">-->
+<!--    <v-btn size="x-large" icon="mdi-arrow-left-bold" variant="text"/>-->
+<!--    <h3>Текущий месяц</h3>-->
+<!--    <v-btn size="x-large" icon="mdi-arrow-right-bold" variant="text"/>-->
+<!--  </v-row>-->
   <v-row justify="space-between" align="center">
     <div style="position: relative; height:40vh; width:40vw;">
       <Pie
@@ -47,7 +47,7 @@ export default {
         plugins: {
           title: {
             display: true,
-            text: 'Статистика обращений за месяц',
+            text: 'Статистика обращений за все время',
             font: {
               size: 20
             }
@@ -74,7 +74,7 @@ export default {
           },
           title: {
             display: true,
-            text: 'Статистика по сотрудникам',
+            text: 'Статистика по сотрудникам за все время',
             font: {
               size: 20
             }

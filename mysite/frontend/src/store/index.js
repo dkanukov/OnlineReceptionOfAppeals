@@ -4,7 +4,8 @@ export default createStore({
 	state: () => ({
 		tickets: [],
 		user: null,
-		filterHelpType: []
+		filterHelpType: [],
+		allUsers: [],
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -18,6 +19,13 @@ export default createStore({
 		},
 		deleteTicket(state, ticketId) {
 			state.tickets = state.tickets.filter((ticket) => ticket.id !== ticketId)
+		},
+		setAllUsers(state, users) {
+			state.allUsers = users
+			console.log(state.allUsers)
+		},
+		setNewStatusToTicket(state, element) {
+			state.tickets.find((ticket) => ticket.id === element.id).status = 'new'
 		}
 	},
 	actions: {
@@ -30,6 +38,14 @@ export default createStore({
 				console.log(`Не удалось получить пользователя`)
 			}
 
+		},
+		async getAllUsers(ctx) {
+			const ans = await fetch('http://127.0.0.1:8000/api/all-users', {method: 'GET'})
+			if (ans.ok) {
+				ctx.commit('setAllUsers', await ans.json())
+			} else {
+				console.log(`Не удалось получить сотрудников`)
+			}
 		},
 		async fetchTickets(ctx) {
 			try {
@@ -106,6 +122,25 @@ export default createStore({
 			})
 			if (!res.ok) {
 				console.log(`Не удалось отметить тикет ${element.id}`)
+			}
+		},
+		async moveFromArchiveToNew(ctx, element) {
+			console.log(element)
+			const cookie = document.cookie
+			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+				method: 'PATCH',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				},
+				body: JSON.stringify({
+					'status': 'new'
+				})
+			})
+			if (res.ok) {
+				ctx.commit('setNewStatusToTicket', element)
+			} else {
+				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
 			}
 		}
 	}

@@ -79,6 +79,7 @@
               <v-row no-gutters>
                 {{ticket.notes}}
               </v-row>
+              <v-btn @click="moveTicketFromArchive(ticket)">Вернуть обращение в работу</v-btn>
             </v-expansion-panel-text>
 
           </v-expansion-panel>
@@ -226,7 +227,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchTickets', 'patchTicketStatusById', 'patchTicketNotes', 'getUser']),
+    ...mapActions(['fetchTickets', 'patchTicketStatusById', 'patchTicketNotes', 'getUser', 'getAllUsers', 'moveFromArchiveToNew']),
     ...mapMutations([]),
     handleNewTicketBtnClick() {
       this.isShowDialog = true
@@ -256,6 +257,9 @@ export default {
     updateTickets() {
       console.log('upd')
       this.fetchTickets()
+    },
+    moveTicketFromArchive(ticket) {
+      this.moveFromArchiveToNew(ticket)
     },
     redirectToArchive() {
       this.currentPage = 'archive'
@@ -307,6 +311,7 @@ export default {
       console.log(this.tickets)
     })
     await this.getUser()
+    await this.getAllUsers()
   }
 }
 </script>
