@@ -6,6 +6,7 @@ export default createStore({
 		user: null,
 		filterHelpType: [],
 		allUsers: [],
+		allStatistic: {},
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -26,6 +27,11 @@ export default createStore({
 		},
 		setNewStatusToTicket(state, element) {
 			state.tickets.find((ticket) => ticket.id === element.id).status = 'new'
+		},
+		setAllStatistic(state, statistic) {
+			console.log(statistic)
+			state.allStatistic['optionStatistic'] = Array.from(Object.values(statistic.option))
+			console.log(state.allStatistic)
 		}
 	},
 	actions: {
@@ -141,11 +147,11 @@ export default createStore({
 				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
 			}
 		},
-		async fetchStatistic() {
+		async fetchAllStatistic(ctx) {
 			const ans = await fetch('http://127.0.0.1:8000/api/statistics', {method: 'GET'})
 			if (ans.ok) {
 				const res = await ans.json()
-				console.log(res)
+				ctx.commit('setAllStatistic', res)
 			} else {
 				console.log(`Не удалось получить статистику за все время`)
 			}

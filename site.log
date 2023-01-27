@@ -7440,3 +7440,29 @@ RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash 
 2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
 >>>>>>> 3fe206ece553c733d89ba9af77d3de17aede1376
+2023-01-27 14:49:42,283 WARNING Not Found: /favicon.ico
+2023-01-27 14:49:42,285 WARNING "GET /favicon.ico HTTP/1.1" 404 6611
+2023-01-27 14:49:52,097 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 14:49:52,099 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 14:50:52,699 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 14:50:52,701 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 14:54:55,701 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 14:54:55,703 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:00:28,802 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:00:28,804 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:01:27,327 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:01:27,328 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:02:45,085 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:02:45,086 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:03:33,055 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:03:33,056 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:03:44,569 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:03:44,570 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:04:00,826 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:04:00,827 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:04:13,108 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:04:13,109 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:05:11,246 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:05:11,248 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:06:30,803 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:06:30,805 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703

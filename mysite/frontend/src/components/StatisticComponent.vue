@@ -7,7 +7,7 @@
   <v-row justify="space-between" align="center">
     <div style="position: relative; height:40vh; width:40vw;">
       <Pie
-          :data="monthDataPie"
+          :data="allDataPie"
           :options="monthOptionPie"
       />
     </div>
@@ -23,7 +23,7 @@
 <script>
 import {Chart as ChartJS, ArcElement, Tooltip, Legend, Title, CategoryScale, LinearScale, BarElement} from 'chart.js'
 import {Pie, Bar} from 'vue-chartjs';
-import {mapActions} from 'vuex';
+import {mapActions, mapState} from 'vuex';
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title, CategoryScale, LinearScale, BarElement)
 
@@ -85,10 +85,22 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchStatistic'])
+    ...mapActions(['fetchAllStatistic'])
+  },
+  computed: {
+    ...mapState(['allStatistic']),
+    allDataPie() {
+      return {
+        labels: ['SOS размещение', 'Гуманитарная помощь', 'Необходим адресный сбор', 'Koнсультация психолога', 'Консультация юриста', 'Хочу в группу поддержки', 'Хочу быть волонтером фонда'],
+        datasets: [{
+          data: this.allStatistic.optionStatistic,
+          backgroundColor: ['#60C1CA', '#82C9EE', '#24527E', '#A0284D', '#DE5C64', '#EFAB63', '#EFAB63'],
+        }]
+      }
+    }
   },
   async mounted() {
-    await this.fetchStatistic()
+    await this.fetchAllStatistic()
   }
 }
 </script>
