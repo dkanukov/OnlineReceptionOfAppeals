@@ -7403,3 +7403,23 @@ RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash 
 2023-01-27 13:00:50,915 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
 2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:06:19,913 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:06:19,914 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:08:46,326 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:08:46,328 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:11:58,664 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:11:58,666 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:16:13,777 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:16:13,779 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:18:12,762 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:18:12,763 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:19:44,792 WARNING Not Found: /robots.txt
+2023-01-27 13:19:44,793 WARNING "GET /robots.txt HTTP/1.1" 404 6608
+2023-01-27 13:21:49,683 WARNING Not Found: /robots.txt
+2023-01-27 13:21:49,685 WARNING "GET /robots.txt HTTP/1.1" 404 6608
+2023-01-27 13:27:12,636 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:27:12,637 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:28:10,163 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:28:10,165 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:29:22,156 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:29:22,160 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
