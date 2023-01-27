@@ -7132,3 +7132,73 @@ Traceback (most recent call last):
     raise TypeError(f'Object of type {o.__class__.__name__} '
 TypeError: Object of type Appeal is not JSON serializable
 2023-01-27 05:41:48,420 ERROR "GET /api/statistics HTTP/1.1" 500 111180
+2023-01-27 06:06:09,535 WARNING Not Found: /api/statistics-users/
+2023-01-27 06:06:09,545 WARNING "GET /api/statistics-users/ HTTP/1.1" 404 6562
+2023-01-27 06:06:35,988 ERROR Internal Server Error: /api/statistics-users
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 217, in get
+    response_data[user] = get_statistics(user_appeals, response_data[user])
+KeyError: <User: stuff@stuff.ru>
+2023-01-27 06:06:36,011 ERROR "GET /api/statistics-users HTTP/1.1" 500 92742
+2023-01-27 06:11:29,685 ERROR Internal Server Error: /api/statistics-users
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 218, in get
+    response_data[user] = get_statistics(user_appeals, response_data[user])
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 175, in get_statistics
+    response['total'] = total
+TypeError: 'NoneType' object does not support item assignment
+2023-01-27 06:11:29,729 ERROR "GET /api/statistics-users HTTP/1.1" 500 96440
+2023-01-27 06:13:30,307 ERROR Internal Server Error: /api/statistics-users
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\renderers.py", line 99, in render
+    ret = json.dumps(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+TypeError: keys must be str, int, float, bool or None, not User
+2023-01-27 06:13:30,360 ERROR "GET /api/statistics-users HTTP/1.1" 500 107406

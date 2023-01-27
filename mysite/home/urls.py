@@ -22,5 +22,7 @@ urlpatterns = [
         path('api/user', api.APIUser.as_view()),
         path('api/all-users', api.APIAllUsers.as_view()),
         path('api/statistics', api.APIStatistics.as_view()),
+        path('api/statistics-users', api.APIUserStatistics.as_view()),
+
     ]
 
