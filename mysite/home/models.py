@@ -11,8 +11,11 @@ from wagtail.fields import StreamField
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     done_tasks_count = models.IntegerField(default=0, null=True)
+
+    def __str__(self):
+        return f'{self.user}'
 
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):

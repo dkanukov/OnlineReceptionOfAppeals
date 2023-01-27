@@ -8,7 +8,7 @@ from .serializers import FeedbackSerializer, AppealSerializer
 from .utils import format_date
 
 from .models import (
-    News, Programs, Appeal
+    News, Programs, Appeal, Profile
 )
 
 
@@ -69,7 +69,6 @@ class APIAppeal(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        print(request.COOKIES)
         if request.user.is_authenticated:
             object_list = Appeal.objects.all()
             serializer = AppealSerializer(instance=object_list, many=True)
@@ -125,10 +124,20 @@ class APIUser(APIView):
 
     def get(self, request):
         if request.user.is_authenticated:
+            user = request.user
+            try:
+                user_done_tasks_count = user.profile.done_tasks_count
+            except Profile.DoesNotExist:
+                user_done_tasks_count = None
+
             response_data = {
-                'first_name': request.user.first_name,
-                'last_name': request.user.last_name,
+                'id': user.id,
+                'first_name': user.first_name,
+                'last_name': user.last_name,
+                'email': user.username,
+                'tasks_count': user_done_tasks_count
             }
+            print(response_data)
             return Response(data=response_data)
         else:
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)

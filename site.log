@@ -6904,3 +6904,99 @@ django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app wi
 2023-01-27 01:03:06,733 WARNING Not Found: /media/images/IMG_2544.original.jpg}
 2023-01-27 01:03:06,766 WARNING "GET /media/images/IMG_2544.original.jpg%7D HTTP/1.1" 404 5806
 2023-01-27 01:03:06,740 WARNING "GET /media/images/IMG_2543.original.jpg%7D HTTP/1.1" 404 5806
+2023-01-27 03:21:58,991 ERROR Internal Server Error: /django-admin/login/
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\auth\views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\auth\views.py", line 98, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\base.py", line 872, in save_base
+    post_save.send(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\models.py", line 24, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 461, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2023-01-27 03:21:59,047 ERROR "POST /django-admin/login/?next=/django-admin/ HTTP/1.1" 500 185475
+2023-01-27 03:31:17,981 ERROR Internal Server Error: /django-admin/auth/user/
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\options.py", line 1588, in response_action
+    response = func(self, request, queryset)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\options.py", line 2099, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\utils.py", line 153, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\utils.py", line 220, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\utils.py", line 204, in _nested
+    children.extend(self._nested(child, seen, format_callback))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\utils.py", line 206, in _nested
+    ret = [format_callback(obj)]
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\contrib\admin\utils.py", line 128, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+TypeError: __str__ returned non-string (type User)
+2023-01-27 03:31:18,019 ERROR "POST /django-admin/auth/user/ HTTP/1.1" 500 136144
