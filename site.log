@@ -7228,6 +7228,42 @@ AttributeError: 'NoneType' object has no attribute 'profile'
 2023-01-27 06:49:46,000 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
 2023-01-27 06:49:59,058 WARNING Bad Request: /api/appeal/8
 2023-01-27 06:49:59,064 WARNING "PATCH /api/appeal/8 HTTP/1.1" 400 78
+<<<<<<< HEAD
+2023-01-27 16:27:14,784 ERROR Internal Server Error: /api/appeal
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 77, in get
+    return Response(serializer.data)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\fields.py", line 915, in to_representation
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'User'
+2023-01-27 16:27:14,846 ERROR "GET /api/appeal HTTP/1.1" 500 126527
+=======
 2023-01-27 12:05:17,196 WARNING Not Found: /favicon.ico
 2023-01-27 12:05:17,197 WARNING "GET /favicon.ico HTTP/1.1" 404 6611
 2023-01-27 12:06:52,596 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
@@ -7403,23 +7439,4 @@ RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash 
 2023-01-27 13:00:50,915 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
 2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:06:19,913 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:06:19,914 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:08:46,326 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:08:46,328 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:11:58,664 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:11:58,666 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:16:13,777 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:16:13,779 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:18:12,762 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:18:12,763 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:19:44,792 WARNING Not Found: /robots.txt
-2023-01-27 13:19:44,793 WARNING "GET /robots.txt HTTP/1.1" 404 6608
-2023-01-27 13:21:49,683 WARNING Not Found: /robots.txt
-2023-01-27 13:21:49,685 WARNING "GET /robots.txt HTTP/1.1" 404 6608
-2023-01-27 13:27:12,636 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:27:12,637 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:28:10,163 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:28:10,165 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
-2023-01-27 13:29:22,156 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
-2023-01-27 13:29:22,160 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+>>>>>>> 3fe206ece553c733d89ba9af77d3de17aede1376

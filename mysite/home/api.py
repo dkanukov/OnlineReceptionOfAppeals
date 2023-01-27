@@ -224,7 +224,7 @@ class APIUserStatistics(APIView):
         response_data = {}
         for user in users:
             user_appeals = appeals.filter(user=user)
-            response_data.setdefault(user.username)
-            response_data[user.username] = get_statistics(user_appeals)
+            response_data.setdefault(user.id)
+            response_data[user.id] = get_statistics(user_appeals)
 
         return Response(data=response_data)
