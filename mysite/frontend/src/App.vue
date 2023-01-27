@@ -226,7 +226,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['fetchTickets', 'patchTicketStatusById', 'patchTicketNotes', 'getUser']),
+    ...mapActions(['fetchTickets', 'patchTicketStatusById', 'patchTicketNotes', 'getUser', 'getAllUsers']),
     ...mapMutations([]),
     handleNewTicketBtnClick() {
       this.isShowDialog = true
@@ -307,6 +307,7 @@ export default {
       console.log(this.tickets)
     })
     await this.getUser()
+    await this.getAllUsers()
   }
 }
 </script>

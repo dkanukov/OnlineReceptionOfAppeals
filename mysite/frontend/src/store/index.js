@@ -4,7 +4,8 @@ export default createStore({
 	state: () => ({
 		tickets: [],
 		user: null,
-		filterHelpType: []
+		filterHelpType: [],
+		allUsers: [],
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -18,6 +19,10 @@ export default createStore({
 		},
 		deleteTicket(state, ticketId) {
 			state.tickets = state.tickets.filter((ticket) => ticket.id !== ticketId)
+		},
+		setAllUsers(state, users) {
+			state.allUsers = users
+			console.log(state.allUsers)
 		}
 	},
 	actions: {
@@ -30,6 +35,14 @@ export default createStore({
 				console.log(`Не удалось получить пользователя`)
 			}
 
+		},
+		async getAllUsers(ctx) {
+			const ans = await fetch('http://127.0.0.1:8000/api/all-users', {method: 'GET'})
+			if (ans.ok) {
+				ctx.commit('setAllUsers', await ans.json())
+			} else {
+				console.log(`Не удалось получить сотрудников`)
+			}
 		},
 		async fetchTickets(ctx) {
 			try {
