@@ -169,3 +169,35 @@ class APIAllUsers(APIView):
                 'tasks_count': user_done_tasks_count
             })
         return Response(data=response_data)
+
+
+class APIStatistics(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        response_data = {}
+        queryset = Appeal.objects.all()
+        total = queryset.count()
+        response_data['total'] = total
+        total_status = {}
+        total_status['new'] = queryset.filter(status="new").count()
+        total_status['work'] = queryset.filter(status="work").count()
+        total_status['done'] = queryset.filter(status="done").count()
+        total_status['archive'] = queryset.filter(status="archive").count()
+        response_data['status'] = total_status
+        total_type = {}
+        total_type['1'] = queryset.filter(type=1).count()
+        total_type['2'] = queryset.filter(type=2).count()
+        total_type['3'] = queryset.filter(type=3).count()
+        response_data['type'] = total_type
+        total_option = {}
+        total_option['1'] = queryset.filter(option=1).count()
+        total_option['2'] = queryset.filter(option=2).count()
+        total_option['3'] = queryset.filter(option=3).count()
+        total_option['4'] = queryset.filter(option=4).count()
+        total_option['5'] = queryset.filter(option=5).count()
+        total_option['6'] = queryset.filter(option=6).count()
+        total_option['7'] = queryset.filter(option=7).count()
+        response_data['option'] = total_option
+
+        return Response(data=response_data)

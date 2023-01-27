@@ -20,6 +20,7 @@ urlpatterns = [
         path('api/appeal/<int:id>', api.APIAppealDetail.as_view()),
         path('api/pay', YooKassaPayment.as_view(), name='payment'),
         path('api/user', api.APIUser.as_view()),
-        path('api/all-users', api.APIAllUsers.as_view())
+        path('api/all-users', api.APIAllUsers.as_view()),
+        path('api/statistics', api.APIStatistics.as_view()),
     ]
 
