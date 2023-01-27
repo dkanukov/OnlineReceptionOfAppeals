@@ -23,6 +23,9 @@ export default createStore({
 		setAllUsers(state, users) {
 			state.allUsers = users
 			console.log(state.allUsers)
+		},
+		setNewStatusToTicket(state, element) {
+			state.tickets.find((ticket) => ticket.id === element.id).status = 'new'
 		}
 	},
 	actions: {
@@ -119,6 +122,25 @@ export default createStore({
 			})
 			if (!res.ok) {
 				console.log(`Не удалось отметить тикет ${element.id}`)
+			}
+		},
+		async moveFromArchiveToNew(ctx, element) {
+			console.log(element)
+			const cookie = document.cookie
+			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+				method: 'PATCH',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				},
+				body: JSON.stringify({
+					'status': 'new'
+				})
+			})
+			if (res.ok) {
+				ctx.commit('setNewStatusToTicket', element)
+			} else {
+				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
 			}
 		}
 	}

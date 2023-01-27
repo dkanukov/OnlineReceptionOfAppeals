@@ -7365,3 +7365,41 @@ at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/component
 2023-01-27 12:46:25,249 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
 2023-01-27 12:47:35,812 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-27 12:47:35,813 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:52:27,143 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:52:27,146 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:58:24,738 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:58:24,739 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:58:57,575 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 12:58:57,576 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 12:59:06,002 ERROR Internal Server Error: /api/appeal/undefined
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/undefined/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-27 12:59:06,005 ERROR "PATCH /api/appeal/undefined HTTP/1.1" 500 70315
+2023-01-27 13:00:25,415 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:00:25,417 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:00:26,012 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:00:26,014 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:00:30,599 ERROR Internal Server Error: /api/appeal/undefined
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/middleware/common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/appeal/undefined/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-01-27 13:00:30,605 ERROR "PATCH /api/appeal/undefined HTTP/1.1" 500 70315
+2023-01-27 13:00:50,914 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:00:50,915 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
