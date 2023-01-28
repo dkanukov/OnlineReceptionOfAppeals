@@ -235,14 +235,13 @@ class APIUserStatistics(APIView):
 
 
 class APIStatisticsPerMonth(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
-    def get(self, request):
-        today = datetime.date.today()
+    def get(self, request, year, month):
         response_data = {}
         appeals = Appeal.objects.filter(
-            create_date__year=today.year,
-            create_date__month=today.month
+            create_date__year=year,
+            create_date__month=month
         )
 
         response_data['1'] = appeals.filter(option=1).count()
@@ -259,16 +258,15 @@ class APIStatisticsPerMonth(APIView):
 class APIUserDoneTasksPerMonth(APIView):
     permission_classes = [AllowAny]
 
-    def get(self, request):
+    def get(self, request, year, month):
         response_data = {}
         users = User.objects.exclude(username="admin")
         appeals = Appeal.objects.all()
-        today = datetime.date.today()
         for user in users:
             user_month_done_tasks_count = appeals.filter(
                 user=user,
-                completion_date__year=today.year,
-                completion_date__month=today.month
+                completion_date__year=year,
+                completion_date__month=month
             ).count()
             response_data[user.id] = user_month_done_tasks_count
 
