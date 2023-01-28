@@ -7440,6 +7440,7 @@ RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash 
 2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
 >>>>>>> 3fe206ece553c733d89ba9af77d3de17aede1376
+<<<<<<< HEAD
 2023-01-28 17:34:11,793 ERROR Internal Server Error: /api/statistics-per-month
 Traceback (most recent call last):
   File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
@@ -7602,3 +7603,317 @@ Traceback (most recent call last):
     return _iterencode(o, 0)
 TypeError: keys must be str, int, float, bool or None, not User
 2023-01-28 18:19:11,527 ERROR "GET /api/statistics-user-per-month HTTP/1.1" 500 93327
+=======
+2023-01-27 14:49:42,283 WARNING Not Found: /favicon.ico
+2023-01-27 14:49:42,285 WARNING "GET /favicon.ico HTTP/1.1" 404 6611
+2023-01-27 14:49:52,097 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 14:49:52,099 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 14:50:52,699 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 14:50:52,701 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 14:54:55,701 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 14:54:55,703 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:00:28,802 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:00:28,804 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:01:27,327 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:01:27,328 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:02:45,085 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:02:45,086 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:03:33,055 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:03:33,056 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:03:44,569 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:03:44,570 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:04:00,826 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:04:00,827 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:04:13,108 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:04:13,109 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:05:11,246 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:05:11,248 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:06:30,803 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:06:30,805 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:14:45,338 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:14:45,339 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:16:15,682 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:16:15,685 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:18:44,304 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:18:44,306 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:19:04,510 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:19:04,513 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:20:58,973 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:20:58,975 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:22:11,095 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:22:11,097 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:22:18,924 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:22:18,925 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:22:43,005 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:22:43,007 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:01,008 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:01,010 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:13,034 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:13,036 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:21,584 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:21,586 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:41,371 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:41,373 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:43,281 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:43,283 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:44,994 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:44,996 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:52,280 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:52,282 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:23:54,280 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:23:54,281 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:24:36,275 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:24:36,276 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:24:38,289 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:24:38,290 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:24:49,031 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:24:49,033 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:24:51,376 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:24:51,378 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:24:59,822 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:24:59,823 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:25:41,880 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:25:41,882 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:26:13,181 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:26:13,182 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:26:26,928 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:26:26,931 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:27:24,087 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:27:24,089 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:28:28,979 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:28:28,981 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:28:56,038 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:28:56,040 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:29:18,154 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:29:18,155 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:29:20,405 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:29:20,406 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:29:43,334 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:29:43,335 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:30:17,788 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:30:17,790 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-27 15:30:26,976 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-27 15:30:26,977 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 10:02:49,917 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 10:02:49,919 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 10:21:07,557 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 10:21:07,558 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 10:21:37,365 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 10:21:37,369 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 10:22:57,326 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 10:22:57,327 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 10:23:12,353 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 10:23:12,354 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 10:24:53,810 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 10:24:53,810 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:21:22,380 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:21:22,382 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:22:02,805 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:22:02,806 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:22:57,608 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:22:57,609 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:23:01,799 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:23:01,800 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:23:40,384 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:23:40,385 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:25:02,227 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:25:02,229 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:26:44,960 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:26:44,962 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:28:32,185 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:28:32,187 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:32:16,079 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:32:16,080 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:32:34,219 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:32:34,220 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:35:35,258 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:35:35,260 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:37:23,883 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:37:23,884 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:37:41,694 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:37:41,696 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:39:41,442 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:39:41,444 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:44:20,537 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:44:20,538 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:44:22,716 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:44:22,718 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:46:17,175 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:46:17,176 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:46:58,864 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:46:58,866 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:48:07,456 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:48:07,457 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:49:34,532 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:49:34,533 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:53:57,280 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleBuildError in 
+            Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/store/index.js: Unexpected token, expected "from" (4:0)
+
+  2 | import * as node
+  3 |
+> 4 | export default createStore({
+    | ^
+  5 | 	state: () => ({
+  6 | 		tickets: [],
+  7 | 		user: null,
+    at instantiate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:67:32)
+    at constructor (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:364:12)
+    at JSXParserMixin.raise (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3364:19)
+    at JSXParserMixin.unexpected (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3397:16)
+    at JSXParserMixin.expectContextual (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3733:18)
+    at JSXParserMixin.parseImport (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:14464:12)
+    at JSXParserMixin.parseStatementContent (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13015:27)
+    at JSXParserMixin.parseStatement (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12917:17)
+    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13497:25)
+    at JSXParserMixin.parseBlockBody (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13489:10)
+    at JSXParserMixin.parseProgram (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12832:10)
+    at JSXParserMixin.parseTopLevel (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12822:25)
+    at JSXParserMixin.parse (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:14674:10)
+    at parse (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:14695:26)
+    at parser (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:66:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/transformation/index.js:21:50)
+    at run.next (<anonymous>)
+    at transform (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/transform.js:22:41)
+    at transform.next (<anonymous>)
+    at step (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/gensync/index.js:261:32)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/gensync/index.js:223:11)
+            
+2023-01-28 11:53:57,302 ERROR "GET /appeal/ HTTP/1.1" 500 147631
+2023-01-28 11:53:58,326 ERROR Internal Server Error: /appeal/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/base.py", line 958, in render_annotated
+    return self.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/django/template/library.py", line 239, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/templatetags/webpack_loader.py", line 12, in render_bundle
+    tags = utils.get_as_tags(bundle_name, extension=extension, config=config, attrs=attrs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 62, in get_as_tags
+    bundle = _get_bundle(bundle_name, extension, config)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/utils.py", line 40, in _get_bundle
+    bundle = get_loader(config).get_bundle(bundle_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/webpack_loader/loader.py", line 96, in get_bundle
+    raise WebpackError(error)
+webpack_loader.exceptions.WebpackError: 
+            ModuleBuildError in 
+            Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src/store/index.js: Unexpected token, expected "from" (4:0)
+
+  2 | import * as node
+  3 |
+> 4 | export default createStore({
+    | ^
+  5 | 	state: () => ({
+  6 | 		tickets: [],
+  7 | 		user: null,
+    at instantiate (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:67:32)
+    at constructor (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:364:12)
+    at JSXParserMixin.raise (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3364:19)
+    at JSXParserMixin.unexpected (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3397:16)
+    at JSXParserMixin.expectContextual (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:3733:18)
+    at JSXParserMixin.parseImport (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:14464:12)
+    at JSXParserMixin.parseStatementContent (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13015:27)
+    at JSXParserMixin.parseStatement (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12917:17)
+    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13497:25)
+    at JSXParserMixin.parseBlockBody (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:13489:10)
+    at JSXParserMixin.parseProgram (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12832:10)
+    at JSXParserMixin.parseTopLevel (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:12822:25)
+    at JSXParserMixin.parse (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:14674:10)
+    at parse (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/parser/lib/index.js:14695:26)
+    at parser (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:66:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/transformation/index.js:21:50)
+    at run.next (<anonymous>)
+    at transform (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/@babel/core/lib/transform.js:22:41)
+    at transform.next (<anonymous>)
+    at step (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/gensync/index.js:261:32)
+    at /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/deniskanukov/online_reception_of_appeals/mysite/frontend/node_modules/gensync/index.js:223:11)
+            
+2023-01-28 11:53:58,345 ERROR "GET /appeal/ HTTP/1.1" 500 147629
+2023-01-28 11:54:09,384 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:54:09,386 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:55:12,213 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:55:12,214 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:56:33,101 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:56:33,103 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:56:42,258 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:56:42,260 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:57:41,834 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:57:41,836 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 11:57:56,787 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 11:57:56,790 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:06:07,865 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:06:07,866 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:06:24,079 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:06:24,080 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:07:40,795 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:07:40,795 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:10:11,553 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:10:11,554 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:14:06,488 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:14:06,491 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:14:29,575 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:14:29,576 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:14:44,584 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:14:44,587 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+2023-01-28 12:14:55,180 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-28 12:14:55,182 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
+>>>>>>> 1f547753e5bf56e21f86a8e759697ad53c94dd09
