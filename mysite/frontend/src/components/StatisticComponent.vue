@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row justify="space-evenly" align="center">
+    <v-row justify="space-between" align="center">
       <div style="position: relative; height:40vh; width:40vw;">
         <Pie
             :data="allDataPie"
@@ -15,26 +15,31 @@
       </div>
     </v-row>
   </div>
-  <v-row class="mt-10">
-    <v-col>
-      <h2>Текущая статистика по статусам:</h2>
-      <v-row no-gutters>
-        <h3>Новые: {{allStatistic.statusStatistic.new}}</h3>
-      </v-row>
-      <v-row no-gutters>
-        <h3>В работе: {{allStatistic.statusStatistic.work}}</h3>
-      </v-row>
-      <v-row no-gutters>
-        <h3>Выполнены: {{allStatistic.statusStatistic.done}}</h3>
-      </v-row>
-      <v-row no-gutters>
-        <h3>В архиве: {{allStatistic.statusStatistic.archive}}</h3>
-      </v-row>
-      <v-row no-gutters>
-        <h2>Всего: {{allStatistic.total}}</h2>
-      </v-row>
-    </v-col>
-  </v-row>
+  <div class="mt-10">
+    <h2 class="mb-4">Текущая статистика по статусам</h2>
+    <v-row class="w-50" no-gutters>
+      <v-col>
+        <h1 class="customColor">{{allStatistic.statusStatistic.new}}</h1>
+        <p>Новые</p>
+      </v-col>
+      <v-col>
+        <h1 class="customColor">{{allStatistic.statusStatistic.work}}</h1>
+        <p>В работе</p>
+      </v-col>
+      <v-col>
+        <h1 class="customColor">{{allStatistic.statusStatistic.done}}</h1>
+        <p>Выполнены</p>
+      </v-col>
+      <v-col>
+        <h1 class="customColor">{{allStatistic.statusStatistic.archive}}</h1>
+        <p>В архиве</p>
+      </v-col>
+      <v-col>
+        <h1 class="customSize">{{allStatistic.total}}</h1>
+        <p>Всего</p>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -63,6 +68,10 @@ export default {
             font: {
               size: 20
             },
+            padding: {
+              bottom: 30,
+            },
+            color: '#000000'
           },
           legend: {
             display: true,
@@ -92,6 +101,10 @@ export default {
             font: {
               size: 20
             },
+            padding: {
+              bottom: 30,
+            },
+            color: '#000000'
           },
           tooltip: {
             displayColors: false
@@ -131,5 +144,12 @@ export default {
 </script>
 
 <style scoped>
+.customColor {
+  color: #60C1CA;
+  font-size: 60px;
+}
 
+.customSize {
+  font-size: 60px;
+}
 </style>
