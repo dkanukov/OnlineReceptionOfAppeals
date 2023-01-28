@@ -59,7 +59,7 @@
               hide-details="auto"
               variant="underlined"
               v-model="selectedTicket.userName"
-              :items="allUsers.map((user) => `${user.first_name} ${user.last_name}`)"
+              :items="allUsers.map((user) => `${user.last_name} ${user.first_name}`)"
               @update:modelValue="handleTicketChangeDuty()"
               style="max-width: 400px;"
           />
@@ -81,7 +81,7 @@
           <v-row justify="space-between">
             <div>
               <v-btn variant="tonal" color="success" @click="handleTicketDone" v-if="selectedTicket.status==='done'">
-                Выполнен!
+                Выполнено!
               </v-btn>
               <v-btn @click="sendForm" color="success">Сохранить</v-btn>
               <v-btn @click="discardForm">Отменить</v-btn>
@@ -181,7 +181,7 @@ export default {
     },
     handleTicketChangeDuty() {
       if (this.selectedTicket.userName) {
-        const newSelectedUser = this.allUsers.find((user) => `${user.first_name} ${user.last_name}` === this.selectedTicket.userName)
+        const newSelectedUser = this.allUsers.find((user) => `${user.last_name} ${user.first_name}` === this.selectedTicket.userName)
         this.selectedTicket.user = newSelectedUser.id
         this.patchUserOnTicket({selectedTicket: this.selectedTicket.id, newSelectedUser: newSelectedUser.id})
       }

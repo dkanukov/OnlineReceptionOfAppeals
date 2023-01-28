@@ -317,7 +317,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['tickets']),
+    ...mapState(['tickets', 'user']),
     isShowNewTicketOption() {
       return this.newTicket.helpType === 'Помощь' || this.newTicket.helpType === 'Консультация'
     },
@@ -337,8 +337,11 @@ export default {
       }
     },
     filteredTickets() {
-      if (!this.filterHelpType.length) {
+      if (!this.filterHelpType.length && !this.isMine) {
         return this.tickets
+      }
+      if (!this.filterHelpType.length && this.isMine) {
+        return this.tickets.filter((ticket) => ticket.user === this.user.id)
       }
       return this.tickets.filter((ticket) => {
         if (this.filterHelpType.includes(this.helpType[ticket.type - 1])) {
