@@ -17,13 +17,18 @@
               id: {{ ticket.element.id }}
             </p>
           </div>
-          <div class="text-truncate text-grey-darken-1 text-sm-subtitle-1 mdi-clock-">
+          <div class="text-truncate text-sm-subtitle-1 mdi-clock-">
             {{ ticket.element.last_name }} {{ ticket.element.name }}
           </div>
           <div class="ticketTIme text-grey-darken-1 text-sm-subtitle-2">
-            <p>
-              <v-icon icon="mdi-calendar-clock-outline" style="width: 16px; height: 16px"></v-icon>
-              {{ ticket.element.create_date }}
+            <p class="d-flex justify-space-between">
+              <span>
+                <v-icon icon="mdi-calendar-clock-outline" style="width: 16px; height: 16px"></v-icon>
+                {{ ticket.element.create_date }}
+              </span>
+              <span v-if="ticket.element.user">
+<!--                {{findDuty(ticket.element.user)}}-->
+              </span>
             </p>
           </div>
         </div>
@@ -53,8 +58,9 @@
               density="compact"
               hide-details="auto"
               variant="underlined"
-              v-model="selectedTicket.user"
+              v-model="selectedTicket.userName"
               :items="allUsers.map((user) => `${user.first_name} ${user.last_name}`)"
+              @update:modelValue="handleTicketChangeDuty()"
               style="max-width: 400px;"
           />
           <p class="text-grey-darken-1 ">
@@ -74,6 +80,9 @@
         <v-card-actions>
           <v-row justify="space-between">
             <div>
+              <v-btn variant="tonal" color="success" @click="handleTicketDone" v-if="selectedTicket.status==='done'">
+                Выполнен!
+              </v-btn>
               <v-btn @click="sendForm" color="success">Сохранить</v-btn>
               <v-btn @click="discardForm">Отменить</v-btn>
             </div>
@@ -132,7 +141,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchTicketStatusById', 'pathTicketFlag']),
+    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchTicketStatusById', 'pathTicketFlag', 'patchUserOnTicket', 'moveTicketToArchive']),
     handleTicketMove({added}) {
       if (added) {
         this.patchTicketStatusById({
@@ -143,6 +152,9 @@ export default {
     },
     whenTicketClick(ticket) {
       this.selectedTicket = ticket
+      if (ticket.user) {
+        this.selectedTicket['userName'] = this.findDuty(ticket.user)
+      }
       this.selectedTicketNotes = this.selectedTicket.notes
       this.isShowDialog = true
     },
@@ -159,6 +171,20 @@ export default {
     },
     clickOnFlag() {
       this.pathTicketFlag(this.selectedTicket)
+    },
+    findDuty(id) {
+      const foundUser =  this.allUsers.find((user) => user.id === id)
+      return `${foundUser.last_name} ${foundUser.first_name}`
+    },
+    handleTicketChangeDuty() {
+      if (this.selectedTicket.userName) {
+        const newSelectedUser = this.allUsers.find((user) => `${user.first_name} ${user.last_name}` === this.selectedTicket.userName)
+        this.selectedTicket.user = newSelectedUser.id
+        this.patchUserOnTicket({selectedTicket: this.selectedTicket.id, newSelectedUser: newSelectedUser.id})
+      }
+    },
+    handleTicketDone() {
+      this.moveTicketToArchive(this.selectedTicket)
     }
   },
   computed: {

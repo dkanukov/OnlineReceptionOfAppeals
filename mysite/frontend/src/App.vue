@@ -175,7 +175,7 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import DragndropTable from '@/components/DragndropTable.vue';
 import StatisticComponent from '@/components/StatisticComponent.vue';
-import {mapActions, mapState, mapMutations} from 'vuex';
+import {mapActions, mapMutations, mapState} from 'vuex';
 
 const HELP_TYPE = {
   'Помощь': 1,
@@ -256,13 +256,14 @@ export default {
         })
       })
       this.patchTicketNotes({element: await res.json(), newNote: this.newTicket.notes})
+      this.fetchTickets()
+      this.isShowDialog = false
     },
     discardForm() {
       this.isShowDialog = false
       this.newTicket = {}
     },
     updateTickets() {
-      console.log('upd')
       this.fetchTickets()
     },
     moveTicketFromArchive(ticket) {
@@ -302,12 +303,11 @@ export default {
       if (!this.filterHelpType.length) {
         return this.tickets
       }
-      const filteredTickets = this.tickets.filter((ticket) => {
+      return this.tickets.filter((ticket) => {
         if (this.filterHelpType.includes(this.helpType[ticket.type - 1])) {
           return ticket
         }
       })
-      return filteredTickets
     },
     archiveTickets() {
       return this.tickets.filter((ticket) => ticket.status === 'archive')

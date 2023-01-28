@@ -51,13 +51,16 @@ export default createStore({
 				const userStatObject = {
 					userId: user.id,
 					userName: `${user.last_name} ${user.first_name}`,
-					total: userStat.total
+					total: userStat.status['archive']
 				}
 				allUserStatObjects.push(userStatObject)
 			})
 			state.allUserStatistic = allUserStatObjects
 			// console.log(state.allUserStatistic)
 		},
+		setArchiveStatus(state, element) {
+			state.tickets.find((ticket) => ticket.id === element.id).status = 'archive'
+		}
 	},
 	actions: {
 		async getUser(ctx) {
@@ -182,6 +185,37 @@ export default createStore({
 				ctx.commit('setAllUserStatistic', res2)
 			} else {
 				console.log(`Не удалось получить статистику за все время`)
+			}
+		},
+		async patchUserOnTicket(ctx, param) {
+			const cookie = document.cookie
+			await fetch(`http://127.0.0.1:8000/api/appeal/${param.selectedTicket}`, {
+				method: 'PATCH',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				},
+				body: JSON.stringify({
+					'user_id': param.newSelectedUser
+				})
+			})
+		},
+		async moveTicketToArchive(ctx, element) {
+			const cookie = document.cookie
+			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
+				method: 'PATCH',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+				},
+				body: JSON.stringify({
+					'status': 'archive'
+				})
+			})
+			if (res.ok) {
+				ctx.commit('setArchiveStatus', element)
+			} else {
+				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
 			}
 		}
 	}

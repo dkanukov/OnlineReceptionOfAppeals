@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "vue-chartjs": "^5.2.0",
-    "vuedraggable": "^4.1.0"
-  }
-}
