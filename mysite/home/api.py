@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.db.utils import IntegrityError
 from .serializers import FeedbackSerializer, AppealSerializer
-from .utils import format_date, change_user_done_tasks_count
+from .utils import format_date, change_user_done_tasks_count, change_appeal_complete_date
 import datetime
 
 from .models import (
@@ -109,13 +109,15 @@ class APIAppealDetail(APIView):
                     )
                 else:
                     pass
+                change_appeal_complete_date(
+                    old_status=appeal.status,
+                    new_status=request.data['status'],
+                    appeal=appeal
+                )
                 appeal.status = request.data['status']
             if 'notes' in request.data:
                 appeal.notes = request.data['notes']
             if 'flag' in request.data:
-                #print(request.data)
-                #print(type(request.data['flag']))
-                #print(request.data['flag'])
                 appeal.flag = request.data['flag']
             if 'user_id' in request.data:
                 try:
@@ -250,5 +252,24 @@ class APIStatisticsPerMonth(APIView):
         response_data['5'] = appeals.filter(option=5).count()
         response_data['6'] = appeals.filter(option=6).count()
         response_data['7'] = appeals.filter(option=7).count()
+
+        return Response(data=response_data)
+
+
+class APIUserDoneTasksPerMonth(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        response_data = {}
+        users = User.objects.exclude(username="admin")
+        appeals = Appeal.objects.all()
+        today = datetime.date.today()
+        for user in users:
+            user_month_done_tasks_count = appeals.filter(
+                user=user,
+                completion_date__year=today.year,
+                completion_date__month=today.month
+            ).count()
+            response_data[user.id] = user_month_done_tasks_count
 
         return Response(data=response_data)

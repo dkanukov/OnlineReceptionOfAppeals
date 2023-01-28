@@ -1,4 +1,5 @@
 # Вспомогательные функции
+import datetime
 
 
 def format_date(date):
@@ -26,4 +27,13 @@ def change_user_done_tasks_count(old_status, new_status, user):
     if old_status in ('done', 'archive') and new_status in ('new', 'work'):
         user.profile.done_tasks_count -= 1
     user.save()
+    return
+
+
+def change_appeal_complete_date(old_status, new_status, appeal):
+    if old_status in ('new', 'work') and new_status == 'done':
+        appeal.completion_date = datetime.date.today()
+    if old_status in ('done', 'archive') and new_status in ('new', 'work'):
+        appeal.completion_date = None
+    appeal.save()
     return
