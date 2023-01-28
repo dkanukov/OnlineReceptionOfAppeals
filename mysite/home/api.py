@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.db.utils import IntegrityError
 from .serializers import FeedbackSerializer, AppealSerializer
 from .utils import format_date, change_user_done_tasks_count
+import datetime
 
 from .models import (
     News, Programs, Appeal, Profile
@@ -205,8 +206,9 @@ def get_statistics(queryset):
     response['option'] = total_option
     return response
 
+
 class APIStatistics(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         response_data = {}
@@ -216,7 +218,7 @@ class APIStatistics(APIView):
 
 
 class APIUserStatistics(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         users = User.objects.exclude(username="admin")
@@ -226,5 +228,27 @@ class APIUserStatistics(APIView):
             user_appeals = appeals.filter(user=user)
             response_data.setdefault(user.id)
             response_data[user.id] = get_statistics(user_appeals)
+
+        return Response(data=response_data)
+
+
+class APIStatisticsPerMonth(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        today = datetime.date.today()
+        response_data = {}
+        appeals = Appeal.objects.filter(
+            create_date__year=today.year,
+            create_date__month=today.month
+        )
+
+        response_data['1'] = appeals.filter(option=1).count()
+        response_data['2'] = appeals.filter(option=2).count()
+        response_data['3'] = appeals.filter(option=3).count()
+        response_data['4'] = appeals.filter(option=4).count()
+        response_data['5'] = appeals.filter(option=5).count()
+        response_data['6'] = appeals.filter(option=6).count()
+        response_data['7'] = appeals.filter(option=7).count()
 
         return Response(data=response_data)

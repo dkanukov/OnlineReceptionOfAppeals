@@ -7440,3 +7440,105 @@ RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash 
 2023-01-27 13:01:10,998 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-27 13:01:11,001 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 6703
 >>>>>>> 3fe206ece553c733d89ba9af77d3de17aede1376
+2023-01-28 17:34:11,793 ERROR Internal Server Error: /api/statistics-per-month
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'getset_descriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 241, in get
+    appeals = Appeal.objects.filter(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1273, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'None' expected a number but got <attribute 'month' of 'datetime.date' objects>.
+2023-01-28 17:34:11,885 ERROR "GET /api/statistics-per-month HTTP/1.1" 500 151409
+2023-01-28 17:35:48,216 ERROR Internal Server Error: /api/statistics-per-month
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1988, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'getset_descriptor'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\online_reception_of_appeals\mysite\home\api.py", line 243, in get
+    appeals = Appeal.objects.filter(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\query.py", line 1071, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\query.py", line 1089, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\query.py", line 1096, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1532, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1448, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\sql\query.py", line 1273, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\HP\PycharmProjects\1075\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1990, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'None' expected a number but got <attribute 'month' of 'datetime.date' objects>.
+2023-01-28 17:35:48,330 ERROR "GET /api/statistics-per-month HTTP/1.1" 500 151434
