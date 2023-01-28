@@ -26,8 +26,8 @@
                 <v-icon icon="mdi-calendar-clock-outline" style="width: 16px; height: 16px"></v-icon>
                 {{ ticket.element.create_date }}
               </span>
-              <span v-if="ticket.element.user">
-<!--                {{findDuty(ticket.element.user)}}-->
+              <span>
+                {{findDuty(ticket.element.user)}}
               </span>
             </p>
           </div>
@@ -174,6 +174,9 @@ export default {
     },
     findDuty(id) {
       const foundUser =  this.allUsers.find((user) => user.id === id)
+      if (!foundUser) {
+        return ''
+      }
       return `${foundUser.last_name} ${foundUser.first_name}`
     },
     handleTicketChangeDuty() {

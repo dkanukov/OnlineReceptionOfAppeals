@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-row justify="space-evenly" align="center">
+    <v-row justify="space-between" align="center">
       <div style="position: relative; height:40vh; width:40vw;">
         <Pie
             :data="allDataPie"
@@ -17,7 +17,7 @@
   </div>
   <div class="mt-10">
     <h2 class="mb-4">Текущая статистика по статусам</h2>
-    <v-row class="w-50">
+    <v-row class="w-50" no-gutters>
       <v-col>
         <h1 class="customColor">{{allStatistic.statusStatistic.new}}</h1>
         <p>Новые</p>
@@ -35,7 +35,7 @@
         <p>В архиве</p>
       </v-col>
       <v-col>
-        <h1>{{allStatistic.total}}</h1>
+        <h1 class="customSize">{{allStatistic.total}}</h1>
         <p>Всего</p>
       </v-col>
     </v-row>
@@ -68,6 +68,10 @@ export default {
             font: {
               size: 20
             },
+            padding: {
+              bottom: 30,
+            },
+            color: '#000000'
           },
           legend: {
             display: true,
@@ -97,6 +101,10 @@ export default {
             font: {
               size: 20
             },
+            padding: {
+              bottom: 30,
+            },
+            color: '#000000'
           },
           tooltip: {
             displayColors: false
@@ -138,5 +146,10 @@ export default {
 <style scoped>
 .customColor {
   color: #60C1CA;
+  font-size: 60px;
+}
+
+.customSize {
+  font-size: 60px;
 }
 </style>
