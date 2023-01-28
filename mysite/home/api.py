@@ -6,7 +6,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.db.utils import IntegrityError
 from .serializers import FeedbackSerializer, AppealSerializer
-from .utils import format_date, change_user_done_tasks_count
+from .utils import format_date, change_user_done_tasks_count, change_appeal_complete_date
+import datetime
 
 from .models import (
     News, Programs, Appeal, Profile
@@ -108,13 +109,15 @@ class APIAppealDetail(APIView):
                     )
                 else:
                     pass
+                change_appeal_complete_date(
+                    old_status=appeal.status,
+                    new_status=request.data['status'],
+                    appeal=appeal
+                )
                 appeal.status = request.data['status']
             if 'notes' in request.data:
                 appeal.notes = request.data['notes']
             if 'flag' in request.data:
-                #print(request.data)
-                #print(type(request.data['flag']))
-                #print(request.data['flag'])
                 appeal.flag = request.data['flag']
             if 'user_id' in request.data:
                 try:
@@ -205,8 +208,9 @@ def get_statistics(queryset):
     response['option'] = total_option
     return response
 
+
 class APIStatistics(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         response_data = {}
@@ -216,7 +220,7 @@ class APIStatistics(APIView):
 
 
 class APIUserStatistics(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         users = User.objects.exclude(username="admin")
@@ -226,5 +230,44 @@ class APIUserStatistics(APIView):
             user_appeals = appeals.filter(user=user)
             response_data.setdefault(user.id)
             response_data[user.id] = get_statistics(user_appeals)
+
+        return Response(data=response_data)
+
+
+class APIStatisticsPerMonth(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request, year, month):
+        response_data = {}
+        appeals = Appeal.objects.filter(
+            create_date__year=year,
+            create_date__month=month
+        )
+
+        response_data['1'] = appeals.filter(option=1).count()
+        response_data['2'] = appeals.filter(option=2).count()
+        response_data['3'] = appeals.filter(option=3).count()
+        response_data['4'] = appeals.filter(option=4).count()
+        response_data['5'] = appeals.filter(option=5).count()
+        response_data['6'] = appeals.filter(option=6).count()
+        response_data['7'] = appeals.filter(option=7).count()
+
+        return Response(data=response_data)
+
+
+class APIUserDoneTasksPerMonth(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request, year, month):
+        response_data = {}
+        users = User.objects.exclude(username="admin")
+        appeals = Appeal.objects.all()
+        for user in users:
+            user_month_done_tasks_count = appeals.filter(
+                user=user,
+                completion_date__year=year,
+                completion_date__month=month
+            ).count()
+            response_data[user.id] = user_month_done_tasks_count
 
         return Response(data=response_data)

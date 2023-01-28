@@ -23,6 +23,7 @@ urlpatterns = [
         path('api/all-users', api.APIAllUsers.as_view()),
         path('api/statistics', api.APIStatistics.as_view()),
         path('api/statistics-users', api.APIUserStatistics.as_view()),
-
+        path('api/statistics-per-month/<int:year>/<int:month>', api.APIStatisticsPerMonth.as_view()),
+        path('api/statistics-user-per-month/<int:year>/<int:month>', api.APIUserDoneTasksPerMonth.as_view()),
     ]
 
