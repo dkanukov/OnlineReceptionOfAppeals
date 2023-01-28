@@ -2,8 +2,8 @@
   <v-app class="containerCustom">
     <HeaderComponent/>
     <div v-if="currentPage==='dashBoard'" class="containerCustom mt-10">
-      <v-row align="center" justify="space-between">
-        <v-row align="center">
+      <v-row align="center" justify="space-between" no-gutters>
+        <v-row align="center" no-gutters>
           <v-btn
               variant="tonal"
               @click="handleNewTicketBtnClick"
@@ -17,6 +17,13 @@
               class="ml-4 setMinWidth customColorBtn"
           >
             <v-icon icon="mdi-cached"></v-icon>
+          </v-btn>
+          <v-btn
+              @click="updateTickets"
+              variant="tonal"
+              class="ml-10 setMinWidth customColorBtn"
+          >
+            Мои
           </v-btn>
           <v-autocomplete
               class="ml-4"
@@ -79,7 +86,7 @@
               <v-row no-gutters>
                 {{ticket.notes}}
               </v-row>
-              <v-btn @click="moveTicketFromArchive(ticket)">Вернуть обращение в работу</v-btn>
+              <v-btn class="mt-5" @click="moveTicketFromArchive(ticket)">Вернуть обращение в работу</v-btn>
             </v-expansion-panel-text>
 
           </v-expansion-panel>

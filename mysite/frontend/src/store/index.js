@@ -6,6 +6,17 @@ export default createStore({
 		user: null,
 		filterHelpType: [],
 		allUsers: [],
+		allStatistic: {
+			'optionStatistic': [],
+			'statusStatistic': {
+				'new': 0,
+				'work': 0,
+				'done': 0,
+				'archive': 0
+			},
+			'total': 0
+		},
+		allUserStatistic: []
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -26,7 +37,27 @@ export default createStore({
 		},
 		setNewStatusToTicket(state, element) {
 			state.tickets.find((ticket) => ticket.id === element.id).status = 'new'
-		}
+		},
+		setAllStatistic(state, statistic) {
+			state.allStatistic['optionStatistic'] = Array.from(Object.values(statistic.option))
+			state.allStatistic['statusStatistic'] = statistic.status
+			state.allStatistic['total'] = statistic.total
+			// console.log(state.allStatistic)
+		},
+		setAllUserStatistic(state, statistic) {
+			const allUserStatObjects = []
+			state.allUsers.forEach((user) => {
+				const userStat = statistic[user.id]
+				const userStatObject = {
+					userId: user.id,
+					userName: `${user.last_name} ${user.first_name}`,
+					total: userStat.total
+				}
+				allUserStatObjects.push(userStatObject)
+			})
+			state.allUserStatistic = allUserStatObjects
+			// console.log(state.allUserStatistic)
+		},
 	},
 	actions: {
 		async getUser(ctx) {
@@ -37,7 +68,6 @@ export default createStore({
 			} else {
 				console.log(`Не удалось получить пользователя`)
 			}
-
 		},
 		async getAllUsers(ctx) {
 			const ans = await fetch('http://127.0.0.1:8000/api/all-users', {method: 'GET'})
@@ -125,7 +155,6 @@ export default createStore({
 			}
 		},
 		async moveFromArchiveToNew(ctx, element) {
-			console.log(element)
 			const cookie = document.cookie
 			const res = await fetch(`http://127.0.0.1:8000/api/appeal/${element.id}`, {
 				method: 'PATCH',
@@ -141,6 +170,18 @@ export default createStore({
 				ctx.commit('setNewStatusToTicket', element)
 			} else {
 				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
+			}
+		},
+		async fetchAllStatistic(ctx) {
+			const ans = await fetch('http://127.0.0.1:8000/api/statistics', {method: 'GET'})
+			const ans2 = await fetch('http://127.0.0.1:8000/api/statistics-users', {method: 'GET'})
+			if (ans.ok && ans2.ok) {
+				const res = await ans.json()
+				const res2 = await ans2.json()
+				ctx.commit('setAllStatistic', res)
+				ctx.commit('setAllUserStatistic', res2)
+			} else {
+				console.log(`Не удалось получить статистику за все время`)
 			}
 		}
 	}
