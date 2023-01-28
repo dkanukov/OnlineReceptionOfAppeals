@@ -31,8 +31,9 @@ export default createStore({
 		setAllStatistic(state, statistic) {
 			console.log(statistic)
 			state.allStatistic['optionStatistic'] = Array.from(Object.values(statistic.option))
+			state.allStatistic['statusStatistic'] = statistic.status
 			console.log(state.allStatistic)
-		}
+		},
 	},
 	actions: {
 		async getUser(ctx) {

@@ -8,16 +8,31 @@
     <div style="position: relative; height:40vh; width:40vw;">
       <Pie
           :data="allDataPie"
-          :options="monthOptionPie"
+          :options="optionPie"
       />
     </div>
     <div style="position: relative; height:40vh; width:40vw;">
       <Bar
           :data="monthDataBar"
-          :options="monthOptionBar"
+          :options="optionBar"
       />
     </div>
   </v-row>
+  <div>
+    <h2>Текущая статистика по статусам:</h2>
+    <v-row no-gutters>
+<!--        <h3>Новые: {{allStatistic.statusStatistic.new}}</h3>-->
+    </v-row>
+    <v-row no-gutters>
+      <h3>В работе:</h3>
+    </v-row>
+    <v-row no-gutters>
+      <h3>Выполнены:</h3>
+    </v-row>
+    <v-row no-gutters>
+      <h3>В архиве: </h3>
+    </v-row>
+  </div>
 </template>
 
 <script>
@@ -35,14 +50,7 @@ export default {
   },
   data() {
     return {
-      monthDataPie: {
-        labels: ['SOS размещение', 'Гуманитарная помощь', 'Необходим адресный сбор', 'Koнсультация психолога', 'Консультация юриста', 'Хочу в группу поддержки', 'Хочу быть волонтером фонда'],
-        datasets: [{
-          data: [40, 20, 80, 10, 5, 15, 20],
-          backgroundColor: ['#60C1CA', '#82C9EE', '#24527E', '#A0284D', '#DE5C64', '#EFAB63', '#EFAB63'],
-        }]
-      },
-      monthOptionPie: {
+      optionPie: {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -66,7 +74,7 @@ export default {
           data: [40, 20, 12]
         }]
       },
-      monthOptionBar: {
+      optionBar: {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {

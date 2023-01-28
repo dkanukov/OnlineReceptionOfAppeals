@@ -11,10 +11,7 @@
       </div>
     </div>
     <div class="d-flex align-center">
-      <p class="mr-5" v-if="user">{{user.last_name}} {{user.first_name}}</p>
-      <v-avatar color="surface-variant" size="50">
-        <span class="text-h5">NC</span>
-      </v-avatar>
+      <h3 class="mr-5" v-if="user">{{user.last_name}} {{user.first_name}}</h3>
     </div>
   </div>
 </template>
