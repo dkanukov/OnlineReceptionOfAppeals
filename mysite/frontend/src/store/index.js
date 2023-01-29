@@ -17,7 +17,9 @@ export default createStore({
 			},
 			'total': 0
 		},
-		allUserStatistic: []
+		allUserStatistic: [],
+		monthUserStatistic: {},
+		monthStatistic: {},
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
@@ -67,6 +69,12 @@ export default createStore({
 		},
 		setArchiveStatus(state, element) {
 			state.tickets.find((ticket) => ticket.id === element.id).status = 'archive'
+		},
+		setMonthUserStatistic(state, data) {
+			state.monthUserStatistic = data
+		},
+		setMonthStatistic(state, data) {
+			state.monthStatistic = data
 		}
 	},
 	actions: {
@@ -226,8 +234,20 @@ export default createStore({
 			}
 		},
 		async fetchMonthStatistic(ctx, date) {
-			const ans = await fetch(`http://127.0.0.1:8000/api/statistics-per-month/${date.year}/${date.month}`, {method: 'GET'})
-			return await ans.json()
+			const res = await fetch(`http://127.0.0.1:8000/api/statistics-per-month/${date.year}/${date.month}`, {method: 'GET'})
+			if (res.ok) {
+				ctx.commit('setMonthStatistic', await res.json())
+			} else {
+				console.log(`Не удалось получить статистику за месяц: ${date}`)
+			}
 		},
+		async fetchMonthUserStatistic(ctx, date) {
+			const res = await fetch(`http://127.0.0.1:8000/api/statistics-user-per-month/${date.year}/${date.month}`, {method: 'GET'})
+			if (res.ok) {
+				ctx.commit('setMonthUserStatistic', await res.json())
+			} else {
+				console.log(`Не удалось получить статистику за месяц по юзерам: ${date}`)
+			}
+		}
 	}
 })

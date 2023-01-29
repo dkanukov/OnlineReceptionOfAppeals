@@ -49,7 +49,7 @@
     </div>
   </div>
   <div v-else>
-    <v-row no-gutters justify="space-evenly">
+    <v-row class="mb-10" no-gutters justify="space-evenly">
       <v-btn
           variant="outlined"
           icon
@@ -68,6 +68,20 @@
       >
         <v-icon>mdi-arrow-right-bold</v-icon>
       </v-btn>
+    </v-row>
+    <v-row justify="space-between" align="center">
+      <div style="position: relative; height:40vh; width:40vw;">
+        <Pie
+            :data="monthDataPie"
+            :options="optionPie"
+        />
+      </div>
+      <div style="position: relative; height:40vh; width:40vw;">
+        <Bar
+            :data="monthDataBar"
+            :options="optionBar"
+        />
+      </div>
     </v-row>
   </div>
 </template>
@@ -95,7 +109,7 @@ export default {
           title: {
             display: true,
             align: 'start',
-            text: 'Статистика обращений за все время',
+            text: this.statType === 'all' ? 'Статистика обращений за все время' : 'Статистика обращений за месяц',
             font: {
               size: 20
             },
@@ -128,7 +142,7 @@ export default {
           title: {
             display: true,
             align: 'start',
-            text: 'Статистика по сотрудникам за все время',
+            text: this.statType === 'all' ? 'Статистика обращений за все время' : 'Статистика обращений за месяц',
             font: {
               size: 20
             },
@@ -149,18 +163,18 @@ export default {
   },
   methods: {
     format,
-    ...mapActions(['fetchAllStatistic', 'fetchMonthStatistic']),
-    async handlePrevClick() {
+    ...mapActions(['fetchAllStatistic', 'fetchMonthStatistic', 'fetchMonthUserStatistic', 'fetchMonthStatistic']),
+    handlePrevClick() {
       this.statDate = subMonths(this.statDate, 1)
       this.isNextDisabled = false
       const date = {
         year: getYear(this.statDate),
-        month: getMonth(this.statDate)
+        month: getMonth(this.statDate) + 1
       }
-      const res = await this.fetchMonthStatistic(date)
-      console.log(res)
+      this.fetchMonthStatistic(date)
+      this.fetchMonthUserStatistic(date)
     },
-    async handleNextClick() {
+    handleNextClick() {
       this.statDate = addMonths(this.statDate, 1)
       console.log(setMilliseconds(this.statDate, 1), setMilliseconds(new Date(), 1))
       if (isEqual(setMilliseconds(this.statDate, 1), setMilliseconds(new Date(), 1))) {
@@ -168,14 +182,14 @@ export default {
       }
       const date = {
         year: getYear(this.statDate),
-        month: getMonth(this.statDate)
+        month: getMonth(this.statDate) + 1
       }
-      const res = await this.fetchMonthStatistic(date)
-      console.log(res)
+      this.fetchMonthStatistic(date)
+      this.fetchMonthUserStatistic(date)
     }
   },
   computed: {
-    ...mapState(['allStatistic', 'allUserStatistic']),
+    ...mapState(['allStatistic', 'allUserStatistic', 'monthUserStatistic', 'monthStatistic', 'allUsers']),
     allDataPie() {
       return {
         labels: ['SOS размещение', 'Гуманитарная помощь', 'Необходим адресный сбор', 'Koнсультация психолога', 'Консультация юриста', 'Хочу в группу поддержки', 'Хочу быть волонтером фонда'],
@@ -193,6 +207,26 @@ export default {
           data: this.allUserStatistic.map((user) => user.total)
         }]
       }
+    },
+    monthDataPie() {
+      return {
+        labels: ['SOS размещение', 'Гуманитарная помощь', 'Необходим адресный сбор', 'Koнсультация психолога', 'Консультация юриста', 'Хочу в группу поддержки', 'Хочу быть волонтером фонда'],
+        datasets: [{
+          data: Object.values(this.monthStatistic).map((value) => value),
+          backgroundColor: ['#60C1CA', '#82C9EE', '#24527E', '#A0284D', '#DE5C64', '#EFAB63', '#FFD677'],
+        }]
+      }
+    },
+    monthDataBar() {
+      console.log(this.allUsers.map((user) => `${user.last_name} ${user.first_name}`))
+      console.log(Object.values(this.monthUserStatistic).map((value) => value))
+      return {
+        labels: this.allUsers.map((user) => `${user.last_name} ${user.first_name}`),
+        datasets: [{
+          backgroundColor: '#82C9EE',
+          data: Object.values(this.monthUserStatistic).map((value) => value),
+        }]
+      }
     }
   },
   watch: {
@@ -200,11 +234,11 @@ export default {
       async handler() {
         const date = {
           year: getYear(this.statDate),
-          month: getMonth(this.statDate)
+          month: getMonth(this.statDate) + 1
         }
         if (this.statType === 'month') {
-          const res = await this.fetchMonthStatistic(date)
-          console.log(res)
+          this.fetchMonthStatistic(date)
+          this.fetchMonthUserStatistic(date)
         }
       },
       immediate: true
