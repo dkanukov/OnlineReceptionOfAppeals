@@ -209,7 +209,7 @@ def get_statistics(queryset):
 
 
 class APIStatistics(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny ]
 
     def get(self, request):
         response_data = {}
@@ -219,7 +219,7 @@ class APIStatistics(APIView):
 
 
 class APIUserStatistics(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     def get(self, request):
         users = User.objects.exclude(username="admin")
@@ -228,7 +228,7 @@ class APIUserStatistics(APIView):
         for user in users:
             user_appeals = appeals.filter(user=user)
             response_data.setdefault(user.id)
-            response_data[user.id] = get_statistics(user_appeals)
+            response_data[user.id] = user.profile.done_tasks_count
 
         return Response(data=response_data)
 

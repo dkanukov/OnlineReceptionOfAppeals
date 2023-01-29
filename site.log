@@ -8526,3 +8526,9 @@ webpack_loader.exceptions.WebpackError:
 2023-01-29 20:02:21,967 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
 2023-01-29 20:03:12,813 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-29 20:03:12,815 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 23:45:38,372 WARNING Bad Request: /api/appeal/69
+2023-01-29 23:45:38,377 WARNING "PATCH /api/appeal/69 HTTP/1.1" 400 57
+2023-01-30 00:37:55,963 WARNING Not Found: /api/statistics-user/
+2023-01-30 00:37:55,969 WARNING "GET /api/statistics-user/ HTTP/1.1" 404 7143
+2023-01-30 00:43:39,566 WARNING Not Found: /api/api/statistics-users/
+2023-01-30 00:43:39,572 WARNING "GET /api/api/statistics-users/ HTTP/1.1" 404 7158

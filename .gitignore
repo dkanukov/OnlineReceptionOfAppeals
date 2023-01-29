@@ -7,6 +7,8 @@ node_modules
 /mysite/home/test_api_post.py
 /mysite/home/test_api.py
 /mysite/home/__pycache__
+/mysite/home/random_date.py
+/mysite/home/dates
 *.pyc
 
 
