@@ -91,7 +91,6 @@ export default {
       this.moveFromArchiveToNew(ticket)
     },
     findTicketDuty(userId) {
-      console.log(userId)
       const user = this.allUsers.find((user) => user.id === userId)
       if (user) {
         return `${user.last_name} ${user.first_name}`
@@ -111,9 +110,6 @@ export default {
       return this.tickets.filter((ticket) => ticket.status === 'archive')
     }
   },
-  mounted() {
-    console.log(this.allUsers)
-  }
 }
 </script>
 

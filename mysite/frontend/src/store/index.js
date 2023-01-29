@@ -224,6 +224,10 @@ export default createStore({
 			} else {
 				console.log(`Не удалось обновить статус тикета с ID: ${element.id}`)
 			}
-		}
+		},
+		async fetchMonthStatistic(ctx, date) {
+			const ans = await fetch(`http://127.0.0.1:8000/api/statistics-per-month/${date.year}/${date.month}`, {method: 'GET'})
+			return await ans.json()
+		},
 	}
 })
