@@ -39,10 +39,10 @@
               <p class="ml-3">{{ HELP_OPTION_ARR[ticket.option - 1] }}</p>
             </v-col>
             <v-col>
-              <p class="ml-3">{{  }} {{ ticket.create_date }}</p>
+              <p class="ml-3">{{ticket.create_date }}</p>
             </v-col>
             <v-col>
-              <p>Выполнил: {{ticket.user}}</p>
+              <p>Выполнил: {{findTicketDuty(ticket.user)}}</p>
             </v-col>
           </v-row>
         </v-expansion-panel-title>
@@ -90,9 +90,17 @@ export default {
     moveTicketFromArchive(ticket) {
       this.moveFromArchiveToNew(ticket)
     },
+    findTicketDuty(userId) {
+      console.log(userId)
+      const user = this.allUsers.find((user) => user.id === userId)
+      if (user) {
+        return `${user.last_name} ${user.first_name}`
+      }
+      return ''
+    }
   },
   computed: {
-    ...mapState(['tickets']),
+    ...mapState(['tickets', 'allUsers']),
     archiveTickets() {
       if (!isEqual(this.dateRange.start, this.dateRange.end)) {
         return this.tickets.filter((ticket) => {
@@ -103,6 +111,9 @@ export default {
       return this.tickets.filter((ticket) => ticket.status === 'archive')
     }
   },
+  mounted() {
+    console.log(this.allUsers)
+  }
 }
 </script>
 
