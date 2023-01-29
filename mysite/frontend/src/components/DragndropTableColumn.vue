@@ -141,7 +141,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchTicketStatusById', 'pathTicketFlag', 'patchUserOnTicket', 'moveTicketToArchive']),
+    ...mapActions(['deleteTicketById', 'patchTicketNotes', 'patchTicketStatusById', 'pathTicketFlag', 'patchUserOnTicket', 'moveTicketToArchive', 'fetchTickets']),
     handleTicketMove({added}) {
       if (added) {
         this.patchTicketStatusById({
@@ -188,6 +188,7 @@ export default {
     },
     handleTicketDone() {
       this.moveTicketToArchive(this.selectedTicket)
+      this.isShowDialog = false
     }
   },
   computed: {
