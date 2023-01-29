@@ -165,6 +165,7 @@ export default {
     async sendForm() {
       this.patchTicketNotes({element: this.selectedTicket, newNote: this.selectedTicketNotes})
       this.selectedTicket.notes = this.selectedTicketNotes
+      this.isShowDialog = false
     },
     discardForm() {
       this.isShowDialog = false

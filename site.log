@@ -8532,3 +8532,19 @@ webpack_loader.exceptions.WebpackError:
 2023-01-30 00:37:55,969 WARNING "GET /api/statistics-user/ HTTP/1.1" 404 7143
 2023-01-30 00:43:39,566 WARNING Not Found: /api/api/statistics-users/
 2023-01-30 00:43:39,572 WARNING "GET /api/api/statistics-users/ HTTP/1.1" 404 7158
+2023-01-29 22:00:02,356 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:00:02,357 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:01:34,387 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:01:34,387 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:01:59,848 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:01:59,848 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:03:35,192 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:03:35,194 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:05:13,353 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:05:13,353 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:06:21,972 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:06:21,973 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:07:17,668 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:07:17,670 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:08:41,359 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:08:41,361 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120

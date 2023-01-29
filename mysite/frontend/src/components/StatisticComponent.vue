@@ -73,13 +73,13 @@
       <div style="position: relative; height:40vh; width:40vw;">
         <Pie
             :data="monthDataPie"
-            :options="optionPie"
+            :options="optionPieMonth"
         />
       </div>
       <div style="position: relative; height:40vh; width:40vw;">
         <Bar
             :data="monthDataBar"
-            :options="optionBar"
+            :options="optionBarMonth"
         />
       </div>
     </v-row>
@@ -109,7 +109,37 @@ export default {
           title: {
             display: true,
             align: 'start',
-            text: this.statType === 'all' ? 'Статистика обращений за все время' : 'Статистика обращений за месяц',
+            text: 'Статистика обращений за все время',
+            font: {
+              size: 20
+            },
+            padding: {
+              bottom: 30,
+            },
+            color: '#000000'
+          },
+          legend: {
+            display: true,
+            position: 'left',
+            labels: {
+              font: {
+                size: 16,
+              }
+            }
+          },
+          tooltip: {
+            displayColors: false
+          }
+        }
+      },
+      optionPieMonth: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: {
+            display: true,
+            align: 'start',
+            text: 'Статистика обращений за месяц',
             font: {
               size: 20
             },
@@ -142,7 +172,31 @@ export default {
           title: {
             display: true,
             align: 'start',
-            text: this.statType === 'all' ? 'Статистика обращений за все время' : 'Статистика обращений за месяц',
+            text: 'Статистика обращений за все время',
+            font: {
+              size: 20
+            },
+            padding: {
+              bottom: 30,
+            },
+            color: '#000000'
+          },
+          tooltip: {
+            displayColors: false
+          }
+        }
+      },
+      optionBarMonth: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: true,
+            align: 'start',
+            text: 'Статистика обращений за месяц',
             font: {
               size: 20
             },
@@ -176,7 +230,6 @@ export default {
     },
     handleNextClick() {
       this.statDate = addMonths(this.statDate, 1)
-      console.log(setMilliseconds(this.statDate, 1), setMilliseconds(new Date(), 1))
       if (isEqual(setMilliseconds(this.statDate, 1), setMilliseconds(new Date(), 1))) {
         this.isNextDisabled = true
       }
@@ -201,10 +254,10 @@ export default {
     },
     allDataBar() {
       return {
-        labels: this.allUserStatistic.map((user) => user.userName),
+        labels: this.allUsers.map((user) => `${user.last_name} ${user.first_name}`),
         datasets: [{
           backgroundColor: '#82C9EE',
-          data: this.allUserStatistic.map((user) => user.total)
+          data: Object.values(this.allUserStatistic).map((value) => value)
         }]
       }
     },
@@ -218,8 +271,6 @@ export default {
       }
     },
     monthDataBar() {
-      console.log(this.allUsers.map((user) => `${user.last_name} ${user.first_name}`))
-      console.log(Object.values(this.monthUserStatistic).map((value) => value))
       return {
         labels: this.allUsers.map((user) => `${user.last_name} ${user.first_name}`),
         datasets: [{
