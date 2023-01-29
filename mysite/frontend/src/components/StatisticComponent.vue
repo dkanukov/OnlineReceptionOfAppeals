@@ -1,6 +1,26 @@
 <template>
   <v-row justify="end" no-gutters class="mb-10" align="center">
-    <v-btn-toggle v-model="statType">
+    <v-row v-if="statType==='month'" align="center" no-gutters justify="space-evenly">
+      <v-btn
+          variant="outlined"
+          icon
+          color="info"
+          @click="handlePrevClick"
+      >
+        <v-icon>mdi-arrow-left-bold</v-icon>
+      </v-btn>
+      <h2>{{format(statDate, 'yyyy.MM')}}</h2>
+      <v-btn
+          :disabled="isNextDisabled"
+          variant="outlined"
+          icon
+          color="info"
+          @click="handleNextClick"
+      >
+        <v-icon>mdi-arrow-right-bold</v-icon>
+      </v-btn>
+    </v-row>
+    <v-btn-toggle mandatory v-model="statType">
       <v-btn value="all">За все время</v-btn>
       <v-btn value="month">За месяц</v-btn>
     </v-btn-toggle>
@@ -49,26 +69,6 @@
     </div>
   </div>
   <div v-else>
-    <v-row class="mb-16" no-gutters justify="space-evenly">
-      <v-btn
-          variant="outlined"
-          icon
-          color="info"
-          @click="handlePrevClick"
-      >
-        <v-icon>mdi-arrow-left-bold</v-icon>
-      </v-btn>
-      <h2>{{format(statDate, 'yyyy.MM')}}</h2>
-      <v-btn
-          :disabled="isNextDisabled"
-          variant="outlined"
-          icon
-          color="info"
-          @click="handleNextClick"
-      >
-        <v-icon>mdi-arrow-right-bold</v-icon>
-      </v-btn>
-    </v-row>
     <v-row justify="space-between" align="center">
       <div style="position: relative; height:40vh; width:40vw;">
         <Pie

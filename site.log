@@ -8648,3 +8648,13 @@ SyntaxError: /Users/deniskanukov/online_reception_of_appeals/mysite/frontend/src
 2023-01-29 22:12:54,449 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
 2023-01-29 22:13:00,872 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
 2023-01-29 22:13:00,873 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:14:52,475 WARNING Not Found: /favicon.ico
+2023-01-29 22:14:52,478 WARNING "GET /favicon.ico HTTP/1.1" 404 7028
+2023-01-29 22:14:59,501 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:14:59,502 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:14:59,561 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:14:59,562 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:16:37,249 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:16:37,250 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
+2023-01-29 22:19:59,400 WARNING Not Found: /appeal/<%= BASE_URL %>favicon.ico
+2023-01-29 22:19:59,401 WARNING "GET /appeal/%3C%=%20BASE_URL%20%%3Efavicon.ico HTTP/1.1" 404 7120
