@@ -212,6 +212,7 @@ export default {
           'user_id': null
         })
       })
+      this.selectedTicket.user = ''
       this.selectedTicket.userName = ''
     }
   },
