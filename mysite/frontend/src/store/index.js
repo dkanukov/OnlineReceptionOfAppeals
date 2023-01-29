@@ -25,7 +25,8 @@ export default createStore({
 		setFetchedTickets(state, tickets) {
 			tickets.forEach((ticket) => {
 				const parsedDateArray = ticket.create_date.split('-')
-				const dateObject = new Date(Number(parsedDateArray[2]), Number(parsedDateArray[1]), Number(parsedDateArray[0]))
+				const dateObject = new Date(Number(parsedDateArray[2]), Number(parsedDateArray[1] - 1), Number(parsedDateArray[0]))
+				console.log(dateObject)
 				ticket.create_date = format(dateObject, 'dd.MM.yyyy')
 			})
 			state.tickets = tickets

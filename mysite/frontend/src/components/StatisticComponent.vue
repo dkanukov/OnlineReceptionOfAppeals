@@ -49,7 +49,7 @@
     </div>
   </div>
   <div v-else>
-    <v-row class="mb-10" no-gutters justify="space-evenly">
+    <v-row class="mb-16" no-gutters justify="space-evenly">
       <v-btn
           variant="outlined"
           icon
