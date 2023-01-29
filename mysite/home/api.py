@@ -74,7 +74,9 @@ class APIAppeal(APIView):
         print(request.COOKIES)
         if request.user.is_authenticated:
             object_list = Appeal.objects.all()
+            print(object_list)
             serializer = AppealSerializer(instance=object_list, many=True)
+            print(serializer.data)
             return Response(serializer.data)
         else:
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
@@ -155,7 +157,6 @@ class APIUser(APIView):
                 'email': user.username,
                 'tasks_count': user_done_tasks_count
             }
-            print(response_data)
             return Response(data=response_data)
         else:
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
