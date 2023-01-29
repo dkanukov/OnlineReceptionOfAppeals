@@ -62,7 +62,16 @@
               :items="allUsers.map((user) => `${user.last_name} ${user.first_name}`)"
               @update:modelValue="handleTicketChangeDuty()"
               style="max-width: 400px;"
-          />
+          >
+            <template v-slot:append>
+              <v-slide-x-reverse-transition mode="out-in" class="mdi-cross">
+                <v-icon
+                    icon="mdi-close"
+                    @click="deleteUserFromTicket"
+                ></v-icon>
+              </v-slide-x-reverse-transition>
+            </template>
+          </v-autocomplete>
           <p class="text-grey-darken-1 ">
             {{ this.selectedTicket.name }}
             {{ this.selectedTicket.last_name }}
@@ -190,10 +199,24 @@ export default {
     handleTicketDone() {
       this.moveTicketToArchive(this.selectedTicket)
       this.isShowDialog = false
+    },
+    async deleteUserFromTicket() {
+      const cookie = document.cookie
+      await fetch(`http://127.0.0.1:8000/api/appeal/${this.selectedTicket.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': cookie.substring(cookie.indexOf('csrftoken=') + 10)
+        },
+        body: JSON.stringify({
+          'user_id': null
+        })
+      })
+      this.selectedTicket.userName = ''
     }
   },
   computed: {
-    ...mapState(['allUsers'])
+    ...mapState(['allUsers']),
   },
 }
 </script>

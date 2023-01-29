@@ -230,7 +230,7 @@ export default {
     },
     handleNextClick() {
       this.statDate = addMonths(this.statDate, 1)
-      if (isEqual(setMilliseconds(this.statDate, 1), setMilliseconds(new Date(), 1))) {
+      if (isEqual(setMilliseconds(this.statDate, 0), setMilliseconds(new Date(), 1))) {
         this.isNextDisabled = true
       }
       const date = {
