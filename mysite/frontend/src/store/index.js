@@ -1,4 +1,5 @@
 import {createStore} from 'vuex';
+import {format} from 'date-fns';
 
 export default createStore({
 	state: () => ({
@@ -20,6 +21,11 @@ export default createStore({
 	}),
 	mutations: {
 		setFetchedTickets(state, tickets) {
+			tickets.forEach((ticket) => {
+				const parsedDateArray = ticket.create_date.split('-')
+				const dateObject = new Date(Number(parsedDateArray[2]), Number(parsedDateArray[1]), Number(parsedDateArray[0]))
+				ticket.create_date = format(dateObject, 'dd.MM.yyyy')
+			})
 			state.tickets = tickets
 		},
 		setNewTicketStatusById(state, element) {
@@ -27,6 +33,7 @@ export default createStore({
 		},
 		setUser(state, user) {
 			state.user = user
+			console.log(state.user)
 		},
 		deleteTicket(state, ticketId) {
 			state.tickets = state.tickets.filter((ticket) => ticket.id !== ticketId)
