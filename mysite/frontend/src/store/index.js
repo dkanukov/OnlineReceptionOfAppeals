@@ -26,7 +26,6 @@ export default createStore({
 			tickets.forEach((ticket) => {
 				const parsedDateArray = ticket.create_date.split('-')
 				const dateObject = new Date(Number(parsedDateArray[2]), Number(parsedDateArray[1] - 1), Number(parsedDateArray[0]))
-				console.log(dateObject)
 				ticket.create_date = format(dateObject, 'dd.MM.yyyy')
 			})
 			state.tickets = tickets
@@ -36,14 +35,12 @@ export default createStore({
 		},
 		setUser(state, user) {
 			state.user = user
-			console.log(state.user)
 		},
 		deleteTicket(state, ticketId) {
 			state.tickets = state.tickets.filter((ticket) => ticket.id !== ticketId)
 		},
 		setAllUsers(state, users) {
 			state.allUsers = users
-			console.log(state.allUsers)
 		},
 		setNewStatusToTicket(state, element) {
 			state.tickets.find((ticket) => ticket.id === element.id).status = 'new'
@@ -52,21 +49,9 @@ export default createStore({
 			state.allStatistic['optionStatistic'] = Array.from(Object.values(statistic.option))
 			state.allStatistic['statusStatistic'] = statistic.status
 			state.allStatistic['total'] = statistic.total
-			// console.log(state.allStatistic)
 		},
 		setAllUserStatistic(state, statistic) {
-			const allUserStatObjects = []
-			state.allUsers.forEach((user) => {
-				const userStat = statistic[user.id]
-				const userStatObject = {
-					userId: user.id,
-					userName: `${user.last_name} ${user.first_name}`,
-					total: userStat.status['archive']
-				}
-				allUserStatObjects.push(userStatObject)
-			})
-			state.allUserStatistic = allUserStatObjects
-			// console.log(state.allUserStatistic)
+			state.allUserStatistic = statistic
 		},
 		setArchiveStatus(state, element) {
 			state.tickets.find((ticket) => ticket.id === element.id).status = 'archive'
@@ -124,7 +109,6 @@ export default createStore({
 			}
 		},
 		async patchTicketNotes(ctx, data) {
-			console.log(data)
 			const cookie = document.cookie
 			if (data.element.notes !== data.newNote) {
 				const res = await fetch(`http://127.0.0.1:8000/api/appeal/${data.element.id}`, {

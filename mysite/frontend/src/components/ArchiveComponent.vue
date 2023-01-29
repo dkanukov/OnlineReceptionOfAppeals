@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import {mapState} from 'vuex';
+import {mapActions, mapState} from 'vuex';
 import {DatePicker} from 'v-calendar';
 import {format, isEqual, parse, isBefore, isAfter} from 'date-fns';
 import 'v-calendar/dist/style.css';
@@ -86,6 +86,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['moveFromArchiveToNew']),
     format,
     moveTicketFromArchive(ticket) {
       this.moveFromArchiveToNew(ticket)

@@ -310,7 +310,6 @@ export default {
   },
   async created() {
     this.fetchTickets().then(() => {
-      console.log(this.tickets)
     })
     await this.getUser()
     await this.getAllUsers()
