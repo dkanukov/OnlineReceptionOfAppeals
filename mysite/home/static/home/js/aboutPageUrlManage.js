@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		location.hash = '#requisites-tab'
 	})
 	document.getElementsByClassName("feedbacks-tab")[0].addEventListener('click', () => {
-		location.hash = '#requisites-tab'
+		location.hash = '#feedbacks-tab'
 	})
 	document.getElementsByClassName("about-tab")[0].addEventListener('click', () => {
-		location.hash = 'about-tab'
+		location.hash = '#about-tab'
 	})
 
 

@@ -61,7 +61,8 @@ export default createStore({
 		},
 		setMonthStatistic(state, data) {
 			state.monthStatistic = data
-		}
+		},
+
 	},
 	actions: {
 		async getUser(ctx) {
@@ -234,5 +235,5 @@ export default createStore({
 				console.log(`Не удалось получить статистику за месяц по юзерам: ${date}`)
 			}
 		}
-	}
+	},
 })
