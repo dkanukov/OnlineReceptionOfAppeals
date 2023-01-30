@@ -66,6 +66,7 @@
             <template v-slot:append>
               <v-slide-x-reverse-transition mode="out-in" class="mdi-cross">
                 <v-icon
+                    v-if="selectedTicket.userName"
                     icon="mdi-close"
                     @click="deleteUserFromTicket"
                 ></v-icon>
@@ -197,6 +198,8 @@ export default {
       }
     },
     handleTicketDone() {
+      this.selectedTicket.status = 'archive'
+      console.log(this.selectedTicket.status)
       this.moveTicketToArchive(this.selectedTicket)
       this.isShowDialog = false
     },
@@ -212,6 +215,7 @@ export default {
           'user_id': null
         })
       })
+      this.selectedTicket.user = ''
       this.selectedTicket.userName = ''
     }
   },

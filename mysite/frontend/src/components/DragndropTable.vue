@@ -7,7 +7,7 @@
             name: 'new',
             put: ['inProgress', 'closed']
           }"
-          :tickets="newTickets"
+          :tickets="tickets.filter((ticket) => ticket.status === 'new')"
       />
     </v-col>
     <v-col cols="4">
@@ -17,7 +17,7 @@
             name: 'inProgress',
             put: ['new', 'closed']
           }"
-          :tickets="inProgressTickets"
+          :tickets="tickets.filter((ticket) => ticket.status === 'work')"
       />
     </v-col>
     <v-col cols="4">
@@ -27,7 +27,7 @@
             name: 'closed',
             put: ['inProgress', 'new']
           }"
-          :tickets="closedTickets"
+          :tickets="tickets.filter((ticket) => ticket.status === 'done')"
       />
     </v-col>
   </v-row>
@@ -46,20 +46,8 @@ export default {
     patchTicketStatusById: Function,
   },
   data() {
-    return {
-      newTickets: this.tickets.filter((ticket) => ticket.status === 'new'),
-      inProgressTickets: this.tickets.filter((ticket) => ticket.status === 'work'),
-      closedTickets: this.tickets.filter((ticket) => ticket.status === 'done'),
-    }
   },
   computed: {},
-  watch: {
-    tickets() {
-      this.newTickets = this.tickets.filter((ticket) => ticket.status === 'new')
-      this.inProgressTickets = this.tickets.filter((ticket) => ticket.status === 'work')
-      this.closedTickets = this.tickets.filter((ticket) => ticket.status === 'done')
-    },
-  },
 }
 </script>
 
