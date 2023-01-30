@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block html %}
+<!Doctype html>
+<html>
+    <head>
+        {% block head %}{{ block.super }}{% endblock %}
+        <!-- html-webpack-inject will inject head assets below -->
+    </head>
+    <body>
+        {% block body %}{{ block.super }}{% endblock %}
+        <!-- html-webpack-inject will inject body assets below -->
+    </body>
+</html>
+{% endblock %}

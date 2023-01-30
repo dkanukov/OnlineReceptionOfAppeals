@@ -71,7 +71,6 @@ class APIAppeal(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        print(request.COOKIES)
         if request.user.is_authenticated:
             object_list = Appeal.objects.all()
             serializer = AppealSerializer(instance=object_list, many=True)
@@ -80,17 +79,14 @@ class APIAppeal(APIView):
             return Response("not authentificated user", status=status.HTTP_403_FORBIDDEN)
 
     def post(self, request):
-        print(request.data)
         serializer = AppealSerializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             except IntegrityError:
-                print("ошибка записи")
                 return Response("wrong type/option data", status=status.HTTP_400_BAD_REQUEST)
         else:
-            print(serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -209,7 +205,7 @@ def get_statistics(queryset):
 
 
 class APIStatistics(APIView):
-    permission_classes = [AllowAny ]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         response_data = {}
@@ -219,7 +215,7 @@ class APIStatistics(APIView):
 
 
 class APIUserStatistics(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         users = User.objects.exclude(username="admin")
@@ -234,7 +230,7 @@ class APIUserStatistics(APIView):
 
 
 class APIStatisticsPerMonth(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, year, month):
         response_data = {}
@@ -255,7 +251,7 @@ class APIStatisticsPerMonth(APIView):
 
 
 class APIUserDoneTasksPerMonth(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request, year, month):
         response_data = {}
